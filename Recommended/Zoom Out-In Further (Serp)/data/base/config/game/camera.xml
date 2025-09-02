@@ -1,0 +1,132 @@
+
+<ModOps>
+    
+  <!-- add more zoom levels. close zoom is already good enough, but still added the debug ones -->
+  <!-- looks like ~300 Height is max, does not zoom further -->
+  <ModOp Type="add" Path="Normal/Presets">
+    
+    <Preset ID="-4" Height="0.8" Pitch="0.8" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="0.8f" GamepadPanningSpeed="8.0f" Debug="false"/>
+    <Preset ID="-3" Height="1.2" Pitch="0.8" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="1.2f" GamepadPanningSpeed="8.0f" Debug="false"/>
+    <Preset ID="-2" Height="2.0" Pitch="0.8" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="2.0f" GamepadPanningSpeed="8.0f" Debug="false"/>
+    <Preset ID="-1" Height="3.0" Pitch="0.8" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="3.0f" GamepadPanningSpeed="8.0f" Debug="false"/>
+    
+
+    <Preset ID="21" Height="200" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="67.0f" GamepadPanningSpeed="112.0f"/>
+    <Preset ID="22" Height="230" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="70.0f" GamepadPanningSpeed="120.0f"/>
+    <Preset ID="23" Height="260" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="73.0f" GamepadPanningSpeed="128.0f"/>
+    <Preset ID="24" Height="300" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="88.0f" GamepadPanningSpeed="168.0f"/>
+    <Preset ID="25" Height="350" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="88.0f" GamepadPanningSpeed="168.0f"/>
+    <Preset ID="26" Height="400" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="88.0f" GamepadPanningSpeed="168.0f"/>
+    <Preset ID="27" Height="500" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="88.0f" GamepadPanningSpeed="168.0f"/>
+    <Preset ID="28" Height="750" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="88.0f" GamepadPanningSpeed="168.0f"/>
+    <Preset ID="29" Height="900" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="88.0f" GamepadPanningSpeed="168.0f"/>
+    <Preset ID="30" Height="1200" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="88.0f" GamepadPanningSpeed="168.0f" WorldMapTransition="true"/>
+    <Preset ID="31" Height="1500" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="88.0f" GamepadPanningSpeed="168.0f" WorldMapTransition="true"/>
+    <Preset ID="32" Height="2000" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="88.0f" GamepadPanningSpeed="168.0f" WorldMapTransition="true"/>
+    
+  </ModOp>
+  
+
+  
+  <ModOp Type="merge" Path="Normal/Settings">
+    <Settings 
+      MinFromHeight="1.0">
+    </Settings>
+  </ModOp>
+  <ModOp Type="merge" Path="Normal/Settings">
+    <Settings 
+      MinTerrainDistance="1.0">
+    </Settings>
+  </ModOp>
+
+</ModOps> 
+
+<!-- vanilla camera.xml: -->
+<!-- <Normal> -->
+  <!-- <Presets> -->
+    <!-- <Preset ID="-4"  Height="0.8"  Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="0.8f"   GamepadPanningSpeed="8.0f"    Debug="true"/> -->
+    <!-- <Preset ID="-3"  Height="1.2"  Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="1.2f"   GamepadPanningSpeed="8.0f"    Debug="true"/> -->
+    <!-- <Preset ID="-2"  Height="2.0"  Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="2.0f"   GamepadPanningSpeed="8.0f"    Debug="true"/> -->
+    <!-- <Preset ID="-1"  Height="3.0"  Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="3.0f"   GamepadPanningSpeed="8.0f"    Debug="true"/> -->
+    <!-- <Preset ID="0"     Height="4.5"  Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="4.5"  GamepadPanningSpeed="8.0f"/> -->
+    <!-- <Preset ID="1"     Height="6"    Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="6.0f"   GamepadPanningSpeed="8.0f"/> -->
+    <!-- <Preset ID="2"     Height="8"    Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="8.0f"   GamepadPanningSpeed="8.0f"/> -->
+    <!-- <Preset ID="3"   Height="10"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="10.0f"  GamepadPanningSpeed="8.0f"/> -->
+    <!-- <Preset ID="4"     Height="12.5"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="13.0f"  GamepadPanningSpeed="8.0f"/> -->
+    <!-- <Preset ID="5"     Height="15"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="16.0f"  GamepadPanningSpeed="8.0f"/> -->
+    <!-- <Preset ID="6"     Height="17.5"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="19.0f"  GamepadPanningSpeed="8.0f"/> -->
+    <!-- <Preset ID="7"     Height="20"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="22.0f"  GamepadPanningSpeed="12.0f"/> -->
+    <!-- <Preset ID="8"     Height="25"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="25.0f"  GamepadPanningSpeed="15.0f"/> -->
+    <!-- <Preset ID="9"     Height="30"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="28.0f"  GamepadPanningSpeed="15.0f"/> -->
+    <!-- <Preset ID="10"  Height="35"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="31.0f"  GamepadPanningSpeed="15.0f"/> -->
+    <!-- <Preset ID="11"  Height="40"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="34.0f"  GamepadPanningSpeed="20.0f"/> -->
+    <!-- <Preset ID="12"  Height="50"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="37.0f"  GamepadPanningSpeed="25.0f"/> -->
+    <!-- <Preset ID="13"  Height="60"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="40.0f"  GamepadPanningSpeed="30.0f"/> -->
+    <!-- <Preset ID="14"  Height="75"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="43.0f"  GamepadPanningSpeed="40.0f"/> -->
+    <!-- <Preset ID="15"  Height="90"   Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="46.0f"  GamepadPanningSpeed="50.0f"/> -->
+    <!-- <Preset ID="16"  Height="105"  Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="49.0f"  GamepadPanningSpeed="70.0f"/> -->
+    <!-- <Preset ID="17"  Height="120"  Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="true"   EdgeScrollingSpeed="52.0f"  GamepadPanningSpeed="75.0f"/> -->
+    <!-- <Preset ID="18"  Height="135"  Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="true"   EdgeScrollingSpeed="55.0f"  GamepadPanningSpeed="80.0f"/> -->
+    <!-- <Preset ID="19"  Height="155"  Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="true"   EdgeScrollingSpeed="58.0f"  GamepadPanningSpeed="88.0f"/> -->
+    <!-- <Preset ID="20"  Height="175"  Pitch="0.8"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.7"   ExtendedZoom="true"   EdgeScrollingSpeed="61.0f"  GamepadPanningSpeed="96.0f" WorldMapTransition="true" /> -->
+
+
+    <!-- <Preset ID="21"  Height="300"  Pitch="0.875"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.46"  ExtendedZoom="false"  EdgeScrollingSpeed="76.0f"  GamepadPanningSpeed="128.0f"  Debug="true"/> -->
+    <!-- <Preset ID="22"  Height="500"  Pitch="0.875"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.46"  ExtendedZoom="false"  EdgeScrollingSpeed="76.0f"  GamepadPanningSpeed="128.0f"  Debug="true"/> -->
+    <!-- <Preset ID="23"  Height="900"  Pitch="0.875"   MinPitch="-0.375"   MaxPitch="1.40"   Fov="0.46"  ExtendedZoom="false"  EdgeScrollingSpeed="76.0f"  GamepadPanningSpeed="128.0f"  Debug="true"/> -->
+  <!-- </Presets> -->
+
+  <!-- <Settings -->
+    <!-- DefaultPreset="13" -->
+    <!-- MouseRotSpeed="0.1" -->
+    <!-- MinFromHeight="4" -->
+    <!-- MinTerrainDistance="2.0" -->
+    <!-- MovementFriction="0.78" -->
+    <!-- RotationFriction="0.67" -->
+    <!-- ZoomSpeed="7.5" -->
+    <!-- ZoomStep="2.0" -->
+    <!-- HeightSoftness="0.3" -->
+    <!-- GamepadRightStickThreshold="0.5" -->
+    <!-- GamepadPanBoostSpeedMultiplier="3.0" -->
+    <!-- GamepadPanAcceleration="0.0" -->
+    <!-- GamepadPanDeceleration="0.0" -->
+    <!-- GamepadZoomSpeed="20.0" -->
+    <!-- GamepadZoomAcceleration="0.4" -->
+    <!-- GamepadZoomDeceleration="0.2" -->
+    <!-- GamepadYawSpeed="90.0" -->
+    <!-- GamepadPitchSpeed="70.0"> -->
+  <!-- </Settings> -->
+<!-- </Normal> -->
+
+<!-- <Simple> -->
+  <!-- <Presets> -->
+    <!-- <Preset ID="1"   Height="15"   Pitch="0.65"  MinPitch="0.65"   MaxPitch="0.65"   Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="16.0f"  GamepadPanningSpeed="16.0f"/> -->
+    <!-- <Preset ID="2"   Height="60"   Pitch="0.8"   MinPitch="0.8"    MaxPitch="0.8"    Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="40.0f"  GamepadPanningSpeed="40.0f"/> -->
+    <!-- <Preset ID="3"   Height="135"  Pitch="1.075"   MinPitch="1.075"  MaxPitch="1.075"  Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="55.0f"  GamepadPanningSpeed="60.0f"/> -->
+    <!-- <Preset ID="4"   Height="215"  Pitch="1.075"   MinPitch="1.075"  MaxPitch="1.075"  Fov="0.7"   ExtendedZoom="true"   EdgeScrollingSpeed="67.0f"  GamepadPanningSpeed="80.0f"/> -->
+        <!-- <Preset ID="5"   Height="600"  Pitch="1.075"   MinPitch="1.075"  MaxPitch="1.075"  Fov="0.7"   ExtendedZoom="false"  EdgeScrollingSpeed="67.0f"  GamepadPanningSpeed="80.0f"/> -->
+  <!-- </Presets> -->
+
+  <!-- <Settings  -->
+    <!-- MinZoomPreset="1"             -->
+    <!-- MaxZoomPreset="4" -->
+    <!-- DefaultPreset="2" -->
+    <!-- ZoomDuration="400" -->
+    <!-- ZoomSensivity="1" -->
+    <!-- MouseRotSpeed="0.1" -->
+    <!-- MinFromHeight="1.0" -->
+    <!-- MinTerrainDistance="2.0" -->
+    <!-- DriftFriction="0.75" -->
+    <!-- HeightSoftness="0.3" -->
+    <!-- GamepadRightStickThreshold="0.5" -->
+    <!-- GamepadPanSpeedMultiplier="0.001" -->
+    <!-- GamepadPanBoostSpeedMultiplier="6.0" -->
+    <!-- GamepadPanAcceleration="0.0" -->
+    <!-- GamepadPanDeceleration="0.0" -->
+    <!-- GamepadZoomSpeed="10.0" -->
+    <!-- GamepadZoomAcceleration="0.2" -->
+    <!-- GamepadZoomDeceleration="0.2" -->
+    <!-- GamepadYawSpeed="110.0" -->
+    <!-- GamepadPitchSpeed="110.0"> -->
+  <!-- </Settings> -->
+<!-- </Simple> -->

@@ -1,0 +1,28 @@
+{
+  "Version": "1.0",
+  "ModID": "zoom-out-further-serp",  
+  "Anno": 8,  
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Gameplay"
+  },
+  "ModName": {
+    "English": "Zoom Out/In Further (Serp) (Serp)",
+    "German": "Zoom Weiter Raus/Rein (Serp)"
+  },
+  "Description": {
+    "English": "Allows you to zoom out further. Make sure you have extended zoom in game options enabled and this is not enough zooming out for you. I don't know how increase the drawing distance, so many details of your city won't be displayed on high zoom level.",
+    "German": "Erlaubt es weiter raus zu zoomen. Der erweiterte Zoom muss in den Anno Einstellungen aktiviert sein und du brauchst diesen Mod nur, wenn dir das herauszoomen davon noch immer nicht reicht. Leider weiß ich nicht wie ich die Detailstufe bei weitem Zoom vergrößern kann, daher werden bei weitem Zoom nur noch wenige Details deiner Stadt sichtbar sein."
+  },
+  "Difficulty": "unchanged",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66"
+}
