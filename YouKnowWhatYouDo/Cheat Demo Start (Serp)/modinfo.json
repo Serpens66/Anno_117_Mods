@@ -12,7 +12,7 @@
     "English": "Cheat Demo Start (Serp)"
   },
   "Description": {
-    "German": "A cheat start for the Anno117 Demo. Different starting situation than in demo. Everything unlocked, everything researched and ignoring buildcosts."
+    "German": "A cheat start for the Anno117 Demo. Different start world, easy game settings and unrevealed map with AIs. Both sessions unlocked from the start. Every building/ship/unit unhidden. Includes keybind mod for several cheats, see readme of the included mod Cheat Keybinds (Serp)"
   },
   "KnownIssues": [
     {
@@ -21,7 +21,7 @@
   ],
   "Difficulty": "cheat",
   "GameSetup": {
-    "RequiresNewGame": true,
+    "RequiresNewGame": false,
     "SafeToRemove": true,
     "Multiplayer": true,
     "Campaign": true

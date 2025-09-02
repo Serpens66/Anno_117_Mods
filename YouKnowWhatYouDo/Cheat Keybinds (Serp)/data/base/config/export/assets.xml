@@ -148,7 +148,7 @@
           </InputTypes>
         </Item>
         
-        <!-- instant ship/unit production of currently selected shipyards production -->
+        <!-- instant ship/unit production of currently selected shipyards production (does not work, not sure why) -->
         <Item>
           <Command>Selection.Object.Shipyard.CheatSkipRemainingTime();Selection.Object.Recruitment.CheatSkipRemainingTime();</Command>
           <Text>-6903073957892729392</Text>
@@ -168,7 +168,7 @@
           </InputTypes>
         </Item>
         
-        <!-- finish a portion of selected monument building phase, hit multiple times to finish it -->
+        <!-- finish a portion of selected monument building phase, hit multiple times to finish it (does not work, not sure why) -->
         <Item>
           <Command>Selection.Object.Monument.CheatUpgradeMicro()</Command>
           <Text>-6903073957892729392</Text>
@@ -251,7 +251,7 @@
           </InputTypes>
         </Item>
         
-        <!-- add the needed fertility from the currently selected factory to the island -->
+        <!-- add the needed fertility from the currently selected factory to the island (does not work, not sure why) -->
         <Item>
           <Command>Selection.Object.Factory.ToggleCheatFertility()</Command>
           <Text>-6903073957892729392</Text>
@@ -271,9 +271,9 @@
           </InputTypes>
         </Item>
         
-        <!-- add random items to the current island -->
+        <!-- add random items to the current island. does not work -->
         <Item>
-          <Command>Item.SetCheatAllItems()</Command>
+          <Command>Item.CheatAllItems()</Command>
           <Text>-6903073957892729392</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>

@@ -70,9 +70,9 @@
   <!-- <ModOp Property="Craftable" Merge=".[not(CraftingTime) or CraftingTime&gt;5000]"> -->
     <!-- <CraftingTime>5000</CraftingTime> -->
   <!-- </ModOp> -->
-  <!-- <ModOp Type="merge" Path="//Values/Craftable[not(CraftingTime) or CraftingTime&gt;5000]"> -->
-    <!-- <CraftingTime>5000</CraftingTime> -->
-  <!-- </ModOp> -->
+  <ModOp Type="merge" Path="//Values/Craftable[not(CraftingTime) or CraftingTime&gt;5000]">
+    <CraftingTime>5000</CraftingTime>
+  </ModOp>
   
   <Assets>
     <Asset>
