@@ -1,0 +1,27 @@
+{
+  "Version": "1.0",
+  "ModID": "cheat-keybinds-serp",
+  "Anno": 8,
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "LoadAfterIds": null,
+  "Category": {
+    "English": "Cheat"
+  },
+  "ModName": {
+    "English": "Cheat Keybinds (Serp)"
+  },
+  "Description": {
+    "English": "Adds several cheat commands to keybinds. Helpful to test mods or simply to cheat."
+  },
+  "Difficulty": "cheat",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66"
+}

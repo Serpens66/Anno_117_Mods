@@ -1,0 +1,166 @@
+<ModOps>
+    
+  <!-- https://github.com/jakobharder/anno-mod-loader/blob/main/doc/modloader-changes.md -->
+
+
+  <!-- adjust this modop to change the start settings for the Demo -->
+  <ModOp GUID="107279" Merge="DifficultySetup">
+    <SetupStartEmperor>31637</SetupStartEmperor>
+    <SetupMapTemplateType>43182</SetupMapTemplateType>
+    <SetupStartShips>WarFleet</SetupStartShips>
+    <SetupFertility>High</SetupFertility>
+    <SetupRawMaterial>High</SetupRawMaterial>
+    <SetupStartSession>Large</SetupStartSession>
+    <SetupStartSessionIslandSize>Large</SetupStartSessionIslandSize>
+    <SetupStartWithKontor>Standard</SetupStartWithKontor>
+    <SetupConstructionCostRefund>Full</SetupConstructionCostRefund>
+    <SetupDistributionWorkforce>Plenty</SetupDistributionWorkforce>
+    <SetupInactiveCosts>Off</SetupInactiveCosts>
+    <SetupIncidents>Easy</SetupIncidents>
+    <SetupLossCondition>BailoutWithSlowLiquidation</SetupLossCondition>
+    <DCContractCooldown>Often</DCContractCooldown>
+    <SetupRelocateBuildings>On</SetupRelocateBuildings>
+    <SetupRevealedMap>On</SetupRevealedMap>
+    <SetupStartCredits>Plenty</SetupStartCredits>
+    <SetupTraderRefillRate>Plenty</SetupTraderRefillRate>
+    <SetupIncludeShipsForAnnihilation>On</SetupIncludeShipsForAnnihilation>
+    <SetupSettlementCost>Low</SetupSettlementCost>
+    <SetupTaxes>Spare</SetupTaxes>
+    <SetupStartGoods>Plenty</SetupStartGoods>
+    <SetupStartForestSize>Large</SetupStartForestSize>
+    <SetupNeedConsumption>Low</SetupNeedConsumption>
+    <Pirates>
+      <Item>
+        <Profile>37494</Profile>
+        <Dormancy>Active</Dormancy>
+        <RaidDifficulty>Easy</RaidDifficulty>
+        <WarFleetDifficulty>Easy</WarFleetDifficulty>
+        <PatrolDifficulty>Short</PatrolDifficulty>
+        <WarThreats>Easy</WarThreats>
+      </Item>
+      <Item>
+        <Profile>37495</Profile>
+        <Dormancy>Active</Dormancy>
+        <RaidDifficulty>Easy</RaidDifficulty>
+        <WarFleetDifficulty>Easy</WarFleetDifficulty>
+        <PatrolDifficulty>Short</PatrolDifficulty>
+        <WarThreats>Easy</WarThreats>
+      </Item>
+    </Pirates>
+    <DefaultSecondParties>
+      <Item>
+        <Profile>31099</Profile>
+      </Item>
+      <Item>
+        <Profile>31100</Profile>
+      </Item>
+      <Item>
+        <Profile>31101</Profile>
+      </Item>
+    </DefaultSecondParties>
+  </ModOp>
+  
+  <!-- TODO: noch irgendwie das research feature unlocken "Du musst Wissen erlangen, bevor du Entdeckungen erforschen kannst" Du musst &lt;b&gt;Wissen&lt;/b&gt; erlangen, bevor du Entdeckungen erforschen kannst. -->
+  <!-- lua TechHandler:CheatToggleResearchAll() -->
+  <!-- <ModOp GUID='41,600069,600070,42' Merge="TechHandler"> -->
+    <!-- <HasResearchedAll>1</HasResearchedAll> -->
+  <!-- </ModOp> -->
+
+  <!-- schneller schiffe bauen (piratenschiffe erben hiervon!) -->
+  <!-- <ModOp Property="Craftable" Merge=".[not(CraftingTime) or CraftingTime&gt;5000]"> -->
+    <!-- <CraftingTime>5000</CraftingTime> -->
+  <!-- </ModOp> -->
+  <!-- <ModOp Type="merge" Path="//Values/Craftable[not(CraftingTime) or CraftingTime&gt;5000]"> -->
+    <!-- <CraftingTime>5000</CraftingTime> -->
+  <!-- </ModOp> -->
+  
+  <Assets>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500000000</GUID>
+          <Name>Unlock and load both sessions at start</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition />
+              <ConditionAlwaysTrue />
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnlockAssets>
+                      <Item>
+                        <Asset>3245</Asset>
+                      </Item>
+                      <Item>
+                        <Asset>6627</Asset>
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+            <Item>
+              <TriggerAction>
+                <Template>ActionLoadSession</Template>
+                <Values>
+                  <Action/>
+                  <ActionLoadSession>
+                    <LoadSession>3245</LoadSession>
+                  </ActionLoadSession>
+                </Values>
+              </TriggerAction>
+            </Item>
+            <Item>
+              <TriggerAction>
+                <Template>ActionLoadSession</Template>
+                <Values>
+                  <Action/>
+                  <ActionLoadSession>
+                    <LoadSession>6627</LoadSession>
+                  </ActionLoadSession>
+                </Values>
+              </TriggerAction>
+            </Item>
+            <!-- add alot of money -->
+            <!-- <Item> -->
+              <!-- <TriggerAction> -->
+                <!-- <Template>ActionAddGoodsToItemContainer</Template> -->
+                <!-- <Values> -->
+                  <!-- <Action/> -->
+                  <!-- <ActionAddGoodsToItemContainer> -->
+                    <!-- <Goods> -->
+                      <!-- <Item> -->
+                        <!-- <Good> -->
+                          <!-- <Value>1010017</Value> -->
+                        <!-- </Good> -->
+                        <!-- <Amount> -->
+                          <!-- <Value>10000000</Value> -->
+                        <!-- </Amount> -->
+                      <!-- </Item> -->
+                    <!-- </Goods> -->
+                  <!-- </ActionAddGoodsToItemContainer> -->
+                  <!-- <LocationFilter/> -->
+                <!-- </Values> -->
+              <!-- </TriggerAction> -->
+            <!-- </Item> -->
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>1</AutoRegisterTrigger>
+          <UsedBySecondParties>1</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </Assets>
+
+</ModOps>

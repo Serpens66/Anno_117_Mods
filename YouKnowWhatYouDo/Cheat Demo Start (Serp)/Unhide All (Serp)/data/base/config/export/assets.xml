@@ -1,0 +1,60 @@
+<ModOps>
+  
+  <!-- Serp GUIDs 1500000001 -->
+  <!-- 1500000002 is in shared mod "copy-pools-ap-constructioncategory-buildings-serp" -->
+  
+  
+  <Assets>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500000001</GUID>
+          <Name>Unhide all ships und units and buildings</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition />
+              <ConditionAlwaysTrue />
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnhideAssets>
+                      <!-- All Ships -->
+                      <Item>
+                        <Asset>30827</Asset>
+                      </Item>
+                      <!-- Military Land Units -->
+                      <Item>
+                        <Asset>109990</Asset>
+                      </Item>
+                      <!-- buildings -->
+                      <Item>
+                        <Asset>1500000002</Asset>
+                      </Item>
+                    </UnhideAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>1</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </Assets>
+  
+  
+  
+</ModOps>

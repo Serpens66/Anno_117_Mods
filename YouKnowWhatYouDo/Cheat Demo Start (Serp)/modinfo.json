@@ -1,0 +1,37 @@
+{
+  "Version": "1.0",
+  "ModID": "cheat-demo-start-serp",  
+  "Anno": 8,  
+  "IncompatibleIds": [],
+  "ModDependencies": null,
+  "LoadAfterIds": [],
+  "Category": {
+    "English": "Gameplay"
+  },
+  "ModName": {
+    "English": "Cheat Demo Start (Serp)"
+  },
+  "Description": {
+    "German": "A cheat start for the Anno117 Demo. Different starting situation than in demo. Everything unlocked, everything researched and ignoring buildcosts."
+  },
+  "KnownIssues": [
+    {
+      "English": null
+    }
+  ],
+  "Difficulty": "cheat",
+  "GameSetup": {
+    "RequiresNewGame": true,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "Scripts": {
+    "Modules": [
+      "data/democheat_serp.lua"
+    ]
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66"
+}
