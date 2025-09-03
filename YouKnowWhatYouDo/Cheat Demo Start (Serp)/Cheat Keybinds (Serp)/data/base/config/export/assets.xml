@@ -1,6 +1,5 @@
 <ModOps>
 
-    
     <!-- Alt+F4 should force quit the game without saving -->
     <ModOp Type="merge" GUID='2001271' Path="/Values/ShortcutConfig/InputBindings/Item[InputTypes/Modern/KeyType='Alt;F4']">
       <Command>Game:FastQuit(1)</Command>
@@ -13,7 +12,7 @@
         <!-- Cheats is nil currently, hopefully enabled in full release -->
         <!-- <Item> -->
           <!-- <Command>Cheats:ToggleConsole();</Command> -->
-          <!-- <Text>-6903073957892729392</Text> -->
+          <!-- <Text>1500000000</Text> -->
           <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
           <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
           <!-- <AudioEvent>200634</AudioEvent> -->
@@ -32,7 +31,7 @@
         
         <Item>
           <Command>Mods:LoadMods();</Command>
-          <Text>-6903073957892729392</Text>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -51,7 +50,7 @@
         
         <Item>
           <Command>Cheat.GlobalCheats:ToggleUpgradeCheck()</Command>
-          <Text>-6903073957892729392</Text>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -71,7 +70,7 @@
         <!-- no buildcosts for everything (costs are still subsctracted, so you can go bancrupt!) -->
         <Item>
           <Command>Cheat.GlobalCheats:ToggleIgnoreBuildingCosts()</Command>
-          <Text>-6903073957892729392</Text>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -88,10 +87,10 @@
           </InputTypes>
         </Item>
         
-        <!-- ToggleSuperShipSpeed funzt nicht -->
+        <!-- ToggleSuperShipSpeed does not work, most likely because the renameing from Walking to Movement? -->
         <Item>
           <Command>Cheat.GlobalCheats:ToggleSuperShipSpeed()</Command>
-          <Text>-6903073957892729392</Text>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -111,7 +110,7 @@
         <!-- credit 1000 of every unlocked good -->
         <Item>
           <Command>if Area.IsCurrentAreaValidIsland then Area.Current.Economy:AddAmount(1000) end;</Command>
-          <Text>-6903073957892729392</Text>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -131,7 +130,7 @@
         <!-- money -->
         <Item>
           <Command>Economy.MetaStorage:AddAmount(1010017,100000)</Command>
-          <Text>-6903073957892729392</Text>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -148,10 +147,10 @@
           </InputTypes>
         </Item>
         
-        <!-- instant ship/unit production of currently selected shipyards production (does not work, not sure why) -->
+        <!-- instant ship/unit production of currently selected shipyards production -->
         <Item>
-          <Command>Selection.Object.Shipyard.CheatSkipRemainingTime();Selection.Object.Recruitment.CheatSkipRemainingTime();</Command>
-          <Text>-6903073957892729392</Text>
+          <Command>Selection.Object.Recruitment:CheatSkipRemainingTime();</Command>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -168,10 +167,10 @@
           </InputTypes>
         </Item>
         
-        <!-- finish a portion of selected monument building phase, hit multiple times to finish it (does not work, not sure why) -->
+        <!-- finish a portion of selected monument building phase, hit multiple times to finish it -->
         <Item>
-          <Command>Selection.Object.Monument.CheatUpgradeMicro()</Command>
-          <Text>-6903073957892729392</Text>
+          <Command>Selection.Object.Monument:CheatUpgradeMicro()</Command>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -194,7 +193,7 @@
          <!-- Alternative: CheatChangePopulation. It adds 500 of every unlocked residence to the global population (after unlock of new pop the amount is the same for all pops) -->
         <Item>
           <Command>AreaPopulation:CheatChangePopulation(true)</Command>
-          <Text>-6903073957892729392</Text>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -214,7 +213,7 @@
          <!-- CompleteTechResearch or ResetTech for all existing techs -->
         <Item>
           <Command>TechHandler:CheatToggleResearchAll()</Command>
-          <Text>-6903073957892729392</Text>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -232,9 +231,10 @@
         </Item>
         
         <!-- increase attractivity of current island by 1000 (false->decrease true->increase,false->100 true->1000) -->
+        <!-- Im not sure of attractivity exists in 117?! -->
         <Item>
-          <Command>Attractivity.CheatChangeAttractivityNet(true,true)</Command>
-          <Text>-6903073957892729392</Text>
+          <Command>Attractivity:CheatChangeAttractivityNet(true,true)</Command>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -251,10 +251,10 @@
           </InputTypes>
         </Item>
         
-        <!-- add the needed fertility from the currently selected factory to the island (does not work, not sure why) -->
+        <!-- add the needed fertility from the currently selected factory to the island -->
         <Item>
-          <Command>Selection.Object.Factory.ToggleCheatFertility()</Command>
-          <Text>-6903073957892729392</Text>
+          <Command>Selection.Object.Factory:ToggleCheatFertility()</Command>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>
@@ -271,10 +271,10 @@
           </InputTypes>
         </Item>
         
-        <!-- add random items to the current island. does not work -->
+        <!-- add random items to the current island. -->
         <Item>
-          <Command>Item.CheatAllItems()</Command>
-          <Text>-6903073957892729392</Text>
+          <Command>Item:CheatAllItems()</Command>
+          <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
           <AudioEvent>200634</AudioEvent>

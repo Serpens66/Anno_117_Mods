@@ -1,0 +1,10 @@
+<ModOps>
+
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500000000</LineId>
+      <Text>Cheat Keybind</Text>
+    </Text>
+  </ModOp>
+  
+</ModOps>
