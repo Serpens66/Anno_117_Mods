@@ -1,0 +1,38 @@
+<ModOps>
+    
+
+    <!-- trading with AI opponents and other humans gets slightly worse prices, but it is still good enough. -->
+    <!-- The PriceFactors here in PassiveTradeFeature define at what price (compared to BasePrice) the Parties put goods/items into  -->
+     <!-- their passive trade! So the prices here in 2nd and 3rd party are at the same time the active prices the human sees at their harbour  -->
+    <!-- The game unfortunately is only calculating with integers , so although it accepts PriceFactors being float here, for preferred goods it calcualtes like this: -->
+      <!-- 16 * 0.8 = 12(.8), 12 * 2 = 24 (instead of 12.8*2 = 25.6). -->
+    <ModOp Type="merge" GUID="140115" Path="/Values">
+        <PassiveTradeFeature>
+          <PriceFactors>
+            <!-- make passive trading at human harbor a better than the trading at third party harbor (activetrade) -->
+            <!-- Anno 117 can make the active trades better via preferred goods AND via BetterPriceGoodConfig,  -->
+            <!-- while passive trading is the one that has to be better, because only this is limited in amounts! (see Anno 1404) -->
+             <!-- better active tradding prices is just a money glitch -.- -->
+            <Human>
+              <GlobalProductSellPriceFactor>0.8</GlobalProductSellPriceFactor>
+              <GlobalProductBuyPriceFactor>1.5</GlobalProductBuyPriceFactor>
+            </Human>
+            <SecondParty>
+              <GlobalProductSellPriceFactor>0.8</GlobalProductSellPriceFactor>
+              <GlobalProductBuyPriceFactor>1.5</GlobalProductBuyPriceFactor>
+            </SecondParty>
+            <ThirdParty>
+              <GlobalProductSellPriceFactor>2</GlobalProductSellPriceFactor>
+              <GlobalProductBuyPriceFactor>0.5</GlobalProductBuyPriceFactor>
+            </ThirdParty>
+            <VirtualParticipant_NeverOwnsGameObjects>
+              <GlobalProductSellPriceFactor>2</GlobalProductSellPriceFactor>
+              <GlobalProductBuyPriceFactor>0.5</GlobalProductBuyPriceFactor>
+            </VirtualParticipant_NeverOwnsGameObjects>
+          </PriceFactors>
+        </PassiveTradeFeature>
+    </ModOp>
+    
+
+    
+</ModOps>
