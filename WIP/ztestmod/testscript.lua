@@ -11,11 +11,14 @@ end
 
 local status,err = xpcall(function()
   print("testscript called from xml")
-  Economy.MetaStorage:AddAmount(1010017,10000)
-  print("Mainnn")
-  print("isValid: ",Selection:isValid())
-  print("Object isValid: ",Selection.Object:isValid())
-  print("Mainnn",Selection.Object.GUID)
+  
+  -- Unlock:UnlockNet(2880)
+  
+  -- Economy.MetaStorage:AddAmount(1010017,1000)
+  -- print("Mainnn")
+  -- print("isValid: ",Selection:isValid())
+  -- print("Object isValid: ",Selection.Object:isValid())
+  -- print("Mainnn",Selection.Object.GUID)
   -- Selection.Object.ShipModuleOwner:CheatAddShipModule(31651)
   -- Selection.Object.ShipModuleOwner:CheatTryRemoveShipModule(31651)
   

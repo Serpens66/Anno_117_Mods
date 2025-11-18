@@ -376,12 +376,6 @@
                           </Amount>
                         </Item>
                       </Goods>
-                      <ItemContainerObjects>
-                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
-                        <Values>
-                          <ObjectFilter/>
-                        </Values>
-                      </ItemContainerObjects>
                     </ActionAddGoodsToItemContainer>
                     <LocationFilter/>
                   </Values>

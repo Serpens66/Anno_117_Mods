@@ -1,5 +1,6 @@
 <ModOps>
 
+  <!-- Serp GUIDs 1500000002 ,1500000003 , 1500000004, 1500000005 -->
   
   <ModOp Type="addNextSibling" GUID="31973">
     <Asset>
@@ -7,7 +8,33 @@
       <Values>
         <Standard>
           <GUID>1500000002</GUID>
-          <Name>AP - All Construction Menu Buildings</Name>
+          <Name>AP - All Construction Menu Buildings (includes Productionchains and some Categories, so everything which is listed in a buildmenu))</Name>
+        </Standard>
+        <AssetPool>
+          <AssetList>
+          </AssetList>
+        </AssetPool>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>AssetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1500000003</GUID>
+          <Name>AP - All ProductionChains</Name>
+        </Standard>
+        <AssetPool>
+          <AssetList>
+          </AssetList>
+        </AssetPool>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>AssetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1500000004</GUID>
+          <Name>AP - All Construction Categories</Name>
         </Standard>
         <AssetPool>
           <AssetList>
@@ -25,7 +52,24 @@
       </Asset>
     </Item>
   </ModOp>
-  
+  <!-- all ProductionChain -->
+  <ModOp Type="add" Path="@1500000003/AssetPool/AssetList"
+    Content="//Values[ProductionChain/Building]/Standard/GUID/text()">
+    <Item>
+      <Asset>
+        <ModOpContent />
+      </Asset>
+    </Item>
+  </ModOp>
+  <!-- all ConstructionCategory -->
+  <ModOp Type="add" Path="@1500000004/AssetPool/AssetList"
+    Content="//Values[ConstructionCategory/BuildingList/Item/Building]/Standard/GUID/text()">
+    <Item>
+      <Asset>
+        <ModOpContent />
+      </Asset>
+    </Item>
+  </ModOp>
   
   
 
