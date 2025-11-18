@@ -1,0 +1,30 @@
+{
+  "Version": "1.0",
+  "ModID": "display-buffs-from-others-serp",
+  "Anno": 8,  
+  "IncompatibleIds": null,
+  "ModDependencies": [],
+  "LoadAfterIds":["*"],  
+  "Category": {
+    "English": "Misc"
+  },
+  "ModName": {
+    "English": "Display Buffs from Others (Serp)"
+  },
+  "Description": {
+    "English": "All buffs active at other players objects are displayed when you click on the affected object. Downside is that the UI will partly hide the portrait from that player."
+  },
+  "Difficulty": "unchanged",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66",
+  "changelog": {
+    "1.0" : "Release"
+  }
+}

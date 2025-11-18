@@ -1,0 +1,30 @@
+{
+  "Version": "1.0",
+  "ModID": "change-multiplayer-gamespeed-serp",
+  "Anno": 8,  
+  "IncompatibleIds": null,
+  "ModDependencies": [],
+  "LoadAfterIds": [],
+  "Category": {
+    "English": "Misc"
+  },
+  "ModName": {
+    "English": "Change Multiplayer GameSpeed (Serp)"
+  },
+  "Description": {
+    "English": "Allows to change the gamespeed in Multiplayer"
+  },
+  "Difficulty": "unchanged",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66",
+  "changelog": {
+    "1.0" : "Release"
+  }
+}

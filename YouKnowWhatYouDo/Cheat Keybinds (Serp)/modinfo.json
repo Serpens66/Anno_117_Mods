@@ -4,7 +4,7 @@
   "Anno": 8,
   "IncompatibleIds": null,
   "ModDependencies": null,
-  "LoadAfterIds": null,
+  "LoadAfterIds": ["hot-reload-ubi"],
   "Category": {
     "English": "Cheat"
   },
@@ -12,7 +12,7 @@
     "English": "Cheat Keybinds (Serp)"
   },
   "Description": {
-    "English": "Adds several cheat commands to keybinds. Helpful to test mods or simply to cheat."
+    "English": "Adds several cheat commands to keybinds (see readme). Helpful to test mods or simply to cheat."
   },
   "Difficulty": "cheat",
   "GameSetup": {

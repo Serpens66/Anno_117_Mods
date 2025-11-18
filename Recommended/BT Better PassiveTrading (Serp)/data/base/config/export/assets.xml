@@ -1,5 +1,37 @@
 <ModOps>
     
+    <!-- In 1404 ist der Basispreis von Holz 4. -->
+    <!-- Dies ist auch der Preis den man beim aktiven Verkaufen bekommt. -->
+    
+    <!-- Beim Aktiven Kaufen hängt der Preis vom neutralen Händler ab, Gribaldi will 8 für 1 Holz haben. -->
+     <!-- und northburg 10 pro Holz. -->
+    <!-- Werkzeug hat Basispreis 36 , Northburg verkaufts aktiv für 90. gribaldi für 72 und ali für 66 -->
+     
+    <!-- Beim Einstellen in den passiven Handel ist der defaultpreis bei Holz immer 10, egal ob Kauf -->
+     <!-- oder Verkauf. Und Werkzeug ist 90 -->
+    <!-- Dh. passiver Kauf ist schlechter als aktiver Kauf. -->
+    <!-- Aber passiver Verkauf ist besser als aktiver Verkauf -->
+    
+    <!-- für Werkzeug wäre der mittelere preis 63 (+-27) -->
+    
+
+
+   <!-- In theory it should get more profit for activetrading, since you use your own ship and do the work yourself. -->
+   <!-- But the problem is that activetrading (with 3rd party) is unlimited -->
+   <!-- Das heißt der einzige Grund den passivhandel zu stärken, ist die fehlende Limitierung beim aktivhandel -->
+    <!-- mit thirdparty -->
+   
+   <!-- Egal wie wir den passivhandel hier stärken, am ende gibt es nur: -->
+   <!-- - Preferred goods (die nur im aktivhandel mehr geld geben) sind useless -->
+   <!-- - oder sie sind weiterhin profitabel, dann auch weiterhin unlimited. -->
+   <!-- -> egal wie, es ist kein gutes ergebnis -->
+   
+   <!-- können wir 3rd party in dieser hinsicht zu 2nd party machen, denn diese haben ja ein limit -->
+    <!-- wieviel sie kaufen/verkaufen... -->
+   
+   <!-- Daher ist meine Quests instead Preferred Lösung in 1800 wohl leider die Beste Lösung -->
+
+
 
     <!-- trading with AI opponents and other humans gets slightly worse prices, but it is still good enough. -->
     <!-- The PriceFactors here in PassiveTradeFeature define at what price (compared to BasePrice) the Parties put goods/items into  -->
@@ -7,30 +39,40 @@
     <!-- The game unfortunately is only calculating with integers , so although it accepts PriceFactors being float here, for preferred goods it calcualtes like this: -->
       <!-- 16 * 0.8 = 12(.8), 12 * 2 = 24 (instead of 12.8*2 = 25.6). -->
     <ModOp Type="merge" GUID="140115" Path="/Values">
-        <PassiveTradeFeature>
-          <PriceFactors>
-            <!-- make passive trading at human harbor a better than the trading at third party harbor (activetrade) -->
-            <!-- Anno 117 can make the active trades better via preferred goods AND via BetterPriceGoodConfig,  -->
-            <!-- while passive trading is the one that has to be better, because only this is limited in amounts! (see Anno 1404) -->
-             <!-- better active tradding prices is just a money glitch -.- -->
-            <Human>
-              <GlobalProductSellPriceFactor>0.8</GlobalProductSellPriceFactor>
-              <GlobalProductBuyPriceFactor>1.5</GlobalProductBuyPriceFactor>
-            </Human>
-            <SecondParty>
-              <GlobalProductSellPriceFactor>0.8</GlobalProductSellPriceFactor>
-              <GlobalProductBuyPriceFactor>1.5</GlobalProductBuyPriceFactor>
-            </SecondParty>
-            <ThirdParty>
-              <GlobalProductSellPriceFactor>2</GlobalProductSellPriceFactor>
-              <GlobalProductBuyPriceFactor>0.5</GlobalProductBuyPriceFactor>
-            </ThirdParty>
-            <VirtualParticipant_NeverOwnsGameObjects>
-              <GlobalProductSellPriceFactor>2</GlobalProductSellPriceFactor>
-              <GlobalProductBuyPriceFactor>0.5</GlobalProductBuyPriceFactor>
-            </VirtualParticipant_NeverOwnsGameObjects>
-          </PriceFactors>
-        </PassiveTradeFeature>
+      <PassiveTradeFeature>
+        <PriceFactors>
+          <!-- make passive trading at human harbor better than the trading at third party harbor (activetrade) -->
+          <!-- Anno 117 can make the active trades better via preferred goods AND via BetterPriceGoodConfig,  -->
+          <!-- while passive trading is the one that has to be better, because only this is limited in amounts! (see Anno 1404) -->
+           <!-- better active tradding prices is just a money glitch -.- -->
+           
+          <!-- <Human> -->
+            <!-- <GlobalProductSellPriceFactor>1</GlobalProductSellPriceFactor> -->
+            <!-- <GlobalProductBuyPriceFactor>1</GlobalProductBuyPriceFactor> -->
+          <!-- </Human> -->
+          <!-- <SecondParty> -->
+            <!-- <GlobalProductSellPriceFactor>1.5</GlobalProductSellPriceFactor> -->
+            <!-- <GlobalProductBuyPriceFactor>0.666</GlobalProductBuyPriceFactor> -->
+          <!-- </SecondParty> -->
+          <!-- <ThirdParty> -->
+            <!-- <GlobalProductSellPriceFactor>2</GlobalProductSellPriceFactor> -->
+            <!-- <GlobalProductBuyPriceFactor>0.5</GlobalProductBuyPriceFactor> -->
+          <!-- </ThirdParty> -->
+          <!-- <VirtualParticipant_NeverOwnsGameObjects> -->
+            <!-- <GlobalProductSellPriceFactor>2</GlobalProductSellPriceFactor> -->
+            <!-- <GlobalProductBuyPriceFactor>0.5</GlobalProductBuyPriceFactor> -->
+          <!-- </VirtualParticipant_NeverOwnsGameObjects> -->
+          
+          <Human>
+            <GlobalProductSellPriceFactor>0.9</GlobalProductSellPriceFactor>
+            <GlobalProductBuyPriceFactor>1.6</GlobalProductBuyPriceFactor>
+          </Human>
+          <SecondParty>
+            <GlobalProductSellPriceFactor>0.9</GlobalProductSellPriceFactor>
+            <GlobalProductBuyPriceFactor>1.6</GlobalProductBuyPriceFactor>
+          </SecondParty>
+        </PriceFactors>
+      </PassiveTradeFeature>
     </ModOp>
     
 

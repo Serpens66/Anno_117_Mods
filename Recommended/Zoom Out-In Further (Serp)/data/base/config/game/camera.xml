@@ -10,7 +10,6 @@
     <Preset ID="-2" Height="2.0" Pitch="0.8" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="2.0f" GamepadPanningSpeed="8.0f" Debug="false"/>
     <Preset ID="-1" Height="3.0" Pitch="0.8" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="3.0f" GamepadPanningSpeed="8.0f" Debug="false"/>
     
-
     <Preset ID="21" Height="200" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="67.0f" GamepadPanningSpeed="112.0f"/>
     <Preset ID="22" Height="230" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="70.0f" GamepadPanningSpeed="120.0f"/>
     <Preset ID="23" Height="260" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="73.0f" GamepadPanningSpeed="128.0f"/>
@@ -26,6 +25,12 @@
     
   </ModOp>
   
+    <!-- <ModOp Add="Normal/Presets"> -->
+      <!-- <Amount><ModValue Insert="self::node() * $factor"/></Amount> -->
+      
+      <!-- <Preset ID="33" Height="20* $factor0" Pitch="0.875" MinPitch="-0.375" MaxPitch="1.40" Fov="0.7" ExtendedZoom="true" EdgeScrollingSpeed="67.0f" GamepadPanningSpeed="112.0f"/> -->
+      
+    <!-- </ModOp> -->
 
   
   <ModOp Type="merge" Path="Normal/Settings">

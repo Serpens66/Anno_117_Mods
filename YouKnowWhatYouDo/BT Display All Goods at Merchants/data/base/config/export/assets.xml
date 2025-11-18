@@ -1,0 +1,19 @@
+<ModOps>
+
+  <!-- TODO: -->
+   <!-- noch so schreiben, dass vorhandene Einträge nicht überschrieben werden -->
+   
+
+  <ModOp Type='merge' Path='//Values/Trader/OfferedGoods/Item/Goods'
+    Content="@3415/ProductStorageList/ProductList/Item/Product/text()">
+    <Item>
+      <Good>
+        <ModOpContent />
+      </Good>
+      <Limit>50</Limit>
+      <ProductionPerMinute>0.01</ProductionPerMinute>
+    </Item>
+  </ModOp>
+
+
+</ModOps>

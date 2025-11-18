@@ -22,6 +22,15 @@
     "Multiplayer": true,
     "Campaign": true
   },
+  "Options": {
+    "range": {
+      "label": "factor0",
+      "type": "enum",
+      "default": "10",
+      "values": [ "10", "20", "30" ],
+      "labels": [ "10 Street Range", "20 Street Range", "30 Street Range" ]
+    },
+  },
   "DLCDependencies": null,
   "CreatorName": "Serp",
   "CreatorContact": "https://github.com/Serpens66"

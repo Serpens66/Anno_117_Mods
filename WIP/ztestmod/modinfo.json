@@ -1,0 +1,41 @@
+{
+  "Version": "1.0",
+  "ModID": "testmod-serp",  
+  "Anno": 8,  
+  "IncompatibleIds": [],
+  "ModDependencies": null,
+  "LoadAfterIds": [],
+  "Category": {
+    "English": "Gameplay"
+  },
+  "ModName": {
+    "English": "testmod"
+  },
+  "Description": {
+    "German": "testmod"
+  },
+  "KnownIssues": [
+    {
+      "English": null
+    }
+  ],
+  "Scripts": {
+    "Modules": [
+      "data/testscript_main.lua"
+    ],
+    "Init": "TestMod = require(\"testscript_main\")",
+    "Load": "TestMod:GameLoaded()",
+    "Unload": "TestMod:GameUnloaded()",
+    "Tick": "TestMod:Tick()"
+  },
+  "Difficulty": "cheat",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66"
+}

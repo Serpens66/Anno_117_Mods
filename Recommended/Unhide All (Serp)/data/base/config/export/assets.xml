@@ -4,7 +4,7 @@
   <!-- 1500000002 is in shared mod "copy-pools-ap-constructioncategory-buildings-serp" -->
   
   
-  <Assets>
+  <ModOp Type="AddNextSibling" GUID='55268'>
     <Asset>
       <Template>Trigger</Template>
       <Values>
@@ -53,7 +53,8 @@
         </TriggerSetup>
       </Values>
     </Asset>
-  </Assets>
+  
+  </ModOp>
   
   
   

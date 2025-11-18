@@ -1,0 +1,19 @@
+<ModOps>
+  
+  <!-- TODO: -->
+    <!-- es gibt nur sehr wenige assets mit dem Buff property?! wird also eventuell nun anders gemacht, iwie Effect? -->
+    <!-- gibts zwar, aber ist nichts vergleichbares zu ShouldBeShownInForeignObjectMenu.. -->
+     <!-- also mal rausfinden wie zb. Glaubens-Schiffbuffs bei schiffen angezeigt werden -->
+  <!-- ok schiff Patron Buff ist ein normaler Buff: NeptunShipBuff -->
+  
+    <!-- change the templates, so showing buffs is the default behaviour. -->
+     <!-- if a mod still does not want to to display, it can set it explicit to 0 in assets.xml -->
+    
+    <ModOp Type="merge" Path="//Properties/Buff">
+      <ShouldBeShownInForeignObjectMenu>1</ShouldBeShownInForeignObjectMenu>
+    </ModOp>
+
+  
+  
+  
+</ModOps>

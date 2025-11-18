@@ -1,0 +1,38 @@
+{
+  "Version": "1.0",
+  "ModID": "display-passive-tradegoods-serp",
+  "Anno": 8,  
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "LoadAfterIds": ["*"],
+  "Category": {
+    "Chinese": "游戏玩法",
+    "English": "Gameplay",
+    "German": "Gameplay"
+  },
+  "ModName": {
+    "Chinese": "BT 商品贸易数量显示 (Serp)",
+    "English": "BT Display All Goods at Merchants (Serp)",
+    "German": "BT Zeige alle Güter von Händlern an (Serp)"
+  },
+  "Description": {
+    "Chinese": "可以在创建贸易界面查看AI商品需求数量和AI商品提供数量。",
+    "English": "In Anno 1800 Passive Traders can only sell to you what they have in stock. But you only see few of the goods they have -> the ones they -produce- themself you see in the active tradescreen. They can not sell other goods even as passive trade than these, except if they bought them from you or another player. This mod adds all goods from the game to the active tradescreen from all merchants so you 1) see how much of each good they have and if it is worth to put something in the -buy- from passive trade and 2) can buy them active (if they have some in stock).  I recommend my other mod -Merchants Produce All Goods- if you want merchants to automatically have a small stack of everything.",
+    "German": "In Anno 1800 können die passiven Händler nur das verkaufen, was sie auch auf Lager haben. Normalerweise sind das nur die Güter die sie selbst aktiv -produzieren-, diese siehst du im Aktivhandel an ihrem Kontor. Sie können auch im Passivhandel keine anderen Waren verkaufen, außer sie haben sie vorher von dir oder einem anderen Spieler kaufen können. Dieser Mod fügt alle Güter des Spiels zum Aktivhandelsmenü aller Händler hinzu, so dass du nun sehen kannst, ob und welche Waren die Händler auf Lager haben und es sich demnach lohnt eine Waren in den passiven Einkauf zu setzen und 2) du diese Waren auch aktiv kaufen kannst (sofern welche auf Lager sind). Ich empfehle dazu noch meinen Mod -Merchants Produce All Goods- wenn ihr möchtet, dass die Händler von allen Waren ein wenig auf Lager haben, auch ohne es zuvor von einem Spieler gekauft zu haben."
+  },
+  "KnownIssues": [],
+  "Difficulty": "cheat",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66",
+  "ModioResourceId": 3310514,
+  "changelog": {
+    "1.021" : "Add ModioResourceId to modinfo.json"
+  }
+}
