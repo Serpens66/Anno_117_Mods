@@ -1,5 +1,5 @@
 {
-  "Version": "1.0",
+  "Version": "0.1",
   "ModID": "change-multiplayer-gamespeed-serp",
   "Anno": 8,  
   "IncompatibleIds": null,
@@ -20,6 +20,14 @@
     "SafeToRemove": true,
     "Multiplayer": true,
     "Campaign": true
+  },
+  "Scripts": {
+    "Modules": [
+      "data/gamespeed_serp.lua"
+    ],
+    "Init": "GameSpeed_Serp = require(\"gamespeed_serp\")",
+    "Load": "GameSpeed_Serp:GameLoaded()",
+    "Unload": "GameSpeed_Serp:GameUnloaded()"
   },
   "DLCDependencies": null,
   "CreatorName": "Serp",

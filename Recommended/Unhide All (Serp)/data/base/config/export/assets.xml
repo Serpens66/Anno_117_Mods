@@ -36,9 +36,13 @@
                       <Item>
                         <Asset>109990</Asset>
                       </Item>
-                      <!-- buildings -->
+                      <!-- all direct construction menu entries -->
                       <Item>
                         <Asset>1500000002</Asset>
+                      </Item>
+                      <!-- all buildings -->
+                      <Item>
+                        <Asset>1500000005</Asset>
                       </Item>
                     </UnhideAssets>
                     <!-- ProductionChain and ConstructionCategory must be unlocked to expand and see their content -->

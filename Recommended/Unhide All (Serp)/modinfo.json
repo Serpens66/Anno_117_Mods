@@ -1,5 +1,5 @@
 {
-  "Version": "1.01",
+  "Version": "1.022",
   "ModID": "unhide-all-ships-and-buildings-serp",
   "Anno": 8,  
   "IncompatibleIds": null,
@@ -27,6 +27,9 @@
   "ModioResourceId" : 5426387,
   "changelog": {
     "1.0" : "Release",
-    "1.01" : "Unlock all ProductionChains and Categories, so you can also see them (buildings still locked)"
+    "1.01" : "Unlock all ProductionChains and Categories, so you can also see them (buildings still locked)",
+    "1.02" : "No changes, test update to see if discord modbot messeage works now",
+    "1.021" : "No changes, test update to see if discord modbot messeage works now",
+    "1.022" : "Add 'All Buildings' Pool to shared mod."
   }
 }

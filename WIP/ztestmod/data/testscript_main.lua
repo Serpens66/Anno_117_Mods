@@ -70,6 +70,17 @@ function TestMod.Main()
       -- print(_VERSION) -- lua version: Luau ist eine von Lua 5.1 abgeleitete Skriptsprache, die speziell für Roblox entwickelt wurde und in Roblox Studio verwendet wird. Sie ist bekannt für ihre Geschwindigkeit, Sicherheit und schrittweise Typisierung
       
       
+      -- and we can not use global variables in different scripts anymore?!
+    
+  -- funktioniert nicht mehr vanilla funktionen zu überschreiben... no writable member 'SetGameSpeed'
+  -- local SetGameSpeed_old = GameClock.SetGameSpeed -- overwriting this to be notified whenever it is called anywhere, even other mods
+  -- GameClock.SetGameSpeed = function(self, gameSpeed) -- no need to do it for IncreaseGameSpeed/DecreaseGameSpeed because they dont work well anyways (once slowest is reached, you can not increase anymore, so no modder should use them anyways)
+    -- print("gamespeed_serp.lua : GameClock:SetGameSpeed called with: "..tostring(gameSpeed))
+    -- GameSpeed_Serp.CurrentGameSpeed = gameSpeed
+    -- return SetGameSpeed_old(gameSpeed)
+  -- end
+      
+      
       
       -- source: https://stackoverflow.com/questions/65482605/how-to-print-all-values-in-a-lua-table
       local sort, rep, concat = table.sort, string.rep, table.concat
@@ -155,7 +166,7 @@ function TestMod.Main()
       -- Online.GetCoopPeersAtMarker(id , customValue )
       -- Cheats:UnloadSession(GUID)
 
-      -- Selection.Object.Position
+      -- Selection.Object.Position -- Vector3: 0x1fcbc1334b8
 
       -- Cheats:ToggleConsole()
       

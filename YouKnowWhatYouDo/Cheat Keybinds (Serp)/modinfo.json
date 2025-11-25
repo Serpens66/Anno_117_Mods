@@ -1,5 +1,5 @@
 {
-  "Version": "1.01",
+  "Version": "1.011",
   "ModID": "cheat-keybinds-serp",
   "Anno": 8,
   "IncompatibleIds": null,
@@ -26,6 +26,7 @@
   "CreatorContact": "https://github.com/Serpens66",
   "ModioResourceId" : 5426208,
   "changelog": {
-    "1.01" : "Release"
+    "1.01" : "Release",
+    "1.011" : "- Add keybind 'Shift;Home' to instant research the current active research (thanks JohnyBgood)"
   }
 }

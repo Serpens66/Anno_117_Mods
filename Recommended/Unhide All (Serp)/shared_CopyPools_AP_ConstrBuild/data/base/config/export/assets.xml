@@ -8,7 +8,7 @@
       <Values>
         <Standard>
           <GUID>1500000002</GUID>
-          <Name>AP - All Construction Menu Buildings (includes Productionchains and some Categories, so everything which is listed in a buildmenu))</Name>
+          <Name>AP - All Construction Menu Buildings (includes Productionchains and some Categories, so everything which is listed in a buildmenu, does NOT include the buildings inside a ProductionChain))</Name>
         </Standard>
         <AssetPool>
           <AssetList>
@@ -42,8 +42,21 @@
         </AssetPool>
       </Values>
     </Asset>
+    <Asset>
+      <Template>AssetPool</Template>
+      <Values>
+        <Standard>
+          <GUID>1500000005</GUID>
+          <Name>AP - All Buildings</Name>
+        </Standard>
+        <AssetPool>
+          <AssetList>
+          </AssetList>
+        </AssetPool>
+      </Values>
+    </Asset>
   </ModOp>
-  <!-- add all buildings from any ConstructionCategory -->
+  <!-- add all entries from any ConstructionCategory -->
   <ModOp Type="add" Path="@1500000002/AssetPool/AssetList"
     Content="//Values/ConstructionCategory/BuildingList/Item/Building/text()">
     <Item>
@@ -64,6 +77,15 @@
   <!-- all ConstructionCategory -->
   <ModOp Type="add" Path="@1500000004/AssetPool/AssetList"
     Content="//Values[ConstructionCategory/BuildingList/Item/Building]/Standard/GUID/text()">
+    <Item>
+      <Asset>
+        <ModOpContent />
+      </Asset>
+    </Item>
+  </ModOp>
+  <!-- all Buildings -->
+  <ModOp Type="add" Path="@1500000005/AssetPool/AssetList"
+    Content="//Values[Building and Constructable]/Standard/GUID/text()">
     <Item>
       <Asset>
         <ModOpContent />

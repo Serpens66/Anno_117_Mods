@@ -259,6 +259,26 @@
           <!-- </InputTypes> -->
         <!-- </Item> -->
         
+        
+        <Item>
+          <Command>local currentTech = TechHandler:GetTechAtQueuePosition(0);if currentTech and currentTech.Guid then TechHandler:CompleteTechResearch(currentTech.Guid, true);end</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Shift;Home</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Shift;Home</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
         <!-- add the needed fertility from the currently selected factory to the island -->
         <Item>
           <Command>Selection.Object.Factory:ToggleCheatFertility()</Command>

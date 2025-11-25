@@ -1,4 +1,4 @@
-print("testscript called from xml1")
+print("testscript called from xml start")
 
 -- can be used as error_handler for xpcall. only within xpcall error_handler we can access the full traceback
 -- xpcall(fn,error_handler,...)
@@ -9,10 +9,30 @@ local function log_error(err)
   return fullerr
 end
 
+
 local status,err = xpcall(function()
   print("testscript called from xml")
+    
   
+
+    
+  -- print(datasets.GameSpeed)
+    
+  -- print(Participants.Current.ProfileCounter.Stats:GetCounter(0 , 36 , 40562 , 3 ))
+    
+  -- Conditions:RegisterTriggerForCurrentParticipantNet(1500001011)
+  
+  -- GameClock:SetGameSpeed(4)
+  
+  -- print(Selection.Object.Position)  
+  
+  -- print(Cheat:isValid()) 
+  -- Item:CheatAllItems()
   -- Unlock:UnlockNet(2880)
+  
+  -- local currentTech = TechHandler:GetTechAtQueuePosition(0);if currentTech and currentTech.Guid then TechHandler:CompleteTechResearch(currentTech.Guid, true);end
+  
+  -- Cheat.GlobalCheats:ToggleIgnoreFertilities()
   
   -- Economy.MetaStorage:AddAmount(1010017,1000)
   -- print("Mainnn")
@@ -23,8 +43,11 @@ local status,err = xpcall(function()
   -- Selection.Object.ShipModuleOwner:CheatTryRemoveShipModule(31651)
   
   -- print(Area.Current.Fertilities)
-  -- for k,v in pairs() do
+  -- for k,v in pairs(getmetatable(Cheats)) do
+  -- for k,v in pairs(Unlock) do
     -- print(k,v)
   -- end
   
 end,log_error)
+
+

@@ -1,2 +1,0 @@
-TextSources.TextSourceRoots.GameClock.SetSetGameSpeed(4)
-TextSources.TextSourceRoots.Conditions.RegisterTriggerForCurrentParticipant(1999003473) -- notification

@@ -6,6 +6,10 @@
   <!-- Infotip with MoreTooltips mod, beim Hovern über ObjectIcon, um Infos über fremde Schiffe anzuzeigen -->
   <!-- ObjectmenuForeignScene InfoTip  -->
     
+  <!-- einen General Enemy pro Human machen, damit diese sich nicht gegenseitig beeinflussen. -->
+  <!-- als shared mod machen und evlt für eigene Quests nutzen.  -->
+  <!-- Und evlt. auch gucken ob und bei welchen vanilla Quests das sinnvoll wäre, ist evtl. aber kompliziert einzubauen das nach human zu unterscheiden -->
+    
   <!-- Mod mit der man die module eines fertigen schiffes ändern kann, falls vanilla das nicht zufügt: -->
     <!-- function CPropertyShipModuleOwner.CheatAddShipModule(self, shipModuleGuid ) end -->
     <!-- function CPropertyShipModuleOwner.CheatTryRemoveShipModule(self, shipModuleGuid ) end -->
@@ -535,6 +539,85 @@
         </Values>
       </Asset>
       
+      
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1500000030</GUID>
+            <Name>Credit Emperor Reputation for every Monument Event</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionPlayerCounter</Template>
+              <Values>
+                <Condition/>
+                 <ConditionPlayerCounter>
+                  <PlayerCounter>MonumentEventsFinished</PlayerCounter>
+                  <Context>40562</Context>
+                  <CounterAmount>1</CounterAmount>
+                </ConditionPlayerCounter>
+                <ConditionLocationProps/>
+                <ConditionCounterProps>
+                  <RelativeToQuestStart>1</RelativeToQuestStart>
+                </ConditionCounterProps>
+                <ConditionPropsComparable/>
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionAddGoodsToItemContainer</Template>
+                  <Values>
+                    <Action/>
+                    <ActionAddGoodsToItemContainer>
+                      <Goods>
+                        <Item>
+                          <Good>
+                            <Value>1010017</Value>
+                          </Good>
+                          <Amount>
+                            <Value>100000</Value>
+                          </Amount>
+                        </Item>
+                      </Goods>
+                    </ActionAddGoodsToItemContainer>
+                    <LocationFilter/>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            
+              <Item>
+                <TriggerAction>
+                  <Template>ActionChangeReputation</Template>
+                  <Values>
+                      <Action />
+                      <ActionChangeReputation>
+                          <UseProcessingParticipant>1</UseProcessingParticipant>
+                          <Amount>
+                              <Value>3</Value>
+                          </Amount>
+                      </ActionChangeReputation>
+                  </Values>
+                </TriggerAction>
+              </Item>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionResetTrigger</Template>
+                  <Values>
+                    <Action />
+                    <ActionResetTrigger />
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup>
+            <AutoRegisterTrigger>1</AutoRegisterTrigger>
+            <UsedBySecondParties>0</UsedBySecondParties>
+          </TriggerSetup>
+        </Values>
+      </Asset>
       
       <!-- <Asset> -->
         <!-- <BaseAssetGUID>3245</BaseAssetGUID> -->
@@ -1284,10 +1367,15 @@
    
 
     <!-- Remove reroll cost  Diana -->
-    <ModOp Type="Merge" GUID="32777" Path="Values/Trader">
+    <ModOp Type="Merge" GUID="32777" Path="/Values/Trader">
         <TraderDefaultItemRerollCosts>0</TraderDefaultItemRerollCosts>
         <TraderDefaultItemRerollCostIncrease>0</TraderDefaultItemRerollCostIncrease>
     </ModOp>
+    
+    
+  <ModOp Type="replace" GUID='37853' Path="/Values/Trigger/SubTriggers/Item/SubTrigger/Values/Trigger/TriggerCondition/Values/ConditionNeedAttributeCounter/NeedAttributeAmount">
+    <NeedAttributeAmount>999</NeedAttributeAmount>
+  </ModOp>
 
 
 </ModOps>
