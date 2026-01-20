@@ -1,0 +1,74 @@
+<ModOps>
+  
+  <!-- Serp GUIDs 1500000010,1500000011, 15000000012,1500000013,1500000014 -->
+  <!-- 1500000002,1500000003,1500000004,1500000005 is in shared mod "copy-pools-ap-constructioncategory-buildings-serp" -->
+  
+  
+  <ModOp Type="AddNextSibling" GUID='55268'>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500000010</GUID>
+          <Name>Unlock all ships und units and buildings</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition />
+              <ConditionAlwaysTrue />
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionUnlockAsset</Template>
+                <Values>
+                  <Action />
+                  <ActionUnlockAsset>
+                    <UnlockAssets>
+                      <!-- ProductionChains -->
+                      <Item>
+                        <Asset>1500000003</Asset>
+                      </Item>
+                      <!-- ConstructionCategories -->
+                      <Item>
+                        <Asset>1500000004</Asset>
+                      </Item>
+                      <!-- All Ships -->
+                      <Item>
+                        <Asset>30827</Asset>
+                      </Item>
+                      <!-- Military Land Units -->
+                      <Item>
+                        <Asset>109990</Asset>
+                      </Item>
+                      <!-- all direct construction menu entries -->
+                      <Item>
+                        <Asset>1500000002</Asset>
+                      </Item>
+                      <!-- all buildings -->
+                      <Item>
+                        <Asset>1500000005</Asset>
+                      </Item>
+                    </UnlockAssets>
+                  </ActionUnlockAsset>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>1</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    
+  
+  </ModOp>
+  
+  
+  
+</ModOps>

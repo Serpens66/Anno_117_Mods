@@ -1,0 +1,31 @@
+{
+  "Version": "1.0",
+  "ModID": "unlock-all-ships-and-buildings-serp",
+  "Anno": 8,  
+  "IncompatibleIds": null,
+  "ModDependencies": [],
+  "LoadAfterIds": [],
+  "Category": {
+    "English": "Misc"
+  },
+  "ModName": {
+    "English": "Unlock All Ships/Units and Buildings (Serp)"
+  },
+  "Description": {
+    "English": "Unlocks all buildings/ships/units as soon as this mod is loaded (also from mods)."
+  },
+  "Difficulty": "cheat",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66",
+  "ModioResourceId" : 0,
+  "changelog": {
+    "1.0" : "Release"
+  }
+}

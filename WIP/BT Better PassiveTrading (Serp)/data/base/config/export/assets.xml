@@ -1,5 +1,19 @@
 <ModOps>
     
+    
+    <!-- <AreaPassiveTradeUpgrade> -->
+      <!-- <PassiveTradeReward> -->
+        <!-- <Item> -->
+          <!-- <RewardProduct>2139</RewardProduct> -->
+          <!-- <RewardAmount>1</RewardAmount> -->
+          <!-- <SoldProduct>2171</SoldProduct> -->
+          <!-- <SoldAmount>10</SoldAmount> -->
+        <!-- </Item> -->
+      <!-- </PassiveTradeReward> -->
+    <!-- </AreaPassiveTradeUpgrade> -->
+    
+    
+    <!-- ################# -->
     <!-- In 1404 ist der Basispreis von Holz 4. -->
     <!-- Dies ist auch der Preis den man beim aktiven Verkaufen bekommt. -->
     

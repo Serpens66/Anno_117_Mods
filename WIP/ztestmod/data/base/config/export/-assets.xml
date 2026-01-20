@@ -1,0 +1,1566 @@
+<ModOps>
+    
+  <!-- https://github.com/jakobharder/anno-mod-loader/blob/main/doc/modloader-changes.md -->
+    
+  <!-- TODO:  -->
+  <!-- Infotip with MoreTooltips mod, beim Hovern über ObjectIcon, um Infos über fremde Schiffe anzuzeigen -->
+  <!-- ObjectmenuForeignScene InfoTip  -->
+    
+  <!-- einen General Enemy pro Human machen, damit diese sich nicht gegenseitig beeinflussen. -->
+  <!-- als shared mod machen und evlt für eigene Quests nutzen.  -->
+  <!-- Und evlt. auch gucken ob und bei welchen vanilla Quests das sinnvoll wäre, ist evtl. aber kompliziert einzubauen das nach human zu unterscheiden -->
+    
+  <!-- Mod mit der man die module eines fertigen schiffes ändern kann, falls vanilla das nicht zufügt: -->
+    <!-- function CPropertyShipModuleOwner.CheatAddShipModule(self, shipModuleGuid ) end -->
+    <!-- function CPropertyShipModuleOwner.CheatTryRemoveShipModule(self, shipModuleGuid ) end -->
+    
+    
+  <!-- gibt kein <ResetTrigger> mehr -->
+    <!-- IsOptional funzt aktuell nicht mehr richtig, die subtrigger actions werden nicht ausgeführt, obwohl wahr, solange IsOptional=1 ist -->
+    <!-- mit IsOptional=0 werden sie ausgeführt. Liegt an dem neuen internen System wie das abgearbeitet wird, ist nämlich tatsächlich jetzt mit delay und dieser sorgt dafür, dass alles mit IsOptional als unwahr gilt zum Zeitpunkt des Prüfens, weil das Prüfen erst im nächsten Tick kommt -->
+    <!-- Also conditions/actions in Triggern werden jetzt vergleichsweise sehr langsam ausgeführt -->
+   <!-- Trigger sollen wohl nur noch selten genutzt werden (zb. unlocks) und stattdessen das neue komplizierte System mit Connectors/Functions usw. -->
+   <!-- wobei dies in vanilla für StoryLines und Quests genutzt wird. Müsste man testen, ob das auch für KI funktioniert. -->
+  
+  <!-- gibt bei Trigger jetzt aber auch: UsedByThirdParties -->
+   <!-- und ConditionUnlocked kann checken: CheckUnlockForAllFirstParties / CheckUnlockForAllSecondParties -->
+  
+  <!-- BuyNet Code ist nicht mehr in xml.. -->
+   <!-- aber es gibt SellPriceFactorUpgrade um den Verkaufspreis von Sellable zu steuern -->
+  
+  <!-- gibt auch kein ThirdpartyNotificationButtons ... -->
+  
+  <!-- PopUps brauchen auch keinen Enum mehr, können einfach mit ActionTriggerPopup gestartet werden, -->
+   <!-- wobei die Auswirkungen der Buttons in ActionTriggerPopup definiert werden (nach reihenfolge der buttons) -->
+  <!-- Während PopUp aktiv ist, kann man aber sonst nichts in der Welt anklicken! (also kein Ersatz für ThirdpartyNotificationButtons) -->
+   <!-- ist im Coop vermutlich sehr nervig, wenn ständig so ein PopUp auftaucht für alle Spieler.. -->
+  
+  <!-- ActionChangeParticipant kann nun auch visual owner ändern -->
+    
+  <!-- ActionSpawnObjects hat nun "Priorities" wo man die spawnlocation definieren kann. Wenn das erste Ziel keinen validen Spawnpunkt findet, wird die nächste genutzt. -->
+   <!-- dh man kann nun einfach immer als letzte priority einfach sagen "irgendwo" oderso, um das als Fallback zu haben, damits aufjedenfall spawned -->
+    
+  <!-- Participants sind jetzt über GUID, nicht mehr über Enums definiert, also endlos viele möglich -->
+  
+    <!-- Was ist CharacterNotificationTrigger? Wird nur bei DecisionTaken/Opened verwendet und man kann sagen ob man ne eigene notification, oder ein Pamsy oder ein custompamsy abspielen will -->
+   <!-- custompamsy ist genau das, was wir in 1800 an sich immer brauchten, um selbst Inititator und Target zu bestimmen. -->
+    <!-- Hoffentlich kann man CharacterNotificationTrigger auch irgendwie anders verwenden als nur in Decision?...wohl nicht -->
+    <!-- Ah dafür scheint es ActionTriggerParticipantMessage zu geben -->
+
+  
+  <!-- ActionSetSelection funzt in 117 endlich -->
+  
+  <!-- Anstatt Reputation gibt es jetzt "Reasons" die einem quasi Plus/Minus-punkte für einen festen Zeitraum geben, bzw. solange etwas erfüllt ist. -->
+   
+  <!-- Attackable Property heißt jetzt Health und AttackableType heißt DefenderType und MilitaryFeature ist UnitFeature -->
+  <!-- UnitAttackerType UnitDefenderType AttackBehaviorType -->
+   <!-- auch Detach objekte haben eigenes AttackBehaviors, klingt so als könnte man attachments beeinflussen was die soldaten angreifen können -->
+  
+  <!-- Projectiles haben keine: SpawnImpactObject, StatusEffects , Effectivities ... -->
+  
+  <!-- Effect Chains gibts aber noch mit: TimedEffect (nur halt nicht über Projektil verteilt) -->
+  
+  <!-- Es gibt Plundering, aber vermutlich nicht schiffe, sondern nur warehouse vom landunits, und evlt. bekommt man nur Geld dafür? -->
+  <!-- Gibt aber auch n Buff für Units RewardMoneyPerDestroyedBuilding / Ship  -->
+   <!-- CapturedWhenSurroundedByEnemyCount macht nur, dass es nicht flieht, also vermutlich zerstört wird, nicht den Besitzer wechseln -->
+  
+  <!-- BuildingRestrictions EnableMinDistanceBetweenTowers ist enabled und man kann MinDistanceBetweenTowers setzen -->
+  
+  <!-- Upgrades/Buffs -->
+  <!-- ItemWithBoost ist auch interessant, eine globale Condition entscheidet darüber ob ausgerüstete Unit einen extra Buff bekommt -->
+  <!-- gibt endlich SlotCountUpgrade -->
+  
+  <!-- was macht EnemyWavesConfiguration -->
+
+  <!-- mit CostFactor kann man ein Costs Objekt im Laufe des Spiels günstiger machen, wenn Unlock unlocked ist, -->
+   <!-- geht aber nur ein Unlock pro Asset und ist prozentual auf alle Kosten -->
+  <!-- <CostFactor> -->
+    <!-- <Unlock>81030</Unlock> -->
+    <!-- <CostFactor> -->
+      <!-- <Value>50</Value> -->
+      <!-- <Percental>1</Percental> -->
+    <!-- </CostFactor> -->
+  <!-- </CostFactor> -->
+
+
+  <!-- ActionAddResource does not exist anymore, use instead: ActionAddGoodsToItemContainer -->
+  
+    <ModOp Type="merge" GUID='141148' Path="/Values/DifficultySetup">
+        <SetupStartEmperor>31637</SetupStartEmperor>
+        <SetupMapTemplateType>43182</SetupMapTemplateType>
+        <SetupStartShips>WarFleet</SetupStartShips>
+        <SetupFertility>High</SetupFertility>
+        <SetupRawMaterial>High</SetupRawMaterial>
+        <SetupStartSession>Large</SetupStartSession>
+        <SetupStartSessionIslandSize>Large</SetupStartSessionIslandSize>
+        <SetupStartWithKontor>Standard</SetupStartWithKontor>
+        <SetupConstructionCostRefund>Full</SetupConstructionCostRefund>
+        <SetupDistributionWorkforce>Plenty</SetupDistributionWorkforce>
+        <SetupInactiveCosts>Off</SetupInactiveCosts>
+        <SetupIncidents>Easy</SetupIncidents>
+        <SetupLossCondition>BailoutWithSlowLiquidation</SetupLossCondition>
+        <DCContractCooldown>Often</DCContractCooldown>
+        <SetupRelocateBuildings>On</SetupRelocateBuildings>
+        <SetupRevealedMap>On</SetupRevealedMap>
+        <SetupStartCredits>Plenty</SetupStartCredits>
+        <SetupTraderRefillRate>Plenty</SetupTraderRefillRate>
+        <SetupIncludeShipsForAnnihilation>On</SetupIncludeShipsForAnnihilation>
+        <SetupSettlementCost>Low</SetupSettlementCost>
+        <SetupTaxes>Spare</SetupTaxes>
+        <SetupStartGoods>Plenty</SetupStartGoods>
+        <SetupStartForestSize>Large</SetupStartForestSize>
+        <SetupNeedConsumption>Low</SetupNeedConsumption>
+        <Pirates>
+          <Item>
+            <Profile>37494</Profile>
+            <Dormancy>Active</Dormancy>
+            <RaidDifficulty>Easy</RaidDifficulty>
+            <WarFleetDifficulty>Easy</WarFleetDifficulty>
+            <PatrolDifficulty>Short</PatrolDifficulty>
+            <WarThreats>Easy</WarThreats>
+          </Item>
+          <Item>
+            <Profile>37495</Profile>
+            <Dormancy>Active</Dormancy>
+            <RaidDifficulty>Easy</RaidDifficulty>
+            <WarFleetDifficulty>Easy</WarFleetDifficulty>
+            <PatrolDifficulty>Short</PatrolDifficulty>
+            <WarThreats>Easy</WarThreats>
+          </Item>
+        </Pirates>
+        <DefaultSecondParties>
+          <Item>
+            <Profile>31099</Profile>
+          </Item>
+          <Item>
+            <Profile>31100</Profile>
+          </Item>
+          <Item>
+            <Profile>31101</Profile>
+          </Item>
+        </DefaultSecondParties>
+    </ModOp>
+    <!-- <ModOp Type="replace" GUID='141148' Path="/Values/DifficultySetup/SecondParties"> -->
+      <!-- <SecondParties><Item></Item></SecondParties> -->
+    <!-- </ModOp> -->
+    
+    
+
+    <!-- <ModOp Type="merge" Path="//Values/Locked">
+        <DefaultLockedState>0</DefaultLockedState>
+    </ModOp> -->
+    
+    
+    <!-- schneller schiffe bauen (piratenschiffe erben hiervon!) -->
+    <ModOp Type="merge" Path="//Values/Craftable">
+      <CraftingTime>5000</CraftingTime>
+    </ModOp>
+    
+  
+
+    <ModOp Type="AddNextSibling" GUID='55268'>
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1500001166</GUID>
+          </Standard>
+          <Trigger>
+            
+            <TriggerCondition>
+              <Template>ConditionAlwaysTrue</Template>
+              <Values>
+                <Condition />
+                <ConditionAlwaysTrue />
+              </Values>
+            </TriggerCondition>
+            
+            <!-- <TriggerCondition> -->
+              <!-- <Template>ConditionPlayerCounter</Template> -->
+              <!-- <Values> -->
+                <!-- <Condition> -->
+                  <!-- <IsOptional>1</IsOptional> -->
+                <!-- </Condition> -->
+                <!-- <ConditionPlayerCounter> -->
+                  <!-- <PlayerCounter>PopulationByLevel</PlayerCounter> -->
+                  <!-- <Context>1499</Context> -->
+                  <!-- <CounterAmount>10</CounterAmount> -->
+                  <!-- <CounterScope>Area</CounterScope> -->
+                  <!-- <CounterScopeContextUseProcessingContext>0</CounterScopeContextUseProcessingContext> -->
+                <!-- </ConditionPlayerCounter> -->
+                <!-- <ConditionLocationProps> -->
+                  <!-- <RestrictByParentLocations>1</RestrictByParentLocations> -->
+                  <!-- <WriteTagsForTargetLocation> -->
+                    <!-- <TagTargetArea>testland</TagTargetArea> -->
+                  <!-- </WriteTagsForTargetLocation> -->
+                <!-- </ConditionLocationProps> -->
+                <!-- <ConditionCounterProps/> -->
+                <!-- <ConditionPropsComparable/> -->
+              <!-- </Values> -->
+            <!-- </TriggerCondition> -->
+            
+            <TriggerActions>
+              
+              <Item>
+                <TriggerAction>
+                  <Template>ActionExecuteScript</Template>
+                  <Values>
+                    <Action />
+                    <ActionExecuteScript>
+                      <ScriptFileName>testscript.lua</ScriptFileName>
+                    </ActionExecuteScript>
+                  </Values>
+                </TriggerAction>
+              </Item>
+              
+              <Item>
+                <TriggerAction>
+                  <Template>ActionUnlockAsset</Template>
+                  <Values>
+                    <Action/>
+                    <ActionUnlockAsset>
+                      <UnlockAssets>
+                        <Item>
+                          <Asset>1500000021</Asset>
+                        </Item>
+                        <Item>
+                          <Asset>42625</Asset>
+                        </Item>
+                        <Item>
+                          <Asset>95754</Asset>
+                        </Item>
+                      </UnlockAssets>
+                    </ActionUnlockAsset>
+                  </Values>
+                </TriggerAction>
+              </Item>
+              
+              
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionLoadSession</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionLoadSession> -->
+                      <!-- <LoadSession>1500005566</LoadSession> -->
+                    <!-- </ActionLoadSession> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionLoadSession</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionLoadSession> -->
+                      <!-- <LoadSession>1500005567</LoadSession> -->
+                    <!-- </ActionLoadSession> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionLoadSession</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionLoadSession> -->
+                      <!-- <LoadSession>1500005568</LoadSession> -->
+                    <!-- </ActionLoadSession> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionLoadSession</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionLoadSession> -->
+                      <!-- <LoadSession>1500005569</LoadSession> -->
+                    <!-- </ActionLoadSession> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionLoadSession</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionLoadSession> -->
+                      <!-- <LoadSession>1500005570</LoadSession> -->
+                    <!-- </ActionLoadSession> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionLoadSession</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionLoadSession> -->
+                      <!-- <LoadSession>1500005571</LoadSession> -->
+                    <!-- </ActionLoadSession> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionLoadSession</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionLoadSession> -->
+                      <!-- <LoadSession>1500005572</LoadSession> -->
+                    <!-- </ActionLoadSession> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionLoadSession</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionLoadSession> -->
+                      <!-- <LoadSession>1500005573</LoadSession> -->
+                    <!-- </ActionLoadSession> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionLoadSession</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionLoadSession> -->
+                      <!-- <LoadSession>1500005574</LoadSession> -->
+                    <!-- </ActionLoadSession> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionLoadSession</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionLoadSession> -->
+                      <!-- <LoadSession>1500005575</LoadSession> -->
+                    <!-- </ActionLoadSession> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              
+              <Item>
+                <TriggerAction>
+                  <Template>ActionUnlockAsset</Template>
+                  <Values>
+                    <Action />
+                    <ActionUnlockAsset>
+                      <UnlockAssets>
+                        <Item>
+                          <Asset>6627</Asset>
+                        </Item>
+                      </UnlockAssets>
+                    </ActionUnlockAsset>
+                  </Values>
+                </TriggerAction>
+              </Item>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionLoadSession</Template>
+                  <Values>
+                    <Action/>
+                    <ActionLoadSession>
+                      <LoadSession>6627</LoadSession>
+                    </ActionLoadSession>
+                  </Values>
+                </TriggerAction>
+              </Item>
+
+              
+              <Item>
+                <TriggerAction>
+                  <Template>ActionAddGoodsToItemContainer</Template>
+                  <Values>
+                    <Action/>
+                    <ActionAddGoodsToItemContainer>
+                      <Goods>
+                        <Item>
+                          <Good>
+                            <Value>1010017</Value>
+                          </Good>
+                          <Amount>
+                            <Value>1000</Value>
+                          </Amount>
+                        </Item>
+                      </Goods>
+                    </ActionAddGoodsToItemContainer>
+                    <LocationFilter/>
+                  </Values>
+                </TriggerAction>
+              </Item>
+              
+              
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionEffect</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionEffect> -->
+                      <!-- <EffectAsset>38163</EffectAsset> -->
+                      <!-- <StartEffect>1</StartEffect> -->
+                      <!-- <AffectProcessingParticipant>1</AffectProcessingParticipant> -->
+                      <!-- <ReadTaggedLocation>testland</ReadTaggedLocation> -->
+                      <!-- <TargetObjectForLocalEffect> -->
+                        <!-- <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset> -->
+                        <!-- <Values> -->
+                          <!-- <ObjectFilter> -->
+                            <!-- <ObjectGUID>3087</ObjectGUID> -->
+                          <!-- </ObjectFilter> -->
+                        <!-- </Values> -->
+                      <!-- </TargetObjectForLocalEffect> -->
+                    <!-- </ActionEffect> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+
+              <!-- ActionChangeIslandOwner -->
+              
+              
+              <!-- ActionChangeIslandVegetation -->
+              
+              
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionTriggerPopup</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionTriggerPopup> -->
+                      <!-- <Popup>58114</Popup> -->
+                      <!-- <ButtonActions> -->
+                        <!-- <Item></Item> -->
+                        <!-- <Item> -->
+                          <!-- <TextSource>Cheat.GlobalCheats:ToggleIgnoreBuildingCosts()</TextSource> -->
+                        <!-- </Item> -->
+                      <!-- </ButtonActions> -->
+                    <!-- </ActionTriggerPopup> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionStartIncident</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionStartIncident> -->
+                      <!-- <Incident>31929</Incident> -->
+                      <!-- <Incident>25598</Incident> -->
+                    <!-- </ActionStartIncident> -->
+                    <!-- <ObjectFilter> -->
+                      <!-- <ObjectGUID>3087</ObjectGUID> -->
+                      <!-- <CheckObjectOwner>1</CheckObjectOwner> -->
+                      <!-- <UseProcessingProfileForOwnerCheck>1</UseProcessingProfileForOwnerCheck> -->
+                      <!-- <MaxObjectCount>3</MaxObjectCount> -->
+                    <!-- </ObjectFilter> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+              
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup>
+            <AutoRegisterTrigger>1</AutoRegisterTrigger>
+            <UsedBySecondParties>0</UsedBySecondParties>
+          </TriggerSetup>
+        </Values>
+      </Asset>
+      
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1500001167</GUID>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionAlwaysTrue</Template>
+              <Values>
+                <Condition />
+                <ConditionAlwaysTrue />
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionAddGoodsToItemContainer</Template>
+                  <Values>
+                    <Action/>
+                    <ActionAddGoodsToItemContainer>
+                      <Goods>
+                        <Item>
+                          <Good>
+                            <Value>95749</Value>
+                          </Good>
+                          <Amount>
+                            <Value>1</Value>
+                          </Amount>
+                        </Item>
+                        <Item>
+                          <Good>
+                            <Value>95750</Value>
+                          </Good>
+                          <Amount>
+                            <Value>1</Value>
+                          </Amount>
+                        </Item>
+                        <Item>
+                          <Good>
+                            <Value>95751</Value>
+                          </Good>
+                          <Amount>
+                            <Value>1</Value>
+                          </Amount>
+                        </Item>
+                        <Item>
+                          <Good>
+                            <Value>95754</Value>
+                          </Good>
+                          <Amount>
+                            <Value>1</Value>
+                          </Amount>
+                        </Item>
+                      </Goods>
+                      <ItemContainerObjects>
+                        <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                        <Values>
+                          <ObjectFilter/>
+                        </Values>
+                      </ItemContainerObjects>
+                    </ActionAddGoodsToItemContainer>
+                    <LocationFilter>
+                      <AllowAllLocations>1</AllowAllLocations>
+                    </LocationFilter>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup>
+            <AutoRegisterTrigger>0</AutoRegisterTrigger>
+            <UsedBySecondParties>0</UsedBySecondParties>
+          </TriggerSetup>
+        </Values>
+      </Asset>
+      
+      
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>1500000030</GUID>
+            <Name>Credit Emperor Reputation for every Monument Event</Name>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionPlayerCounter</Template>
+              <Values>
+                <Condition/>
+                 <ConditionPlayerCounter>
+                  <PlayerCounter>MonumentEventsFinished</PlayerCounter>
+                  <Context>40562</Context>
+                  <CounterAmount>1</CounterAmount>
+                </ConditionPlayerCounter>
+                <ConditionLocationProps/>
+                <ConditionCounterProps>
+                  <RelativeToQuestStart>1</RelativeToQuestStart>
+                </ConditionCounterProps>
+                <ConditionPropsComparable/>
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionAddGoodsToItemContainer</Template>
+                  <Values>
+                    <Action/>
+                    <ActionAddGoodsToItemContainer>
+                      <Goods>
+                        <Item>
+                          <Good>
+                            <Value>1010017</Value>
+                          </Good>
+                          <Amount>
+                            <Value>100000</Value>
+                          </Amount>
+                        </Item>
+                      </Goods>
+                    </ActionAddGoodsToItemContainer>
+                    <LocationFilter/>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            
+              <Item>
+                <TriggerAction>
+                  <Template>ActionChangeReputation</Template>
+                  <Values>
+                      <Action />
+                      <ActionChangeReputation>
+                          <UseProcessingParticipant>1</UseProcessingParticipant>
+                          <Amount>
+                              <Value>3</Value>
+                          </Amount>
+                      </ActionChangeReputation>
+                  </Values>
+                </TriggerAction>
+              </Item>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionResetTrigger</Template>
+                  <Values>
+                    <Action />
+                    <ActionResetTrigger />
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup>
+            <AutoRegisterTrigger>1</AutoRegisterTrigger>
+            <UsedBySecondParties>0</UsedBySecondParties>
+          </TriggerSetup>
+        </Values>
+      </Asset>
+      
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>3245</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500005566</GUID> -->
+            <!-- <Name>Province Roman Italia</Name> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>6627</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500005567</GUID> -->
+            <!-- <Name>Province Celtic Britannia</Name> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>3245</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500005568</GUID> -->
+            <!-- <Name>Province Roman Italia</Name> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>6627</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500005569</GUID> -->
+            <!-- <Name>Province Celtic Britannia</Name> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>3245</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500005570</GUID> -->
+            <!-- <Name>Province Roman Italia</Name> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>6627</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500005571</GUID> -->
+            <!-- <Name>Province Celtic Britannia</Name> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>3245</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500005572</GUID> -->
+            <!-- <Name>Province Roman Italia</Name> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>6627</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500005573</GUID> -->
+            <!-- <Name>Province Celtic Britannia</Name> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>3245</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500005574</GUID> -->
+            <!-- <Name>Province Roman Italia</Name> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>6627</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500005575</GUID> -->
+            <!-- <Name>Province Celtic Britannia</Name> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      
+      <!-- add 10 new buildings as test -->
+      
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>3528</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000005</GUID> -->
+            <!-- <Name>Public Roman Tavern</Name> -->
+            <!-- <IconFilename>data/ui/2kimages/main/3dicons/icon_pub.png</IconFilename> -->
+          <!-- </Standard> -->
+          <!-- <Locked> -->
+            <!-- <DefaultLockedState>0</DefaultLockedState> -->
+          <!-- </Locked> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000006</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000007</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000008</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000009</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000010</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000011</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000012</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000013</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000014</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000015</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000016</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000017</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000018</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000019</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      <!-- <Asset> -->
+        <!-- <BaseAssetGUID>1500000005</BaseAssetGUID> -->
+        <!-- <Values> -->
+          <!-- <Standard> -->
+            <!-- <GUID>1500000020</GUID> -->
+          <!-- </Standard> -->
+        <!-- </Values> -->
+      <!-- </Asset> -->
+      
+    
+    </ModOp>
+
+
+    <!-- <ModOp Type="AddNextSibling" GUID='41252' Path="/Values/ConstructionCategory/BuildingList/Item[Building='42434']"> -->
+      <!-- <Item><Building>1500000005</Building></Item> -->
+      <!-- <Item><Building>1500000006</Building></Item> -->
+      <!-- <Item><Building>1500000007</Building></Item> -->
+      <!-- <Item><Building>1500000008</Building></Item> -->
+      <!-- <Item><Building>1500000009</Building></Item> -->
+      <!-- <Item><Building>1500000010</Building></Item> -->
+      <!-- <Item><Building>1500000011</Building></Item> -->
+      <!-- <Item><Building>1500000012</Building></Item> -->
+      <!-- <Item><Building>1500000013</Building></Item> -->
+      <!-- <Item><Building>1500000014</Building></Item> -->
+      <!-- <Item><Building>1500000015</Building></Item> -->
+      <!-- <Item><Building>1500000016</Building></Item> -->
+      <!-- <Item><Building>1500000017</Building></Item> -->
+      <!-- <Item><Building>1500000018</Building></Item> -->
+      <!-- <Item><Building>1500000019</Building></Item> -->
+      <!-- <Item><Building>1500000020</Building></Item> -->
+    <!-- </ModOp> -->
+    
+    <!-- <ModOp Type="add" GUID='41362,77297' Path="/Values/ConstructionCategory/BuildingList"> -->
+      <!-- <Item><Building>1500000005</Building></Item> -->
+      <!-- <Item><Building>1500000006</Building></Item> -->
+      <!-- <Item><Building>1500000007</Building></Item> -->
+      <!-- <Item><Building>1500000008</Building></Item> -->
+      <!-- <Item><Building>1500000009</Building></Item> -->
+      <!-- <Item><Building>1500000010</Building></Item> -->
+      <!-- <Item><Building>1500000011</Building></Item> -->
+      <!-- <Item><Building>1500000012</Building></Item> -->
+      <!-- <Item><Building>1500000013</Building></Item> -->
+      <!-- <Item><Building>1500000014</Building></Item> -->
+      <!-- <Item><Building>1500000015</Building></Item> -->
+      <!-- <Item><Building>1500000016</Building></Item> -->
+      <!-- <Item><Building>1500000017</Building></Item> -->
+      <!-- <Item><Building>1500000018</Building></Item> -->
+      <!-- <Item><Building>1500000019</Building></Item> -->
+      <!-- <Item><Building>1500000020</Building></Item> -->
+    <!-- </ModOp> -->
+    
+    
+    
+    <!-- <ModOp Type="AddNextSibling" GUID='500204' Path="/Values/MinimapScene/FertilityOrder/Item[1]"> -->
+      <!-- <Item> -->
+        <!-- <GUID>2203</GUID> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <GUID>2204</GUID> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <GUID>32456</GUID> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <GUID>4050</GUID> -->
+      <!-- </Item> -->
+    <!-- </ModOp> -->
+    
+    
+    <!-- <ModOp Type="merge" GUID='31312' Path="/Values/FertilitySet/Fertilities"> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2203</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2204</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>32456</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>4050</Fertility> -->
+      <!-- </Item> -->
+      
+      <!-- <Item> -->
+        <!-- <Fertility>2206</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2212</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2214</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2209</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2217</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>51212</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2210</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2205</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2218</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2219</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2202</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>4051</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>4082</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>4052</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2211</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>8432</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>2208</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>8577</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>4049</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>4063</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>8487</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>4064</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>4066</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>4062</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>4053</Fertility> -->
+      <!-- </Item> -->
+      <!-- <Item> -->
+        <!-- <Fertility>32027</Fertility> -->
+      <!-- </Item> -->
+    <!-- </ModOp> -->
+    
+    <!-- <ModOp Type="merge" GUID='2200' Path="/Values"> -->
+      <!-- <Factory7> -->
+        <!-- <NeededFertility>2203</NeededFertility> -->
+      <!-- </Factory7> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" GUID='2693' Path="/Values"> -->
+      <!-- <Factory7> -->
+        <!-- <NeededFertility>2204</NeededFertility> -->
+      <!-- </Factory7> -->
+    <!-- </ModOp> -->
+
+    <!-- <ModOp Type="merge" Path="//Values/Standard[IconFilename='data/ui/fhd/base/icon_content/building/icon_3d_residence.png']"> -->
+      <!-- <IconFilename>data/ui/2kimages/main/3dicons/icon_resident.png</IconFilename> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" Path="//Values/Standard[IconFilename='data/ui/fhd/base/icon_content/building/icon_3d_warehouse.png']"> -->
+      <!-- <IconFilename>data/ui/2kimages/main/3dicons/icon_warehouse.png</IconFilename> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" Path="//Values/Standard[IconFilename='data/ui/fhd/base/icon_content/building/icon_3d_construction_category_harbour.png']"> -->
+      <!-- <IconFilename>data/ui/2kimages/main/3dicons/icon_harbour_buildings.png</IconFilename> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" Path="//Values/Standard[IconFilename='data/ui/fhd/base/icon_content/building/icon_3d_construction_category_military.png']"> -->
+      <!-- <IconFilename>data/ui/2kimages/main/3dicons/influence/icon_buff_military_gold.png</IconFilename> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" Path="//Values/Standard[IconFilename='data/ui/fhd/base/icon_content/building/icon_3d_construction_category_institution.png']"> -->
+      <!-- <IconFilename>data/icon_3d_construction_category_institution_colour.png</IconFilename> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" Path="//Values/Standard[IconFilename='data/ui/fhd/base/icon_content/building/icon_3d_construction_category_religion.png']"> -->
+      <!-- <IconFilename>data/icon_3d_construction_category_religion_colour.png</IconFilename> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" Path="//Values/Standard[IconFilename='data/ui/fhd/base/icon_content/building/icon_3d_construction_category_materials.png']"> -->
+      <!-- <IconFilename>data/ui/2kimages/main/3dicons/icon_bricks.png</IconFilename> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" Path="//Values/Standard[IconFilename='data/ui/fhd/base/icon_content/building/icon_3d_construction_category_aqueduct.png']"> -->
+      <!-- <IconFilename>data/ui/4k/base/icon_content/construction_groups/icon_construction_category_aqueduct.png</IconFilename> -->
+    <!-- </ModOp> -->
+
+    
+ 
+    <!-- funktioniert weiterhin nur der erste keybind , wenn mehrere exakt denselben Command haben -->
+    <ModOp Type="add" GUID='2001271' Path="/Values/ShortcutConfig/InputBindings">
+        
+        <Item>
+            <Command>Conditions:RegisterTriggerForCurrentParticipantNet(1500001166)</Command>
+            <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+            <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+            <AudioEvent>200634</AudioEvent>
+            <Configurable>0</Configurable>
+            <HideInOptionMenu>1</HideInOptionMenu>
+            <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+            <InputTypes>
+              <Modern>
+                <KeyType>Control;F11</KeyType>
+              </Modern>
+              <Legacy>
+                <KeyType>Control;F11</KeyType>
+              </Legacy>
+            </InputTypes>
+        </Item>
+        
+        <!-- funzt nicht -->
+        <Item>
+            <Command>Cheat:ToggleInGameDebugCheatPage()</Command>
+            <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+            <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+            <AudioEvent>200634</AudioEvent>
+            <Configurable>0</Configurable>
+            <HideInOptionMenu>1</HideInOptionMenu>
+            <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+            <InputTypes>
+              <Modern>
+                <KeyType>Control;X</KeyType>
+              </Modern>
+              <Legacy>
+                <KeyType>Control;X</KeyType>
+              </Legacy>
+            </InputTypes>
+        </Item>
+        
+        <!-- instant session switch (graphics are loading while you see it) -->
+        <!-- <Item> -->
+          <!-- <Command>Cheat.GlobalCheats:ToggleSessionSwitchUISkipped()</Command> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>0</Configurable> -->
+          <!-- <HideInOptionMenu>1</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Alt;A</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Alt;A</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        
+        <Item>
+          <Command>TestMod.Main()</Command>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>0</Configurable>
+          <HideInOptionMenu>1</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>F12</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>F12</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <Item>
+          <Command>Target:ToggleTargetMode(2001000)</Command>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>0</Configurable>
+          <HideInOptionMenu>1</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Alt;P</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Alt;P</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        
+        <!-- <Item> -->
+          <!-- <Command>Scripts:JumpToSession(1500005566)</Command> -->
+          <!-- <Text>-6900160505564318858</Text> -->
+          <!-- <Active>Session;WorldMap</Active> -->
+          <!-- <Identifier>6627</Identifier> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS</AvailableOnPlatforms> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Numpad3</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Numpad3</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        <!-- <Item> -->
+          <!-- <Command>Scripts:JumpToSession(1500005567)</Command> -->
+          <!-- <Text>-6900160505564318858</Text> -->
+          <!-- <Active>Session;WorldMap</Active> -->
+          <!-- <Identifier>6627</Identifier> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS</AvailableOnPlatforms> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Numpad4</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Numpad4</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        <!-- <Item> -->
+          <!-- <Command>Scripts:JumpToSession(1500005568)</Command> -->
+          <!-- <Text>-6900160505564318858</Text> -->
+          <!-- <Active>Session;WorldMap</Active> -->
+          <!-- <Identifier>6627</Identifier> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS</AvailableOnPlatforms> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Numpad5</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Numpad5</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        <!-- <Item> -->
+          <!-- <Command>Scripts:JumpToSession(1500005569)</Command> -->
+          <!-- <Text>-6900160505564318858</Text> -->
+          <!-- <Active>Session;WorldMap</Active> -->
+          <!-- <Identifier>6627</Identifier> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS</AvailableOnPlatforms> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Numpad6</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Numpad6</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        <!-- <Item> -->
+          <!-- <Command>Scripts:JumpToSession(1500005570)</Command> -->
+          <!-- <Text>-6900160505564318858</Text> -->
+          <!-- <Active>Session;WorldMap</Active> -->
+          <!-- <Identifier>6627</Identifier> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS</AvailableOnPlatforms> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Numpad7</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Numpad7</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        <!-- <Item> -->
+          <!-- <Command>Scripts:JumpToSession(1500005571)</Command> -->
+          <!-- <Text>-6900160505564318858</Text> -->
+          <!-- <Active>Session;WorldMap</Active> -->
+          <!-- <Identifier>6627</Identifier> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS</AvailableOnPlatforms> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Numpad8</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Numpad8</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        
+        <!-- Keine Ahnunn warum 95754 nach unlock im kontor erscheint, aber mein eigenes item was quasi ne kopie davon ist, nicht... -->
+        <Asset>
+          <Template>ItemWithUI</Template>
+          <Values>
+            <Standard>
+              <GUID>1500000021</GUID>
+              <Name>TestItem Lua script</Name>
+              <IconFilename>data/ui/fhd/base/icon_content/diplomacy/icon_2d_war_total.png</IconFilename>
+              <InfoDescription>-6917162586975470179</InfoDescription>
+            </Standard>
+            <Text>
+              <OasisId>-6907881402262505058</OasisId>
+            </Text>
+            <Item>
+              <Rarity>Unique</Rarity>
+              <HasAction>1</HasAction>
+              <ItemType>NonSocketable</ItemType>
+              <Flotsam>139573</Flotsam>
+              <IsMetaItem>1</IsMetaItem>
+            </Item>
+            <ItemWithUI>
+              <ItemActions>
+                <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                <Values>
+                  <ActionList>
+                    <Actions>
+                      <Item>
+                        <Action>
+                          <Template>ActionExecuteScript</Template>
+                          <Values>
+                            <Action/>
+                            <ActionExecuteScript>
+                              <ScriptFileName>testscript.lua</ScriptFileName>
+                            </ActionExecuteScript>
+                          </Values>
+                        </Action>
+                      </Item>
+                    </Actions>
+                  </ActionList>
+                </Values>
+              </ItemActions>
+            </ItemWithUI>
+            <Locked>
+              <!-- <Scope>Participant</Scope> -->
+              <Scope>Account</Scope>
+              <DefaultLockedState>0</DefaultLockedState>
+            </Locked>
+            <ItemAction>
+              <ActionDescription>-6907565249441184454</ActionDescription>
+            </ItemAction>
+          </Values>
+        </Asset>
+        
+        
+    </ModOp>
+    
+    
+    <!-- Alt+F4 should force quit the game without saving -->
+    <ModOp Type="merge" GUID='2001271' Path="/Values/ShortcutConfig/InputBindings/Item[InputTypes/Modern/KeyType='Alt;F4']">
+      <Command>Game:FastQuit(1)</Command>
+      <Identifier>0</Identifier>
+    </ModOp>
+    
+    
+    <ModOp Type="merge" GUID='95754' Path="/Values">
+      <Standard>
+        <IconFilename>data/ui/fhd/base/icon_content/diplomacy/icon_2d_inactive_pirate.png</IconFilename>
+      </Standard>
+      <ItemWithUI>
+        <ItemActions>
+          <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+          <Values>
+            <ActionList>
+              <Actions>
+                <Item>
+                  <Action>
+                    <Template>ActionExecuteScript</Template>
+                    <Values>
+                      <Action/>
+                      <ActionExecuteScript>
+                        <ScriptFileName>testscript.lua</ScriptFileName>
+                      </ActionExecuteScript>
+                    </Values>
+                  </Action>
+                </Item>
+              </Actions>
+            </ActionList>
+          </Values>
+        </ItemActions>
+      </ItemWithUI>
+    </ModOp>
+  
+  
+    <!-- bigger max selection rectangle multi target (eg. move, pipette, stamp), original 120 -->
+    <!-- a value of 500 is enough to get the whole continental island at once -->
+    <!-- (in 117 you can draw unlimited, but only if within this size, the result is with all buildings) -->
+    <ModOp Type="merge" GUID='142880' Path="/Values/BuildModeFeature/MultiMove" Condition="/Values/BuildModeFeature/MultiMove[MaxRectSize&lt;1000]">
+        <MaxRectSize>1000</MaxRectSize>
+    </ModOp>
+    
+    <ModOp Type="merge" GUID='2001000' Path="/Values/TargetMode">
+        <Matches>
+          <SelectionMatch1>
+            <Flags>OrNextMatch;CheckProperty;Commandable</Flags>
+            <Property>Movement</Property>
+          </SelectionMatch1>
+          <SelectionMatch2>
+            <Flags>CheckProperty</Flags>
+            <Property>UnitCamp</Property>
+          </SelectionMatch2>
+          <TargetMatch1>
+            <Flags>Never</Flags>
+          </TargetMatch1>
+          <DisableMatch1>
+            <Flags>Never</Flags>
+          </DisableMatch1>
+        </Matches>
+    </ModOp>
+  
+  
+    <!-- Variablen können frei erstellt werden ohne Enum und können mit konstanten oder auch mit anderen Variablen in Condition verglichen werden -->
+    <!-- Sie können statt in der Config, auch in einer StorylineVariables definiert werden -->
+    <!-- Aber scheinbar kann man sie nicht direkt auf einen wert wie "Anzahl der Häuser" oderso setzen oder damit vergleichen.. -->
+    <!-- Doch es gibt immerhin ActionSetVariable mit SetIntVariableToRandom/SetAssetVariableToRandomPoolEntry/SetIntVariableByProgressLevel -->
+      <!-- gibt an sich auch SetIntVariableToSpecialValue, aber natürlich gibts da nur die Option BailoutMoneyAmount :D -->
+    <ModOp Type="add" GUID='23779' Path="/Values/ConditionVariableConfiguration/IntVariables">
+      <Item>
+        <Name>SerpTestInt</Name>
+        <StartValue>100</StartValue>
+        <Comment>Serp Test</Comment>
+      </Item>
+    </ModOp>
+  
+
+  
+  <!-- Condition to only start a Trigger for Human0 ? Ist das möglich mit dem neuen Connector StoryLine system? -->
+  <!-- IslandMatcher kann playercounter prüfen und owner -->
+
+
+  <!-- was macht lOrTag>GiftShip</Rea , also kann man schiffe verschenken, oder was ist das -->
+  
+  <!-- TODO: -->
+   <!-- mal viele Kriegsschiffe spawnen und Pirat plattmachen, ob man über Hils schießen kann,  -->
+    <!-- ob Pirat zurückkommt usw. -->
+
+  <!-- Test TimedEffect mit ActionEffect obs da denselben Bug wie bei 1800 gibt -->
+   
+
+    <!-- Remove reroll cost  Diana -->
+    <ModOp Type="Merge" GUID="32777" Path="/Values/Trader">
+        <TraderDefaultItemRerollCosts>0</TraderDefaultItemRerollCosts>
+        <TraderDefaultItemRerollCostIncrease>0</TraderDefaultItemRerollCostIncrease>
+    </ModOp>
+    
+    <!-- man kann zwar Baumaterial Kosten zum Kontor zufügen, aber er lässt sich dennoch bei Besiedelung ohne Bauen -.- -->
+     <!-- (wenn bauendes schiff es dabei hat, wirds abgezogen, steht aber nicht im BauTooltip) -->
+    <!-- <ModOp Type="replace" GUID="3402" Path="/Values/Cost"> -->
+      <!-- <Cost> -->
+        <!-- <Costs> -->
+          <!-- <Item> -->
+            <!-- <Ingredient>2174</Ingredient> -->
+            <!-- <Amount>1</Amount> -->
+          <!-- </Item> -->
+        <!-- </Costs> -->
+      <!-- </Cost> -->
+    <!-- </ModOp> -->
+    
+    
+
+    <!-- <ModOp Type="merge" GUID="140577" Path="/Values/ColorConfig"> -->
+      <!-- <SlotGhostColor> -->
+        <!-- <Roman> -->
+          <!-- <Color> -->
+            <!-- <Deuteranopia>-13468201</Deuteranopia> -->
+            <!-- <Protanopia>-13468201</Protanopia> -->
+            <!-- <Tritanopia>-13468201</Tritanopia> -->
+            <!-- <None>-13468201</None> -->
+          <!-- </Color> -->
+        <!-- </Roman> -->
+        <!-- <Celtic> -->
+          <!-- <Color> -->
+            <!-- <Deuteranopia>-13468201</Deuteranopia> -->
+            <!-- <Protanopia>-13468201</Protanopia> -->
+            <!-- <Tritanopia>-13468201</Tritanopia> -->
+            <!-- <None>-13468201</None> -->
+          <!-- </Color> -->
+        <!-- </Celtic> -->
+      <!-- </SlotGhostColor> -->
+      <!-- <MeshGraphColors> -->
+        <!-- <GraphBorderColors> -->
+          <!-- <BorderBlueprintColor> -->
+            <!-- <None>-13468201</None> -->
+            <!-- <Deuteranopia>-13468201</Deuteranopia> -->
+            <!-- <Protanopia>-13468201</Protanopia> -->
+            <!-- <Tritanopia>-13468201</Tritanopia> -->
+          <!-- </BorderBlueprintColor> -->
+        <!-- </GraphBorderColors> -->
+      <!-- </MeshGraphColors> -->
+    <!-- </ModOp> -->
+    
+    <!-- Farbe von Blueprints, Minimap und Worldmap Wasser lässt sich via xml nicht ändern -->
+     <!-- nur farbe der inseln auf minimap lässt sich durch xml ändern, aber: nur alle inseln weltweit (passt nicht zu wüsteninseln) und die auf strategic map gehen nicht und keine datei dazu gefunden, also lassen wir inselfarben so -->
+     <!-- aber von abrissauswahlRect -->
+    <!-- <ModOp Type="merge" Path="//Deuteranopia"> -->
+      <!-- <Deuteranopia>-13468201</Deuteranopia> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" Path="//Protanopia"> -->
+      <!-- <Protanopia>-13468201</Protanopia> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" Path="//Tritanopia"> -->
+      <!-- <Tritanopia>-13468201</Tritanopia> -->
+    <!-- </ModOp> -->
+    <!-- <ModOp Type="merge" Path="//None[../Deuteranopia]"> -->
+      <!-- <None>-13468201</None> -->
+    <!-- </ModOp> -->
+    
+    <ModOp Type="merge" GUID="180006" Path="/Values/TransitionConfig">
+      <SessionPC>
+        <Duration>0</Duration>
+        <WarmupDuration>0</WarmupDuration>
+      </SessionPC>
+      <WorldMapPC>
+        <Duration>0</Duration>
+      </WorldMapPC>
+      <FadeTransitionDuration>0</FadeTransitionDuration>
+    </ModOp>
+
+    
+    
+    
+    
+    
+    <!-- neue kostenlose Straße mit keinen Kosten zum Planen zufügen. -->
+    <!-- TODO: Brücke usw auch ersetzen und ein anderes Asusehen geben, damit erkennbar, dass man diese noch upgraden sollte -->
+    <ModOp Type="AddPrevSibling" GUID="41366,41252" Path="/Values/ConstructionCategory/BuildingList/Item[Building='8541']">
+      <Item>
+        <Building>1500000030</Building>
+      </Item>
+    </ModOp>
+    <ModOp Type="add" GUID="142880" Path="/Values/BuildModeFeature/GUIDRegionReplacements">
+      <Item>
+        <GUIDGroup>
+          <Roman>
+            <AssetGUID>1500000030</AssetGUID>
+          </Roman>
+          <Celtic>
+            <AssetGUID>1500000031</AssetGUID>
+          </Celtic>
+        </GUIDGroup>
+      </Item>
+    </ModOp>
+    <ModOp Type="AddNextSibling" GUID="8541">
+      <Asset>
+        <BaseAssetGUID>8541</BaseAssetGUID>
+        <Values>
+          <Standard>
+            <GUID>1500000030</GUID>
+            <Name>Street Roman Earthen Road</Name>
+          </Standard>
+          <Cost>
+            <Costs>
+              <Item />
+            </Costs>
+          </Cost>
+          <Text>
+            <OasisId>-6910804741279834244</OasisId>
+          </Text>
+          <Street>
+            <LogicisticSpeedFactor>0</LogicisticSpeedFactor>
+            <TileSetGraphicsFolder>data/base/graphics/roman/infrastructure/street_01/</TileSetGraphicsFolder>
+            <!-- <WedgeConfig> -->
+              <!-- <Tile_Street_Building_Any>data/base/graphics/celtic/infrastructure/street_wedges/street_wedges_single_straight.cfg</Tile_Street_Building_Any> -->
+              <!-- <Tile_Street_Any_Building>data/base/graphics/celtic/infrastructure/street_wedges/street_wedges_single_straight_flipped.cfg</Tile_Street_Any_Building> -->
+              <!-- <Tile_Building_Street_Any>data/base/graphics/celtic/infrastructure/street_wedges/street_wedges_single_diagonal_flipped.cfg</Tile_Building_Street_Any> -->
+              <!-- <Tile_Building_Any_Street>data/base/graphics/celtic/infrastructure/street_wedges/street_wedges_single_diagonal.cfg</Tile_Building_Any_Street> -->
+            <!-- </WedgeConfig> -->
+          </Street>
+          <MeshGraphStyle>
+            <CrossingReplacements>
+              <River>
+                <Style>27499</Style>
+              </River>
+              <Sea>
+                <Style>30449</Style>
+              </Sea>
+              <Coast>
+                <Style>50218</Style>
+              </Coast>
+            </CrossingReplacements>
+            <UpgradesTo>8541</UpgradesTo>
+            <MaintenancePerUnitLength>0</MaintenancePerUnitLength>
+          </MeshGraphStyle>
+        </Values>
+      </Asset>
+    </ModOp>
+    
+
+</ModOps>

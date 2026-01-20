@@ -1,0 +1,25 @@
+<ModOps>
+    
+  <!-- https://github.com/jakobharder/anno-mod-loader/blob/main/doc/modloader-changes.md -->
+    
+  <!-- water and map colour is done by replacing dds files at the correct folder location in this mod -->
+    
+    
+    <!-- make islands on minimap a bit greenish. Colorpicker in modding discord: https://discord.com/channels/578443209940926465/581158181078695948/833369411830284318 -->
+    <!-- unfortunately only one setting for all of them, so wont fit for egypt islands in the future... -->
+    <!-- <ModOp Type="merge" GUID="500204" Path="/Values/MinimapScene"> -->
+      <!-- <TerrainTexture> -->
+        <!-- <NormalColor> -->
+          <!-- <None>-4536182</None> -->
+          <!-- <Deuteranopia>-4536182</Deuteranopia> -->
+          <!-- <Protanopia>-4536182</Protanopia> -->
+          <!-- <Tritanopia>-4536182</Tritanopia> -->
+        <!-- </NormalColor> -->
+      <!-- </TerrainTexture> -->
+    <!-- </ModOp> -->
+    
+    
+    <!-- There seems to be no colour code for the Islands on the Strategic Map (TradeRoute) ? -->
+    <!-- And I also did not find a dds file to change island colour.. -->
+
+</ModOps>

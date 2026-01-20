@@ -1,0 +1,33 @@
+{
+  "Version": "1.0",
+  "ModID": "blueblueprints-serp",  
+  "Anno": 8,  
+  "IncompatibleIds": [],
+  "ModDependencies": null,
+  "LoadAfterIds": [],
+  "Category": {
+    "English": "Cosmetic"
+  },
+  "ModName": {
+    "English": "Blue Blueprints (Serp)"
+  },
+  "KnownIssues": [
+    {
+      "English": null
+    }
+  ],
+  "Difficulty": "unchanged",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66",
+  "ModioResourceId" : 5511671,
+  "changelog": {
+    "1.0" : "Release"
+  }
+}

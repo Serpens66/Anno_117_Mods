@@ -21,12 +21,21 @@
     "Multiplayer": true,
     "Campaign": true
   },
+  "Scripts": {
+    "Modules": [
+      "data/cheatkeybinds_serp.lua"
+    ],
+    "Init": "CheatKeybinds_Serp = require(\"cheatkeybinds_serp\")",
+    "Load": "CheatKeybinds_Serp:GameLoaded()",
+    "Unload": "CheatKeybinds_Serp:GameUnloaded()"
+  },
   "DLCDependencies": null,
   "CreatorName": "Serp",
   "CreatorContact": "https://github.com/Serpens66",
   "ModioResourceId" : 5426208,
   "changelog": {
     "1.01" : "Release",
-    "1.011" : "- Add keybind 'Shift;Home' to instant research the current active research (thanks JohnyBgood)"
+    "1.011" : "- Add keybind 'Shift;Home' to instant research the current active research (thanks JohnyBgood)",
+    "1.02" : "- Reworked system (WIP braucht game patch für lua...)"
   }
 }

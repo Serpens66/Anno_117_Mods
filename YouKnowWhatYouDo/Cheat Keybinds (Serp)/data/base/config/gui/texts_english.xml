@@ -3,8 +3,23 @@
   <ModOp Add="/TextExport/Texts[1]">
     <Text>
       <LineId>1500000000</LineId>
-      <Text>Cheat Keybind</Text>
+      <Text>Execute Cheat Keybind</Text>
+    </Text>
+    <Text>
+      <LineId>1500000016</LineId>
+      <Text>Previous Cheat Keybind</Text>
+    </Text>
+    <Text>
+      <LineId>1500000017</LineId>
+      <Text>Next Cheat Keybind</Text>
+    </Text>
+    
+    <Text>
+      <LineId>1500000015</LineId>
+      <Text>Ship Speed</Text>
     </Text>
   </ModOp>
+  
+  <!-- <ModOp Remove="/TextExport/Texts/Text[LineId='-6915801281774100367']"></ModOp> -->
   
 </ModOps>

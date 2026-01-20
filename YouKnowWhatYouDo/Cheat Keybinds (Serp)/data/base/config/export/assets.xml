@@ -1,5 +1,7 @@
 <ModOps>
-
+  
+  <!-- Serp GUID: 1500000000 and 1500000015 bis 1500000049 -->
+  
   <!-- maybe add: -->
   <!-- Quests:CheatSetAllPoolCountdownEndtimersToNewTime() -->
   <!-- Static.Incident.ShortenIncidentSchedulerIntervalForMajorIncidents(0) -->
@@ -56,8 +58,49 @@
           </InputTypes>
         </Item>
         
+        
+        <!-- PROBLEM -->
+          <!-- Can not access CheatKeybinds_Serp here  -.- have to wait until this is fixed.. -->
+        
         <Item>
-          <Command>Cheat.GlobalCheats:ToggleUpgradeCheck()</Command>
+          <Command>CheatKeybinds_Serp:ChangeCheat(-1)</Command>
+          <Text>1500000016</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Alt;C</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Alt;C</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        <Item>
+          <Command>print(CheatKeybinds_Serp==nil)</Command>
+          <!-- <Command>CheatKeybinds_Serp:ChangeCheat(1)</Command> -->
+          <Text>1500000017</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Alt;B</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Alt;B</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        <Item>
+          <Command>CheatKeybinds_Serp:StartCheat()</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
@@ -67,37 +110,68 @@
           <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
           <InputTypes>
             <Modern>
-              <KeyType>Alt;Home</KeyType>
+              <KeyType>Alt;V</KeyType>
             </Modern>
             <Legacy>
-              <KeyType>Alt;Home</KeyType>
+              <KeyType>Alt;V</KeyType>
             </Legacy>
           </InputTypes>
         </Item>
         
+        
+        
+        
+        
+        
+        <!-- old keybinds -->
+        
+        
+        
+        
+        
+        <!-- <Item> -->
+          <!-- <Command>Cheat.GlobalCheats:ToggleUpgradeCheck()</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Alt;Home</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Alt;Home</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        
         <!-- no buildcosts for everything (costs are still subsctracted, so you can go bancrupt!) -->
-        <Item>
-          <Command>Cheat.GlobalCheats:ToggleIgnoreBuildingCosts()</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Control;Insert</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Control;Insert</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
+        <!-- <Item> -->
+          <!-- <Command>Cheat.GlobalCheats:ToggleIgnoreBuildingCosts()</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Control;Insert</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Control;Insert</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
         
         <!-- ToggleSuperShipSpeed does not work, most likely because the renameing from Walking to Movement? -->
         <!-- <Item> -->
           <!-- <Command>Cheat.GlobalCheats:ToggleSuperShipSpeed()</Command> -->
+          <!-- <Command>Conditions:RegisterTriggerForCurrentParticipantNet(1500000015)</Command> -->
           <!-- <Text>1500000000</Text> -->
           <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
           <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
@@ -116,127 +190,127 @@
         <!-- </Item> -->
         
         <!-- credit 1000 of every unlocked good -->
-        <Item>
-          <Command>if Area.IsCurrentAreaValidIsland then Area.Current.Economy:AddAmount(1000) end;</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Alt;Insert</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Alt;Insert</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
+        <!-- <Item> -->
+          <!-- <Command>if Area.IsCurrentAreaValidIsland then Area.Current.Economy:AddAmount(1000) end;</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Alt;Insert</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Alt;Insert</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
         
         <!-- money -->
-        <Item>
-          <Command>Economy.MetaStorage:AddAmount(1010017,100000)</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Shift;Insert</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Shift;Insert</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
+        <!-- <Item> -->
+          <!-- <Command>Economy.MetaStorage:AddAmount(1010017,100000)</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Shift;Insert</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Shift;Insert</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
         
         <!-- instant ship/unit production of currently selected shipyards production -->
-        <Item>
-          <Command>Selection.Object.Recruitment:CheatSkipRemainingTime();</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Shift;End</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Shift;End</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
+        <!-- <Item> -->
+          <!-- <Command>Selection.Object.Recruitment:CheatSkipRemainingTime();</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Shift;End</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Shift;End</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
         
         <!-- finish a portion of selected monument building phase, hit multiple times to finish it -->
-        <Item>
-          <Command>Selection.Object.Monument:CheatUpgradeMicro()</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Control;End</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Control;End</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
+        <!-- <Item> -->
+          <!-- <Command>Selection.Object.Monument:CheatUpgradeMicro()</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Control;End</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Control;End</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
         
         <!-- fill populaiton of all houses of the current island to max -->
          <!-- does not seem to exist anymore... -->
          <!-- AreaManager.AreaPopulation.SetFillAllResidencesOnIsland() -->
          <!-- Alternative: CheatChangePopulation. It adds 500 of every unlocked residence to the global population (after unlock of new pop the amount is the same for all pops) -->
-        <Item>
-          <Command>AreaPopulation:CheatChangePopulation(true)</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Insert</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Insert</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
+        <!-- <Item> -->
+          <!-- <Command>AreaPopulation:CheatChangePopulation(true)</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Insert</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Insert</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
         
          <!-- CompleteTechResearch or ResetTech for all existing techs -->
-        <Item>
-          <Command>TechHandler:CheatToggleResearchAll()</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Alt;End</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Alt;End</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
+        <!-- <Item> -->
+          <!-- <Command>TechHandler:CheatToggleResearchAll()</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Alt;End</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Alt;End</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
         
         <!-- increase attractivity of current island by 1000 (false->decrease true->increase,false->100 true->1000) -->
         <!-- Im not sure of attractivity exists in 117?! -->
@@ -260,68 +334,437 @@
         <!-- </Item> -->
         
         
-        <Item>
-          <Command>local currentTech = TechHandler:GetTechAtQueuePosition(0);if currentTech and currentTech.Guid then TechHandler:CompleteTechResearch(currentTech.Guid, true);end</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Shift;Home</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Shift;Home</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
+        <!-- <Item> -->
+          <!-- <Command>local currentTech = TechHandler:GetTechAtQueuePosition(0);if currentTech and currentTech.Guid then TechHandler:CompleteTechResearch(currentTech.Guid, true);end</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Shift;Home</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Shift;Home</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
         
         <!-- add the needed fertility from the currently selected factory to the island -->
-        <Item>
-          <Command>Selection.Object.Factory:ToggleCheatFertility()</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Control;Home</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Control;Home</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
+        <!-- <Item> -->
+          <!-- <Command>Selection.Object.Factory:ToggleCheatFertility()</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Control;Home</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Control;Home</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
         
         <!-- add random items to the current island. -->
-        <Item>
-          <Command>Item:CheatAllItems()</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Home</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Home</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
+        <!-- <Item> -->
+          <!-- <Command>Item:CheatAllItems()</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Home</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Home</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
         
     </ModOp>
     
+      <!-- <LineId>-6915801281774100367</LineId> -->
+      <!-- <Text>CQ Cheat GiveMoney</Text> -->
+      
+      <!-- <LineId>-6915158694393416181</LineId> -->
+      <!-- <Text>CQ Cheat GiveAllGoods</Text> -->
+      
+      <!-- <LineId>-6913846241831142340</LineId> -->
+      <!-- <Text>CQ Cheat BoostFactories</Text> -->
+      <!-- <FactoryUpgrade> -->
+        <!-- <ProductivityUpgrade> -->
+          <!-- <Value>900</Value> -->
+          <!-- <Percental>1</Percental> -->
+        <!-- </ProductivityUpgrade> -->
+      <!-- </FactoryUpgrade> -->
+      
+      <!-- <LineId>-6912340508834098154</LineId> -->
+      <!-- <Text>CQ Cheat MalusAttributes</Text> -->
+      <!-- <AreaNeedAttributeBuff> -->
+        <!-- <BonusAttributes> -->
+          <!-- <Money> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>-1000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </Money> -->
+          <!-- <Happiness> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>-1000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </Happiness> -->
+          <!-- <Health> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>-1000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </Health> -->
+          <!-- <FireSafety> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>-1000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </FireSafety> -->
+        <!-- </BonusAttributes> -->
+      <!-- </AreaNeedAttributeBuff> -->
+      
+      <!-- <LineId>-6902394822431217079</LineId> -->
+      <!-- <Text>CQ Cheat BonusAttributes</Text> -->
+      <!-- <AreaNeedAttributeBuff> -->
+        <!-- <BonusAttributes> -->
+          <!-- <Money> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>10000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </Money> -->
+          <!-- <Happiness> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>10000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </Happiness> -->
+          <!-- <Health> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>10000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </Health> -->
+          <!-- <FireSafety> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>10000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </FireSafety> -->
+          <!-- <Belief> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>10000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </Belief> -->
+          <!-- <Knowledge> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>10000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </Knowledge> -->
+          <!-- <Prestige> -->
+            <!-- <ValueOrPercent> -->
+              <!-- <Value>10000</Value> -->
+              <!-- <Percental>0</Percental> -->
+            <!-- </ValueOrPercent> -->
+          <!-- </Prestige> -->
+        <!-- </BonusAttributes> -->
+      <!-- </AreaNeedAttributeBuff> -->
     
+    <ModOp Type="AddNextSibling" GUID='55268'>
+      <Asset>
+        <Template>FeatureUnlock</Template>
+        <Values>
+          <Standard>
+            <GUID>1500000015</GUID>
+            <Name>Provide/Remove Effect to Speed Up Ships</Name>
+          </Standard>
+          <Locked>
+            <DefaultLockedState>1</DefaultLockedState>
+          </Locked>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionAlwaysTrue</Template>
+              <Values>
+                <Condition>
+                  <SubConditionCompletionOrder>MutuallyExclusive</SubConditionCompletionOrder>
+                </Condition>
+                <ConditionAlwaysTrue />
+              </Values>
+            </TriggerCondition>
+            <SubTriggers>
+              <Item>
+                <SubTrigger>
+                  <Template>AutoCreateTrigger</Template>
+                  <Values>
+                    <Trigger>
+                      <TriggerCondition>
+                        <Template>ConditionUnlocked</Template>
+                        <Values>
+                          <Condition/>
+                          <ConditionUnlocked>
+                            <UnlockNeeded>1500000015</UnlockNeeded>
+                          </ConditionUnlocked>
+                          <ConditionPropsNegatable>
+                            <NegateCondition>1</NegateCondition>
+                          </ConditionPropsNegatable>
+                        </Values>
+                      </TriggerCondition>
+                      <TriggerActions>
+                        <Item>
+                          <TriggerAction>
+                            <Template>ActionEffect</Template>
+                            <Values>
+                              <Action/>
+                              <ActionEffect>
+                                <EffectAsset>1500000016</EffectAsset>
+                                <StartEffect>1</StartEffect>
+                                <AffectProcessingParticipant>1</AffectProcessingParticipant>
+                              </ActionEffect>
+                            </Values>
+                          </TriggerAction>
+                        </Item>
+                        <Item>
+                          <TriggerAction>
+                            <Template>ActionUnlockAsset</Template>
+                            <Values>
+                              <Action/>
+                              <ActionUnlockAsset>
+                                <UnlockAssets>
+                                  <Item>
+                                    <Asset>1500000015</Asset>
+                                  </Item>
+                                </UnlockAssets>
+                              </ActionUnlockAsset>
+                            </Values>
+                          </TriggerAction>
+                        </Item>
+                      </TriggerActions>
+                    </Trigger>
+                  </Values>
+                </SubTrigger>
+              </Item>
+              <Item>
+                <SubTrigger>
+                  <Template>AutoCreateTrigger</Template>
+                  <Values>
+                    <Trigger>
+                      <TriggerCondition>
+                        <Template>ConditionUnlocked</Template>
+                        <Values>
+                          <Condition/>
+                          <ConditionUnlocked>
+                            <UnlockNeeded>1500000015</UnlockNeeded>
+                          </ConditionUnlocked>
+                          <ConditionPropsNegatable />
+                        </Values>
+                      </TriggerCondition>
+                      <TriggerActions>
+                        <Item>
+                          <TriggerAction>
+                            <Template>ActionEffect</Template>
+                            <Values>
+                              <Action/>
+                              <ActionEffect>
+                                <EffectAsset>1500000016</EffectAsset>
+                                <StartEffect>0</StartEffect>
+                                <AffectProcessingParticipant>1</AffectProcessingParticipant>
+                              </ActionEffect>
+                            </Values>
+                          </TriggerAction>
+                        </Item>
+                        <Item>
+                          <TriggerAction>
+                            <Template>ActionLockAsset</Template>
+                            <Values>
+                              <Action/>
+                              <ActionLockAsset>
+                                <LockAssets>
+                                  <Item>
+                                    <Asset>1500000015</Asset>
+                                  </Item>
+                                </LockAssets>
+                              </ActionLockAsset>
+                            </Values>
+                          </TriggerAction>
+                        </Item>
+                      </TriggerActions>
+                    </Trigger>
+                  </Values>
+                </SubTrigger>
+              </Item>
+            </SubTriggers>
+          </Trigger>
+          <TriggerSetup>
+            <AutoRegisterTrigger>0</AutoRegisterTrigger>
+            <UsedBySecondParties>0</UsedBySecondParties>
+            <UsedByThirdParties>0</UsedByThirdParties>
+            <AutoSelfUnlock>0</AutoSelfUnlock>
+          </TriggerSetup>
+        </Values>
+      </Asset>
+      
+              
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionNotification</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action /> -->
+                    <!-- <ActionNotification> -->
+                      <!-- <Notification> -->
+                        <!-- <Template>SideNotification</Template> -->
+                        <!-- <Values> -->
+                          <!-- <SideNotification> -->
+                            <!-- <IconAsset>1500000016</IconAsset> -->
+                          <!-- </SideNotification> -->
+                          <!-- <BaseNotification> -->
+                            <!-- <NotificationBlockingTime>0</NotificationBlockingTime> -->
+                            <!-- <NotificationPriority>900</NotificationPriority> -->
+                            <!-- <NotificationQueueTimeoutOverwrite>20000</NotificationQueueTimeoutOverwrite> -->
+                            <!-- <IsUnique>1</IsUnique> -->
+                            <!-- <NotificationText>1500000015</NotificationText> -->
+                            <!-- <NotificationAudioAsset>121786</NotificationAudioAsset> -->
+                            <!-- <NotificationGroup>PlayerClick</NotificationGroup> -->
+                            <!-- <NotificationTone>Neutral</NotificationTone> -->
+                            <!-- <NotificationTopic>SaveGame</NotificationTopic> -->
+                          <!-- </BaseNotification> -->
+                          <!-- <NotificationSubtitle /> -->
+                        <!-- </Values> -->
+                      <!-- </Notification> -->
+                    <!-- </ActionNotification> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+                            
+              <!-- <Item> -->
+                <!-- <TriggerAction> -->
+                  <!-- <Template>ActionAddGoodsToItemContainer</Template> -->
+                  <!-- <Values> -->
+                    <!-- <Action/> -->
+                    <!-- <ActionAddGoodsToItemContainer> -->
+                      <!-- <Goods> -->
+                        <!-- <Item> -->
+                          <!-- <Good> -->
+                            <!-- <Value>1010017</Value> -->
+                          <!-- </Good> -->
+                          <!-- <Amount> -->
+                            <!-- <Value>1000</Value> -->
+                          <!-- </Amount> -->
+                        <!-- </Item> -->
+                      <!-- </Goods> -->
+                    <!-- </ActionAddGoodsToItemContainer> -->
+                    <!-- <LocationFilter/> -->
+                  <!-- </Values> -->
+                <!-- </TriggerAction> -->
+              <!-- </Item> -->
+      
+      
+      
+      <Asset>
+        <Template>Effect</Template>
+        <Values>
+          <Standard>
+            <GUID>1500000016</GUID>
+            <Name>Cheat: Ship Speed All Ships</Name>
+            <IconFilename>data/ui/fhd/base/icon_content/achievements/achievement_set9_06.png</IconFilename>
+            <InfoDescription>-6907624412579326382</InfoDescription>
+          </Standard>
+          <Effect>
+            <EffectScope>ObjectsInMeta</EffectScope>
+            <SourceCategory>Tech</SourceCategory>
+            <Buffs>
+              <Item>
+                <GUID>1500000017</GUID>
+              </Item>
+            </Buffs>
+            <Targets>
+              <Item>
+                <GUID>38995</GUID>
+              </Item>
+            </Targets>
+            <EffectIconCategory>Positive</EffectIconCategory>
+            <HideInGovernorsBar>0</HideInGovernorsBar>
+          </Effect>
+          <Text>
+            <OasisId>1500000015</OasisId>
+          </Text>
+        </Values>
+      </Asset>
+      <Asset>
+        <Template>ShipBuff</Template>
+        <Values>
+          <Standard>
+            <GUID>1500000017</GUID>
+            <Name>TechEffect Ship Speed Buff</Name>
+            <IconFilename>data/ui/fhd/base/icon_content/achievements/achievement_set9_06.png</IconFilename>
+          </Standard>
+          <HealthUpgrade>
+            <BaseHealthUpgrade>
+              <Value>100</Value>
+              <Percental>1</Percental>
+            </BaseHealthUpgrade>
+            <SelfHealUpgrade>
+              <Value>100</Value>
+              <Percental>1</Percental>
+            </SelfHealUpgrade>
+          </HealthUpgrade>
+          <VehicleUpgrade/>
+          <TradeShipUpgrade>
+            <TradeShipUpgrade>
+              <LoadingSpeedUpgrade>
+                <Value>200</Value>
+                <Percental>1</Percental>
+              </LoadingSpeedUpgrade>
+            </TradeShipUpgrade>
+          </TradeShipUpgrade>
+          <Text>
+            <OasisId>1500000015</OasisId>
+          </Text>
+          <Buff>
+            <SourceCategory>Generic</SourceCategory>
+          </Buff>
+          <MovementUpgrade>
+            <BuffBaseSpeedUpgrade>
+              <Value>1000</Value>
+              <Percental>1</Percental>
+            </BuffBaseSpeedUpgrade>
+            <BuffReduceNegativeWindImpactUpgrade>
+              <Value>100</Value>
+              <Percental>1</Percental>
+            </BuffReduceNegativeWindImpactUpgrade>
+            <BuffTransferSpeedUpgrade>
+              <Value>500</Value>
+              <Percental>1</Percental>
+            </BuffTransferSpeedUpgrade>
+          </MovementUpgrade>
+          <MaintenanceUpgrade/>
+          <UnitUpgrade/>
+          <ItemContainerUpgrade/>
+          <SellableUpgrade/>
+        </Values>
+      </Asset>
+      
+      
+    </ModOp>
     
     
 </ModOps>

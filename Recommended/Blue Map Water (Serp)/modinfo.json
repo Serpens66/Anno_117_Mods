@@ -1,0 +1,33 @@
+{
+  "Version": "1.0",
+  "ModID": "bluemapwater-serp",  
+  "Anno": 8,  
+  "IncompatibleIds": [],
+  "ModDependencies": null,
+  "LoadAfterIds": [],
+  "Category": {
+    "English": "Cosmetic"
+  },
+  "ModName": {
+    "English": "Blue Map Water (Serp)"
+  },
+  "KnownIssues": [
+    {
+      "English": null
+    }
+  ],
+  "Difficulty": "unchanged",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66",
+  "ModioResourceId" : 5511844,
+  "changelog": {
+    "1.0" : "Release"
+  }
+}
