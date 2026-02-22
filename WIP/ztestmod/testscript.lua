@@ -7,14 +7,68 @@ print("testscript called from xml start")
 local function log_error(err)
   local traceback = debug.traceback~=nil and debug.traceback() or "nil"
   local fullerr = tostring(err)..", traceback:\n"..traceback
-  system.log("ERROR : "..fullerr)
+  system.log("LUA ERROR : "..fullerr)
   return fullerr
+end
+
+
+-- Areatable is a table (eg returned from Object.Area.ID/ts.Area.Current.ID eg. AreaID={SessionID=2,IslandID=1,AreaIndex=1})
+function AreatableToAreaID(Areatable)
+  if type(Areatable)=="table" then
+    local AreaIndex,IslandID,SessionID = Areatable["AreaIndex"],Areatable["IslandID"],Areatable["SessionID"]
+    if type(AreaIndex)=="number" and type(IslandID)=="number" and type(SessionID)=="number" then
+      local AreaID = (bit32.lshift(AreaIndex,13)+bit32.lshift(IslandID,6)+SessionID)
+      return AreaID
+    end
+  end
+end
+function AreaIDToAreatable(AreaID)
+  if type(AreaID)~="table" then
+    local AreaIndex = bit32.rshift(bit32.band(AreaID,0xE000), 13)
+    local IslandID = bit32.rshift(bit32.band(AreaID,0x1FC0), 6)
+    local SessionID = bit32.band(AreaID,0xF)
+    return {AreaIndex=AreaIndex, IslandID=IslandID, SessionID=SessionID}
+  end
+end
+
+-- only returns valid areas from the currently active session of the executing player
+-- MetaGame.GetSessionGameObject(OID) is able to return objects from any session! 
+-- see also compare to 1800: https://github.com/Serpens66/Anno-1800-SharedMods-for-Modders-/blob/3aece64f299365309aaf1f7a57f28e2f6900f106/shared_LuaLight/data/scripts_serp/lighttools.lua#L752
+-- and : https://github.com/Serpens66/Anno-1800-Mods/blob/2869e3bdade294b068718b91cd811ac2816db099/WorkInProgress-Mods/shared_LuaMedium/data/scripts_serp/objectfinder.lua#L493
+function LoopOverAllAreas()
+  print("called LoopOverAllAreas")
+  FromSessionID = 1 -- 0 is meta
+  ToSessionID = 40
+  FromIslandID = 1 -- is 0 for eg. ships and other things not bound to islands
+  ToIslandID = 100
+  FromAreaIndex = 1 -- is 0 for eg. ships and other things not bound to islands
+  ToAreaIndex = 1 -- can be 2 for islands sharing two owners , like ketema island. but unlikely that we need it, so default to only 1
+  for SessionID=FromSessionID,ToSessionID do
+    for IslandID=FromIslandID,ToIslandID do
+      for AreaIndex=FromAreaIndex,ToAreaIndex do
+        local AreaID = AreatableToAreaID({SessionID=SessionID,IslandID=IslandID,AreaIndex=AreaIndex})
+        local theArea = GameSession:AreaFromID(AreaID) -- Area or GameSession, both have AreaFromID, seems to be no difference
+        -- local theArea = Area:AreaFromID(AreaID)
+        if theArea and theArea:isValid() then
+          local KontorID = theArea.KontorID
+          local OwnerName = theArea.OwnerName
+          local Owner = theArea.Owner
+          local KontorCost = theArea.KontorCost
+          local Fertilities = theArea.Fertilities
+          local CityName = theArea.CityName
+          local HasAreaEconomy = theArea.HasAreaEconomy
+          print(SessionID,AreaID,KontorID,OwnerName,Owner,KontorCost,Fertilities,CityName,HasAreaEconomy)
+        end
+      end
+    end
+  end
 end
 
 
 local status,err = xpcall(function()
   print("testscript called from xml")
-    
+  system.log("testscript called from xml")
+  LoopOverAllAreas()
     
     -- Target:ToggleTargetMode(2001000) -- move
     -- Target:ToggleTargetMode(2001296) -- attack

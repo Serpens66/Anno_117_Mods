@@ -1,4 +1,5 @@
 print("testscript_main called")
+system.log("testscript_main called")
 local TestMod = {Last_Tick=0}
 
 -- https://luau.org/
@@ -9,9 +10,11 @@ local TestMod = {Last_Tick=0}
 local function log_error(err)
   local traceback = debug.traceback~=nil and debug.traceback() or "nil"
   local fullerr = tostring(err)..", traceback:\n"..traceback
-  system.log("ERROR : "..fullerr)
+  system.log("LUA ERROR : "..fullerr)
   return fullerr
 end
+
+
 
 function TestMod.Tick()
   local status,err = xpcall(function()
@@ -48,14 +51,16 @@ end
 
 function TestMod.GameLoaded()
   print("Game Loaded")
+  system.log("Game Loaded")
   local status,err = xpcall(function()
     -- Options.SetExtendedCameraDistanceEnabled(true) -- seems not to exist anymore as function...
-    if events.OnSessionEnter["testscript"]==nil then
-      events.OnSessionEnter:Add(OnSessionEnterFn,"testscript")
-      print("OnSessionEnterFn registered")
-    else -- TODO: sichergehen dass dieser check funzt
-      print("OnSessionEnterFn already registered")
-    end
+    -- if events.OnSessionEnter["testscript"]==nil then
+      -- events.OnSessionEnter:Add(OnSessionEnterFn,"testscript")
+      -- print("OnSessionEnterFn registered")
+    -- else -- TODO: sichergehen dass dieser check funzt
+      -- print("OnSessionEnterFn already registered")
+    -- end
+        
   end,log_error)
 end
 function TestMod.GameUnloaded()
@@ -82,41 +87,7 @@ function TestMod.Main()
       
       
       
-      -- source: https://stackoverflow.com/questions/65482605/how-to-print-all-values-in-a-lua-table
-      local sort, rep, concat = table.sort, string.rep, table.concat
-      local function TableToFormattedString(var, sorted, indent)
-          if type (var) == 'string' then
-              return "'" .. var .. "'"
-          elseif type (var) == 'table' then
-              local keys = {}
-              for key, _ in pairs (var) do
-                  keys[#keys + 1] = key
-              end
-              if sorted then
-                  sort (keys, function (a, b)
-                      if type (a) == type (b) and (type (a) == 'number' or type (a) == 'string') then
-                          return a < b
-                      elseif type (a) == 'number' and type (b) ~= 'number' then
-                          return true
-                      else
-                          return false
-                      end
-                  end)
-              end
-              local strings = {}
-              local indent = indent or 0
-              for _, key in ipairs (keys) do
-                  strings [#strings + 1]
-                      = rep ('\t', indent + 1)
-                     .. TableToFormattedString(key, sorted, indent + 1)
-                     .. ' = '
-                     .. TableToFormattedString(var [key], sorted, indent + 1)
-              end
-              return 'table (\n' .. concat (strings, '\n') .. '\n' .. rep ('\t', indent) .. ')'
-          else
-              return tostring (var)
-          end
-      end
+      
       
 
       -- datasets.RomanizationType.None
