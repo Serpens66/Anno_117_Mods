@@ -1,0 +1,33 @@
+{
+  "Version": "1.012",
+  "ModID": "cheat-keybinds-serp",
+  "Anno": 8,
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "LoadAfterIds": ["hot-reload-ubi"],
+  "Category": {
+    "English": "Cheat"
+  },
+  "ModName": {
+    "English": "Cheat Keybinds (Serp)"
+  },
+  "Description": {
+    "English": "Adds several cheat commands to keybinds (see readme). Helpful to test mods or simply to cheat."
+  },
+  "Difficulty": "cheat",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp",
+  "CreatorContact": "https://github.com/Serpens66",
+  "ModioResourceId" : 5426208,
+  "changelog": {
+    "1.01" : "Release",
+    "1.011" : "- Add keybind 'Shift;Home' to instant research the current active research (thanks JohnyBgood)",
+    "1.012" : "- Add keybind 'Alt;Delete' to delete (no ruin) current selected building/ship/unit even from other players. - Add keybind 'Shift;Delete' to destroy (ruin) current selected building/ship/unit even from other players (unknown if desync in Multiplayer). - Add keybind 'Control;Delete' to take over control of selected object (surely causes desync in Multiplayer)"
+  }
+}

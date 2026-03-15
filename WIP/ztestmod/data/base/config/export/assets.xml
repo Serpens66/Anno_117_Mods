@@ -1,5 +1,8 @@
 <ModOps>
     
+  <ModOp Type="replace" GUID="2001270" Path="/Values/GlobalConfig/TimeNotifications">
+    <TimeNotifications />
+</ModOp>
   <!-- https://github.com/jakobharder/anno-mod-loader/blob/main/doc/modloader-changes.md -->
     
   <!-- TODO:  -->
@@ -1366,6 +1369,7 @@
         <MaxRectSize>1000</MaxRectSize>
     </ModOp>
     
+    <!-- kontrollieren von AI schiffen geht hiermit, also vermutlich auch wie in diplo mod 1800 -->
     <ModOp Type="merge" GUID='2001000' Path="/Values/TargetMode">
         <Matches>
           <SelectionMatch1>

@@ -1,0 +1,399 @@
+<ModOps>
+
+  <!-- maybe add: -->
+  <!-- Quests:CheatSetAllPoolCountdownEndtimersToNewTime() -->
+  <!-- Static.Incident.ShortenIncidentSchedulerIntervalForMajorIncidents(0) -->
+  <!-- Participants.ActiveEmperorProperty:ShortenAllEmperorQuestTimerIntervals() -->
+  <!-- Participants:GetParticipant(Selection.Object.Owner).Diplomacy:ResetAllActionCooldownsNet() -->
+  <!-- AreaWorkforce:CheatAddDelta(productGUID , delta ) -->
+
+<!-- testing -->
+<!-- Selection:DestructSelected() -> nur eigene objekte und mit Sicherheitsabfrage -->
+<!-- GetGameObject(Selection.Object.ID):DestructConfirmedNet() -> funzt und macht durch Net vermutlich kein Desync -->
+<!-- Cheats:DestroySelectedObjects() -->
+<!-- LandCombat:DestroySelectedUnit() -->
+<!-- SessionUnit.BalancingTest:AddDamagePercent(self, unitID , percent , damageDealer , countAsUnitAttack ) -->
+<!-- Cheats:DamageSelectedObjects(percentage , damageDealerParticipant , countAsUnitAttack ) -->
+<!-- AreaManager.Walls:ApplyDamageAtPosition(targetPosition , damage ) -->
+<!-- SessionUnit.BalancingTest:AddDamagePercent(Selection.Object.ID,100,42) error: weak reference was null... -->
+
+
+
+    <!-- Alt+F4 should force quit the game without saving -->
+    <ModOp Type="merge" GUID='2001271' Path="/Values/ShortcutConfig/InputBindings/Item[InputTypes/Modern/KeyType='Alt;F4']">
+      <Command>Game:FastQuit(1)</Command>
+      <!-- <Identifier>0</Identifier> -->
+    </ModOp>
+    
+    <!-- funktioniert weiterhin nur der erste keybind , wenn mehrere exakt denselben Command haben -->
+    <ModOp Type="add" GUID='2001271' Path="/Values/ShortcutConfig/InputBindings">
+        
+        <!-- Cheats is nil currently, hopefully enabled in full release -->
+        <!-- <Item> -->
+          <!-- <Command>Cheats:ToggleConsole();</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Oem2_NumberSign</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Oem2_NumberSign</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        
+        
+        <!-- delete object (no ruins) is "Net" so most likely no desync -->
+        <Item>
+          <Command>GetGameObject(Selection.Object.ID):DestructConfirmedNet();</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Alt;Delete</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Alt;Delete</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        <!-- destroy object (ruins), maybe desync -->
+        <Item>
+          <Command>AreaManager.Walls:ApplyDamageAtPosition(Selection.Object.Position,100000);</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Shift;Delete</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Shift;Delete</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        <!-- change owner of selection to you, surely causes desync -->
+        <!-- Alternative without desync: Selection.Object.Sellable:BuyNet(42) BUT: this requires traderights and does transfer money, so same limitations like in 1800 -->
+        <Item>
+          <Command>Selection:ChangeParticipantOfSelected()</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Control;Delete</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Control;Delete</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        
+        <Item>
+          <Command>Mods:LoadMods();</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>F11</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>F11</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <Item>
+          <Command>Cheat.GlobalCheats:ToggleUpgradeCheck()</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Alt;Home</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Alt;Home</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <!-- no buildcosts for everything (costs are still subsctracted, so you can go bancrupt!) -->
+        <Item>
+          <Command>Cheat.GlobalCheats:ToggleIgnoreBuildingCosts()</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Control;Insert</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Control;Insert</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <!-- ToggleSuperShipSpeed does not work, most likely because the renameing from Walking to Movement? -->
+        <!-- <Item> -->
+          <!-- <Command>Cheat.GlobalCheats:ToggleSuperShipSpeed()</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>End</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>End</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        
+        <!-- credit 1000 of every unlocked good -->
+        <Item>
+          <Command>if Area.IsCurrentAreaValidIsland then Area.Current.Economy:AddAmount(1000) end;</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Alt;Insert</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Alt;Insert</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <!-- money -->
+        <Item>
+          <Command>Economy.MetaStorage:AddAmount(1010017,100000)</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Shift;Insert</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Shift;Insert</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <!-- instant ship/unit production of currently selected shipyards production -->
+        <Item>
+          <Command>Selection.Object.Recruitment:CheatSkipRemainingTime();</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Shift;End</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Shift;End</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <!-- finish a portion of selected monument building phase, hit multiple times to finish it -->
+        <Item>
+          <Command>Selection.Object.Monument:CheatUpgradeMicro()</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Control;End</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Control;End</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <!-- fill populaiton of all houses of the current island to max -->
+         <!-- does not seem to exist anymore... -->
+         <!-- AreaManager.AreaPopulation.SetFillAllResidencesOnIsland() -->
+         <!-- Alternative: CheatChangePopulation. It adds 500 of every unlocked residence to the global population (after unlock of new pop the amount is the same for all pops) -->
+        <Item>
+          <Command>AreaPopulation:CheatChangePopulation(true)</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Insert</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Insert</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+         <!-- CompleteTechResearch or ResetTech for all existing techs -->
+        <Item>
+          <Command>TechHandler:CheatToggleResearchAll()</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Alt;End</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Alt;End</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <!-- increase attractivity of current island by 1000 (false->decrease true->increase,false->100 true->1000) -->
+        <!-- Im not sure of attractivity exists in 117?! -->
+        <!-- <Item> -->
+          <!-- <Command>Attractivity:CheatChangeAttractivityNet(true,true)</Command> -->
+          <!-- <Text>1500000000</Text> -->
+          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+          <!-- <AudioEvent>200634</AudioEvent> -->
+          <!-- <Configurable>1</Configurable> -->
+          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+          <!-- <InputTypes> -->
+            <!-- <Modern> -->
+              <!-- <KeyType>Shift;Home</KeyType> -->
+            <!-- </Modern> -->
+            <!-- <Legacy> -->
+              <!-- <KeyType>Shift;Home</KeyType> -->
+            <!-- </Legacy> -->
+          <!-- </InputTypes> -->
+        <!-- </Item> -->
+        
+        
+        <Item>
+          <Command>local currentTech = TechHandler:GetTechAtQueuePosition(0);if currentTech and currentTech.Guid then TechHandler:CompleteTechResearch(currentTech.Guid, true);end</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Shift;Home</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Shift;Home</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <!-- add the needed fertility from the currently selected factory to the island -->
+        <Item>
+          <Command>Selection.Object.Factory:ToggleCheatFertility()</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Control;Home</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Control;Home</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+        <!-- add random items to the current island. -->
+        <Item>
+          <Command>Item:CheatAllItems()</Command>
+          <Text>1500000000</Text>
+          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+          <AudioEvent>200634</AudioEvent>
+          <Configurable>1</Configurable>
+          <HideInOptionMenu>0</HideInOptionMenu>
+          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+          <InputTypes>
+            <Modern>
+              <KeyType>Home</KeyType>
+            </Modern>
+            <Legacy>
+              <KeyType>Home</KeyType>
+            </Legacy>
+          </InputTypes>
+        </Item>
+        
+    </ModOp>
+    
+    
+    
+    
+</ModOps>
