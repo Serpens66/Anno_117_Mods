@@ -1,5 +1,5 @@
 {
-  "Version": "1.012",
+  "Version": "1.013",
   "ModID": "cheat-keybinds-serp",
   "Anno": 8,
   "IncompatibleIds": null,
@@ -28,6 +28,7 @@
   "changelog": {
     "1.01" : "Release",
     "1.011" : "- Add keybind 'Shift;Home' to instant research the current active research (thanks JohnyBgood)",
-    "1.012" : "- Add keybind 'Alt;Delete' to delete (no ruin) current selected building/ship/unit even from other players. - Add keybind 'Shift;Delete' to destroy (ruin) current selected building/ship/unit even from other players (unknown if desync in Multiplayer). - Add keybind 'Control;Delete' to take over control of selected object (surely causes desync in Multiplayer)"
+    "1.012" : "- Add keybind 'Alt;Delete' to delete (no ruin) current selected building/ship/unit even from other players. - Add keybind 'Shift;Delete' to destroy (ruin) current selected building/ship/unit even from other players (unknown if desync in Multiplayer). - Add keybind 'Control;Delete' to take over control of selected object (surely causes desync in Multiplayer)",
+    "1.013" : "- While using Control+Delete to take control of selected object: If the object is a Kontor or Villa, instead of changing owner the official TakeOver of the island will be triggered, to hopefully fix the problem that AI continues to build on the island you took over. Thanks 'hulker12' for the report."
   }
 }

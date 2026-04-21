@@ -89,8 +89,9 @@
         </Item>
         <!-- change owner of selection to you, surely causes desync -->
         <!-- Alternative without desync: Selection.Object.Sellable:BuyNet(42) BUT: this requires traderights and does transfer money, so same limitations like in 1800 -->
+        <!-- if Kontor is selected, then take over the whole island (island also changes owner with ChangeParticipantOfSelected on kontor, but I is not notified and continues to build on island) -->
         <Item>
-          <Command>Selection:ChangeParticipantOfSelected()</Command>
+          <Command>if Selection.Object:isValid() and not Selection.Object.IsOwnedByCurrentParticipant and (Selection.Object.IsKontor or Selection.Object.Villa:isValid()) then Selection.Object.Area:Takeover(Participants.GetCurrentParticipantGUID,datasets.TakeOverTransformation.ChangeOwner); else Selection:ChangeParticipantOfSelected() end;</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
           <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>

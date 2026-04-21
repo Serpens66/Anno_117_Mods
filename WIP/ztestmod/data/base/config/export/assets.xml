@@ -1423,6 +1423,10 @@
         <TraderDefaultItemRerollCosts>0</TraderDefaultItemRerollCosts>
         <TraderDefaultItemRerollCostIncrease>0</TraderDefaultItemRerollCostIncrease>
     </ModOp>
+    <ModOp Type="Merge" GUID="32778" Path="/Values/Trader">
+        <TraderDefaultItemRerollCosts>1</TraderDefaultItemRerollCosts>
+        <TraderDefaultItemRerollCostIncrease>1</TraderDefaultItemRerollCostIncrease>
+    </ModOp>
     
     <!-- man kann zwar Baumaterial Kosten zum Kontor zufügen, aber er lässt sich dennoch bei Besiedelung ohne Bauen -.- -->
      <!-- (wenn bauendes schiff es dabei hat, wirds abgezogen, steht aber nicht im BauTooltip) -->
@@ -1566,5 +1570,142 @@
       </Asset>
     </ModOp>
     
+
+
+  <!-- <ModOp Append="../" GUID="54681"> -->
+   <ModOp Type="AddNextSibling" GUID='55268'>
+
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>2001000000</GUID>
+          <Name>Sardine Watcher</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionInStorage</Template>
+            <Values>
+              <Condition/>
+              <ConditionInStorage>
+                <InStorageGoods>
+                  <Item>
+                    <Product>2088</Product>
+                    <Amount>1</Amount>
+                  </Item>
+                </InStorageGoods>
+                <InStorageCompareOp>AtLeast</InStorageCompareOp>
+              </ConditionInStorage>
+              <ObjectFilter>
+                <CheckObjectOwner>1</CheckObjectOwner>
+                <UseProcessingProfileForOwnerCheck>1</UseProcessingProfileForOwnerCheck>
+                <ExcludedObjects>
+                  <Template>EmptyAutoCreateValue</Template>
+                  <Values>
+                    <EmptyAutoCreateValue/>
+                  </Values>
+                </ExcludedObjects>
+                <Matcher>141458</Matcher>
+              </ObjectFilter>
+            </Values>
+          </TriggerCondition>
+          <!-- <TriggerCondition>
+            <Template>ConditionInStorage</Template>
+            <Values>
+              <Condition />
+              <ConditionInStorage>
+                <InStorageGoods>
+                  <Item>
+                    <Product>2088</Product> <Amount>1</Amount>
+                  </Item>
+                </InStorageGoods>
+                <InStorageCompareOp>AtLeast</InStorageCompareOp>
+              </ConditionInStorage>
+              <ObjectFilter />
+            </Values>
+          </TriggerCondition> -->
+          <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionAddGoodsToItemContainer</Template>
+                  <Values>
+                    <Action/>
+                    <ActionAddGoodsToItemContainer>
+                      <Goods>
+                        <Item>
+                          <Good>
+                            <Value>1010017</Value>
+                          </Good>
+                          <Amount>
+                            <Value>1000000</Value>
+                          </Amount>
+                        </Item>
+                      </Goods>
+                    </ActionAddGoodsToItemContainer>
+                    <LocationFilter/>
+                  </Values>
+                </TriggerAction>
+              </Item>
+
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>1</AutoRegisterTrigger>
+          <UsedByFirstParties>1</UsedByFirstParties>
+          <UsedBySecondParties>0</UsedBySecondParties>
+          <UsedByThirdParties>0</UsedByThirdParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+
+
+      <Asset>
+        <Template>Trigger</Template>
+        <Values>
+          <Standard>
+            <GUID>2001000001</GUID>
+          </Standard>
+          <Trigger>
+            <TriggerCondition>
+              <Template>ConditionAlwaysTrue</Template>
+              <Values>
+                <Condition />
+                <ConditionAlwaysTrue />
+              </Values>
+            </TriggerCondition>
+            <TriggerActions>
+              <Item>
+                <TriggerAction>
+                  <Template>ActionAddGoodsToItemContainer</Template>
+                  <Values>
+                    <Action/>
+                    <ActionAddGoodsToItemContainer>
+                      <Goods>
+                        <Item>
+                          <Good>
+                            <Value>1010017</Value>
+                          </Good>
+                          <Amount>
+                            <Value>5000</Value>
+                          </Amount>
+                        </Item>
+                      </Goods>
+                    </ActionAddGoodsToItemContainer>
+                    <LocationFilter/>
+                  </Values>
+                </TriggerAction>
+              </Item>
+            </TriggerActions>
+          </Trigger>
+          <TriggerSetup>
+            <AutoRegisterTrigger>1</AutoRegisterTrigger>
+            <UsedBySecondParties>0</UsedBySecondParties>
+          </TriggerSetup>
+        </Values>
+      </Asset>
+
+  </ModOp>
+
+
 
 </ModOps>
