@@ -1395,6 +1395,11 @@
     <!-- Aber scheinbar kann man sie nicht direkt auf einen wert wie "Anzahl der Häuser" oderso setzen oder damit vergleichen.. -->
     <!-- Doch es gibt immerhin ActionSetVariable mit SetIntVariableToRandom/SetAssetVariableToRandomPoolEntry/SetIntVariableByProgressLevel -->
       <!-- gibt an sich auch SetIntVariableToSpecialValue, aber natürlich gibts da nur die Option BailoutMoneyAmount :D -->
+     <!-- für +- gibt es ActionModifyVariable und um fixen wert zu setzen muss man Random zwischen 1 und 1 machen, ums auf 1 zu setzen -->
+    <!-- kann in lua mit Variables:GetVariable("SerpTestInt") abgefragt werden (aber leider nicht gesetzt..) -->
+    <!-- mit ConditionCompareVariable kann man ihren wert in xml abgleichen -->
+    <!-- Eine normale Variable gilt pro Participant! und wird im Coop dann auch entrechend gesynced. -->
+    <!-- Es gibt aber auch Multiplayervariablen, in GUID 145949 , aber einfach nur da zufügen teilt sie offenbar nicht mit anderen Participants.. also keine Ahnung wie nutzen -->
     <ModOp Type="add" GUID='23779' Path="/Values/ConditionVariableConfiguration/IntVariables">
       <Item>
         <Name>SerpTestInt</Name>

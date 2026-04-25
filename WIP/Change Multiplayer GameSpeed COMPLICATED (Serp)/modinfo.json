@@ -1,6 +1,6 @@
 {
   "Version": "0.1",
-  "ModID": "change-multiplayer-gamespeed-serp",
+  "ModID": "change-multiplayer-gamespeed-complicated-serp",
   "Anno": 8,  
   "IncompatibleIds": null,
   "ModDependencies": [],
@@ -27,7 +27,8 @@
     ],
     "Init": "GameSpeed_Serp = require(\"gamespeed_serp\")",
     "Load": "GameSpeed_Serp:GameLoaded()",
-    "Unload": "GameSpeed_Serp:GameUnloaded()"
+    "Unload": "GameSpeed_Serp:GameUnloaded()",
+    "Tick": "GameSpeed_Serp:Tick_CheckIfSpeedShouldChange()"
   },
   "DLCDependencies": null,
   "CreatorName": "Serp",

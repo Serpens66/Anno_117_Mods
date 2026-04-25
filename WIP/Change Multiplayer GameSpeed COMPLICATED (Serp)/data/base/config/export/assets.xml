@@ -1,0 +1,442 @@
+<ModOps>
+
+  <!-- TODO: -->
+  <!-- notification in extra trigger packen der über lua umweg mit ActionExecuteScript aufgerufen wird, -->
+   <!-- damit alle spieler diese nachricht bekommen -->
+  <!-- Und PROBLEM: CurrentGameSpeed_MP_Serp wird nicht mit anderen Participants geteilt, obwohl zugefügt zu GlobalConditionVariablesMultiPlayerShared... -->
+  <!-- mal nach DLC nochmal gucken, ob da was geändert wurde, zb. ob und wie MP_VolcanoQuestLineOwner genutzt wird -->
+   
+   
+
+  <!-- Serp guids 1500000050 to 1500000054 -->
+
+  <!-- GameClock:IncreaseGameSpeed() (does not work anymore when slowest speed reached -.-, same bug in Anno 1800 and 117 ...) -->
+	<!-- GameClock:DecreaseGameSpeed() -->
+
+  <!-- alternative: -->
+  <!-- GameClock:SetGameSpeed(4). only 2,3 and 4 are working it seems -->
+	
+  <!-- Easiest way to excute a lua script for all human participants at once, is to simply do ActionExecuteScript within a Trigger. -->
+  <!-- Problem in Anno 117 is, that these scripts can not save any global/reusable variables and also can not access any variables from other scripts or their previous call..(was possible in 1800..) -->
+  <!-- That means we are unable to save the current gamespeed in lua. Easiest workaround would be to simply define 4 different keybinds to access all allowed  -->
+   <!-- gamespeeds. But I want it to make with only 2 keybinds (descrease/increase), so I will implement a complicated solution :D -->
+    <!-- I will make use of xml Variables and the fact that Tick-lua scripts are able to remember their lua variables. -->
+  
+  <!-- I added NotificationAudioAsset to the Notifications, dont ask me why they are still silent.. -->
+  
+  <!-- Variablen können frei erstellt werden ohne Enum und können mit konstanten oder auch mit anderen Variablen in Condition verglichen werden -->
+  <!-- Sie können statt in der Config, auch in einer StorylineVariables definiert werden -->
+  <!-- Aber scheinbar kann man sie nicht direkt auf einen wert wie "Anzahl der Häuser" oderso setzen oder damit vergleichen.. -->
+  <!-- Doch es gibt immerhin ActionSetVariable mit SetIntVariableToRandom/SetAssetVariableToRandomPoolEntry/SetIntVariableByProgressLevel -->
+    <!-- gibt an sich auch SetIntVariableToSpecialValue, aber natürlich gibts da nur die Option BailoutMoneyAmount :D -->
+   <!-- für +- gibt es ActionModifyVariable und um fixen wert zu setzen muss man Random zwischen 1 und 1 machen, ums auf 1 zu setzen -->
+  <!-- kann in lua mit Variables:GetVariable("SerpTestInt") abgefragt werden (aber leider nicht gesetzt..) -->
+  <!-- mit ConditionCompareVariable kann man ihren wert in xml abgleichen -->
+  <!-- Eine normale Variable gilt pro Participant! und wird im Coop dann auch entrechend gesynced. -->
+  <!-- Es gibt aber auch Multiplayervariablen, in GUID 145949 , aber einfach nur da zufügen teilt sie offenbar nicht mit anderen Participants.. also keine Ahnung wie nutzen -->
+  <ModOp Type="add" GUID='145949' Path="/Values/ConditionVariableConfiguration/IntVariables">
+    <Item>
+      <Name>CurrentGameSpeed_MP_Serp</Name>
+      <StartValue>2</StartValue>
+      <Comment>Usage in MP Game Speed Mod</Comment>
+    </Item>
+  </ModOp>
+  
+  
+  <!-- funktioniert weiterhin nur der erste keybind , wenn mehrere exakt denselben Command haben .. -->
+  <ModOp Type="add" GUID='2001271' Path="/Values/ShortcutConfig/InputBindings">
+
+    <Item>
+      <Command>Conditions:RegisterTriggerForCurrentParticipantNet(1500000050)</Command>
+      <Text>-6911597694545728808</Text>
+      <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+      <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+      <AudioEvent>200634</AudioEvent>
+      <Configurable>1</Configurable>
+      <HideInOptionMenu>0</HideInOptionMenu>
+      <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+      <InputTypes>
+        <Modern>
+          <KeyType>Alt;NumpadSubtract</KeyType>
+        </Modern>
+        <Legacy>
+          <KeyType>Alt;NumpadSubtract</KeyType>
+        </Legacy>
+      </InputTypes>
+    </Item>
+    <Item>
+      <Command>Conditions:RegisterTriggerForCurrentParticipantNet(1500000051)</Command>
+      <Text>-6903066501330432418</Text>
+      <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+      <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+      <AudioEvent>200634</AudioEvent>
+      <Configurable>1</Configurable>
+      <HideInOptionMenu>0</HideInOptionMenu>
+      <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+      <InputTypes>
+        <Modern>
+          <KeyType>Alt;NumpadAdd</KeyType>
+        </Modern>
+        <Legacy>
+          <KeyType>Alt;NumpadAdd</KeyType>
+        </Legacy>
+      </InputTypes>
+    </Item>
+  </ModOp>
+  
+    
+    
+  <!-- Code by Serp: -->
+  <!-- Keybind Commands are only executed for the player who hit the button, which is most of the time exactly what we want. -->
+  <!-- But when changing the game speed in multiplayer, it must be executed for all players. -->
+  <!-- "ActionExecuteScript" does execute a script for all players at the same time, regardless which player triggered this action. -->
+  <!-- Although this is something we usually DONT want, in this case it is the solution for the multiplayer gamespeed. -->
+  
+  <ModOp GUID="87295" Type="AddNextSibling">
+    
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <Name>Decrease Speed MP</Name>
+          <GUID>1500000050</GUID>
+        </Standard>
+        <Trigger>
+          <!-- <TriggerCondition> -->
+            <!-- <Template>ConditionIsMultiplayer</Template> -->
+            <!-- <Values> -->
+              <!-- <Condition> -->
+                <!-- <SubConditionCompletionOrder>MutuallyExclusive</SubConditionCompletionOrder> -->
+              <!-- </Condition> -->
+              <!-- <ConditionIsMultiplayer> -->
+                <!-- <MultiplayerMode>Singleplayer</MultiplayerMode> -->
+              <!-- </ConditionIsMultiplayer> -->
+              <!-- <ConditionPropsNegatable> -->
+                <!-- <NegateCondition>1</NegateCondition> -->
+              <!-- </ConditionPropsNegatable> -->
+            <!-- </Values> -->
+          <!-- </TriggerCondition> -->
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition>
+                <SubConditionCompletionOrder>MutuallyExclusive</SubConditionCompletionOrder>
+              </Condition>
+              <ConditionAlwaysTrue />
+            </Values>
+          </TriggerCondition>
+          <!-- Only decrease the value of "CurrentGameSpeed_MP_Serp" by one, if it is MoreThan 2 (because 2 is the min allowed gamespeed) -->
+          <SubTriggers>
+            <Item>
+              <SubTrigger>
+                <Template>AutoCreateTrigger</Template>
+                <Values>
+                  <Trigger>
+                    <TriggerCondition>
+                      <Template>ConditionCompareVariable</Template>
+                      <Values>
+                        <Condition/>
+                        <ConditionCompareVariable>
+                          <VariableToCheck>CurrentGameSpeed_MP_Serp</VariableToCheck>
+                          <ComparisonOperation>MoreThan</ComparisonOperation>
+                          <SecondVariable>
+                            <Template>IntVariableOrValue</Template>
+                            <Values>
+                              <IntVariableOrValue>
+                                <IntValue>2</IntValue>
+                              </IntVariableOrValue>
+                            </Values>
+                          </SecondVariable>
+                        </ConditionCompareVariable>
+                      </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                      <Item>
+                        <TriggerAction>
+                          <Template>ActionModifyVariable</Template>
+                          <Values>
+                            <Action/>
+                            <ActionModifyVariable>
+                              <VariableName>CurrentGameSpeed_MP_Serp</VariableName>
+                              <Modifier>Subtract</Modifier>
+                              <ModifierVariable>
+                                <Template>IntVariableOrValue</Template>
+                                <Values>
+                                  <IntVariableOrValue>
+                                    <IntValue>1</IntValue>
+                                  </IntVariableOrValue>
+                                </Values>
+                              </ModifierVariable>
+                            </ActionModifyVariable>
+                          </Values>
+                        </TriggerAction>
+                      </Item>
+                      <Item>
+                        <TriggerAction>
+                          <Template>ActionNotification</Template>
+                          <Values>
+                            <Action />
+                            <ActionNotification>
+                              <Notification>
+                                <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                                <Values>
+                                  <SideNotification>
+                                    <IconAsset>501356</IconAsset>
+                                    <NotificationSideTitle>-6902842790310563938</NotificationSideTitle>
+                                    <HasJumpLocation>0</HasJumpLocation>
+                                    <IsArchivable>0</IsArchivable>
+                                  </SideNotification>
+                                  <BaseNotification>
+                                    <NotificationText>-6911597694545728808</NotificationText>
+                                    <NotificationAudioAsset>125726</NotificationAudioAsset>
+                                    <NotificationPriority>-1</NotificationPriority>
+                                    <NotificationTopic>OnlineGame</NotificationTopic>
+                                  </BaseNotification>
+                                  <NotificationSubtitle>
+                                    <Subtitle>-6911597694545728808</Subtitle>
+                                  </NotificationSubtitle>
+                                </Values>
+                              </Notification>
+                            </ActionNotification>
+                          </Values>
+                        </TriggerAction>
+                      </Item>
+                    </TriggerActions>
+                  </Trigger>
+                </Values>
+              </SubTrigger>
+            </Item>
+            <Item>
+              <SubTrigger>
+                <Template>AutoCreateTrigger</Template>
+                <Values>
+                  <Trigger>
+                    <TriggerCondition>
+                      <Template>ConditionCompareVariable</Template>
+                      <Values>
+                        <Condition/>
+                        <ConditionCompareVariable>
+                          <VariableToCheck>CurrentGameSpeed_MP_Serp</VariableToCheck>
+                          <ComparisonOperation>AtMost</ComparisonOperation>
+                          <SecondVariable>
+                            <Template>IntVariableOrValue</Template>
+                            <Values>
+                              <IntVariableOrValue>
+                                <IntValue>2</IntValue>
+                              </IntVariableOrValue>
+                            </Values>
+                          </SecondVariable>
+                        </ConditionCompareVariable>
+                      </Values>
+                    </TriggerCondition>
+                  </Trigger>
+                </Values>
+              </SubTrigger>
+            </Item>
+          </SubTriggers>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    
+    
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <Name>Increase Speed MP</Name>
+          <GUID>1500000051</GUID>
+        </Standard>
+        <Trigger>
+          <!-- <TriggerCondition> -->
+            <!-- <Template>ConditionIsMultiplayer</Template> -->
+            <!-- <Values> -->
+              <!-- <Condition> -->
+                <!-- <SubConditionCompletionOrder>MutuallyExclusive</SubConditionCompletionOrder> -->
+              <!-- </Condition> -->
+              <!-- <ConditionIsMultiplayer> -->
+                <!-- <MultiplayerMode>Singleplayer</MultiplayerMode> -->
+              <!-- </ConditionIsMultiplayer> -->
+              <!-- <ConditionPropsNegatable> -->
+                <!-- <NegateCondition>1</NegateCondition> -->
+              <!-- </ConditionPropsNegatable> -->
+            <!-- </Values> -->
+          <!-- </TriggerCondition> -->
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition>
+                <SubConditionCompletionOrder>MutuallyExclusive</SubConditionCompletionOrder>
+              </Condition>
+              <ConditionAlwaysTrue />
+            </Values>
+          </TriggerCondition>
+          <!-- Only increase the value of "CurrentGameSpeed_MP_Serp" by one, if it is LessThan 4 (because 4 is the max allowed gamespeed) -->
+          <SubTriggers>
+            <Item>
+              <SubTrigger>
+                <Template>AutoCreateTrigger</Template>
+                <Values>
+                  <Trigger>
+                    <TriggerCondition>
+                      <Template>ConditionCompareVariable</Template>
+                      <Values>
+                        <Condition/>
+                        <ConditionCompareVariable>
+                          <VariableToCheck>CurrentGameSpeed_MP_Serp</VariableToCheck>
+                          <ComparisonOperation>LessThan</ComparisonOperation>
+                          <SecondVariable>
+                            <Template>IntVariableOrValue</Template>
+                            <Values>
+                              <IntVariableOrValue>
+                                <IntValue>4</IntValue>
+                              </IntVariableOrValue>
+                            </Values>
+                          </SecondVariable>
+                        </ConditionCompareVariable>
+                      </Values>
+                    </TriggerCondition>
+                    <TriggerActions>
+                      <Item>
+                        <TriggerAction>
+                          <Template>ActionModifyVariable</Template>
+                          <Values>
+                            <Action/>
+                            <ActionModifyVariable>
+                              <VariableName>CurrentGameSpeed_MP_Serp</VariableName>
+                              <Modifier>Add</Modifier>
+                              <ModifierVariable>
+                                <Template>IntVariableOrValue</Template>
+                                <Values>
+                                  <IntVariableOrValue>
+                                    <IntValue>1</IntValue>
+                                  </IntVariableOrValue>
+                                </Values>
+                              </ModifierVariable>
+                            </ActionModifyVariable>
+                          </Values>
+                        </TriggerAction>
+                      </Item>
+                      <Item>
+                        <TriggerAction>
+                          <Template>ActionNotification</Template>
+                          <Values>
+                            <Action />
+                            <ActionNotification>
+                              <Notification>
+                                <IsBaseAutoCreateAsset>1</IsBaseAutoCreateAsset>
+                                <Values>
+                                  <SideNotification>
+                                    <IconAsset>501356</IconAsset>
+                                    <NotificationSideTitle>-6902842790310563938</NotificationSideTitle>
+                                    <HasJumpLocation>0</HasJumpLocation>
+                                    <IsArchivable>0</IsArchivable>
+                                  </SideNotification>
+                                  <BaseNotification>
+                                    <NotificationText>-6903066501330432418</NotificationText>
+                                    <NotificationAudioAsset>125725</NotificationAudioAsset>
+                                    <NotificationPriority>-1</NotificationPriority>
+                                    <NotificationTopic>OnlineGame</NotificationTopic>
+                                  </BaseNotification>
+                                  <NotificationSubtitle>
+                                    <Subtitle>-6903066501330432418</Subtitle>
+                                  </NotificationSubtitle>
+                                </Values>
+                              </Notification>
+                            </ActionNotification>
+                          </Values>
+                        </TriggerAction>
+                      </Item>
+                    </TriggerActions>
+                  </Trigger>
+                </Values>
+              </SubTrigger>
+            </Item>
+            <Item>
+              <SubTrigger>
+                <Template>AutoCreateTrigger</Template>
+                <Values>
+                  <Trigger>
+                    <TriggerCondition>
+                      <Template>ConditionCompareVariable</Template>
+                      <Values>
+                        <Condition/>
+                        <ConditionCompareVariable>
+                          <VariableToCheck>CurrentGameSpeed_MP_Serp</VariableToCheck>
+                          <ComparisonOperation>AtLeast</ComparisonOperation>
+                          <SecondVariable>
+                            <Template>IntVariableOrValue</Template>
+                            <Values>
+                              <IntVariableOrValue>
+                                <IntValue>4</IntValue>
+                              </IntVariableOrValue>
+                            </Values>
+                          </SecondVariable>
+                        </ConditionCompareVariable>
+                      </Values>
+                    </TriggerCondition>
+                  </Trigger>
+                </Values>
+              </SubTrigger>
+            </Item>
+          </SubTriggers>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <Name>Reset Variable (eg. when leaving pause menu or load a save), registered via lua</Name>
+          <GUID>1500000054</GUID>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionSetVariable</Template>
+                <Values>
+                  <Action/>
+                  <ActionSetVariable>
+                    <VariableName>CurrentGameSpeed_MP_Serp</VariableName>
+                    <SetVariableTo>
+                      <Template>SetIntVariableToRandom</Template>
+                      <Values>
+                        <SetIntVariableToRandom>
+                          <Min>2</Min>
+                          <Max>2</Max>
+                        </SetIntVariableToRandom>
+                      </Values>
+                    </SetVariableTo>
+                  </ActionSetVariable>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    
+    
+  </ModOp>
+
+</ModOps> 

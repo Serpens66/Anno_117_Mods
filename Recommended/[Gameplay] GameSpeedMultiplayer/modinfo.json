@@ -1,0 +1,32 @@
+{
+  "Version": "1.0.2",
+  "ModID": "change-multiplayer-gamespeed-serp",
+  "Anno": 8,  
+  "IncompatibleIds": null,
+  "ModDependencies": [],
+  "LoadAfterIds": [],
+  "Category": {
+    "English": "Misc"
+  },
+  "ModName": {
+    "English": "GameSpeed Multiplayer",
+    "English": "Spielgeschwindigkeit Multiplayer",
+  },
+  "Description": {
+    "English": "Allows to change the gamespeed in multiplayer",
+    "German": "Ermöglicht die Anpassung der Spielgeschwindigkeit im Mehrspieler."
+  },
+  "Difficulty": "unchanged",
+  "GameSetup": {
+    "RequiresNewGame": false,
+    "SafeToRemove": true,
+    "Multiplayer": true,
+    "Campaign": true
+  },
+  "DLCDependencies": null,
+  "CreatorName": "Serp , questxyx",
+  "CreatorContact": "https://github.com/Serpens66 , .questy Discord",
+  "changelog": {
+    "1.0.2" : "Changed Code to ActionExecuteScript execute code for all human players. Add Sidenotification."
+  }
+}
