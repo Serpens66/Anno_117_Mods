@@ -1,5 +1,5 @@
 {
-  "Version": "1.0.2",
+  "Version": "1.0.3",
   "ModID": "change-multiplayer-gamespeed-serp",
   "Anno": 8,  
   "IncompatibleIds": null,
@@ -10,7 +10,7 @@
   },
   "ModName": {
     "English": "GameSpeed Multiplayer",
-    "English": "Spielgeschwindigkeit Multiplayer",
+    "German": "Spielgeschwindigkeit Multiplayer"
   },
   "Description": {
     "English": "Allows to change the gamespeed in multiplayer",
@@ -26,7 +26,9 @@
   "DLCDependencies": null,
   "CreatorName": "Serp , questxyx",
   "CreatorContact": "https://github.com/Serpens66 , .questy Discord",
+  "ModioResourceId" : 5979203,
   "changelog": {
-    "1.0.2" : "Changed Code to ActionExecuteScript execute code for all human players. Add Sidenotification."
+    "1.0.2" : "Changed Code to ActionExecuteScript execute code for all human players. Add Sidenotification.",
+    "1.0.3" : "Fixed modinfo.json file and added ModioResourceId to it."
   }
 }
