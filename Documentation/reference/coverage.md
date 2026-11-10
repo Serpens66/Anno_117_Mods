@@ -1,0 +1,10 @@
+# Coverage and continuation
+
+| Topic | Covered | Still pending |
+| --- | --- | --- |
+| Repository | All 94 pre-setup non-Git files inventoried at `7bf5ca0`; 21 metadata files (including JSONC), all 28 XML files and 11 Lua sources classified, with notes, package variants, resource paths and local changelogs. | Full offline patch evaluation, binary decoding and current in-game results for every mod. |
+| Vanilla | All 40 installed archive indexes examined. The original filtered 3.0 snapshot has 134 XML, 2,540 Lua and one SRT. The updated extract adds one raw InfoTip export verified against the installed archive. Native data model, localization and selected scripts were inspected. [InfoTip supplement](../foundations/vanilla-research.md#infotips-and-other-resources) | Full feature-specific audits; native engine implementation, parsed InfoTips, UI Studio JSON, resource formats, savegame and MP behavior. |
+| Public game changes | Identified official notes 1.3 through 3.0, launch material, two identified hotfix notices and modding roadmap; see [changelogs](changelogs.md). | Unpublished build deltas and early platform-only changes without retrievable official notes. |
+| Public mod changes | Repo changelogs and local history read; public pages and author references checked. | Independently rendered/downloaded mod.io file histories and parity with packages. |
+| 1800 transfer | Compared the harbor radius, construction category helper, reward pools, expeditions, aqueducts and City Status. Classified local docs and package examples by game and evidence type. [1800 comparison](anno-1800-comparison.md) | Further guides, code, game build differences and dependencies require task-specific checks. |
+| Validation | Extraction paths, selected byte counts and SHA-256 verified. A fresh 40-archive extraction reproduced the supplemented InfoTip entry and matched the original 2,675 entries. Strict XML parser deviations in 104 native files are recorded in the receipt. Workspace XML and package metadata parse under their respective formats. | No game launch, save test, 117 xmltest run or multiplayer test was part of setup. |

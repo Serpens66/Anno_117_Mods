@@ -1,0 +1,1781 @@
+{
+  "schema": 1,
+  "revision": "7bf5ca0fef8794c3c41870617cd41271bee42662",
+  "scope": "Pre-setup working tree; hashes are working-copy bytes, not normalized Git blobs.",
+  "fileCount": 94,
+  "fileKinds": {
+    "binary/opaque": 22,
+    "git attributes": 1,
+    "json": 20,
+    "jsonc": 1,
+    "lua": 11,
+    "md": 5,
+    "txt": 6,
+    "xml": 28
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 66,
+      "sha256": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b",
+      "kind": "git attributes",
+      "encoding": "utf-8",
+      "lines": 2,
+      "urls": []
+    },
+    {
+      "path": "README.md",
+      "bytes": 1823,
+      "sha256": "b4670d93fd30a115653ddfec8c08309fbc445b6ee1b6679b189da15a8ff1871b",
+      "kind": "md",
+      "encoding": "utf-8",
+      "lines": 30,
+      "urls": [
+        "https://discord.gg/nEQj3qfTYm",
+        "https://github.com/anno-mods.png",
+        "https://github.com/anno-mods/Collection"
+      ]
+    },
+    {
+      "path": "Recommended/[Gameplay] GameSpeedMultiplayer/data/base/config/export/assets.xml",
+      "bytes": 15995,
+      "sha256": "73b4ae9363a0d3e400b36fad2bc710ab704aa273b40b9a50970a160f3dafd490",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 396,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 1,
+        "legacy:addnextsibling": 1
+      },
+      "constructs": {
+        "Asset": 6
+      },
+      "definedAssetIds": [
+        "1500000050",
+        "1500000051",
+        "1500000052",
+        "1500000053",
+        "1500000054",
+        "1500000055"
+      ],
+      "lineIds": [],
+      "scriptFiles": [
+        "data/scripts/gamespeed_2.lua",
+        "data/scripts/gamespeed_3.lua",
+        "data/scripts/gamespeed_4.lua"
+      ]
+    },
+    {
+      "path": "Recommended/[Gameplay] GameSpeedMultiplayer/data/scripts/gamespeed_2.lua",
+      "bytes": 173,
+      "sha256": "8b7772da6609968b508d6da1bc7d5c13c7e187d8a2abb8ae952759f88584ee84",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 6,
+      "urls": [],
+      "declaredFunctions": []
+    },
+    {
+      "path": "Recommended/[Gameplay] GameSpeedMultiplayer/data/scripts/gamespeed_3.lua",
+      "bytes": 173,
+      "sha256": "75235490653cb6f93fcc8bd1346268416d1408f10e6099f80b000389db74be73",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 6,
+      "urls": [],
+      "declaredFunctions": []
+    },
+    {
+      "path": "Recommended/[Gameplay] GameSpeedMultiplayer/data/scripts/gamespeed_4.lua",
+      "bytes": 173,
+      "sha256": "28c930f226299b6dddd0949fb0cba11410d80eebfba418c047fd9cda3f493ffd",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 6,
+      "urls": [],
+      "declaredFunctions": []
+    },
+    {
+      "path": "Recommended/[Gameplay] GameSpeedMultiplayer/modinfo.json",
+      "bytes": 1040,
+      "sha256": "febb711c2da5a9149fdec215599e3da37a022b42431180e67dd8827e22ba3a8c",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 34,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "Recommended/Blue Blueprints (Serp)/data/base/graphics/engine/feedback/_blueprintfill_0.dds",
+      "bytes": 349700,
+      "sha256": "6e734947ff7224bbf159275cdae5af73c875959536b2940e1f4eff7a2fa0f87e",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Blueprints (Serp)/data/base/graphics/engine/feedback/blueprintfill_0.dds",
+      "bytes": 349700,
+      "sha256": "902d897d2ee34517bc8b6b1e6b40719fd54f85d57fbc4a6819ac0fcd18c044aa",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Blueprints (Serp)/data/base/graphics/engine/feedback/orig_blueprintfill_0.dds",
+      "bytes": 349700,
+      "sha256": "e55bf4e04ac41c6a5573383769c9e4e8613d99d716a9af188ab029aa0de09ba3",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Blueprints (Serp)/modinfo.json",
+      "bytes": 676,
+      "sha256": "c8900553df1e05a72ebf1020de215dbedda0bd1e7f40e851c8ac3c9a28b629ff",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 33,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/base/config/export/assets.xml",
+      "bytes": 1153,
+      "sha256": "c6f6a9ded6b00576653d55391e07c4777697f287ab05cb4f026825a4e0c05a32",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 25,
+      "urls": [
+        "https://discord.com/channels/578443209940926465/581158181078695948/833369411830284318",
+        "https://github.com/jakobharder/anno-mod-loader/blob/main/doc/modloader-changes.md"
+      ],
+      "root": "ModOps",
+      "operations": {},
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/base/config/gui/texts_english.xml",
+      "bytes": 98,
+      "sha256": "bcf6cae17bfac3f3dbb4799707ae8b3e46726cbe5b8c2c9fed6be40bdae15853",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 5,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {},
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/base/config/gui/texts_german.xml",
+      "bytes": 98,
+      "sha256": "bcf6cae17bfac3f3dbb4799707ae8b3e46726cbe5b8c2c9fed6be40bdae15853",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 5,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {},
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/base/graphics/ui/3d_objects/world_map/maps/world_map_diff_0.dds",
+      "bytes": 89478660,
+      "sha256": "969bab4d3c2464bf7e7c073df895475cb9d9905df2a2827a450698bbc97b4201",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/macromap/bg_map_macromap_1920x1080_0.dds",
+      "bytes": 11141540,
+      "sha256": "d5d94bf1d107055fcf7610064a31736b422d3967f73300a57ee7127bc37f9a13",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/__________bg_map_minimap_400_0.dds",
+      "bytes": 1083252,
+      "sha256": "8b7b3e3b9ecb93651a06206c4b67eb483ceefd8f1858b56ef7ac410baff49720",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/_________bg_map_minimap_400_0.dds",
+      "bytes": 1083252,
+      "sha256": "9d48a8eb274b77462f050ade550455f23f8085a5c11a2ff634227728b6a468e7",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/________bg_map_minimap_400_0.dds",
+      "bytes": 1083252,
+      "sha256": "b5feea664e2142683e11a9320f027fa17e3057274c468f902f0ca4ab5eb82e5f",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/_______bg_map_minimap_400_0.dds",
+      "bytes": 1083252,
+      "sha256": "ac773a7b75a156a5820b8a602c70c6c0f49527e7f3d8bee1301c5988b648d0e5",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/______bg_map_minimap_400_0.dds",
+      "bytes": 1083252,
+      "sha256": "339da710fcc2f9461b1523f20d3d9d1723cd707781ba8556d62143653eebd7f9",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/_____bg_map_minimap_400_0.dds",
+      "bytes": 1083252,
+      "sha256": "446941b4d1d3924460e001a12b6d52e477c9bb305c956326cf444253b1813c7f",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/____bg_map_minimap_400_0.dds",
+      "bytes": 1083252,
+      "sha256": "68215192c8b88a091776a2c7339a20bf145e971cff807a0ef6f1ea6d53c93e8e",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/___bg_map_minimap_400_0.dds",
+      "bytes": 1083252,
+      "sha256": "38a1399f1156c0c2ed300f5d221f6ad3ce832137a998ab3479bb9d71f3ee4e1c",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/__bg_map_minimap_400_0.dds",
+      "bytes": 1083252,
+      "sha256": "f77e0fcae6cf6cac7d525d6a09ce13dccd0eac5b0781d1bfa02fff03d329f3d7",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/_bg_map_minimap_400_0.dds",
+      "bytes": 923348,
+      "sha256": "ce51d878679f3273c01bea45070f5f68aedbb3c54019cc13c2774270a86a4a31",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/bg_map_minimap_400_0.dds",
+      "bytes": 1083252,
+      "sha256": "53b46e3db747635dfa2c91aad0597c881cb63aa8d8d98213802acb1ad061176b",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/data/ui/4k/base/features/minimap/orig_bg_map_minimap_400_0.dds",
+      "bytes": 923348,
+      "sha256": "46c0aa57dba6bfe1da52f12497cd2511af875a041ec9698f7ee62a4522dd453c",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/modinfo.json",
+      "bytes": 673,
+      "sha256": "b2267a1089ec84996a85d748b296d9909eae4c285ef7e221395887ecd0fd24ea",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 33,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "Recommended/Cheat Keybinds (Serp)/Cheat_Keybinds_Serp.png",
+      "bytes": 851399,
+      "sha256": "31e54d10bb7e7925c56372a9804e787375963cf6e7e1a267fd9011f6c55ed69f",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Cheat Keybinds (Serp)/data/base/config/export/assets.xml",
+      "bytes": 17381,
+      "sha256": "1657aae60a46b31388c254756b243d0fffddd1923d6b3cfc06a282a0079879fd",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 400,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 1,
+        "legacy:merge": 1
+      },
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "Recommended/Cheat Keybinds (Serp)/data/base/config/gui/texts_english.xml",
+      "bytes": 169,
+      "sha256": "0f40f081adfc60cf766658b15efce7f3d62c73439644f7fea28c6d28e5d66ed8",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 10,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "short:Add": 1
+      },
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [
+        "1500000000"
+      ],
+      "scriptFiles": []
+    },
+    {
+      "path": "Recommended/Cheat Keybinds (Serp)/modinfo.json",
+      "bytes": 1571,
+      "sha256": "6bce32e132be55455a24d3a1976639ed65bcc400c0690a5185baa5a85ac5d0d3",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 34,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "Recommended/Cheat Keybinds (Serp)/ReadMe.txt",
+      "bytes": 1065,
+      "sha256": "8c7a136494106333d7caaf66a1fd60b4bab67a9ae15ba97e4d01e56cde5ebca9",
+      "kind": "txt",
+      "encoding": "utf-8",
+      "lines": 18,
+      "urls": []
+    },
+    {
+      "path": "Recommended/README.md",
+      "bytes": 33,
+      "sha256": "69b2a619ea920cab4602af1d00658c18a78dd53bdf17d569ac03d955e2eae2fa",
+      "kind": "md",
+      "encoding": "utf-8",
+      "lines": 2,
+      "urls": []
+    },
+    {
+      "path": "Recommended/Unhide All (Serp)/data/base/config/export/assets.xml",
+      "bytes": 2808,
+      "sha256": "a0ffab1482789409f3e682fe8867b3e5e89672f2d032ff8d7af6a29ba5251607",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 84,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:addnextsibling": 1
+      },
+      "constructs": {
+        "Asset": 8
+      },
+      "definedAssetIds": [
+        "1500000001",
+        "1500000006"
+      ],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "Recommended/Unhide All (Serp)/modinfo.json",
+      "bytes": 1159,
+      "sha256": "b0ce73b0295d4e13a491d3e0c7e6e445d622877a36d59968bcc1c6787b65cde8",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 35,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "Recommended/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/changelog.txt",
+      "bytes": 83,
+      "sha256": "16ffb9a116d595cb99c2ce1ab6e0deb2dd31b735ca7660a5c136058c5fb3d4a4",
+      "kind": "txt",
+      "encoding": "utf-8",
+      "lines": 4,
+      "urls": [],
+      "changelogLines": [
+        "1.01:",
+        "Add Pool for ProductionChain and Category",
+        "1.02:",
+        "Add Pool for all Buildings"
+      ]
+    },
+    {
+      "path": "Recommended/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/data/base/config/export/assets.xml",
+      "bytes": 2576,
+      "sha256": "6e13855fc43b9ad1df0cd9fddac3b715b46730a8bdbb622bf628ef62f300ee3b",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 98,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 4,
+        "legacy:addnextsibling": 1
+      },
+      "constructs": {
+        "Asset": 8,
+        "ModOpContent": 4
+      },
+      "definedAssetIds": [
+        "1500000002",
+        "1500000003",
+        "1500000004",
+        "1500000005"
+      ],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "Recommended/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "bytes": 1350,
+      "sha256": "1e539b7fe2e5784817621a63c162f9c498197e32510f0b9b7516fccd3c6ab4c6",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 29,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "Recommended/Unhide All (Serp)/Unhide_All.png",
+      "bytes": 1158834,
+      "sha256": "10f9c08fc1bd655a15605483719167a1faafd69d6b862001d6d7bdcff001ee6e",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "Recommended/Zoom Out-In Further (Serp)/data/base/config/game/camera.xml",
+      "bytes": 11747,
+      "sha256": "6b45fa4200e7a52cf327c19c8a87f8958873f225c48a92a41677b419915b3b82",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 137,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 1,
+        "legacy:merge": 2
+      },
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "Recommended/Zoom Out-In Further (Serp)/modinfo.jsonc",
+      "bytes": 1500,
+      "sha256": "2f0d3c94eff4d164fbcad462e526184a6274bfc3f0cb446e30244c1017d565fb",
+      "kind": "jsonc",
+      "encoding": "utf-8",
+      "lines": 38,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "shared_Mods/README.md",
+      "bytes": 40,
+      "sha256": "816b751594fabbca5ec080ce485f3c49699a441ab1840f9cea8b792d5462970b",
+      "kind": "md",
+      "encoding": "utf-8",
+      "lines": 2,
+      "urls": []
+    },
+    {
+      "path": "shared_Mods/shared_CopyPools_AP_ConstrBuild/data/base/config/export/assets.xml",
+      "bytes": 685,
+      "sha256": "e8b66a67c916722e8508232cbcda330a048fd429c1ba2bcb09e09b0878d5c952",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 32,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 1,
+        "legacy:addnextsibling": 1
+      },
+      "constructs": {
+        "Asset": 2,
+        "ModOpContent": 1
+      },
+      "definedAssetIds": [
+        "1500000002"
+      ],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "shared_Mods/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "bytes": 1349,
+      "sha256": "af32f1d545e53ae81fc8f9074a73c5581d0e694c92833f19d497a535b4aa0545",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 29,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "WIP/AI EnterSessionsAfterHumanAndAsksPermission (Serp)/changelog.txt",
+      "bytes": 421,
+      "sha256": "29f7d2c297ea9da8e8b487b439bc39068cec1ac1f9cd0d07650a6a3a070a75af",
+      "kind": "txt",
+      "encoding": "utf-8",
+      "lines": 5,
+      "urls": [],
+      "changelogLines": [
+        "1.01:",
+        "- added: All AI asks for permission to settle an island. Changed rep bonus/malus for accept/decline of this. ",
+        " I added this to this mod instead making a new one, because AI can only ask for permission in sessions the human already unlocked.",
+        " 1.02:",
+        "- improved code by using the game intern \"MayEnterSessionsBeforeHuman\" value from the AIs, instead of adding new SecondPartyReferenceUnlock to the sessions itself."
+      ]
+    },
+    {
+      "path": "WIP/AI EnterSessionsAfterHumanAndAsksPermission (Serp)/data/config/export/main/asset/assets.xml",
+      "bytes": 32436,
+      "sha256": "c7a8efee9b0c3e46a8b1ebfe07f0b0e4335ff4cca16c03f55703be55538f5f2f",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 870,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:merge": 3,
+        "legacy:replace": 25
+      },
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "WIP/AI EnterSessionsAfterHumanAndAsksPermission (Serp)/modinfo.json",
+      "bytes": 1869,
+      "sha256": "916350c8950e453075f1993dd60c9611aba56bbcffb86733d8a853cea186f67e",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 32,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "WIP/BT Better PassiveTrading (Serp)/data/base/config/export/assets.xml",
+      "bytes": 4798,
+      "sha256": "66f8a6a165c21a2f96b1b95b960f3518c9560970069c8ac3d2ca364145def30e",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 94,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:merge": 1
+      },
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "WIP/BT Better PassiveTrading (Serp)/modinfo.json",
+      "bytes": 930,
+      "sha256": "b7c834cfe5f216316d0cd196594e6cbf68d19b5bd08e12dd38b6acb17f6edf18",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 33,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "WIP/Change Multiplayer GameSpeed COMPLICATED (Serp)/data/base/config/export/assets.xml",
+      "bytes": 20760,
+      "sha256": "9efc06f94da7a4df08897b38843ce5f0e4a47f46e91049ec2b25f818cf4a080a",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 442,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 2,
+        "legacy:addnextsibling": 1
+      },
+      "constructs": {
+        "Asset": 3
+      },
+      "definedAssetIds": [
+        "1500000050",
+        "1500000051",
+        "1500000054"
+      ],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "WIP/Change Multiplayer GameSpeed COMPLICATED (Serp)/data/decreasegamespeed_serp.lua",
+      "bytes": 1600,
+      "sha256": "09163563ae92eb1d0c511ac09826f6eb47d254c3abfc79ab50cd2fb0ae864039",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 39,
+      "urls": [],
+      "declaredFunctions": [
+        "log_error",
+        "DecreaseGameSpeed"
+      ]
+    },
+    {
+      "path": "WIP/Change Multiplayer GameSpeed COMPLICATED (Serp)/data/gamespeed_serp.lua",
+      "bytes": 4272,
+      "sha256": "b6ba5c601b01b46bebd80d850687d93d4cc5bde48c3bcbbfcb4f1407633210f3",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 88,
+      "urls": [],
+      "declaredFunctions": [
+        "GameSpeed_Serp.log_error",
+        "GameSpeed_Serp.OnLeaveUIState",
+        "GameSpeed_Serp.GameLoaded",
+        "GameSpeed_Serp.GameUnloaded",
+        "GameSpeed_Serp.Tick_CheckIfSpeedShouldChange"
+      ]
+    },
+    {
+      "path": "WIP/Change Multiplayer GameSpeed COMPLICATED (Serp)/data/increasegamespeed_serp - Kopie.lua",
+      "bytes": 1603,
+      "sha256": "c7068f57b9dcc12904b7556bcd50976558b949e7d3d04b9807db56fb2f9c571f",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 39,
+      "urls": [],
+      "declaredFunctions": [
+        "log_error",
+        "IncreaseGameSpeed"
+      ]
+    },
+    {
+      "path": "WIP/Change Multiplayer GameSpeed COMPLICATED (Serp)/data/increasegamespeed_serp.lua",
+      "bytes": 1603,
+      "sha256": "c7068f57b9dcc12904b7556bcd50976558b949e7d3d04b9807db56fb2f9c571f",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 39,
+      "urls": [],
+      "declaredFunctions": [
+        "log_error",
+        "IncreaseGameSpeed"
+      ]
+    },
+    {
+      "path": "WIP/Change Multiplayer GameSpeed COMPLICATED (Serp)/modinfo.json",
+      "bytes": 1000,
+      "sha256": "8d7bdfdbc7b35b636338e25e0b6192d4bec1278f90f76dc2ca25ebd62e47e780",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 39,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "WIP/Cheat Keybinds (Serp)/Cheat_Keybinds_Serp.png",
+      "bytes": 851399,
+      "sha256": "31e54d10bb7e7925c56372a9804e787375963cf6e7e1a267fd9011f6c55ed69f",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "WIP/Cheat Keybinds (Serp)/data/base/config/export/assets.xml",
+      "bytes": 33685,
+      "sha256": "101ddf6cbe95ea596b5584621ffd74b5a24bf235780e679da9f08627aa5745ae",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 789,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 1,
+        "legacy:addnextsibling": 1,
+        "legacy:merge": 1
+      },
+      "constructs": {
+        "Asset": 5
+      },
+      "definedAssetIds": [
+        "1500000015",
+        "1500000016",
+        "1500000017"
+      ],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "WIP/Cheat Keybinds (Serp)/data/base/config/gui/texts_english.xml",
+      "bytes": 571,
+      "sha256": "06934d2f419b0fa8f307b19247931e0da75e935e27116773e5c819c2e792b067",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 25,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "short:Add": 1
+      },
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [
+        "1500000000",
+        "1500000015",
+        "1500000016",
+        "1500000017"
+      ],
+      "scriptFiles": []
+    },
+    {
+      "path": "WIP/Cheat Keybinds (Serp)/data/base/config/gui/texts_german.xml",
+      "bytes": 346,
+      "sha256": "921fa4ac66e6dd9b44a344675959d3847675a4847ca8e31b22398cab9268f6b9",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 16,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "short:Add": 1,
+        "short:Remove": 1
+      },
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [
+        "1500000000",
+        "1500000015"
+      ],
+      "scriptFiles": []
+    },
+    {
+      "path": "WIP/Cheat Keybinds (Serp)/data/cheatkeybinds_serp.lua",
+      "bytes": 5728,
+      "sha256": "9a85086154b8c71142803375b729db9476f44c79bdd38772752d0a3a496b10f9",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 127,
+      "urls": [],
+      "declaredFunctions": [
+        "CheatKeybinds_Serp.log_error",
+        "CheatKeybinds_Serp.GameLoaded",
+        "CheatKeybinds_Serp.GameUnloaded",
+        "CheatKeybinds_Serp.Main",
+        "CheatKeybinds_Serp.ChangeCheat",
+        "CheatKeybinds_Serp.StartCheat"
+      ]
+    },
+    {
+      "path": "WIP/Cheat Keybinds (Serp)/modinfo.json",
+      "bytes": 1199,
+      "sha256": "238f59d14d7da1ee9ab3ffcca1f46e781650064cc0f8edac263cb7ac36cdfa7b",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 41,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "WIP/Cheat Keybinds (Serp)/ReadMe.txt",
+      "bytes": 1065,
+      "sha256": "8c7a136494106333d7caaf66a1fd60b4bab67a9ae15ba97e4d01e56cde5ebca9",
+      "kind": "txt",
+      "encoding": "utf-8",
+      "lines": 18,
+      "urls": []
+    },
+    {
+      "path": "WIP/README.md",
+      "bytes": 59,
+      "sha256": "3c9bfad7e992a90d0fe74f0f8b22e7533799ea257a71a37402813f19edaa00a5",
+      "kind": "md",
+      "encoding": "utf-8",
+      "lines": 2,
+      "urls": []
+    },
+    {
+      "path": "WIP/ztestmod/data/base/config/export/assets.xml",
+      "bytes": 70843,
+      "sha256": "87b917719c24e7f186918c6aadca56f0154c7e6b9ec3b15a35735c1df1c2608e",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 1716,
+      "urls": [
+        "https://github.com/jakobharder/anno-mod-loader/blob/main/doc/modloader-changes.md"
+      ],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 3,
+        "legacy:addnextsibling": 3,
+        "legacy:addprevsibling": 1,
+        "legacy:merge": 9,
+        "legacy:replace": 1
+      },
+      "constructs": {
+        "Asset": 11
+      },
+      "definedAssetIds": [
+        "1500000021",
+        "1500000030",
+        "1500001166",
+        "1500001167",
+        "2001000000",
+        "2001000001"
+      ],
+      "lineIds": [],
+      "scriptFiles": [
+        "testscript.lua"
+      ]
+    },
+    {
+      "path": "WIP/ztestmod/data/base/config/gui/texts_english.xml",
+      "bytes": 98,
+      "sha256": "bcf6cae17bfac3f3dbb4799707ae8b3e46726cbe5b8c2c9fed6be40bdae15853",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 5,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {},
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "WIP/ztestmod/data/base/config/gui/texts_german.xml",
+      "bytes": 98,
+      "sha256": "bcf6cae17bfac3f3dbb4799707ae8b3e46726cbe5b8c2c9fed6be40bdae15853",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 5,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {},
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "WIP/ztestmod/data/icon_3d_construction_category_institution_colour.png",
+      "bytes": 212742,
+      "sha256": "25ab1939191df52bcbc6d82aa9d9709d5fb82967da7821088a9af9bf59df8bb2",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "WIP/ztestmod/data/icon_3d_construction_category_religion_colour.png",
+      "bytes": 214451,
+      "sha256": "ce742f1a04ac873ae24732d3feb7e724f772941bdf8066dd9635d7969c813709",
+      "kind": "binary/opaque"
+    },
+    {
+      "path": "WIP/ztestmod/data/testscript_main.lua",
+      "bytes": 11382,
+      "sha256": "c14f8eb289a5d3f88e84490f46af346f2a6e86451ae022985b6c0c0a316ae03e",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 201,
+      "urls": [
+        "https://luau.org/",
+        "https://rfcs.luau.org/function-debug-info.html"
+      ],
+      "declaredFunctions": [
+        "log_error",
+        "TestMod.Tick",
+        "OnSessionEnterFn",
+        "TestMod.GameLoaded",
+        "TestMod.GameUnloaded",
+        "TestMod.Main"
+      ]
+    },
+    {
+      "path": "WIP/ztestmod/modinfo.json",
+      "bytes": 867,
+      "sha256": "730a97cfdb8e153fafb22b4e7fe216a08ab2d1808027f639335e4bb9adb0e1ac",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 41,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "WIP/ztestmod/testscript.lua",
+      "bytes": 6221,
+      "sha256": "e02936931bfde9e797fc02871fbbb3c341fb7b11c9dc7dfd9a389a31388b8f1d",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 137,
+      "urls": [
+        "https://github.com/Serpens66/Anno-1800-Mods/blob/2869e3bdade294b068718b91cd811ac2816db099/WorkInProgress-Mods/shared_LuaMedium/data/scripts_serp/objectfinder.lua#L493",
+        "https://github.com/Serpens66/Anno-1800-SharedMods-for-Modders-/blob/3aece64f299365309aaf1f7a57f28e2f6900f106/shared_LuaLight/data/scripts_serp/lighttools.lua#L752",
+        "https://luau.org/"
+      ],
+      "declaredFunctions": [
+        "log_error",
+        "AreatableToAreaID",
+        "AreaIDToAreatable",
+        "LoopOverAllAreas"
+      ]
+    },
+    {
+      "path": "YouKnowWhatYouDo/BT Display All Goods at Merchants/data/base/config/export/assets.xml",
+      "bytes": 433,
+      "sha256": "6bca80eaf4ef00483579041b663fcaa87ee8cd1a7964a04c40a6b71e8d80e5aa",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 19,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:merge": 1
+      },
+      "constructs": {
+        "ModOpContent": 1
+      },
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/BT Display All Goods at Merchants/modinfo.json",
+      "bytes": 2584,
+      "sha256": "01f7d11f3d2a35cfb2e02a696c5fa81c78af8db84e39907dcaec1e75f4dbc965",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 38,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Cheat Keybinds (Serp)/data/base/config/export/assets.xml",
+      "bytes": 12022,
+      "sha256": "b3a12049192717055733c454aa94ebc2ec7bb89ccfcbf5051a9a950c2cce3393",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 299,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 1,
+        "legacy:merge": 1
+      },
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Cheat Keybinds (Serp)/data/base/config/gui/texts_english.xml",
+      "bytes": 169,
+      "sha256": "0f40f081adfc60cf766658b15efce7f3d62c73439644f7fea28c6d28e5d66ed8",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 10,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "short:Add": 1
+      },
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [
+        "1500000000"
+      ],
+      "scriptFiles": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Cheat Keybinds (Serp)/modinfo.json",
+      "bytes": 653,
+      "sha256": "92f39ea9117f3755b3c85a5b40575a0d434b29db9527c65940c9d8dc6458fe5b",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 27,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Cheat Keybinds (Serp)/ReadMe.txt",
+      "bytes": 1325,
+      "sha256": "e15e0ab6caba62d8c59b16763a6a871e21f5a9701f46220407b82d8dc423135a",
+      "kind": "txt",
+      "encoding": "utf-8",
+      "lines": 21,
+      "urls": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/data/base/config/export/assets.xml",
+      "bytes": 6309,
+      "sha256": "c6e0317516576d0049c39381fee6c5789927a2cee244959f20adac65ec6100b7",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 166,
+      "urls": [
+        "https://github.com/jakobharder/anno-mod-loader/blob/main/doc/modloader-changes.md"
+      ],
+      "root": "ModOps",
+      "operations": {
+        "legacy:merge": 1,
+        "short:Merge": 1
+      },
+      "constructs": {
+        "Asset": 3
+      },
+      "definedAssetIds": [
+        "1500000000"
+      ],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/data/script/version/publicdemo.lua",
+      "bytes": 2781,
+      "sha256": "a6bd41beddc2f947647e5fe114250f0c8480057fc16c8aacd85132eb858b8ad7",
+      "kind": "lua",
+      "encoding": "utf-8",
+      "lines": 73,
+      "urls": [],
+      "declaredFunctions": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/modinfo.json",
+      "bytes": 916,
+      "sha256": "3c98113db58fbeaad310c13cd791d390762f93aa038161630cc65eccc3e2f3ed",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 32,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Unhide All (Serp)/data/base/config/export/assets.xml",
+      "bytes": 1774,
+      "sha256": "6b5af084dc2290774a25d15aa20be2ba0539f8d3a29ee9e95307d366dd3805db",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 60,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {},
+      "constructs": {
+        "Asset": 4
+      },
+      "definedAssetIds": [
+        "1500000001"
+      ],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Unhide All (Serp)/modinfo.json",
+      "bytes": 785,
+      "sha256": "218e8910ab9a61eeac3c1c8ac0e84421ad6d043395abc312c3b061fc3d151740",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 30,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/data/base/config/export/assets.xml",
+      "bytes": 685,
+      "sha256": "e8b66a67c916722e8508232cbcda330a048fd429c1ba2bcb09e09b0878d5c952",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 32,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 1,
+        "legacy:addnextsibling": 1
+      },
+      "constructs": {
+        "Asset": 2,
+        "ModOpContent": 1
+      },
+      "definedAssetIds": [
+        "1500000002"
+      ],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "bytes": 1349,
+      "sha256": "af32f1d545e53ae81fc8f9074a73c5581d0e694c92833f19d497a535b4aa0545",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 29,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "YouKnowWhatYouDo/DisplayBuffsFromOthers (Serp)/data/base/config/export/templates.xml",
+      "bytes": 771,
+      "sha256": "29e300fdd80abdcf928018f93b8866ba38042530f18312136b7b9719463d8644",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 19,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:merge": 1
+      },
+      "constructs": {},
+      "definedAssetIds": [],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/DisplayBuffsFromOthers (Serp)/modinfo.json",
+      "bytes": 811,
+      "sha256": "13d98d8726fc15b2ab74bb19fa84964d0eb17dc16ddce6057cdc0f716fbb054e",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 30,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "YouKnowWhatYouDo/README.md",
+      "bytes": 119,
+      "sha256": "626bc13a437c2628027b8834acc2903fc39baa2cf5b1dd16c3aaef71e8e46518",
+      "kind": "md",
+      "encoding": "utf-8",
+      "lines": 2,
+      "urls": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/data/base/config/export/assets.xml",
+      "bytes": 2409,
+      "sha256": "bdfd268d4609856d3d543b322315d8d7d53504cbdcce722bd25dbaff751f30f9",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 74,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:addnextsibling": 1
+      },
+      "constructs": {
+        "Asset": 7
+      },
+      "definedAssetIds": [
+        "1500000010"
+      ],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/modinfo.json",
+      "bytes": 760,
+      "sha256": "dc8d71e8c29bf9dcb100b025af17e9a63128c53ae1ef6019224c9f5e59420a35",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 31,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    },
+    {
+      "path": "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/shared_CopyPools_AP_ConstrBuild/changelog.txt",
+      "bytes": 83,
+      "sha256": "16ffb9a116d595cb99c2ce1ab6e0deb2dd31b735ca7660a5c136058c5fb3d4a4",
+      "kind": "txt",
+      "encoding": "utf-8",
+      "lines": 4,
+      "urls": [],
+      "changelogLines": [
+        "1.01:",
+        "Add Pool for ProductionChain and Category",
+        "1.02:",
+        "Add Pool for all Buildings"
+      ]
+    },
+    {
+      "path": "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/shared_CopyPools_AP_ConstrBuild/data/base/config/export/assets.xml",
+      "bytes": 2576,
+      "sha256": "6e13855fc43b9ad1df0cd9fddac3b715b46730a8bdbb622bf628ef62f300ee3b",
+      "kind": "xml",
+      "encoding": "utf-8",
+      "lines": 98,
+      "urls": [],
+      "root": "ModOps",
+      "operations": {
+        "legacy:add": 4,
+        "legacy:addnextsibling": 1
+      },
+      "constructs": {
+        "Asset": 8,
+        "ModOpContent": 4
+      },
+      "definedAssetIds": [
+        "1500000002",
+        "1500000003",
+        "1500000004",
+        "1500000005"
+      ],
+      "lineIds": [],
+      "scriptFiles": []
+    },
+    {
+      "path": "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "bytes": 1350,
+      "sha256": "1e539b7fe2e5784817621a63c162f9c498197e32510f0b9b7516fccd3c6ab4c6",
+      "kind": "json",
+      "encoding": "utf-8",
+      "lines": 29,
+      "urls": [
+        "https://github.com/Serpens66"
+      ]
+    }
+  ],
+  "mods": [
+    {
+      "path": "Recommended/[Gameplay] GameSpeedMultiplayer/modinfo.json",
+      "ModID": "change-multiplayer-gamespeed-serp",
+      "Anno": 8,
+      "Version": "1.0.3",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": [],
+      "LoadAfterIds": [],
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "ModioResourceId": 5979203,
+      "changelog": {
+        "1.0.2": "Changed Code to ActionExecuteScript execute code for all human players. Add Sidenotification.",
+        "1.0.3": "Fixed modinfo.json file and added ModioResourceId to it."
+      }
+    },
+    {
+      "path": "Recommended/Blue Blueprints (Serp)/modinfo.json",
+      "ModID": "blueblueprints-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [],
+      "IncompatibleIds": [],
+      "DLCDependencies": null,
+      "ModioResourceId": 5511671,
+      "changelog": {
+        "1.0": "Release"
+      }
+    },
+    {
+      "path": "Recommended/Blue Map Water (Serp)/modinfo.json",
+      "ModID": "bluemapwater-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [],
+      "IncompatibleIds": [],
+      "DLCDependencies": null,
+      "ModioResourceId": 5511844,
+      "changelog": {
+        "1.0": "Release"
+      }
+    },
+    {
+      "path": "Recommended/Cheat Keybinds (Serp)/modinfo.json",
+      "ModID": "cheat-keybinds-serp",
+      "Anno": 8,
+      "Version": "1.013",
+      "Difficulty": "cheat",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [
+        "hot-reload-ubi"
+      ],
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "ModioResourceId": 5426208,
+      "changelog": {
+        "1.01": "Release",
+        "1.011": "- Add keybind 'Shift;Home' to instant research the current active research (thanks JohnyBgood)",
+        "1.012": "- Add keybind 'Alt;Delete' to delete (no ruin) current selected building/ship/unit even from other players. - Add keybind 'Shift;Delete' to destroy (ruin) current selected building/ship/unit even from other players (unknown if desync in Multiplayer). - Add keybind 'Control;Delete' to take over control of selected object (surely causes desync in Multiplayer)",
+        "1.013": "- While using Control+Delete to take control of selected object: If the object is a Kontor or Villa, instead of changing owner the official TakeOver of the island will be triggered, to hopefully fix the problem that AI continues to build on the island you took over. Thanks 'hulker12' for the report."
+      }
+    },
+    {
+      "path": "Recommended/Unhide All (Serp)/modinfo.json",
+      "ModID": "unhide-all-ships-and-buildings-serp",
+      "Anno": 8,
+      "Version": "1.022",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": [],
+      "LoadAfterIds": [],
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "ModioResourceId": 5426387,
+      "changelog": {
+        "1.0": "Release",
+        "1.01": "Unlock all ProductionChains and Categories, so you can also see them (buildings still locked)",
+        "1.02": "No changes, test update to see if discord modbot messeage works now",
+        "1.021": "No changes, test update to see if discord modbot messeage works now",
+        "1.022": "Add 'All Buildings' Pool to shared mod."
+      }
+    },
+    {
+      "path": "Recommended/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "ModID": "copy-pools-ap-buildable-buildings-serp",
+      "Anno": 8,
+      "Version": "1.02",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [
+        "*",
+        "community_patch"
+      ],
+      "IncompatibleIds": null,
+      "DLCDependencies": null
+    },
+    {
+      "path": "Recommended/Zoom Out-In Further (Serp)/modinfo.jsonc",
+      "ModID": "zoom-out-further-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "Options": {
+        "range": {
+          "label": "factor0",
+          "type": "enum",
+          "default": "10",
+          "values": [
+            "10",
+            "20",
+            "30"
+          ],
+          "labels": [
+            "10 Street Range",
+            "20 Street Range",
+            "30 Street Range"
+          ]
+        }
+      },
+      "ModioResourceId": 5425795
+    },
+    {
+      "path": "shared_Mods/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "ModID": "copy-pools-ap-buildable-buildings-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [
+        "*",
+        "community_patch"
+      ],
+      "IncompatibleIds": null,
+      "DLCDependencies": null
+    },
+    {
+      "path": "WIP/AI EnterSessionsAfterHumanAndAsksPermission (Serp)/modinfo.json",
+      "ModID": "AIEnterSessionsAfterHuman_Serp",
+      "Version": "1.021",
+      "ModDependencies": null,
+      "LoadAfterIds": [
+        "Everyone_Hard_AI_Serp",
+        "KreitaniTaludas_Kingsgrove",
+        "Four_Crowns",
+        "Taludas_NewWorldExpanded_Mayabeque",
+        "NewHorizons"
+      ],
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "ModioResourceId": 3689240,
+      "changelog": {
+        "1.021": "Add ModioResourceId to modinfo.json"
+      }
+    },
+    {
+      "path": "WIP/BT Better PassiveTrading (Serp)/modinfo.json",
+      "ModID": "better-passive-trading-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [],
+      "IncompatibleIds": [],
+      "DLCDependencies": null
+    },
+    {
+      "path": "WIP/Change Multiplayer GameSpeed COMPLICATED (Serp)/modinfo.json",
+      "ModID": "change-multiplayer-gamespeed-complicated-serp",
+      "Anno": 8,
+      "Version": "0.1",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": [],
+      "LoadAfterIds": [],
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "Scripts": {
+        "Modules": [
+          "data/gamespeed_serp.lua"
+        ],
+        "Init": "GameSpeed_Serp = require(\"gamespeed_serp\")",
+        "Load": "GameSpeed_Serp:GameLoaded()",
+        "Unload": "GameSpeed_Serp:GameUnloaded()",
+        "Tick": "GameSpeed_Serp:Tick_CheckIfSpeedShouldChange()"
+      },
+      "changelog": {
+        "1.0": "Release"
+      }
+    },
+    {
+      "path": "WIP/Cheat Keybinds (Serp)/modinfo.json",
+      "ModID": "cheat-keybinds-serp",
+      "Anno": 8,
+      "Version": "1.011",
+      "Difficulty": "cheat",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [
+        "hot-reload-ubi"
+      ],
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "Scripts": {
+        "Modules": [
+          "data/cheatkeybinds_serp.lua"
+        ],
+        "Init": "CheatKeybinds_Serp = require(\"cheatkeybinds_serp\")",
+        "Load": "CheatKeybinds_Serp:GameLoaded()",
+        "Unload": "CheatKeybinds_Serp:GameUnloaded()"
+      },
+      "ModioResourceId": 5426208,
+      "changelog": {
+        "1.01": "Release",
+        "1.011": "- Add keybind 'Shift;Home' to instant research the current active research (thanks JohnyBgood)",
+        "1.02": "- Reworked system (WIP braucht game patch für lua...)"
+      }
+    },
+    {
+      "path": "WIP/ztestmod/modinfo.json",
+      "ModID": "testmod-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "cheat",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [],
+      "IncompatibleIds": [],
+      "DLCDependencies": null,
+      "Scripts": {
+        "Modules": [
+          "data/testscript_main.lua"
+        ],
+        "Init": "TestMod = require(\"testscript_main\")",
+        "Load": "TestMod:GameLoaded()",
+        "Unload": "TestMod:GameUnloaded()",
+        "Tick": "TestMod:Tick()"
+      }
+    },
+    {
+      "path": "YouKnowWhatYouDo/BT Display All Goods at Merchants/modinfo.json",
+      "ModID": "display-passive-tradegoods-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "cheat",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [
+        "*"
+      ],
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "ModioResourceId": 0,
+      "changelog": {
+        "1.021": "Add ModioResourceId to modinfo.json"
+      }
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Cheat Keybinds (Serp)/modinfo.json",
+      "ModID": "cheat-keybinds-serp",
+      "Anno": 8,
+      "Version": "1.01",
+      "Difficulty": "cheat",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": null,
+      "IncompatibleIds": null,
+      "DLCDependencies": null
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/modinfo.json",
+      "ModID": "cheat-demo-start-serp",
+      "Anno": 8,
+      "Version": "1.011",
+      "Difficulty": "cheat",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [],
+      "IncompatibleIds": [],
+      "DLCDependencies": null
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Unhide All (Serp)/modinfo.json",
+      "ModID": "unhide-all-ships-and-buildings-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": [],
+      "LoadAfterIds": [],
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "changelog": {
+        "1.0": "Release"
+      }
+    },
+    {
+      "path": "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "ModID": "copy-pools-ap-buildable-buildings-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [
+        "*",
+        "community_patch"
+      ],
+      "IncompatibleIds": null,
+      "DLCDependencies": null
+    },
+    {
+      "path": "YouKnowWhatYouDo/DisplayBuffsFromOthers (Serp)/modinfo.json",
+      "ModID": "display-buffs-from-others-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": [],
+      "LoadAfterIds": [
+        "*"
+      ],
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "changelog": {
+        "1.0": "Release"
+      }
+    },
+    {
+      "path": "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/modinfo.json",
+      "ModID": "unlock-all-ships-and-buildings-serp",
+      "Anno": 8,
+      "Version": "1.0",
+      "Difficulty": "cheat",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": [],
+      "LoadAfterIds": [],
+      "IncompatibleIds": null,
+      "DLCDependencies": null,
+      "ModioResourceId": 0,
+      "changelog": {
+        "1.0": "Release"
+      }
+    },
+    {
+      "path": "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "ModID": "copy-pools-ap-buildable-buildings-serp",
+      "Anno": 8,
+      "Version": "1.02",
+      "Difficulty": "unchanged",
+      "GameSetup": {
+        "RequiresNewGame": false,
+        "SafeToRemove": true,
+        "Multiplayer": true,
+        "Campaign": true
+      },
+      "ModDependencies": null,
+      "LoadAfterIds": [
+        "*",
+        "community_patch"
+      ],
+      "IncompatibleIds": null,
+      "DLCDependencies": null
+    }
+  ],
+  "duplicateModIds": {
+    "cheat-keybinds-serp": [
+      "Recommended/Cheat Keybinds (Serp)/modinfo.json",
+      "WIP/Cheat Keybinds (Serp)/modinfo.json",
+      "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Cheat Keybinds (Serp)/modinfo.json"
+    ],
+    "copy-pools-ap-buildable-buildings-serp": [
+      "Recommended/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "shared_Mods/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json"
+    ],
+    "unhide-all-ships-and-buildings-serp": [
+      "Recommended/Unhide All (Serp)/modinfo.json",
+      "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Unhide All (Serp)/modinfo.json"
+    ]
+  },
+  "identicalFiles": [
+    [
+      "Recommended/Blue Map Water (Serp)/data/base/config/gui/texts_english.xml",
+      "Recommended/Blue Map Water (Serp)/data/base/config/gui/texts_german.xml",
+      "WIP/ztestmod/data/base/config/gui/texts_english.xml",
+      "WIP/ztestmod/data/base/config/gui/texts_german.xml"
+    ],
+    [
+      "Recommended/Cheat Keybinds (Serp)/Cheat_Keybinds_Serp.png",
+      "WIP/Cheat Keybinds (Serp)/Cheat_Keybinds_Serp.png"
+    ],
+    [
+      "Recommended/Cheat Keybinds (Serp)/data/base/config/gui/texts_english.xml",
+      "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Cheat Keybinds (Serp)/data/base/config/gui/texts_english.xml"
+    ],
+    [
+      "Recommended/Cheat Keybinds (Serp)/ReadMe.txt",
+      "WIP/Cheat Keybinds (Serp)/ReadMe.txt"
+    ],
+    [
+      "Recommended/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/changelog.txt",
+      "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/shared_CopyPools_AP_ConstrBuild/changelog.txt"
+    ],
+    [
+      "Recommended/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/data/base/config/export/assets.xml",
+      "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/shared_CopyPools_AP_ConstrBuild/data/base/config/export/assets.xml"
+    ],
+    [
+      "Recommended/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "YouKnowWhatYouDo/Unlock ShipsUnitsBuildingsl (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json"
+    ],
+    [
+      "shared_Mods/shared_CopyPools_AP_ConstrBuild/data/base/config/export/assets.xml",
+      "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/data/base/config/export/assets.xml"
+    ],
+    [
+      "shared_Mods/shared_CopyPools_AP_ConstrBuild/modinfo.json",
+      "YouKnowWhatYouDo/Cheat Demo Start (Serp)/Unhide All (Serp)/shared_CopyPools_AP_ConstrBuild/modinfo.json"
+    ],
+    [
+      "WIP/Change Multiplayer GameSpeed COMPLICATED (Serp)/data/increasegamespeed_serp - Kopie.lua",
+      "WIP/Change Multiplayer GameSpeed COMPLICATED (Serp)/data/increasegamespeed_serp.lua"
+    ]
+  ]
+}

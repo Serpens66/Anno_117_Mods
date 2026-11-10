@@ -1,7 +1,9 @@
 # Anno 117 Mods
-Mods for Anno 1800 created by me (Serp/Serpens66).
+Mods for Anno 117: Pax Romana created by me (Serp/Serpens66).
 You can open the modinfo.json file of each mod for an explanation what it does (should be displayed automatically when you use a modmanager).
 
+
+For mod development and Codex, start with [AGENTS.md](AGENTS.md) and the [Anno 117 knowledge base](Documentation/README.md).
 
 How to Download  
 -
@@ -9,7 +11,7 @@ Click on the green "Code" button on the top right and hit "download zip" to down
 
 Usage  
 -
-Simply put the mods you want to use into your "Documents/Anno 1800/mods" folder (create it if it does not exist) and start the game. Make sure you have either only the zip file of a mod or only the unpacked folder of the mod here, otherwise the mod may load twice.
+Simply put the mods you want to use into your "Documents/Anno 117 - Pax Romana/mods" folder (create it if it does not exist) and start the game. Make sure you have either only the zip file of a mod or only the unpacked folder of the mod here, otherwise the mod may load twice.
 
 Do NOT simply use all the mods from here at once, some might be incomaptible to each other!
 

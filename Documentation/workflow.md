@@ -1,0 +1,7 @@
+# Workflow
+
+1. Identify the package path, ModID, version, nested packages, dependencies, target game build and DLC. Read the actual files and find duplicate IDs or alternative variants in the [inventory](reference/workspace-inventory.json).
+2. Complete the [feature audit](foundations/vanilla-research.md) before choosing an approach. Record native paths, source hashes, selectors, actual and inherited values, references, consumers and open questions. Re-audit sources after a game update, even if the mod used to load.
+3. Prefer a narrow ModOp on a stable native anchor. Verify selector cardinality, expected field types, list identity, duplicate handling, and behavior when optional dependencies are absent or load first. Keep current files and comments. Use the [porting comparison](foundations/loader-and-porting.md) before reusing 1800 code.
+4. Separate checks: parse the authored files; evaluate the patch against the actual 117 input with matching dependencies; inspect the resulting subtree and logs; then, when authorized, check game startup, new and existing saves, removal and multiplayer as applicable. An absent tool or test stays unverified.
+5. Document the actual behavior and known limits. Update this knowledge base as described in [maintenance](maintenance.md). Keep staging and disposable output under ignored `Documentation/out` or outside the repo. Installation and publication are separate actions.
