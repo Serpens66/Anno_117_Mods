@@ -114,23 +114,24 @@ assert len(tool_icon) == 1 and tool_icon[0].findtext('Template') == 'Icon'
 assert tool_icon[0].findtext('Values/Standard/IconFilename') == 'data/ui/fhd/base/icon_content/construction_tools/icon_2d_tools.png'
 
 # Exercise all optional-mod combinations against their actual installed shortcut
-# definitions. Only Text may change; no keys, commands or identifiers may change.
+# definitions (Gamespeed uses its maintained workspace package). Only the console
+# label is patched here; no keys, commands or identifiers may change.
 compatibility = {
     'console-ubi': Path(config['modsPath']) / 'console-ubi',
-    'change-multiplayer-gamespeed-serp': Path(config['modsPath']) / '[Gameplay] GameSpeedMultiplayer',
 }
+package_inputs = {**compatibility, 'change-multiplayer-gamespeed-serp': root / 'Recommended/[Gameplay] GameSpeedMultiplayer'}
 groups = patch.xpath('/ModOps/Group')
 assert {g.get('Condition') for g in groups} == {'#' + name for name in compatibility}
-assert sum(len(g) for g in groups) == 4
+assert sum(len(g) for g in groups) == 1
 def identity(node):
     return (node.findtext('Command'), node.findtext('Identifier'),
             tuple(node.xpath('InputTypes/*/KeyType/text()')))
 for switches in product((False, True), repeat=2):
-    enabled = {name for name, active in zip(compatibility, switches) if active}
+    enabled = {name for name, active in zip(package_inputs, switches) if active}
     simulated = copy.deepcopy(asset[0])
     target = simulated.find('Values/ShortcutConfig/InputBindings')
     for name in enabled:
-        other = ET.parse(str(compatibility[name] / 'data/base/config/export/assets.xml'))
+        other = ET.parse(str(package_inputs[name] / 'data/base/config/export/assets.xml'))
         additions = other.xpath('/ModOps/ModOp/Item')
         assert len(additions) == (1 if name == 'console-ubi' else 3)
         for node in additions:
@@ -152,6 +153,23 @@ for switches in product((False, True), repeat=2):
     assert len(target) == count
     assert [identity(node) for node in target] == identities
 
+speed = root / 'Recommended/[Gameplay] GameSpeedMultiplayer'
+speed_info = json.loads((speed / 'modinfo.json').read_text(encoding='utf-8-sig'))
+assert speed_info['Version'] == '1.0.4' and speed_info['ModID'] == 'change-multiplayer-gamespeed-serp'
+speed_patch = ET.parse(str(speed / 'data/base/config/export/assets.xml'))
+speed_items = speed_patch.xpath('/ModOps/ModOp/Item')
+assert len(speed_items) == 3
+assert [n.findtext('Text') for n in speed_items] == ['1500000060', '1500000061', '1500000062']
+assert [n.findtext('Command') for n in speed_items] == [f'Conditions:RegisterTriggerForCurrentParticipantNet({n})' for n in range(1500000050, 1500000053)]
+assert [n.findtext('InputTypes/Modern/KeyType') for n in speed_items] == ['NumpadSubtract', 'NumpadAdd', 'Alt;NumpadAdd']
+for language in (mod / 'data/base/config/gui').glob('texts_*.xml'):
+    speed_text = ET.parse(str(speed / 'data/base/config/gui' / language.name))
+    assert speed_text.xpath('//LineId/text()') == ['1500000060', '1500000061', '1500000062']
+    expected = ['Spielgeschwindigkeit: Normal', 'Spielgeschwindigkeit: Schnell', 'Spielgeschwindigkeit: Sehr schnell'] if language.stem == 'texts_german' else ['Game speed: Normal', 'Game speed: Fast', 'Game speed: Very fast']
+    assert speed_text.xpath('//Text[LineId]/Text/text()') == expected
+assert 'change-multiplayer-gamespeed-serp' not in (mod / 'modinfo.json').read_text(encoding='utf-8-sig')
+assert not patch.xpath('/ModOps/Group[@Condition="#change-multiplayer-gamespeed-serp"]')
+
 metadata = ET.parse(str(vanilla / 'data/base/config/export/properties-meta.xml'))
 for values in patch.xpath('//Asset/Values | //TriggerCondition/Values | //TriggerAction/Values | //Notification/Values'):
     for prop in values:
@@ -159,7 +177,7 @@ for values in patch.xpath('//Asset/Values | //TriggerCondition/Values | //Trigge
         if prop.tag == 'Standard': continue
         assert all(child.tag in allowed for child in prop), (prop.tag, [c.tag for c in prop], allowed)
 info = json.loads((mod / 'modinfo.json').read_text(encoding='utf-8-sig'))
-assert info['Version'] == '1.15.3' and info['ModID'] == 'cheat-keybinds-serp' and info['Anno'] == 8
+assert info['Version'] == '1.15.5' and info['ModID'] == 'cheat-keybinds-serp' and info['Anno'] == 8
 assert set(compatibility) <= set(info['Dependencies']['Optional'])
 assert set(compatibility) <= set(info['Dependencies']['LoadAfter'])
 assert info['Scripts']['Init'] == 'CheatKeybinds_Serp = require("cheatkeybinds_serp")'
@@ -169,14 +187,14 @@ langs = [p for p in (vanilla / 'data/base/config/gui').glob('texts_*.xml') if p.
 for lang in langs:
     texts = ET.parse(str(mod / 'data/base/config/gui' / lang.name))
     lineids = texts.xpath('//Text/LineId/text()')
-    assert len(lineids) == len(set(lineids)) == 42
+    assert len(lineids) == len(set(lineids)) == 39
     assert referenced_text <= set(lineids)
     assert not set(lineids) & set(ET.parse(str(lang)).xpath('//Text/LineId/text()'))
     for lineid in [*range(1500001221, 1500001233), 1500001254, 1500001255]:
         description = texts.xpath('//Text[LineId=$id]/Text/text()', id=str(lineid))[0]
         assert not re.search(r'\[\d+/\d+\]', description)
         assert 'Alt+' not in description
-for path in mod.rglob('*'):
+for path in [*mod.rglob('*'), *speed.rglob('*')]:
     if path.suffix in ('.xml', '.lua', '.json'):
         raw = path.read_bytes()
         raw.decode('utf-8-sig')
@@ -359,5 +377,9 @@ generated = 'local output = print\nlocal checks = (function()\n' + generated + '
 out = root / 'Documentation/out/cheat-keybinds-mock.luau'
 out.parent.mkdir(parents=True, exist_ok=True)
 out.write_bytes(generated.replace('\n','\r\n').encode('utf-8'))
+assert len(patch.xpath('//SideNotification/Infotip[text()="25345"]')) == 30
+assert not patch.xpath('//SideNotification/Infotip[text()!="25345"]')
+assert len(native.xpath('//Asset[Values/Standard/GUID="25345" and Template="InfoTip"]')) == 1
+
 print(f'PASS: XML/metadata/localization/CRLF checks; {len(langs)} languages, 32 triggers (30 notices + 2 reputation actions), 7 shortcuts, 4 optional-mod combinations.')
 print(f'Generated Luau mock test: {out}')

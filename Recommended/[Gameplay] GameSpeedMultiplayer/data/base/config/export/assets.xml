@@ -22,7 +22,7 @@
   <ModOp Type="add" GUID='2001271' Path="/Values/ShortcutConfig/InputBindings">
     <Item>
       <Command>Conditions:RegisterTriggerForCurrentParticipantNet(1500000050)</Command>
-      <Text>-6911597694545728808</Text>
+      <Text>1500000060</Text>
       <Active>Session;WorldMap;Menu;Pause;Popup</Active>
       <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
       <AudioEvent>125726</AudioEvent>
@@ -40,7 +40,7 @@
     </Item>
     <Item>
       <Command>Conditions:RegisterTriggerForCurrentParticipantNet(1500000051)</Command>
-      <Text>-6903066501330432418</Text>
+      <Text>1500000061</Text>
       <Active>Session;WorldMap;Menu;Pause;Popup</Active>
       <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
       <AudioEvent>125724</AudioEvent>
@@ -58,7 +58,7 @@
     </Item>
     <Item>
       <Command>Conditions:RegisterTriggerForCurrentParticipantNet(1500000052)</Command>
-      <Text>-6903066501330432418</Text>
+      <Text>1500000062</Text>
       <Active>Session;WorldMap;Menu;Pause;Popup</Active>
       <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
       <AudioEvent>125725</AudioEvent>

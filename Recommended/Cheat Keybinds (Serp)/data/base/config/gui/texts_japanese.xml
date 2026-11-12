@@ -106,18 +106,6 @@ CheatKeybinds_Serp records the cheat, execution direction and error.</Text>
       <LineId>1500001248</LineId>
       <Text>Open/close Lua console</Text>
     </Text>
-    <Text>
-      <LineId>1500001249</LineId>
-      <Text>Game speed: Normal</Text>
-    </Text>
-    <Text>
-      <LineId>1500001250</LineId>
-      <Text>Game speed: Fast</Text>
-    </Text>
-    <Text>
-      <LineId>1500001251</LineId>
-      <Text>Game speed: Fastest</Text>
-    </Text>
   </ModOp>
   <ModOp Add="/TextExport/Texts[1]">
     <Text>

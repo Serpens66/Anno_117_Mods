@@ -1,4 +1,12 @@
-Anno 117 - Cheat Keybinds (Serp) - Version 1.15.3
+Anno 117 - Cheat Keybinds (Serp) - Version 1.15.5
+
+1.15.5: Gamespeed 1.0.4 now owns its shortcut labels. The Gamespeed compatibility
+patch, its three texts and optional load dependency have been removed here.
+
+1.15.4: All 30 notices use native long AutosaveLimit_InfoTip 25345 for a hover test.
+Hover the notice text and icon: the expected test content is autosave-limit help
+(Dynamic/Unlimited), not the full cheat description. Check readability/clipping and
+repeat on selection and error notices. No other timing/gameplay settings changed.
 
 1.15.3: Alternative execution defaults to Alt+G (normal execution remains Alt+V).
 The Command and Identifier are preserved. Existing saved overrides may retain the
@@ -65,8 +73,8 @@ Other block reasons, such as pending answers or missing requirements, are separa
 1.14.1 changes / Änderungen:
 - Eindeutige Beschriftungen für Löschen, Zerstören und Mods-Neuladen.
 - Korrekte Beschriftungen für die optionale Lua-Konsole und die drei Geschwindigkeitsstufen.
-- Distinct delete/destroy/reload labels; label-only compatibility patches for console-ubi
-  and change-multiplayer-gamespeed-serp. Neither optional mod is required or modified.
+- Distinct delete/destroy/reload labels; a label-only compatibility patch for console-ubi.
+  Console remains optional. Gamespeed 1.0.4 supplies its own labels independently.
 - All 14 selection/error notices switched to IsSilent=0. The subsequent user report
   and screenshot confirmed visible selection notices in the tested 1.14.1 configuration.
 - Commands, identifiers and default keys are unchanged. Your saved Alt+X override
@@ -150,7 +158,7 @@ save/load/removal and multiplayer/coop remain separate game checks.
 Existing multiplayer/removal metadata is retained; it is not a new compatibility claim.
 
 Quick in-game test (use a disposable save and only one Cheat Keybinds variant;
-the optional console/speed mods may remain enabled to check their corrected labels):
+the optional console and Gamespeed 1.0.4 may remain enabled to check their labels):
 0. Restart normally with 1.15.0. Check the tools icon, compact/expanded text and that
    a saved override such as Alt+X remains assigned. Test notices unpaused, then repeatedly.
    Do not use Alt+F4 to test settings saving: this mod makes it quit immediately.

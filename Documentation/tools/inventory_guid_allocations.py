@@ -88,6 +88,7 @@ def render(packages, declarations, references):
         '## Allocation rules', '',
         '- Check this register and rerun the scanner before allocating an ID. Reserve and document the intended owner before implementing. Do not choose IDs merely because a single package does not contain them.',
         '- **1500001200-1500001299 is reserved exclusively for Cheat Keybinds (`cheat-keybinds-serp`).** Gaps inside that block remain reserved to this mod; they are not available to other mods.',
+        '- **1500000060-1500000062 are reserved for GameSpeed Multiplayer (`change-multiplayer-gamespeed-serp`) shortcut labels.** Retired Cheat Keybinds compatibility IDs 1500001249-1500001251 remain reserved within its exclusive block.',
         '- Existing allocations outside this block remain with their recorded owners. References do not transfer ownership. Same-ModID copies are alternative/bundled packages, not independent allocation owners; reconcile their actual contents and never activate incompatible variants together.',
         '- Assets and text LineIDs are separate runtime namespaces. The historical cross-kind reuse below is recorded accurately, but use a distinct numeric ID for new unrelated owners rather than introducing more cross-kind reuse.',
         '- Preserve published IDs. Resolve old collisions by explicit compatibility/isolation or an authorized migration, not silent renumbering. No IDs were changed by this inventory.',

@@ -6,6 +6,7 @@ Current workspace register, reviewed 2026-11-12. The user confirms the reserved 
 
 - Check this register and rerun the scanner before allocating an ID. Reserve and document the intended owner before implementing. Do not choose IDs merely because a single package does not contain them.
 - **1500001200-1500001299 is reserved exclusively for Cheat Keybinds (`cheat-keybinds-serp`).** Gaps inside that block remain reserved to this mod; they are not available to other mods.
+- **1500000060-1500000062 are reserved for GameSpeed Multiplayer (`change-multiplayer-gamespeed-serp`) shortcut labels.** Retired Cheat Keybinds compatibility IDs 1500001249-1500001251 remain reserved within its exclusive block.
 - Existing allocations outside this block remain with their recorded owners. References do not transfer ownership. Same-ModID copies are alternative/bundled packages, not independent allocation owners; reconcile their actual contents and never activate incompatible variants together.
 - Assets and text LineIDs are separate runtime namespaces. The historical cross-kind reuse below is recorded accurately, but use a distinct numeric ID for new unrelated owners rather than introducing more cross-kind reuse.
 - Preserve published IDs. Resolve old collisions by explicit compatibility/isolation or an authorized migration, not silent renumbering. No IDs were changed by this inventory.
@@ -18,9 +19,9 @@ Translation copies are collapsed to one allocation. Numeric ranges below are exa
 | ModID | Asset definitions | Text definitions (LineID / legacy text GUID) |
 | --- | --- | --- |
 | `change-multiplayer-gamespeed-complicated-serp` | 1500000050-1500000051, 1500000054 | none |
-| `change-multiplayer-gamespeed-serp` | 1500000050-1500000055 | none |
+| `change-multiplayer-gamespeed-serp` | 1500000050-1500000055 | 1500000060-1500000062 |
 | `cheat-demo-start-serp` | 1500000000 | none |
-| `cheat-keybinds-serp` | 1500000015-1500000017, 1500001201-1500001214, 1500001252-1500001253, 1500001256-1500001257, 1500001260-1500001273 | 1500000000, 1500000015-1500000017, 1500001221-1500001232, 1500001240-1500001251, 1500001254-1500001255, 1500001258, 1500001280-1500001293 |
+| `cheat-keybinds-serp` | 1500000015-1500000017, 1500001201-1500001214, 1500001252-1500001253, 1500001256-1500001257, 1500001260-1500001273 | 1500000000, 1500000015-1500000017, 1500001221-1500001232, 1500001240-1500001248, 1500001254-1500001255, 1500001258, 1500001280-1500001293 |
 | `copy-pools-ap-buildable-buildings-serp` | 1500000002-1500000005 | none |
 | `testmod-serp` | 1500000021, 1500000030, 1500001166-1500001167 | none |
 | `unhide-all-ships-and-buildings-serp` | 1500000001, 1500000006 | none |

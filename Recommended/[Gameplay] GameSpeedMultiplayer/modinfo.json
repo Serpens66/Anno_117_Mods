@@ -1,5 +1,5 @@
 {
-  "Version": "1.0.3",
+  "Version": "1.0.4",
   "ModID": "change-multiplayer-gamespeed-serp",
   "Anno": 8,  
   "IncompatibleIds": null,
@@ -28,6 +28,7 @@
   "CreatorContact": "https://github.com/Serpens66 , .questy Discord",
   "ModioResourceId" : 5979203,
   "changelog": {
+    "1.0.4": "Distinct localized Normal/Fast/Very fast shortcut labels are now owned by this mod; no Cheat Keybinds dependency. Gameplay and key defaults are unchanged.",
     "1.0.2" : "Changed Code to ActionExecuteScript execute code for all human players. Add Sidenotification.",
     "1.0.3" : "Fixed modinfo.json file and added ModioResourceId to it."
   }

@@ -1,10 +1,10 @@
 {
-  "Version": "1.15.3",
+  "Version": "1.15.5",
   "ModID": "cheat-keybinds-serp",
   "Anno": 8,
   "Dependencies": {
-    "Optional": ["console-ubi", "change-multiplayer-gamespeed-serp"],
-    "LoadAfter": ["hot-reload-ubi", "console-ubi", "change-multiplayer-gamespeed-serp"]
+    "Optional": ["console-ubi"],
+    "LoadAfter": ["hot-reload-ubi", "console-ubi"]
   },
   "Category": {
     "English": "Cheat"
@@ -35,6 +35,8 @@
   "CreatorContact": "https://github.com/Serpens66",
   "ModioResourceId" : 5426208,
   "changelog": {
+    "1.15.5": "Move Gamespeed shortcut labels into Gamespeed 1.0.4; remove its compatibility patch, texts and optional load dependency. Console compatibility and cheat behavior are unchanged.",
+    "1.15.4": "- Attach native long AutosaveLimit_InfoTip 25345 to all 30 notices for hover testing. This deliberately displays autosave help, not the cheat description. All other notification and gameplay settings remain unchanged.",
     "1.15.3": "- Default alternative execution to Alt+G. Report specific missing-island, selection, research, emperor and diplomacy prerequisites; retain short fallback/log errors. Preserve gameplay, existing shortcut identifiers and notification timing settings.",
     "1.15.2": "- Test global Side notification Delay=0 (affects all side notices) and IsUnique=1 only on the 16 cheat notices. Display durations, queue timeouts, Lua and keybindings remain unchanged. Latency and uniqueness lifetime require in-game testing.",
     "1.15.1": "- Change alternative execution default to Alt+Space+V for one-handed use. Two non-modifier keys require an in-game recognition test; saved overrides are preserved. No notification delay setting changed.",

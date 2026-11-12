@@ -106,18 +106,6 @@ Details stehen unter CheatKeybinds_Serp mit Cheat und Ausführungsrichtung.</Tex
       <LineId>1500001248</LineId>
       <Text>Lua-Konsole öffnen/schließen</Text>
     </Text>
-    <Text>
-      <LineId>1500001249</LineId>
-      <Text>Spielgeschwindigkeit: Normal</Text>
-    </Text>
-    <Text>
-      <LineId>1500001250</LineId>
-      <Text>Spielgeschwindigkeit: Schnell</Text>
-    </Text>
-    <Text>
-      <LineId>1500001251</LineId>
-      <Text>Spielgeschwindigkeit: Sehr schnell</Text>
-    </Text>
   </ModOp>
   <ModOp Add="/TextExport/Texts[1]">
     <Text>
