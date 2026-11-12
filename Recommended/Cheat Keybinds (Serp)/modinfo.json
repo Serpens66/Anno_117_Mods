@@ -1,10 +1,11 @@
 {
-  "Version": "1.013",
+  "Version": "1.15.3",
   "ModID": "cheat-keybinds-serp",
   "Anno": 8,
-  "IncompatibleIds": null,
-  "ModDependencies": null,
-  "LoadAfterIds": ["hot-reload-ubi"],
+  "Dependencies": {
+    "Optional": ["console-ubi", "change-multiplayer-gamespeed-serp"],
+    "LoadAfter": ["hot-reload-ubi", "console-ubi", "change-multiplayer-gamespeed-serp"]
+  },
   "Category": {
     "English": "Cheat"
   },
@@ -21,11 +22,26 @@
     "Multiplayer": true,
     "Campaign": true
   },
+  "Scripts": {
+    "Modules": [
+      "data/cheatkeybinds_serp.lua"
+    ],
+    "Init": "CheatKeybinds_Serp = require(\"cheatkeybinds_serp\")",
+    "Load": "CheatKeybinds_Serp.GameLoaded()",
+    "Unload": "CheatKeybinds_Serp.GameUnloaded()"
+  },
   "DLCDependencies": null,
   "CreatorName": "Serp",
   "CreatorContact": "https://github.com/Serpens66",
   "ModioResourceId" : 5426208,
   "changelog": {
+    "1.15.3": "- Default alternative execution to Alt+G. Report specific missing-island, selection, research, emperor and diplomacy prerequisites; retain short fallback/log errors. Preserve gameplay, existing shortcut identifiers and notification timing settings.",
+    "1.15.2": "- Test global Side notification Delay=0 (affects all side notices) and IsUnique=1 only on the 16 cheat notices. Display durations, queue timeouts, Lua and keybindings remain unchanged. Latency and uniqueness lifetime require in-game testing.",
+    "1.15.1": "- Change alternative execution default to Alt+Space+V for one-handed use. Two non-modifier keys require an in-game recognition test; saved overrides are preserved. No notification delay setting changed.",
+    "1.15.0": "- Add configurable Alt+Shift+V alternative execution. Add emperor reputation +/-10 and own diplomacy cooldown reset. Replace ineffective population cheat with native workforce increase/decrease. Add money/goods subtraction test candidates and research cancel/reset alternatives. Set notice priority to -1 for immediate-replacement testing. Native effects and multiplayer still require in-game validation.",
+    "1.14.2": "- Lead selection notices with the action, amount and toggle/reset behavior; remove counters and repeated default-key hints. Add concise context and restrictions. Replace the hourglass with the native tools icon on all 14 notices. Retain IsSilent=0 after the user confirmed visible notifications in 1.14.1.",
+    "1.14.1": "- Give delete/destroy/reload shortcuts distinct labels; add label-only compatibility patches for the optional console and multiplayer speed mods. Preserve commands, identifiers and key defaults. Set IsSilent=0 on selection/error notices for an in-game display test; visibility is not yet confirmed.",
+    "1.14.0": "- Anno 1800 controls: Alt+C/B select a cheat, Alt+V executes it. Adds localized selection notifications and guarded Luau dispatch for the existing 117 cheats. Retains separate delete/destroy, fast quit and reload shortcuts. Replaces the old direct cheat shortcuts; test the module entrypoints in game before publishing.",
     "1.01" : "Release",
     "1.011" : "- Add keybind 'Shift;Home' to instant research the current active research (thanks JohnyBgood)",
     "1.012" : "- Add keybind 'Alt;Delete' to delete (no ruin) current selected building/ship/unit even from other players. - Add keybind 'Shift;Delete' to destroy (ruin) current selected building/ship/unit even from other players (unknown if desync in Multiplayer). - Add keybind 'Control;Delete' to take over control of selected object (surely causes desync in Multiplayer)",

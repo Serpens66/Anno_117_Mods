@@ -20,3 +20,10 @@ The baseline is `main` at local commit `7bf5ca0` (2026-06-03); the working tree 
 | WIP / AI EnterSessionsAfterHumanAndAsksPermission | Leftover 1800 port material: legacy `data/config/export/main/asset/assets.xml`, 1800-related dependency IDs, and no `Anno: 8`. Its changelog is useful history, not a 117 implementation. |
 
 Three IDs are repeated across the tree: `cheat-keybinds-serp`, `unhide-all-ships-and-buildings-serp` and `copy-pools-ap-buildable-buildings-serp`. The XML inventory gives the actual package boundaries, without implying which copy the installed loader selects. Preserve existing IDs and use one intended package set per test. Note that the top-level README's old installation wording referred to 1800; the current [setup](../setup.md) is authoritative for this repo.
+
+2026-11-12 continuation: Recommended Cheat Keybinds is updated to 1.14.0 with the 1800 Alt+C/B/V workflow, a 117 Luau module and localized notification triggers. The WIP and historical demo copies above remain unchanged. [Feature audit and validation limits](cheat-keybinds-audit.md)
+
+Later 2026-11-12 continuation: Recommended 1.14.1 adds label-only optional console/speed compatibility and changes notification IsSilent to 0 for a user display test. Existing shortcut identities/default keys and other package files are preserved. The 1.14.0 main game log confirms module entrypoint execution; the user reports preserved key rebinding but missing notifications. [Scoped evidence](cheat-keybinds-audit.md#1141-label-and-notification-audit-2026-11-12)
+
+
+1.15.0 continuation: Recommended Cheat Keybinds adds one alternative execution shortcut and shared-direction menu entries, replaces the user-reported ineffective population action with direct workforce increase/decrease, adds emperor ±10 and own diplomacy cooldown reset, and tests priority -1 for immediate notification replacement. The old package variants/profile files remain untouched. [Current source/runtime boundaries](cheat-keybinds-audit.md#1150-immediate-selection-and-alternative-execution-2026-11-12)

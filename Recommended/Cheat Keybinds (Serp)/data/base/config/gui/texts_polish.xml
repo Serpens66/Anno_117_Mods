@@ -1,0 +1,210 @@
+<ModOps>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500000000</LineId>
+      <Text>Cheat Keybind</Text>
+    </Text>
+  </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001221</LineId>
+      <Text>Coins: +100,000 / −100,000
+Normal: add; alternative: subtract. Negative amounts still need an in-game check; bankruptcy is possible.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001222</LineId>
+      <Text>All goods: +1,000 / −1,000
+Normal: add; alternative: subtract. Unlocked goods on your current or selected owned island. Negative amounts still need an in-game check.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001223</LineId>
+      <Text>Increase / decrease workforce
+Normal: increase; alternative: decrease. Current owned island only. The native cheat determines the amount; does not add residents.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001224</LineId>
+      <Text>Build without material checks: On/Off
+Bypass material requirements. Costs can still be deducted; bankruptcy is possible.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001225</LineId>
+      <Text>Upgrade without requirements: On/Off
+Allow building upgrades despite unmet requirements.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001226</LineId>
+      <Text>Factory fertility: On/Off
+Toggle the required fertility for your selected owned factory.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001227</LineId>
+      <Text>Complete ship or unit instantly
+Finish current recruitment in your selected owned shipyard or recruitment building.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001228</LineId>
+      <Text>Advance monument construction
+Affects your selected owned monument. Advances only part of the phase; repeat as needed.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001229</LineId>
+      <Text>Complete / cancel current research
+Normal: complete the first queued technology; alternative: cancel it. No refund behavior is established.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001230</LineId>
+      <Text>Research all / reset all research
+Normal: research every technology; alternative: reset all. Normal execution no longer toggles research back off.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001231</LineId>
+      <Text>Add random items
+On your current owned island.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001232</LineId>
+      <Text>Take over foreign object or island
+Kontor/Villa: the whole island; otherwise the selected foreign object. May desync multiplayer.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001240</LineId>
+      <Text>Cheats: previous selection (without executing)</Text>
+    </Text>
+    <Text>
+      <LineId>1500001241</LineId>
+      <Text>Cheats: next selection (without executing)</Text>
+    </Text>
+    <Text>
+      <LineId>1500001242</LineId>
+      <Text>Cheats: execute selected cheat</Text>
+    </Text>
+    <Text>
+      <LineId>1500001243</LineId>
+      <Text>Requirement missing
+The selected cheat lacks a suitable game context.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001244</LineId>
+      <Text>Cheat failed – see log
+CheatKeybinds_Serp records the cheat, execution direction and error.</Text>
+    </Text>
+  </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001245</LineId>
+      <Text>Cheats: delete selection (without ruins)</Text>
+    </Text>
+    <Text>
+      <LineId>1500001246</LineId>
+      <Text>Cheats: destroy selection</Text>
+    </Text>
+    <Text>
+      <LineId>1500001247</LineId>
+      <Text>Reload mods</Text>
+    </Text>
+    <Text>
+      <LineId>1500001248</LineId>
+      <Text>Open/close Lua console</Text>
+    </Text>
+    <Text>
+      <LineId>1500001249</LineId>
+      <Text>Game speed: Normal</Text>
+    </Text>
+    <Text>
+      <LineId>1500001250</LineId>
+      <Text>Game speed: Fast</Text>
+    </Text>
+    <Text>
+      <LineId>1500001251</LineId>
+      <Text>Game speed: Fastest</Text>
+    </Text>
+  </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001254</LineId>
+      <Text>Emperor reputation: +10 / −10
+Normal: +10; alternative: −10 with the current emperor. Normal reputation scale: −100 to +100.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001255</LineId>
+      <Text>Reset diplomacy cooldowns
+Reset your own action cooldowns. Other restrictions, such as pending replies or unmet requirements, remain.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001258</LineId>
+      <Text>Cheats: alternative execution</Text>
+    </Text>
+  </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001280</LineId>
+      <Text>Goods: choose your own island
+Move the view to an owned island or select a building there.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001281</LineId>
+      <Text>Workforce: choose your own island
+Move the view to an owned island. A building selection alone is not enough here.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001282</LineId>
+      <Text>Items: choose your own island
+Move the view to an owned island.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001283</LineId>
+      <Text>No object selected
+Select an object appropriate for this cheat.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001284</LineId>
+      <Text>Fertility: select a factory
+The selection has no suitable factory property.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001285</LineId>
+      <Text>Recruitment: select your own shipyard
+Select an owned shipyard or recruitment building with production in progress.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001286</LineId>
+      <Text>Monument: select your own monument
+The selection is not a suitable monument.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001287</LineId>
+      <Text>Foreign object selected
+This cheat requires an object you own.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001288</LineId>
+      <Text>Research queue is empty
+Start research before completing or cancelling it.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001289</LineId>
+      <Text>Takeover: select a foreign object
+You already own the selected object.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001290</LineId>
+      <Text>No current player available
+This cheat requires a valid current participant.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001291</LineId>
+      <Text>No active emperor available
+This cheat requires a valid active emperor.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001292</LineId>
+      <Text>Diplomacy currently unavailable
+The current player has no valid diplomacy property.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001293</LineId>
+      <Text>Workforce currently unavailable
+The current island workforce manager is invalid.</Text>
+    </Text>
+  </ModOp>
+</ModOps>

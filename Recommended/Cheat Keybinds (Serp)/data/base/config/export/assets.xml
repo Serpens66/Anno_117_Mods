@@ -1,96 +1,88 @@
 <ModOps>
-
   <!-- maybe add: -->
   <!-- Quests:CheatSetAllPoolCountdownEndtimersToNewTime() -->
   <!-- Static.Incident.ShortenIncidentSchedulerIntervalForMajorIncidents(0) -->
   <!-- Participants.ActiveEmperorProperty:ShortenAllEmperorQuestTimerIntervals() -->
   <!-- Participants:GetParticipant(Selection.Object.Owner).Diplomacy:ResetAllActionCooldownsNet() -->
   <!-- AreaWorkforce:CheatAddDelta(productGUID , delta ) -->
-
-<!-- testing -->
-<!-- Selection:DestructSelected() -> nur eigene objekte und mit Sicherheitsabfrage -->
-<!-- GetGameObject(Selection.Object.ID):DestructConfirmedNet() -> funzt und macht durch Net vermutlich kein Desync -->
-<!-- Cheats:DestroySelectedObjects() -->
-<!-- LandCombat:DestroySelectedUnit() -->
-<!-- SessionUnit.BalancingTest:AddDamagePercent(self, unitID , percent , damageDealer , countAsUnitAttack ) -->
-<!-- Cheats:DamageSelectedObjects(percentage , damageDealerParticipant , countAsUnitAttack ) -->
-<!-- AreaManager.Walls:ApplyDamageAtPosition(targetPosition , damage ) -->
-<!-- SessionUnit.BalancingTest:AddDamagePercent(Selection.Object.ID,100,42) error: weak reference was null... -->
-
-
-
-    <!-- Alt+F4 should force quit the game without saving -->
-    <ModOp Type="merge" GUID='2001271' Path="/Values/ShortcutConfig/InputBindings/Item[InputTypes/Modern/KeyType='Alt;F4']">
-      <Command>Game:FastQuit(1)</Command>
-      <!-- <Identifier>0</Identifier> -->
-    </ModOp>
-    
-    <!-- funktioniert weiterhin nur der erste keybind , wenn mehrere exakt denselben Command haben -->
-    <ModOp Type="add" GUID='2001271' Path="/Values/ShortcutConfig/InputBindings">
-        
-        <!-- Cheats is nil currently, hopefully enabled in full release -->
-        <!-- <Item> -->
-          <!-- <Command>Cheats:ToggleConsole();</Command> -->
-          <!-- <Text>1500000000</Text> -->
-          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
-          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
-          <!-- <AudioEvent>200634</AudioEvent> -->
-          <!-- <Configurable>1</Configurable> -->
-          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
-          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
-          <!-- <InputTypes> -->
-            <!-- <Modern> -->
-              <!-- <KeyType>Oem2_NumberSign</KeyType> -->
-            <!-- </Modern> -->
-            <!-- <Legacy> -->
-              <!-- <KeyType>Oem2_NumberSign</KeyType> -->
-            <!-- </Legacy> -->
-          <!-- </InputTypes> -->
-        <!-- </Item> -->
-        
-        
-        <!-- delete object (no ruins) is "Net" so most likely no desync -->
-        <Item>
-          <Command>GetGameObject(Selection.Object.ID):DestructConfirmedNet();</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Alt;Delete</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Alt;Delete</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
-        <!-- destroy object (ruins), maybe desync -->
-        <Item>
-          <Command>AreaManager.Walls:ApplyDamageAtPosition(Selection.Object.Position,100000);</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>Shift;Delete</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>Shift;Delete</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
-        <!-- change owner of selection to you, surely causes desync -->
-        <!-- Alternative without desync: Selection.Object.Sellable:BuyNet(42) BUT: this requires traderights and does transfer money, so same limitations like in 1800 -->
-        <!-- if Kontor is selected, then take over the whole island (island also changes owner with ChangeParticipantOfSelected on kontor, but I is not notified and continues to build on island) -->
-        <Item>
+  <!-- testing -->
+  <!-- Selection:DestructSelected() -> nur eigene objekte und mit Sicherheitsabfrage -->
+  <!-- GetGameObject(Selection.Object.ID):DestructConfirmedNet() -> funzt und macht durch Net vermutlich kein Desync -->
+  <!-- Cheats:DestroySelectedObjects() -->
+  <!-- LandCombat:DestroySelectedUnit() -->
+  <!-- SessionUnit.BalancingTest:AddDamagePercent(self, unitID , percent , damageDealer , countAsUnitAttack ) -->
+  <!-- Cheats:DamageSelectedObjects(percentage , damageDealerParticipant , countAsUnitAttack ) -->
+  <!-- AreaManager.Walls:ApplyDamageAtPosition(targetPosition , damage ) -->
+  <!-- SessionUnit.BalancingTest:AddDamagePercent(Selection.Object.ID,100,42) error: weak reference was null... -->
+  <!-- Alt+F4 should force quit the game without saving -->
+  <ModOp Type="merge" GUID="2001271" Path="/Values/ShortcutConfig/InputBindings/Item[InputTypes/Modern/KeyType='Alt;F4']">
+    <Command>Game:FastQuit(1)</Command>
+    <!-- <Identifier>0</Identifier> -->
+  </ModOp>
+  <!-- funktioniert weiterhin nur der erste keybind , wenn mehrere exakt denselben Command haben -->
+  <ModOp Type="add" GUID="2001271" Path="/Values/ShortcutConfig/InputBindings">
+    <!-- Cheats is nil currently, hopefully enabled in full release -->
+    <!-- <Item> -->
+    <!-- <Command>Cheats:ToggleConsole();</Command> -->
+    <!-- <Text>1500000000</Text> -->
+    <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+    <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+    <!-- <AudioEvent>200634</AudioEvent> -->
+    <!-- <Configurable>1</Configurable> -->
+    <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+    <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+    <!-- <InputTypes> -->
+    <!-- <Modern> -->
+    <!-- <KeyType>Oem2_NumberSign</KeyType> -->
+    <!-- </Modern> -->
+    <!-- <Legacy> -->
+    <!-- <KeyType>Oem2_NumberSign</KeyType> -->
+    <!-- </Legacy> -->
+    <!-- </InputTypes> -->
+    <!-- </Item> -->
+    <!-- delete object (no ruins) is "Net" so most likely no desync -->
+    <Item>
+      <Command>if Selection.Object:isValid() then GetGameObject(Selection.Object.ID):DestructConfirmedNet(); end</Command>
+      <Text>1500001245</Text>
+      <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+      <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+      <AudioEvent>200634</AudioEvent>
+      <Configurable>1</Configurable>
+      <HideInOptionMenu>0</HideInOptionMenu>
+      <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+      <InputTypes>
+        <Modern>
+          <KeyType>Alt;Delete</KeyType>
+        </Modern>
+        <Legacy>
+          <KeyType>Alt;Delete</KeyType>
+        </Legacy>
+      </InputTypes>
+    </Item>
+    <!-- destroy object (ruins), maybe desync -->
+    <Item>
+      <Command>if Selection.Object:isValid() then AreaManager.Walls:ApplyDamageAtPosition(Selection.Object.Position,100000); end</Command>
+      <Text>1500001246</Text>
+      <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+      <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+      <AudioEvent>200634</AudioEvent>
+      <Configurable>1</Configurable>
+      <HideInOptionMenu>0</HideInOptionMenu>
+      <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+      <InputTypes>
+        <Modern>
+          <KeyType>Shift;Delete</KeyType>
+        </Modern>
+        <Legacy>
+          <KeyType>Shift;Delete</KeyType>
+        </Legacy>
+      </InputTypes>
+    </Item>
+    <!-- change owner of selection to you, surely causes desync -->
+    <!-- Alternative without desync: Selection.Object.Sellable:BuyNet(42) BUT: this requires traderights and does transfer money, so same limitations like in 1800 -->
+    <!-- if Kontor is selected, then take over the whole island (island also changes owner with ChangeParticipantOfSelected on kontor, but I is not notified and continues to build on island) -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>if Selection.Object:isValid() and not Selection.Object.IsOwnedByCurrentParticipant and (Selection.Object.IsKontor or Selection.Object.Villa:isValid()) then Selection.Object.Area:Takeover(Participants.GetCurrentParticipantGUID,datasets.TakeOverTransformation.ChangeOwner); else Selection:ChangeParticipantOfSelected() end;</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -108,28 +100,27 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-        
-        <Item>
-          <Command>Mods:LoadMods();</Command>
-          <Text>1500000000</Text>
-          <Active>Session;WorldMap;Menu;Pause;Popup</Active>
-          <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
-          <AudioEvent>200634</AudioEvent>
-          <Configurable>1</Configurable>
-          <HideInOptionMenu>0</HideInOptionMenu>
-          <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
-          <InputTypes>
-            <Modern>
-              <KeyType>F11</KeyType>
-            </Modern>
-            <Legacy>
-              <KeyType>F11</KeyType>
-            </Legacy>
-          </InputTypes>
-        </Item>
-        
-        <Item>
+        -->
+    <Item>
+      <Command>Mods:LoadMods();</Command>
+      <Text>1500001247</Text>
+      <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+      <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms>
+      <AudioEvent>200634</AudioEvent>
+      <Configurable>1</Configurable>
+      <HideInOptionMenu>0</HideInOptionMenu>
+      <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+      <InputTypes>
+        <Modern>
+          <KeyType>F11</KeyType>
+        </Modern>
+        <Legacy>
+          <KeyType>F11</KeyType>
+        </Legacy>
+      </InputTypes>
+    </Item>
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>Cheat.GlobalCheats:ToggleUpgradeCheck()</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -147,9 +138,10 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-        <!-- no buildcosts for everything (costs are still subsctracted, so you can go bancrupt!) -->
-        <Item>
+        -->
+    <!-- no buildcosts for everything (costs are still subsctracted, so you can go bancrupt!) -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>Cheat.GlobalCheats:ToggleIgnoreBuildingCosts()</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -167,29 +159,29 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-        <!-- ToggleSuperShipSpeed does not work, most likely because the renameing from Walking to Movement? -->
-        <!-- <Item> -->
-          <!-- <Command>Cheat.GlobalCheats:ToggleSuperShipSpeed()</Command> -->
-          <!-- <Text>1500000000</Text> -->
-          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
-          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
-          <!-- <AudioEvent>200634</AudioEvent> -->
-          <!-- <Configurable>1</Configurable> -->
-          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
-          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
-          <!-- <InputTypes> -->
-            <!-- <Modern> -->
-              <!-- <KeyType>End</KeyType> -->
-            <!-- </Modern> -->
-            <!-- <Legacy> -->
-              <!-- <KeyType>End</KeyType> -->
-            <!-- </Legacy> -->
-          <!-- </InputTypes> -->
-        <!-- </Item> -->
-        
-        <!-- credit 1000 of every unlocked good -->
-        <Item>
+        -->
+    <!-- ToggleSuperShipSpeed does not work, most likely because the renameing from Walking to Movement? -->
+    <!-- <Item> -->
+    <!-- <Command>Cheat.GlobalCheats:ToggleSuperShipSpeed()</Command> -->
+    <!-- <Text>1500000000</Text> -->
+    <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+    <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+    <!-- <AudioEvent>200634</AudioEvent> -->
+    <!-- <Configurable>1</Configurable> -->
+    <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+    <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+    <!-- <InputTypes> -->
+    <!-- <Modern> -->
+    <!-- <KeyType>End</KeyType> -->
+    <!-- </Modern> -->
+    <!-- <Legacy> -->
+    <!-- <KeyType>End</KeyType> -->
+    <!-- </Legacy> -->
+    <!-- </InputTypes> -->
+    <!-- </Item> -->
+    <!-- credit 1000 of every unlocked good -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>if Area.IsCurrentAreaValidIsland then Area.Current.Economy:AddAmount(1000) end;</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -207,9 +199,10 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-        <!-- money -->
-        <Item>
+        -->
+    <!-- money -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>Economy.MetaStorage:AddAmount(1010017,100000)</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -227,9 +220,10 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-        <!-- instant ship/unit production of currently selected shipyards production -->
-        <Item>
+        -->
+    <!-- instant ship/unit production of currently selected shipyards production -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>Selection.Object.Recruitment:CheatSkipRemainingTime();</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -247,9 +241,10 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-        <!-- finish a portion of selected monument building phase, hit multiple times to finish it -->
-        <Item>
+        -->
+    <!-- finish a portion of selected monument building phase, hit multiple times to finish it -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>Selection.Object.Monument:CheatUpgradeMicro()</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -267,12 +262,13 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-        <!-- fill populaiton of all houses of the current island to max -->
-         <!-- does not seem to exist anymore... -->
-         <!-- AreaManager.AreaPopulation.SetFillAllResidencesOnIsland() -->
-         <!-- Alternative: CheatChangePopulation. It adds 500 of every unlocked residence to the global population (after unlock of new pop the amount is the same for all pops) -->
-        <Item>
+        -->
+    <!-- fill populaiton of all houses of the current island to max -->
+    <!-- does not seem to exist anymore... -->
+    <!-- AreaManager.AreaPopulation.SetFillAllResidencesOnIsland() -->
+    <!-- Alternative: CheatChangePopulation. It adds 500 of every unlocked residence to the global population (after unlock of new pop the amount is the same for all pops) -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>AreaPopulation:CheatChangePopulation(true)</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -290,9 +286,10 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-         <!-- CompleteTechResearch or ResetTech for all existing techs -->
-        <Item>
+        -->
+    <!-- CompleteTechResearch or ResetTech for all existing techs -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>TechHandler:CheatToggleResearchAll()</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -310,30 +307,29 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-        <!-- increase attractivity of current island by 1000 (false->decrease true->increase,false->100 true->1000) -->
-        <!-- Im not sure of attractivity exists in 117?! -->
-        <!-- <Item> -->
-          <!-- <Command>Attractivity:CheatChangeAttractivityNet(true,true)</Command> -->
-          <!-- <Text>1500000000</Text> -->
-          <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
-          <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
-          <!-- <AudioEvent>200634</AudioEvent> -->
-          <!-- <Configurable>1</Configurable> -->
-          <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
-          <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
-          <!-- <InputTypes> -->
-            <!-- <Modern> -->
-              <!-- <KeyType>Shift;Home</KeyType> -->
-            <!-- </Modern> -->
-            <!-- <Legacy> -->
-              <!-- <KeyType>Shift;Home</KeyType> -->
-            <!-- </Legacy> -->
-          <!-- </InputTypes> -->
-        <!-- </Item> -->
-        
-        
-        <Item>
+        -->
+    <!-- increase attractivity of current island by 1000 (false->decrease true->increase,false->100 true->1000) -->
+    <!-- Im not sure of attractivity exists in 117?! -->
+    <!-- <Item> -->
+    <!-- <Command>Attractivity:CheatChangeAttractivityNet(true,true)</Command> -->
+    <!-- <Text>1500000000</Text> -->
+    <!-- <Active>Session;WorldMap;Menu;Pause;Popup</Active> -->
+    <!-- <AvailableOnPlatforms>PC;Xbox;PS;Stadia</AvailableOnPlatforms> -->
+    <!-- <AudioEvent>200634</AudioEvent> -->
+    <!-- <Configurable>1</Configurable> -->
+    <!-- <HideInOptionMenu>0</HideInOptionMenu> -->
+    <!-- <AllowMultipleShortcuts>1</AllowMultipleShortcuts> -->
+    <!-- <InputTypes> -->
+    <!-- <Modern> -->
+    <!-- <KeyType>Shift;Home</KeyType> -->
+    <!-- </Modern> -->
+    <!-- <Legacy> -->
+    <!-- <KeyType>Shift;Home</KeyType> -->
+    <!-- </Legacy> -->
+    <!-- </InputTypes> -->
+    <!-- </Item> -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>local currentTech = TechHandler:GetTechAtQueuePosition(0);if currentTech and currentTech.Guid then TechHandler:CompleteTechResearch(currentTech.Guid, true);end</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -351,9 +347,10 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-        <!-- add the needed fertility from the currently selected factory to the island -->
-        <Item>
+        -->
+    <!-- add the needed fertility from the currently selected factory to the island -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>Selection.Object.Factory:ToggleCheatFertility()</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -371,9 +368,10 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
-        <!-- add random items to the current island. -->
-        <Item>
+        -->
+    <!-- add random items to the current island. -->
+    <!-- Retired direct shortcut; use Alt+C/B and Alt+V instead.
+<Item>
           <Command>Item:CheatAllItems()</Command>
           <Text>1500000000</Text>
           <Active>Session;WorldMap;Menu;Pause;Popup</Active>
@@ -391,10 +389,1925 @@
             </Legacy>
           </InputTypes>
         </Item>
-        
+        -->
+    <!-- Anno 1800 selection workflow, implemented by the 117 module. -->
+    <Item>
+      <Command>CheatKeybinds_Serp.ChangeCheat(-1)</Command>
+      <Text>1500001240</Text>
+      <Identifier>CheatKeybindsSerpPrevious</Identifier>
+      <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+      <AvailableOnPlatforms>PC</AvailableOnPlatforms>
+      <Configurable>1</Configurable>
+      <HideInOptionMenu>0</HideInOptionMenu>
+      <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+      <InputTypes>
+        <Modern>
+          <KeyType>Alt;C</KeyType>
+        </Modern>
+        <Legacy>
+          <KeyType>Alt;C</KeyType>
+        </Legacy>
+      </InputTypes>
+    </Item>
+    <Item>
+      <Command>CheatKeybinds_Serp.ChangeCheat(1)</Command>
+      <Text>1500001241</Text>
+      <Identifier>CheatKeybindsSerpNext</Identifier>
+      <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+      <AvailableOnPlatforms>PC</AvailableOnPlatforms>
+      <Configurable>1</Configurable>
+      <HideInOptionMenu>0</HideInOptionMenu>
+      <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+      <InputTypes>
+        <Modern>
+          <KeyType>Alt;B</KeyType>
+        </Modern>
+        <Legacy>
+          <KeyType>Alt;B</KeyType>
+        </Legacy>
+      </InputTypes>
+    </Item>
+    <Item>
+      <Command>CheatKeybinds_Serp.StartCheat()</Command>
+      <Text>1500001242</Text>
+      <Identifier>CheatKeybindsSerpExecute</Identifier>
+      <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+      <AvailableOnPlatforms>PC</AvailableOnPlatforms>
+      <Configurable>1</Configurable>
+      <HideInOptionMenu>0</HideInOptionMenu>
+      <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+      <InputTypes>
+        <Modern>
+          <KeyType>Alt;V</KeyType>
+        </Modern>
+        <Legacy>
+          <KeyType>Alt;V</KeyType>
+        </Legacy>
+      </InputTypes>
+    </Item>
+    <Item>
+      <Command>CheatKeybinds_Serp.StartCheat(true)</Command>
+      <Text>1500001258</Text>
+      <Identifier>CheatKeybindsSerpExecuteAlternative</Identifier>
+      <Active>Session;WorldMap;Menu;Pause;Popup</Active>
+      <AvailableOnPlatforms>PC</AvailableOnPlatforms>
+      <Configurable>1</Configurable>
+      <HideInOptionMenu>0</HideInOptionMenu>
+      <AllowMultipleShortcuts>1</AllowMultipleShortcuts>
+      <InputTypes>
+        <Modern>
+          <KeyType>Alt;G</KeyType>
+        </Modern>
+        <Legacy>
+          <KeyType>Alt;G</KeyType>
+        </Legacy>
+      </InputTypes>
+    </Item>
+  </ModOp>
+  <!-- GUIDs 1500001201-1500001214: notification-only; no gameplay dispatch. -->
+  <ModOp Type="addNextSibling" GUID="31973">
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001201</GUID>
+          <Name>Cheat Keybinds selection notice 1</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001221</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001202</GUID>
+          <Name>Cheat Keybinds selection notice 2</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001222</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001203</GUID>
+          <Name>Cheat Keybinds selection notice 3</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001223</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001204</GUID>
+          <Name>Cheat Keybinds selection notice 4</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001224</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001205</GUID>
+          <Name>Cheat Keybinds selection notice 5</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001225</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001206</GUID>
+          <Name>Cheat Keybinds selection notice 6</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001226</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001207</GUID>
+          <Name>Cheat Keybinds selection notice 7</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001227</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001208</GUID>
+          <Name>Cheat Keybinds selection notice 8</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001228</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001209</GUID>
+          <Name>Cheat Keybinds selection notice 9</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001229</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001210</GUID>
+          <Name>Cheat Keybinds selection notice 10</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001230</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001211</GUID>
+          <Name>Cheat Keybinds selection notice 11</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001231</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001212</GUID>
+          <Name>Cheat Keybinds selection notice 12</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001232</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001213</GUID>
+          <Name>Cheat Keybinds selection notice 13</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001243</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001214</GUID>
+          <Name>Cheat Keybinds selection notice 14</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001244</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <!-- New selection notices and native emperor reputation actions. -->
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001252</GUID>
+          <Name>Cheat Keybinds selection notice Emperor reputation</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001254</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001253</GUID>
+          <Name>Cheat Keybinds selection notice Own diplomacy cooldowns</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001255</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001256</GUID>
+          <Name>Cheat Keybinds emperor reputation +10</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionChangeReputation</Template>
+                <Values>
+                  <Action/>
+                  <ActionChangeReputation>
+                    <UseProcessingParticipant>1</UseProcessingParticipant>
+                    <Amount>
+                      <Value>10</Value>
+                    </Amount>
+                    <AmountIsADelta>1</AmountIsADelta>
+                    <EmperorTrait>[NONE]</EmperorTrait>
+                  </ActionChangeReputation>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001257</GUID>
+          <Name>Cheat Keybinds emperor reputation -10</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionChangeReputation</Template>
+                <Values>
+                  <Action/>
+                  <ActionChangeReputation>
+                    <UseProcessingParticipant>1</UseProcessingParticipant>
+                    <Amount>
+                      <Value>-10</Value>
+                    </Amount>
+                    <AmountIsADelta>1</AmountIsADelta>
+                    <EmperorTrait>[NONE]</EmperorTrait>
+                  </ActionChangeReputation>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <!-- Specific precondition failures; gameplay is never executed here. -->
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001260</GUID>
+          <Name>Cheat Keybinds precondition failure 1</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001280</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001261</GUID>
+          <Name>Cheat Keybinds precondition failure 2</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001281</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001262</GUID>
+          <Name>Cheat Keybinds precondition failure 3</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001282</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001263</GUID>
+          <Name>Cheat Keybinds precondition failure 4</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001283</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001264</GUID>
+          <Name>Cheat Keybinds precondition failure 5</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001284</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001265</GUID>
+          <Name>Cheat Keybinds precondition failure 6</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001285</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001266</GUID>
+          <Name>Cheat Keybinds precondition failure 7</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001286</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001267</GUID>
+          <Name>Cheat Keybinds precondition failure 8</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001287</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001268</GUID>
+          <Name>Cheat Keybinds precondition failure 9</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001288</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001269</GUID>
+          <Name>Cheat Keybinds precondition failure 10</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001289</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001270</GUID>
+          <Name>Cheat Keybinds precondition failure 11</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001290</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001271</GUID>
+          <Name>Cheat Keybinds precondition failure 12</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001291</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001272</GUID>
+          <Name>Cheat Keybinds precondition failure 13</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001292</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+    <Asset>
+      <Template>Trigger</Template>
+      <Values>
+        <Standard>
+          <GUID>1500001273</GUID>
+          <Name>Cheat Keybinds precondition failure 14</Name>
+        </Standard>
+        <Trigger>
+          <TriggerCondition>
+            <Template>ConditionAlwaysTrue</Template>
+            <Values>
+              <Condition/>
+              <ConditionAlwaysTrue/>
+            </Values>
+          </TriggerCondition>
+          <TriggerActions>
+            <Item>
+              <TriggerAction>
+                <Template>ActionNotification</Template>
+                <Values>
+                  <Action/>
+                  <ActionNotification>
+                    <Notification>
+                      <Template>SideNotification</Template>
+                      <Values>
+                        <SideNotification>
+                          <IconAsset>500271</IconAsset>
+                          <NotificationSideTitle>1500000000</NotificationSideTitle>
+                          <HasJumpLocation>0</HasJumpLocation>
+                          <IsArchivable>0</IsArchivable>
+                          <IsSilent>0</IsSilent>
+                          <Infotip>0</Infotip>
+                        </SideNotification>
+                        <BaseNotification>
+                          <NotificationText>1500001293</NotificationText>
+                          <NotificationTopic>Progress</NotificationTopic>
+                          <NotificationPriority>-1</NotificationPriority>
+                          <NotificationBlockingTime>0</NotificationBlockingTime>
+                          <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
+                          <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
+                          <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
+                          <IsUnique>1</IsUnique>
+                        </BaseNotification>
+                        <NotificationSubtitle/>
+                      </Values>
+                    </Notification>
+                  </ActionNotification>
+                </Values>
+              </TriggerAction>
+            </Item>
+          </TriggerActions>
+        </Trigger>
+        <TriggerSetup>
+          <AutoRegisterTrigger>0</AutoRegisterTrigger>
+          <UsedBySecondParties>0</UsedBySecondParties>
+        </TriggerSetup>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!-- Label-only compatibility patches; optional mods must load first. -->
+  <Group Condition="#console-ubi">
+    <ModOp Type="merge" GUID="2001271" Path="/Values/ShortcutConfig/InputBindings/Item[Command='Scripts:ToggleScriptConsole()']">
+      <Text>1500001248</Text>
     </ModOp>
-    
-    
-    
-    
+  </Group>
+  <Group Condition="#change-multiplayer-gamespeed-serp">
+    <ModOp Type="merge" GUID="2001271" Path="/Values/ShortcutConfig/InputBindings/Item[Command='Conditions:RegisterTriggerForCurrentParticipantNet(1500000050)']">
+      <Text>1500001249</Text>
+    </ModOp>
+    <ModOp Type="merge" GUID="2001271" Path="/Values/ShortcutConfig/InputBindings/Item[Command='Conditions:RegisterTriggerForCurrentParticipantNet(1500000051)']">
+      <Text>1500001250</Text>
+    </ModOp>
+    <ModOp Type="merge" GUID="2001271" Path="/Values/ShortcutConfig/InputBindings/Item[Command='Conditions:RegisterTriggerForCurrentParticipantNet(1500000052)']">
+      <Text>1500001251</Text>
+    </ModOp>
+  </Group>
+  <!-- Global Side notification start delay: affects ordinary game side notices too. -->
+  <ModOp Type="merge" GUID="25000040" Path="/Values/NotificationConfiguration/NotificationTypeArray/Side">
+    <Delay>0</Delay>
+  </ModOp>
 </ModOps>

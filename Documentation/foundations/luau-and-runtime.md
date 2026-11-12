@@ -13,3 +13,37 @@ Use `data/script/types/system.lua`, `events.lua` and `types/generated/rdgs/` as 
 - **Pending:** no 3.0 runtime check of peer scope, repeated trigger registration, speed transitions, late join, save/load or notification duplication. The WIP version documents a separate unresolved participant variable and notification path. Re-audit before choosing or extending either design.
 
 Test locally with a disposable save, then check distinct participants and co-op peers, their active sessions, reconnect and removal when applicable. Record the initiating peer and exactly what every other peer sees. Metadata multiplayer flags, no crash on launch, and shared code on disk are separate from synchronization evidence.
+
+## Vanilla Lua source map
+
+The Lua source root is `<vanillaPath>/data/script/`, resolved through ignored `Documentation/local.json`. For the 2026-11-12 Cheat Keybinds audit, the relevant generated bindings and globals were hash-checked against the manifest, and all 40 installed archive inventory entries matched. This supplements the 3.0 baseline; it does not certify every extracted script or game binding.
+
+| Location below data/script | Purpose |
+| --- | --- |
+| `types/generated/globals.lua` | Resolve accessible singleton names to their declared types, e.g. Selection, Area, Economy, Cheat, Conditions, Scripts and TechHandler. |
+| `types/generated/rdgs/` | Read the corresponding class signatures, property types, overloads and validity checks. Colon calls pass self; global properties such as Participants.GetCurrentParticipantGUID are read without parentheses. Generated empty bodies are declarations only. |
+| `types/generated/datasets/` | Inspect the enum used by a signature, then cross-check config/game/datasets.xml; do not reuse 1800 enum values. |
+| `types/system.lua`, `events.lua` | Host logging, coroutine/future primitives and event declarations. `system.run(path)` starts a coroutine, `system.require(path)` mimics Lua 5.1 require, and `system.dofile(path)` executes a script file. |
+| `core/scriptsystem.lua`, `core/core.lua` | Actual helpers layered on top of the host. For example, system.wait(delay) awaits system.sleep(delay); a declaration of an async call is not a synchronous result. |
+| `modules/`, `content/`, `version/` | Actual native consumers and lifecycle examples; use the manifest to distinguish current files from old research-folder leftovers. |
+
+The modloader's Init hook can assign a module returned by require to a uniquely named global. Load/Unload reset per-game module state; a cached module does not automatically reset its variables on save reload. A module definition and its shortcut call must agree on dot versus colon syntax. A mod-global call from ShortcutConfig is supported by the current public script-testing example. The 2026-11-12 main game log now also confirms those calls reaching Cheat Keybinds 1.14.0 on this installation. This does not identify which patch fixed the older failure or guarantee every execution context. [Runtime continuation](../reference/cheat-keybinds-audit.md#1141-label-and-notification-audit-2026-11-12)
+
+## Cheat Keybinds and shortcut dispatch
+
+The [feature audit](../reference/cheat-keybinds-audit.md) records exact targets, inheritance/defaults, source provenance, binding owners, 1800 differences, notification consumers and runtime gaps. Native ShortcutConfig asset 2001271 uses `Values/ShortcutConfig/InputBindings`, with separate Modern/Legacy presets, not 1800 GUIConfig/KeyBindings. A Command is a string; the native examples call singleton methods, whereas the new mod calls its initialized module.
+
+Use explicit function values for cheat dispatch. Do not depend on loadstring, 1800 ts wrappers, old coroutine helpers or availability of the optional Cheats debug global. `Cheats` is declared in Vanilla but was reported nil by the older workspace; availability remains a runtime question. The selection UI uses fixed localized LineIDs and notification-only participant triggers instead of changing a neutral participant's profile name. Gameplay stays in the initiating shortcut's module call; this avoids an additional ActionExecuteScript execution path but does not establish multiplayer safety.
+
+117 equivalents include Recruitment:CheatSkipRemainingTime() and TechHandler:GetTechAtQueuePosition(0) plus CompleteTechResearch(). The older AreaPopulation:CheatChangePopulation(true) declaration did not establish fill-all-residences behavior, and the user now reports no advertised effect; 1.15.0 replaces it with direct AreaWorkforce:CheatChangeWorkforce(true/false), with no claimed amount. Guard invalid objects/properties, zero tech GUIDs and island ownership. A function with implicit current-area context cannot be redirected by merely obtaining Area.CurrentSelectedArea; selected-area fallback is appropriate only when the action is explicitly called on that area's Economy.
+
+Run `Documentation/tools/check_cheat_keybinds.py` for structural checks and generation of a standalone Luau mock harness under ignored `Documentation/out`. Execute the harness with Luau via the workspace permission route. This checks module state and dispatch, not native binding availability, shortcut entrypoints, notifications, saves or peer synchronization. See the audit for the remaining in-game test matrix.
+
+Since 1.14.1, the checker also reads the installed optional console/speed shortcut definitions through `modsPath` and projects all four presence/absence combinations. Compatibility patches change labels only and run after the respective optional mod. Preserve Commands, Identifiers and key defaults when relabeling; the user's tested menu-key override persisted across a restart. `IsSilent` has no documented runtime semantics in the generated metadata: do not assume it means only muted audio. The user now confirms visible selection notices with 1.14.1 and IsSilent=0, with a screenshot. Keep this scoped to the tested configuration. 1.14.2 retains 0 and uses compact action-first text plus tools icon 500271; wrapping, expansion and the icon still need an in-game visual check. [Continuation](../reference/cheat-keybinds-audit.md#1142-compact-notifications-and-tools-icon-2026-11-12)
+
+
+### Directed cheats and priority (1.15.0)
+
+The [1.15.0 audit](../reference/cheat-keybinds-audit.md#1150-immediate-selection-and-alternative-execution-2026-11-12) records normal/alternative calls, signed-amount candidates, explicit research actions, emperor processing-participant actions and the direct workforce/cooldown owners. Use one optional Boolean argument rather than polling key state: the extra configurable Alt+Shift+V binding passes true; the normal existing shortcut stays unchanged. Three-key bindings already occur natively. Keep an explicit notification-GUID mapping when extending the menu because old indices 13/14 would otherwise select the error notices.
+
+Priority -1 is present in native 117 SideNotification examples and the 1800 selection notice. It replaces 200 on all mod notices without adding timers or deleting normal game notifications; actual latest-selection replacement remains a game test. IsSilent=0 remains based on the user's visible 1.14.1 result. Do not infer engine-side timing, native negative-amount effects, workforce quantity or multiplayer synchronization from empty binding declarations or mocked calls.

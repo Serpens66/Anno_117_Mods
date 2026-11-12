@@ -7,8 +7,10 @@ This is the maintained reference for this single Anno 117: Pax Romana PC mod rep
 | Prepare a local or external Codex chat | [Instructions](../AGENTS.md), [setup](setup.md), [workflow](workflow.md) |
 | Trace a native feature from definition to consumers | [Vanilla audit](foundations/vanilla-research.md), [audit template](templates/audit.md) |
 | Package mods, avoid collisions, port a feature | [Loader and porting](foundations/loader-and-porting.md) |
+| Allocate Serp GUIDs or check existing ownership and collisions | [GUID allocation register](reference/guid-allocations.md) |
 | Compare a native system or mod pattern with Anno 1800 | [1800 comparison](reference/anno-1800-comparison.md) |
 | Work on scripts, triggers or multiplayer | [Luau and runtime](foundations/luau-and-runtime.md) |
+| Find Vanilla Lua owners, port shortcut commands or check Cheat Keybinds | [Lua source map](foundations/luau-and-runtime.md#vanilla-lua-source-map), [Cheat Keybinds audit](reference/cheat-keybinds-audit.md) |
 | Choose a repository example and locate its history | [Workspace findings](reference/workspace.md), [file inventory](reference/workspace-inventory.json) |
 | Understand update effects and current tool support | [Changelogs](reference/changelogs.md), [source register](reference/sources.md) |
 | Refresh the extract or check the documentation | [Tools](tools/README.md), [baseline receipt](reference/vanilla-baseline.json) |

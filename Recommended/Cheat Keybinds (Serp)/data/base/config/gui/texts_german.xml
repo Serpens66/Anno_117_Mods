@@ -1,0 +1,210 @@
+<ModOps>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500000000</LineId>
+      <Text>Cheat-Tastenkombination</Text>
+    </Text>
+  </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001221</LineId>
+      <Text>Münzen: +100.000 / −100.000
+Normal: hinzufügen; alternativ: abziehen. Negativer Betrag noch im Spiel zu prüfen; Bankrott möglich.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001222</LineId>
+      <Text>Alle Güter: +1.000 / −1.000
+Normal: hinzufügen; alternativ: abziehen. Nur freigeschaltete Waren auf eigener aktueller oder ausgewählter Insel. Negativer Aufruf noch zu prüfen.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001223</LineId>
+      <Text>Arbeitskräfte erhöhen / senken
+Normal: erhöhen; alternativ: senken. Nur auf deiner aktuellen eigenen Insel. Die Menge bestimmt der native Cheat; keine zusätzlichen Einwohner.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001224</LineId>
+      <Text>Bauen ohne Materialprüfung: Ein/Aus
+Materialvoraussetzungen umgehen. Kosten können weiter abgezogen werden; Bankrott ist möglich.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001225</LineId>
+      <Text>Ausbauen ohne Voraussetzungen: Ein/Aus
+Erlaubt Gebäudeausbau trotz fehlender Voraussetzungen.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001226</LineId>
+      <Text>Fabrik-Fruchtbarkeit: Ein/Aus
+Benötigte Fruchtbarkeit für die ausgewählte eigene Fabrik umschalten.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001227</LineId>
+      <Text>Schiff oder Einheit sofort fertigstellen
+Laufende Rekrutierung in der ausgewählten eigenen Werft oder Rekrutierungsstätte abschließen.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001228</LineId>
+      <Text>Monument-Bauphase voranbringen
+Betrifft das ausgewählte eigene Monument. Nur ein Teil der Bauphase; bei Bedarf wiederholen.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001229</LineId>
+      <Text>Aktuelle Forschung abschließen / abbrechen
+Normal: erste Forschung der Warteschlange abschließen; alternativ: abbrechen. Keine Aussage zur Kostenerstattung.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001230</LineId>
+      <Text>Alle Forschung erforschen / zurücksetzen
+Normal: alle Technologien erforschen; alternativ: alle zurücksetzen. Normales Ausführen setzt Forschung nicht mehr versehentlich zurück.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001231</LineId>
+      <Text>Zufällige Items hinzufügen
+Auf deiner aktuellen eigenen Insel.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001232</LineId>
+      <Text>Fremdes Objekt oder Insel übernehmen
+Kontor/Villa: ganze Insel; sonst ausgewähltes fremdes Objekt. Im Mehrspieler ist ein Desync möglich.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001240</LineId>
+      <Text>Cheats: vorherige Auswahl (ohne Ausführen)</Text>
+    </Text>
+    <Text>
+      <LineId>1500001241</LineId>
+      <Text>Cheats: nächste Auswahl (ohne Ausführen)</Text>
+    </Text>
+    <Text>
+      <LineId>1500001242</LineId>
+      <Text>Cheats: ausgewählten Cheat ausführen</Text>
+    </Text>
+    <Text>
+      <LineId>1500001243</LineId>
+      <Text>Voraussetzung fehlt
+Für den gewählten Cheat fehlt ein passender Spielkontext.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001244</LineId>
+      <Text>Cheat fehlgeschlagen – siehe Log
+Details stehen unter CheatKeybinds_Serp mit Cheat und Ausführungsrichtung.</Text>
+    </Text>
+  </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001245</LineId>
+      <Text>Cheats: Auswahl löschen (ohne Ruine)</Text>
+    </Text>
+    <Text>
+      <LineId>1500001246</LineId>
+      <Text>Cheats: Auswahl zerstören</Text>
+    </Text>
+    <Text>
+      <LineId>1500001247</LineId>
+      <Text>Mods neu laden</Text>
+    </Text>
+    <Text>
+      <LineId>1500001248</LineId>
+      <Text>Lua-Konsole öffnen/schließen</Text>
+    </Text>
+    <Text>
+      <LineId>1500001249</LineId>
+      <Text>Spielgeschwindigkeit: Normal</Text>
+    </Text>
+    <Text>
+      <LineId>1500001250</LineId>
+      <Text>Spielgeschwindigkeit: Schnell</Text>
+    </Text>
+    <Text>
+      <LineId>1500001251</LineId>
+      <Text>Spielgeschwindigkeit: Sehr schnell</Text>
+    </Text>
+  </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001254</LineId>
+      <Text>Kaiserruf: +10 / −10
+Normal: +10; alternativ: −10 gegenüber dem aktuellen Kaiser. Normale Rufskala: −100 bis +100.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001255</LineId>
+      <Text>Diplomatie-Cooldowns zurücksetzen
+Eigene Aktionswartezeiten zurücksetzen. Andere Sperrgründe wie ausstehende Antworten oder fehlende Voraussetzungen bleiben bestehen.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001258</LineId>
+      <Text>Cheats: alternativ ausführen</Text>
+    </Text>
+  </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001280</LineId>
+      <Text>Güter: eigene Insel wählen
+Bewege die Ansicht auf eine eigene Insel oder wähle dort ein Gebäude.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001281</LineId>
+      <Text>Arbeitskräfte: eigene Insel wählen
+Bewege die Ansicht auf eine eigene Insel. Eine Gebäudeauswahl allein reicht hier nicht.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001282</LineId>
+      <Text>Items: eigene Insel wählen
+Bewege die Ansicht auf eine eigene Insel.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001283</LineId>
+      <Text>Kein Objekt ausgewählt
+Wähle ein zum Cheat passendes Objekt aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001284</LineId>
+      <Text>Fruchtbarkeit: Fabrik auswählen
+Die Auswahl besitzt keine passende Fabrik-Eigenschaft.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001285</LineId>
+      <Text>Rekrutierung: eigene Werft wählen
+Wähle eine eigene Werft oder Rekrutierungsstätte mit laufender Produktion.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001286</LineId>
+      <Text>Monument: eigenes Monument wählen
+Die Auswahl ist kein passendes Monument.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001287</LineId>
+      <Text>Fremdes Objekt ausgewählt
+Dieser Cheat benötigt ein eigenes Objekt.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001288</LineId>
+      <Text>Forschung: Warteschlange leer
+Starte eine Forschung, bevor du sie abschließt oder abbrichst.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001289</LineId>
+      <Text>Übernahme: fremdes Objekt wählen
+Das ausgewählte Objekt gehört dir bereits.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001290</LineId>
+      <Text>Kein eigener Spieler aktiv
+Für diesen Cheat muss ein gültiger aktueller Teilnehmer vorhanden sein.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001291</LineId>
+      <Text>Kaiserruf: kein Kaiser aktiv
+Für diesen Cheat muss ein gültiger aktiver Kaiser vorhanden sein.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001292</LineId>
+      <Text>Diplomatie aktuell nicht verfügbar
+Der aktuelle Spieler besitzt keine gültige Diplomatie-Eigenschaft.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001293</LineId>
+      <Text>Arbeitskräfte aktuell nicht verfügbar
+Der Arbeitskräftemanager der aktuellen Insel ist nicht gültig.</Text>
+    </Text>
+  </ModOp>
+</ModOps>
