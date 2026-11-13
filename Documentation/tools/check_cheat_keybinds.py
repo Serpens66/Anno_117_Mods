@@ -83,6 +83,9 @@ native_side = global_config[0].find('Values/NotificationConfiguration/Notificati
 assert native_side is not None and native_side.find('Delay') is None
 templates = ET.parse(str(vanilla / 'data/base/config/export/templates.xml'))
 assert templates.xpath('//Template[Name="NotificationConfiguration"]/Properties/NotificationConfiguration/NotificationTypeArray/Side/Delay/text()') == ['1000']
+# Removed diagnostic IDs must not appear in any live package XML or Lua.
+assert not patch.xpath('//Asset[Values/Standard/GUID="1500001294" or Values/Standard/GUID="1500001295"]')
+assert not patch.xpath('//NotificationAsset')
 delay_ops = patch.xpath('/ModOps/ModOp[@GUID="25000040"]')
 assert len(delay_ops) == 1
 delay_op = delay_ops[0]
@@ -177,9 +180,11 @@ for values in patch.xpath('//Asset/Values | //TriggerCondition/Values | //Trigge
         if prop.tag == 'Standard': continue
         assert all(child.tag in allowed for child in prop), (prop.tag, [c.tag for c in prop], allowed)
 info = json.loads((mod / 'modinfo.json').read_text(encoding='utf-8-sig'))
-assert info['Version'] == '1.15.5' and info['ModID'] == 'cheat-keybinds-serp' and info['Anno'] == 8
+assert info['Version'] == '1.15.0' and info['ModID'] == 'cheat-keybinds-serp' and info['Anno'] == 8
 assert set(compatibility) <= set(info['Dependencies']['Optional'])
 assert set(compatibility) <= set(info['Dependencies']['LoadAfter'])
+assert list(info['changelog']) == ['1.01', '1.011', '1.012', '1.013', '1.15.0']
+assert not any(word in info['changelog']['1.15.0'].lower() for word in ('guid', 'mock', 'luau', 'infotip'))
 assert info['Scripts']['Init'] == 'CheatKeybinds_Serp = require("cheatkeybinds_serp")'
 assert (mod / info['Scripts']['Modules'][0]).is_file()
 referenced_text = set(patch.xpath('//NotificationText/text() | //NotificationSideTitle/text() | /ModOps/ModOp/Item/Text/text() | //ModOp/Text/text()'))
@@ -194,6 +199,9 @@ for lang in langs:
         description = texts.xpath('//Text[LineId=$id]/Text/text()', id=str(lineid))[0]
         assert not re.search(r'\[\d+/\d+\]', description)
         assert 'Alt+' not in description
+for path in mod.rglob('*'):
+    if path.is_file() and path.suffix in ('.xml', '.lua'):
+        assert not re.search(r'150000129[456]|ExecutionNotificationGUIDs', path.read_text(encoding='utf-8-sig')), path
 for path in [*mod.rglob('*'), *speed.rglob('*')]:
     if path.suffix in ('.xml', '.lua', '.json'):
         raw = path.read_bytes()
@@ -377,9 +385,8 @@ generated = 'local output = print\nlocal checks = (function()\n' + generated + '
 out = root / 'Documentation/out/cheat-keybinds-mock.luau'
 out.parent.mkdir(parents=True, exist_ok=True)
 out.write_bytes(generated.replace('\n','\r\n').encode('utf-8'))
-assert len(patch.xpath('//SideNotification/Infotip[text()="25345"]')) == 30
-assert not patch.xpath('//SideNotification/Infotip[text()!="25345"]')
-assert len(native.xpath('//Asset[Values/Standard/GUID="25345" and Template="InfoTip"]')) == 1
+assert len(patch.xpath('//SideNotification/Infotip[text()="0"]')) == 30
+assert not patch.xpath('//SideNotification/Infotip[text()!="0"]')
 
 print(f'PASS: XML/metadata/localization/CRLF checks; {len(langs)} languages, 32 triggers (30 notices + 2 reputation actions), 7 shortcuts, 4 optional-mod combinations.')
 print(f'Generated Luau mock test: {out}')

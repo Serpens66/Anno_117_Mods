@@ -1,84 +1,12 @@
-Anno 117 - Cheat Keybinds (Serp) - Version 1.15.5
+Anno 117 - Cheat Keybinds (Serp) - Version 1.15.0
 
-1.15.5: Gamespeed 1.0.4 now owns its shortcut labels. The Gamespeed compatibility
-patch, its three texts and optional load dependency have been removed here.
-
-1.15.4: All 30 notices use native long AutosaveLimit_InfoTip 25345 for a hover test.
-Hover the notice text and icon: the expected test content is autosave-limit help
-(Dynamic/Unlimited), not the full cheat description. Check readability/clipping and
-repeat on selection and error notices. No other timing/gameplay settings changed.
-
-1.15.3: Alternative execution defaults to Alt+G (normal execution remains Alt+V).
-The Command and Identifier are preserved. Existing saved overrides may retain the
-previous assignment; choose Alt+G in Controls if needed. No account/profile is edited.
-Missing prerequisites now show a short reason: missing or foreign selection,
-wrong factory/recruitment/monument type, owned takeover target, missing owned island,
-empty research queue, missing participant/emperor/diplomacy/workforce manager.
-Unexpected Lua failures retain a short notice and log the full error, cheat and direction.
-Priority -1, global Side/Delay=0 and IsUnique=1 remain unchanged.
-No favorites, groups, direct-cheat hotkeys or console-command system is added.
-
-1.15.2: Global Side notification Delay=0, previously inherited as 1000.
-This affects ALL side notices, including normal game notifications. Display durations
-and queue timeouts are unchanged. Our 16 cheat notices also use IsUnique=1.
-Test whether a visible identical notice is suppressed while the cheat still executes;
-after it disappears it must be possible to display it again. Also test A -> B -> A,
-pause/menus and ordinary notifications. Neither latency reduction nor uniqueness
-lifetime is confirmed by an in-game test yet. Lua and shortcut definitions are unchanged.
-
-1.15.1 (historical): Alternative execution default changed to Alt+Space+V. Recognition of Space+V
-as a chord requires an in-game test. Existing saved overrides are not overwritten;
-rebind the alternative shortcut in Controls if it retains the previous assignment.
-No per-notice initial display-delay field was found or changed.
-
-1.15.0 changes / Änderungen:
-- Alt+V führt die normale Richtung aus; Alt+Shift+V die alternative Richtung.
-  Beide sind in den Tastatureinstellungen umbelegbar und nutzen dieselbe Cheat-Auswahl.
-- Neue Einträge: Kaiserruf ±10 und eigene Diplomatie-Cooldowns zurücksetzen.
-- Der wirkungslose Bevölkerungscheat ist durch Arbeitskräfte erhöhen/senken ersetzt.
-  Verwendet den direkten nativen Aufruf; keine fest behauptete Menge und kein Hausfüllen.
-- Normal Alt+V / alternative Alt+Shift+V share one selected cheat. Existing bindings remain.
-- Selection/error notices now use priority -1, matching the old Anno 1800 selection
-  notice and native 117 examples. Immediate replacement still needs an in-game test.
-- Tools icon, IsSilent=0 and zero blocking times are retained. No queue timer or
-  deletion of ordinary game notifications is added.
-
-Normal / alternative execution:
-- Coins: +100,000 / -100,000.
-- All goods: native AddAmount(+1000) / AddAmount(-1000) on the same owned island.
-- Workforce: AreaWorkforce:CheatChangeWorkforce(true) / (false) on your current owned island.
-- Current research: complete / stop the first queued technology. No refund is promised.
-- All research: research all / reset all, rather than automatically toggling on repeat.
-- Emperor reputation: +10 / -10 for the current participant and active emperor.
-- All remaining cheats use the same action in both directions. Cost/upgrade/fertility
-  cheats already toggle themselves; no invented undo for recruitment, monuments,
-  random items or ownership is provided. Cooldown reset also uses the same action.
-
-New effects are not yet verified in game. In particular, negative money/goods amounts
-are candidates supported by the integer parameter declaration, without a found native
-negative Lua example. Test actual deductions and small balances/stocks. The amount
-changed by the direct workforce cheat is unspecified. Diplomatic cooldown reset uses
-only your participant's Diplomacy property; verify negotiations with at least two AIs.
-Other block reasons, such as pending answers or missing requirements, are separate.
-
-1.14.2 changes / Änderungen:
-- Meldungen beginnen direkt mit Wirkung, Menge oder Umschaltfunktion. Keine [2/12]-Zähler
-  oder wiederholten Standardtasten-Hinweise; kurze Einschränkungen folgen im vollen Text.
-- Werkzeug-Icon statt Sanduhr bei allen Auswahl- und Fehlermeldungen.
-- Action-first notices without counters/default-key hints; concise context follows.
-  All 14 notices use the native tools icon. Commands, IDs and key assignments are unchanged.
-- The user confirmed visible selection notices in 1.14.1 with IsSilent=0, including
-  a screenshot. IsSilent=0 is retained. Check the new wrapping/tools icon after restarting.
-
-1.14.1 changes / Änderungen:
-- Eindeutige Beschriftungen für Löschen, Zerstören und Mods-Neuladen.
-- Korrekte Beschriftungen für die optionale Lua-Konsole und die drei Geschwindigkeitsstufen.
-- Distinct delete/destroy/reload labels; a label-only compatibility patch for console-ubi.
-  Console remains optional. Gamespeed 1.0.4 supplies its own labels independently.
-- All 14 selection/error notices switched to IsSilent=0. The subsequent user report
-  and screenshot confirmed visible selection notices in the tested 1.14.1 configuration.
-- Commands, identifiers and default keys are unchanged. Your saved Alt+X override
-  is not edited. The user confirmed a menu-key override survives a restart in 1.14.0.
+1.15.0 changes:
+- Reworked controls: select the previous/next cheat, then execute it normally or
+  alternatively. All four controls can be rebound in the game settings.
+- New cheats: increase/decrease emperor reputation and reset diplomacy cooldowns.
+- Replaced the old population cheat with workforce increase/decrease.
+- Alternative actions: subtract coins or goods, cancel current research,
+  and reset all research.
 
 Bedienung wie im Anno-1800-Mod / Controls as in the Anno 1800 mod:
 - Alt+C: vorherigen Cheat auswählen / select previous cheat (-1)
@@ -86,7 +14,6 @@ Bedienung wie im Anno-1800-Mod / Controls as in the Anno 1800 mod:
 - Alt+V: ausgewählten Cheat normal ausführen / execute selected cheat normally
 - Alt+G: ausgewählten Cheat alternativ ausführen / alternative execution
 Beim Auswählen zeigt die Meldung zuerst die Wirkung, danach kurze Details.
-In 1.14.0 war sie beim Nutzer unsichtbar; mit 1.14.1 und IsSilent=0 ist die Anzeige bestätigt.
 Cycling only selects; it never executes a cheat. Selection wraps around at both ends.
 After loading a game, the first cheat (coins) is selected. Selection is not saved.
 
@@ -126,7 +53,7 @@ Settings labels / Beschriftungen in den Tastatureinstellungen:
 - Keypad - / Keypad + / Alt+Keypad + (GameSpeedMultiplayer): Normal / Schnell / Sehr schnell
 These are distinct actions from multiple mods, not duplicate cheat-menu shortcuts.
 The placeholder row on Shift+F4 came from the console shortcut without a Text field.
-Alt+F4 is a separate native quit shortcut and its label is not changed in 1.14.1.
+Alt+F4 is a separate native quit shortcut.
 
 Context and compatibility:
 - Goods use your current island, or the island of a selected building in a menu.
@@ -140,52 +67,21 @@ Context and compatibility:
 - Ownership change can desync multiplayer.
 - No Anno 1800-only cheats, ship buffs, voice lines or neutral-name workaround are ported.
 - Do not enable this package together with WIP or demo copies sharing cheat-keybinds-serp.
-- ModID and mod.io resource ID are retained. Semantic version 1.14.0 follows legacy 1.013.
+- ModID and mod.io resource ID are retained. Version 1.15.0 follows legacy 1.013.
 
-Validation / Tests:
-Sources audited against installed 3.0 Vanilla XML and Lua bindings on 2026-11-12.
-Earlier 1.14.0 checks passed XML/metadata/localization, Luau compilation and 42 mocked checks.
-A mock does not run the game. The 1.14.0 game log confirms calls from shortcuts into
-the module and normal returns from several cheats. The user reports preserved key
-rebinding after restart and apparently working cheats, initially without visible notices.
-1.14.1 structural checks covered all four console/speed optional-mod combinations;
-the user's subsequent screenshot confirms visible selection notices with IsSilent=0.
-1.14.2 checks preserve the IDs/shortcuts/Lua and validate the new text/icon references.
-1.15.0 passes XML/metadata/text/optional-mod checks, Luau 0.746 compilation and
-136 isolated mock checks for both directions and invalid contexts. Native effects,
-immediate notice replacement, small-stock deductions, research cancellation/refunds,
-save/load/removal and multiplayer/coop remain separate game checks.
-Existing multiplayer/removal metadata is retained; it is not a new compatibility claim.
-
-Quick in-game test (use a disposable save and only one Cheat Keybinds variant;
-the optional console and Gamespeed 1.0.4 may remain enabled to check their labels):
-0. Restart normally with 1.15.0. Check the tools icon, compact/expanded text and that
-   a saved override such as Alt+X remains assigned. Test notices unpaused, then repeatedly.
-   Do not use Alt+F4 to test settings saving: this mod makes it quit immediately.
-1. With default keys, after load press Alt+B: all-goods notice, no goods added yet.
-   Alt+C returns to the add-coins notice. Use your assigned keys if you changed them.
-2. Compare coins before/after Alt+V and Alt+G: each must issue only its one direction.
-   Previous wraps to the cooldown entry; next returns to coins.
-3. Try repeated/rapid cycling, while paused and with menus open. Check the displayed
-   effect matches the action. If the mod global is nil, capture the game log before
-   trying any gameplay workaround; this is the historically failing entrypoint.
-4. Test all fourteen entries in both directions, missing/foreign selection, ocean and
-   empty research queue. Measure workforce before/after both calls (no +500 assumption),
-   and check goods deductions with small stocks. Test takeover/destruction only on the test save.
-5. Test emperor reputation +10/-10, current research complete/stop and all research/reset.
-   Do not assume cancelling research refunds its costs. Check diplomatic cooldowns
-   against at least two AIs; distinguish other blocked-action reasons.
-6. Cycle quickly: the latest notice should replace the previous one immediately and
-   obsolete notices should not play later. Repeat paused, after a full menu loop and
-   with an ordinary game notice present. Priority -1 is not yet a confirmed 117 fix.
-7. Reload the save and return from the main menu: selection should reset to the first entry.
-8. Multiplayer/coop requires a separate peer test with identical packages; check every
-   peer and do not infer synchronization from the absence of a local Lua error.
+Important usage notes:
+- Ignoring building costs can still spend money and cause bankruptcy.
+- Workforce changes do not fill residences or add resident population.
+- Cancelling current research does not promise a refund.
+- Coin/goods subtraction is available, but its behavior at low balances has not
+  been confirmed in game. Keep a separate save before using it.
+- This mod also reduces the initial display delay of ordinary game side notices.
+- Existing saved key assignments are preserved; change them in Controls if needed.
 
 Implementation and source details: Documentation/reference/cheat-keybinds-audit.md
 
 --------------------------------------------------------------------------
-Historical 1.013 readme follows. Its direct cheat keys are inactive in 1.14.0.
+Historical 1.013 readme follows. Its direct cheat keys are inactive in 1.15.0.
 --------------------------------------------------------------------------
 
 Anno 117

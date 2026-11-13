@@ -5,3 +5,5 @@ Record reusable findings in the relevant chapter once. Include the game build, s
 Keep paths that depend on the machine in ignored local configuration. Record only minimal native identifiers, signatures and summaries needed to reproduce research. Do not track complete Vanilla files, credentials, saves, temporary output or downloaded mods. Repository and author permissions still apply to code examples.
 
 Check Markdown links, syntax and any affected examples. Verify structural evidence and offline patch assertions independently of game/save/multiplayer tests. Preserve author-reported conditions and call out unavailable tests. If the workspace is read-only, return a proposed edit with its target and evidence. Commits and publication need separate authorization.
+
+Keep user-facing mod changelogs in chronological order, **oldest to newest**. Preserve existing entries in that order and append new versions at the end. Write entries for players: describe controls and gameplay changes; keep implementation details and test results in the internal documentation.
