@@ -1,6 +1,34 @@
 # Setup
 
-Copy [local.example.json](local.example.json) to the ignored `local.json` alongside it. Relative paths resolve from this directory. Set the actual paths accessible to your chat or shell: installation `maindata`, the selective Vanilla extract, the directory with RDAExplorer's `AnnoRDA.dll`, and optionally a test mod directory and 117-capable offline evaluator. A local path is configuration, not an instruction to install or deploy. In a remote chat, supply the required native files explicitly.
+Copy [local.example.json](local.example.json) to the ignored `local.json` alongside it, then fill only the fields needed for the task. All values in the public template are empty. Keep an existing working local configuration when updating the repository.
+
+Every configured path can be absolute or relative. Resolve relative values against the directory containing `local.json`, regardless of the shell's current directory. An empty string means the path is not configured. Values are literal paths, so expand environment variables yourself before storing them. Windows JSON paths can use `/` separators or doubled backslashes.
+
+Chats with local file access read this configuration before locating game data, tools or external research folders. An absent configuration leads to this setup procedure for tasks that need local inputs. Reading the documentation and reachable public sources can continue independently. A chat without local filesystem access needs the relevant feature files supplied by the user. [Source register](reference/sources.md)
+
+## Configuration fields
+
+| Field | Points to | Needed for |
+| --- | --- | --- |
+| `mainDataPath` | The installed Anno 117 `maindata` directory containing RDA archives. | Refreshing or directly verifying installed Vanilla sources. |
+| `vanillaPath` | The root of the user's current Anno 117 extraction, containing `data/` and its extraction manifest. | Native feature research and checks that read extracted Vanilla. |
+| `rdaExplorerPath` | The tool directory containing `AnnoRDA.dll`. | The supplied PowerShell extractor. |
+| `modsPath` | The actual user or installation mod directory selected for inspection. | Installation/profile checks and the console-package fallback used by the Cheat Keybinds checker. |
+| `xmltestPath` | A matching 117-capable offline evaluator executable. | Offline loader evaluation when that tool is available. |
+| `fileDBReaderPath` | The FileDBReader executable. | Decoding supported binary resources for inspection. |
+| `infoTipInterpreterPath` | The 117 InfoTip format/interpreter XML used with FileDBReader. | InfoTip decoding. |
+| `anno1800DocsPath` | An optional local copy of the broader Anno 1800 SharedMods documentation directory. | Cross-game source research. The source register also links the public repository. |
+| `anno1800StarterPath` | An optional local Anno 1800 starter-kit root containing its `Documentation/` and tools. | Reproducing starter-kit examples and historical audits. |
+| `anno1800VanillaPath` | An optional Anno 1800 extraction root containing `data/`. | Native comparisons against that user's 1800 files. |
+| `referenceModsPath` | An optional directory of separately obtained reference mod packages. | Inspecting examples or dependencies beyond this checkout. |
+| `researchNotesPath` | An optional directory of local research notes and historical source material. | Looking up supplementary notes by the filenames recorded in a finding. |
+| `consoleModPath` | The root of a separately accessible `console-ubi` package containing `modinfo.json` and `data/`. | Cheat Keybinds compatibility checks. An explicit value takes precedence over `modsPath/console-ubi`. |
+
+Missing optional paths block only the operations that need them. A tool requiring an input should identify the field and direct the user to this setup page. A configured path grants no installation, deployment or profile-edit authorization.
+
+## Tools and workspace
+
+Use Python 3 with `lxml` for the supplied XML/GUID and Cheat Keybinds checks. The RDA extractor requires PowerShell and a .NET runtime compatible with the configured `AnnoRDA.dll`. Standalone Luau and `luau-compile` are optional tools for the separately invoked language/mock checks. FileDBReader and its matching interpreter are needed for the documented InfoTip inspection workflow. Record tool versions with the results. [Tool commands](tools/README.md) · [InfoTip inspection](foundations/vanilla-research.md#local-infotip-xml-inspection-export-2026-11-12)
 
 The main development folders are `Recommended/`, `WIP/`, `YouKnowWhatYouDo/` and `shared_Mods/`. Work on a specific package; never point the game at the entire checkout. See the [workspace findings](reference/workspace.md) for overlapping variants.
 
@@ -14,10 +42,8 @@ Store the actual user mod directory in `modsPath` in ignored `local.json`. Resol
 
 For a mod folder that is a junction, inspect its `LinkType` and `Target`, then read `modinfo.json` through the installed path and compare the package files with the intended source. A junction to a development package exposes subsequent edits to the installed mod immediately. Do not copy a second package or recreate a working junction merely to update it. Installation, profile activation and successful loading are separate checks.
 
-The local installation inspected on **2026-11-12** uses `mods/profile.txt`: its `ActiveProfile default` line selects `mods/profiles/default.txt`. That profile contains an uncommented `cheat-keybinds-serp` entry. Inspect the files generated on the actual machine before editing a profile. Older instructions, including the installed `mods/how-to.txt`, instead name `mods/active-profile.txt`; do not create or edit that older path when the observed configuration uses the profile selector. The observed layout does not establish which game update introduced it. [Discrepancy D117-11](reference/discrepancies.md)
+Inspect the profile selector and selected profile generated by the installed loader. Check that the intended ModID is enabled there, and inspect other selectors or activation files only when the actual installation uses them. Profile names and layouts can vary with the loader version. Record the observed files and version before proposing an edit. [Discrepancy D117-11](reference/discrepancies.md)
 
-On that inspection, `mods/Cheat Keybinds (Serp)` was a junction to the repository's `Recommended/Cheat Keybinds (Serp)` package. Metadata read through the installed path reported `cheat-keybinds-serp@1.14.0`, and every source file matched the installed view by SHA-256. No competing package was found in the other checked installation mod directory; the extra mod.io search directory recorded in the old log was absent. Installation and profile activation were therefore confirmed without copying files or changing the profile. Absolute machine paths belong only in `local.json`.
+Read a fresh `mods/mod-loader.log` for the intended startup. Verify the loaded ModID and version, completed patching and any warnings or errors. Record file comparisons, activation, loader output and runtime observations separately. Repeat the check after an update.
 
-The earlier inspection found only a **2026-09-17** loader log recording **1.013**. On rechecking during the documentation update, a fresh `mods/mod-loader.log` dated **2026-11-12 15:20** recorded both enabling and loading `cheat-keybinds-serp@1.14.0`, followed by `Patching completed in 1s`. The inspected loader log contained no warning/error entries. This confirms loader activation and completion of the patch phase for that startup; it does not establish successful module initialization, shortcut execution, cheat effects or save/multiplayer behavior. The agent did not launch the game. For subsequent versions, repeat this fresh-log check rather than relying on profile entries or package bytes alone. [Cheat Keybinds audit](reference/cheat-keybinds-audit.md)
-
-2026-11-12 follow-up: `mods/[Gameplay] GameSpeedMultiplayer` now also uses a junction to its Recommended workspace package and reports `change-multiplayer-gamespeed-serp@1.0.4`. The previous separate 1.0.2 copy was verified against workspace gameplay files and moved intact outside the loaded mods tree with user authorization. The temporary 1.0.2 backup was subsequently deleted at the user's request on 2026-11-12, and `gamespeedBackupPath` was removed from ignored `local.json`. Cheat Keybinds reports 1.15.5 through its existing junction. No profiles or saved shortcuts were changed; package visibility does not replace a fresh loader/game test. [Ownership audit](reference/cheat-keybinds-audit.md#1155-gamespeed-label-ownership-and-installation-2026-11-12)
+The dated profile, junction and log observations from Serp's installation are recorded in the audit. Use the current machine's files for a new check. [Historical installation observations](reference/cheat-keybinds-audit.md#historical-installation-observations-2026-11-12) · [Ownership audit](reference/cheat-keybinds-audit.md#1155-gamespeed-label-ownership-and-installation-2026-11-12)

@@ -1,7 +1,15 @@
 {
   "mainDataPath": "",
-  "vanillaPath": "../../RDAs/current",
+  "vanillaPath": "",
   "rdaExplorerPath": "",
   "modsPath": "",
-  "xmltestPath": ""
+  "xmltestPath": "",
+  "fileDBReaderPath": "",
+  "infoTipInterpreterPath": "",
+  "anno1800DocsPath": "",
+  "anno1800StarterPath": "",
+  "anno1800VanillaPath": "",
+  "referenceModsPath": "",
+  "researchNotesPath": "",
+  "consoleModPath": ""
 }

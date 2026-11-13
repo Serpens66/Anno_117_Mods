@@ -4,13 +4,15 @@ Reviewed 2026-11-10 against the installed Anno 117 PC Update 3.0 archives and th
 
 ## Which local sources to use
 
+The following source identities describe the 2026-11-10 comparison. Resolve their optional path fields through the local configuration. Each PC can supply its own locations. Public references are listed separately in the source register. [Setup](../setup.md) · [Sources](sources.md)
+
 | Source | Use in a 117 investigation |
 | --- | --- |
-| 1800 `mods bei github/SharedMods/Documentation` | The broader 1800 reference covers triggers and saves, shared Lua, multiplayer, InfoTips, graphics and offline loader checks. Start with its coverage and discrepancies. Use its source tracing and validation methods for 117 and recheck the contracts in 117 Vanilla. [Public documentation](https://github.com/Serpens66/Anno-1800-SharedMods-for-Modders-/tree/main/Documentation) |
-| 1800 `ModdingWithCodex` | The smaller starter kit has an audit template, a worked harbor field edit and a reward-pool guide. Its documented 1800 offline results belong to the recorded inputs and evaluator. |
-| 1800 `Anno1800 RDA unpacked/dataAlle` | The local comparison input. It supplies the main assets, templates, property definitions and defaults, datasets and language exports. The exact originating game update is unverified. Other snapshots in the parent directory are separate sources. |
-| 117 configured Vanilla extract and installed archives | The current 117 inputs. The checked asset, template, property, dataset and language files match the local manifest. The installed archive inventory matched all 40 manifest entries by name, size and modification time. |
-| 117 parent directory | `modloader-changes.md` is a historical loader note. `info.txt` records Serp's range and an old allocation marker. `fremde mods` contains reference packages for quests, Lua/UI and ambient settings. Treat their metadata, files and author-reported behavior as distinct evidence. Keep machine-specific paths in the ignored local configuration. [Setup](../setup.md) · [Sources](sources.md) |
+| 1800 shared-mod knowledge base (`anno1800DocsPath`) | The broader 1800 reference covers triggers and saves, shared Lua, multiplayer, InfoTips, graphics and offline loader checks. Start with its coverage and discrepancies. Use its source tracing and validation methods for 117 and recheck the contracts in 117 Vanilla. [Public documentation](https://github.com/Serpens66/Anno-1800-SharedMods-for-Modders-/tree/main/Documentation) |
+| 1800 starter kit (`anno1800StarterPath`) | The smaller starter kit has an audit template, a worked harbor field edit and a reward-pool guide. Its documented 1800 offline results belong to the recorded inputs and evaluator. |
+| 1800 main Vanilla extract (`anno1800VanillaPath`) | The local comparison input. It supplies the main assets, templates, property definitions and defaults, datasets and language exports. The exact originating game update is unverified. Other snapshots in the parent directory are separate sources. |
+| 117 Vanilla extract and installed archives (`vanillaPath`, `mainDataPath`) | The 117 inputs inspected on 2026-11-10. The checked asset, template, property, dataset and language files match the local manifest. The installed archive inventory matched all 40 manifest entries by name, size and modification time. |
+| Optional notes (`researchNotesPath`) and sample packages (`referenceModsPath`) | The inspected notes include `modloader-changes.md`, a historical loader note, and `info.txt`, Serp's range and old allocation marker. The sample collection contains reference packages for quests, Lua/UI and ambient settings. Treat their metadata, files and author-reported behavior as distinct evidence. Keep machine-specific paths in the ignored local configuration. [Setup](../setup.md) · [Sources](sources.md) |
 
 The local Red Sea Albion and AmbientClearView packages use a plain-text `.xml.lnk` with a virtual path to a sibling `.noxml` file. This shows the intended replacement layout. Support for the example on 3.0 and its interaction with other mods remain untested. The nearby Windows shortcuts in the research folders serve a different purpose. [Loader file structure](https://jakobharder.github.io/anno-mod-loader/file-structure/#link-files)
 
@@ -40,7 +42,7 @@ The 1800 money-pool asset `150038` uses template `ResourcePool` and property `Re
 
 ## Source identities and limits
 
-For 117, paths below are relative to the configured Vanilla extract. The five XML files were supplied by `config.rda` and matched the 3.0 manifest. For 1800, use the five corresponding files under `data/config/export/main/asset/` in `dataAlle`. 1800 has `properties-toolone.xml` where 117 has `properties-meta.xml`.
+For 117, paths below are relative to the configured Vanilla extract. The five XML files were supplied by `config.rda` and matched the 3.0 manifest. For 1800, use the five corresponding files under `data/config/export/main/asset/` under `anno1800VanillaPath`. 1800 has `properties-toolone.xml` where 117 has `properties-meta.xml`.
 
 | Input | 1800 SHA-256 | 117 SHA-256 |
 | --- | --- | --- |

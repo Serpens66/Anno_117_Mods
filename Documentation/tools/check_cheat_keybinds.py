@@ -1,7 +1,7 @@
 """Structural checks and generation of a standalone Luau mock test; no game claims.
 
-Run from the repository root. Execute the generated .luau separately using the
-workspace's permission route for Lua/Luau. Output stays in Documentation/out.
+Resolve configured paths from Documentation/local.json. Execute the generated
+.luau with the workspace's permission route. Output stays in Documentation/out.
 """
 from pathlib import Path
 import json
@@ -12,8 +12,43 @@ from lxml import etree as ET
 
 root = Path(__file__).resolve().parents[2]
 mod = root / 'Recommended/Cheat Keybinds (Serp)'
-config = json.loads((root / 'Documentation/local.json').read_text(encoding='utf-8-sig'))
-vanilla = (root / 'Documentation' / config['vanillaPath']).resolve()
+config_path = root / 'Documentation/local.json'
+setup_hint = 'See Documentation/setup.md and Documentation/local.example.json.'
+try:
+    config = json.loads(config_path.read_text(encoding='utf-8-sig'))
+except (OSError, ValueError) as error:
+    raise SystemExit(f'Cannot read Documentation/local.json: {error}. {setup_hint}')
+if not isinstance(config, dict):
+    raise SystemExit(f'Documentation/local.json must contain a JSON object. {setup_hint}')
+
+
+def configured_path(key, required=True):
+    value = config.get(key, '')
+    if not isinstance(value, str):
+        raise SystemExit(f'Configuration field {key} must be a path string. {setup_hint}')
+    if not value.strip():
+        if required:
+            raise SystemExit(f'Configuration field {key} is not configured. {setup_hint}')
+        return None
+    return (config_path.parent / value).resolve()
+
+
+vanilla = configured_path('vanillaPath')
+if not vanilla.is_dir():
+    raise SystemExit(f'Configuration field vanillaPath must point to an existing extract. {setup_hint}')
+console_mod = configured_path('consoleModPath', required=False)
+if console_mod is None:
+    console_mod = configured_path('modsPath') / 'console-ubi'
+if not (console_mod / 'data/base/config/export/assets.xml').is_file():
+    raise SystemExit(
+        f'Console source assets.xml is missing. Set consoleModPath to the package root '
+        f'or modsPath to its parent directory. {setup_hint}')
+for native_name in ('assets.xml', 'templates.xml'):
+    if not (vanilla / 'data/base/config/export' / native_name).is_file():
+        raise SystemExit(
+            f'Configuration field vanillaPath is missing data/base/config/export/{native_name}. '
+            f'{setup_hint}')
+
 native = ET.parse(str(vanilla / 'data/base/config/export/assets.xml'))
 patch = ET.parse(str(mod / 'data/base/config/export/assets.xml'))
 asset = native.xpath("//Asset[Values/Standard/GUID='2001271']")
@@ -120,7 +155,7 @@ assert tool_icon[0].findtext('Values/Standard/IconFilename') == 'data/ui/fhd/bas
 # definitions (Gamespeed uses its maintained workspace package). Only the console
 # label is patched here; no keys, commands or identifiers may change.
 compatibility = {
-    'console-ubi': Path(config['modsPath']) / 'console-ubi',
+    'console-ubi': console_mod,
 }
 package_inputs = {**compatibility, 'change-multiplayer-gamespeed-serp': root / 'Recommended/[Gameplay] GameSpeedMultiplayer'}
 groups = patch.xpath('/ModOps/Group')

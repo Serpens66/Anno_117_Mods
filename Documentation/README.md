@@ -16,6 +16,18 @@ This is the maintained reference for this single Anno 117: Pax Romana PC mod rep
 | Refresh the extract or check the documentation | [Tools](tools/README.md), [baseline receipt](reference/vanilla-baseline.json) |
 | Record a finding or correction | [Maintenance](maintenance.md) |
 
-For an external chat: give it this repository or these documents and the feature's current Vanilla files from your own installation. Ask it to read AGENTS, coverage and discrepancies before making any game-dependent decision. No private paths or extracted Vanilla files are required to read this documentation.
+## Start a chat on another PC or without filesystem access
 
-Evidence labels: **Vanilla** means structure observed in the recorded files; **loader reference/source** means published syntax or implementation scoped to its source version; **workspace** means local code or metadata; **author report** means an observation recorded by its author; **inference** means a conclusion drawn from that evidence; **pending** means unavailable or not established. No game or multiplayer tests were performed for this baseline.
+Provide the repository checkout, or a document bundle containing the root `AGENTS.md`, this README, `reference/coverage.md`, `reference/discrepancies.md`, `setup.md`, `workflow.md` and the relevant topic chapters with their referenced evidence. Preserve relative paths when copying the bundle. The root instructions sit one directory above this README. [Project instructions](../AGENTS.md)
+
+With filesystem access, the chat reads `Documentation/local.json` first to locate machine-specific sources. On a new PC, copy the empty template and fill only the fields needed for the task. Reading and explanation can start from the documentation while local tools require the configured inputs. [Setup and path fields](setup.md)
+
+Without filesystem access, use the supplied documentation and reachable public references. For game-dependent decisions, supply the current Vanilla feature files and their build or extraction manifest. The local configuration describes locations accessible on its owner's machine. Check source availability in the chat's own environment and request essential missing files. [Source register](reference/sources.md) · [Feature audit](foundations/vanilla-research.md)
+
+For a new chat, include this instruction with the documents.
+
+> Read the project instructions, coverage and discrepancies, then the chapters relevant to my task. If you have filesystem access, consult Documentation/local.json and resolve relative paths from its directory. Use the source register for public references. Complete the current Vanilla feature audit before game-dependent decisions and record source evidence and validation limits.
+
+## Evidence labels
+
+**Vanilla** means structure observed in the recorded files; **loader reference/source** means published syntax or implementation scoped to its source version; **workspace** means local code or metadata; **author report** means an observation recorded by its author; **inference** means a conclusion drawn from that evidence; **pending** means unavailable or not established. No game or multiplayer tests were performed for this baseline.
