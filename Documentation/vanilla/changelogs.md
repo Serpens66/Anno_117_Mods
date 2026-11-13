@@ -22,10 +22,10 @@ Scope: official PC-relevant game notes and identifiable public modding/tool chan
 
 The [2026 roadmap](https://www.anno-union.com/roadmap-for-2026/) moves the integrated mod browser/manager from late 2026 to the following year. That is a plan. It does not negate manual PC mod support, and it is separate from 3.0's mod indicators.
 
-## Mod, loader and tool history
+## Loader and tool history
 
-- The local repository contains 16 commits from 2025-09-02 through 2026-06-03 and no local tags. Initial commits introduced zoom and demo packages; November converted selected features toward 117 paths and added the shared construction-pool updates; January added the two DDS mods; February revised the script probe; March/April split Recommended Cheat Keybinds from its WIP variant and revised multiplayer speed; June updated speed metadata. See [workspace findings](workspace.md) for package-level changelog implications and [inventory](workspace-inventory.json) for metadata entries and text changelogs. GitHub's releases/commits pages did not resolve in the public fetch; this history is from the local checkout.
-- Public mod.io URLs surfaced for [Change Gamespeed Multiplayer](https://mod.io/g/anno-117-pax-romana/m/change-gamespeed-multiplayer) and [Unlock All Buildings](https://mod.io/g/anno-117-pax-romana/m/unlock-all-buildings). A public title alone does not identify an author/file or prove parity. The fetched GameSpeed page did not expose version history; rely on the repo entries for local versions and verify the live release when relevant.
 - The [loader's 117 change list](https://jakobharder.github.io/anno-mod-loader/changes-117/) covers path, metadata, localization, XML, profiles, options and scripts. The older local `modloader-changes.md` outside the repo is historical pre-release context. Check current documentation rather than copying its syntax wholesale.
 - The [community GU00 note](https://github.com/anno-mods/modding-guide/blob/main/anno-117/04-updates/patch-notes-gu00.md) is an empty file on the checked branch (Git blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391`). It contributes no changelog entries.
 - [Anno Modding Tools changelog](https://github.com/anno-mods/vscode-anno/blob/main/CHANGELOG.md): 2.0 introduces 117 support and dual-game modinfo schema; later 2.x changes cover RDA-backed sources and refresh, 117 XML tooling and LineID-aware language diffs. Match the installed extension/evaluator version. [RDAExplorer fork releases](https://github.com/anno-mods/RDAExplorer/releases) describe its .NET port and archive changes; the extraction here used the supplied local library fingerprint, not a downloaded release.
+
+Serp package history is maintained in its own chapter. [Serp package history](../mods/changelogs.md)

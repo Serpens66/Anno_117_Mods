@@ -1,0 +1,6 @@
+# Serp package history
+
+Scope is the local repository and identified public pages for its packages, reviewed through 2026-11-10. Later feature audits retain their own dates. [Package audit](cheat-keybinds-audit.md)
+
+- The local repository contains 16 commits from 2025-09-02 through 2026-06-03 and no local tags. Initial commits introduced zoom and demo packages; November converted selected features toward 117 paths and added the shared construction-pool updates; January added the two DDS mods; February revised the script probe; March/April split Recommended Cheat Keybinds from its WIP variant and revised multiplayer speed; June updated speed metadata. See [workspace findings](workspace.md) for package-level changelog implications and [inventory](workspace-inventory.json) for metadata entries and text changelogs. GitHub's releases/commits pages did not resolve in the public fetch; this history is from the local checkout.
+- Public mod.io URLs surfaced for [Change Gamespeed Multiplayer](https://mod.io/g/anno-117-pax-romana/m/change-gamespeed-multiplayer) and [Unlock All Buildings](https://mod.io/g/anno-117-pax-romana/m/unlock-all-buildings). A public title alone does not identify an author/file or prove parity. The fetched GameSpeed page did not expose version history; rely on the repo entries for local versions and verify the live release when relevant.

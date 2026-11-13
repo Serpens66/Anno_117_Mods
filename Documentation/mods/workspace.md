@@ -1,10 +1,10 @@
-# Workspace inventory and examples
+# Serp mod workspace inventory and examples
 
 The baseline is `main` at local commit `7bf5ca0` (2026-06-03); the working tree was clean at inspection. See [repository](https://github.com/Serpens66/Anno_117_Mods) and the [file inventory](workspace-inventory.json) for exact paths, hashes, XML operation counts, metadata, release notes and duplicate groups. Binary assets were classified by path/hash; no image or sound files were unpacked to inspect them. No package here was loaded or modified.
 
 | Location | What it shows and where it is limited |
 | --- | --- |
-| Recommended / GameSpeedMultiplayer | Trigger-to-Luau handoff, exact speed scripts and notification triggers. 1.0.2 switched to peer-oriented execution and added notifications; 1.0.3 fixed metadata and recorded mod.io ID 5979203. See [native comparison](../foundations/luau-and-runtime.md#bounded-vanilla-cross-check-gamespeedmultiplayer). |
+| Recommended / GameSpeedMultiplayer | Trigger-to-Luau handoff, exact speed scripts and notification triggers. 1.0.2 switched to peer-oriented execution and added notifications; 1.0.3 fixed metadata and recorded mod.io ID 5979203. See [native comparison](runtime-examples.md#bounded-vanilla-cross-check-gamespeedmultiplayer). |
 | Recommended / Cheat Keybinds | ShortcutConfig entries and positive `LineId` in English. 1.011 adds instant current research; 1.012 adds destructive/ownership test commands and warns about MP; 1.013 routes selected Kontor/Villa takeover through island takeover. README, comments and metadata describe different subsets. Treat removal and MP safety as unverified. |
 | Recommended / Unhide All | Reveals menu entries while leaving actual building access separate. 1.01 added category/chain visibility; 1.02/1.021 note no code changes; 1.022 bundles the All Buildings pool. The helper inserts AssetPool definitions then selects native list members with `Content`. |
 | Recommended / Blue Blueprints; Blue Map Water | Exact-path DDS replacements. Blueprint keeps source variants by different filenames. Map Water includes a world map and minimap/macromap assets; underscored DDS variants and commented/empty XML are not evidence of active patches. |

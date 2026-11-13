@@ -1,4 +1,6 @@
-# Cheat Keybinds: 117 source audit
+# Serp Cheat Keybinds: 117 source audit
+
+Scope is Serp's Cheat Keybinds package, its dependency interactions and the recorded native-source audits, offline checks and user observations. Package versions and test conditions delimit each result.
 
 Current package: **consolidated 1.15.0**. The 1.14.x and 1.15.1-1.15.7 sections below preserve historical development evidence; they are not the current user-facing changelog. The Vanilla notification diagnostic and experimental InfoTip override have been removed. [Current cleanup](#consolidated-1150-release-cleanup-2026-11-12)
 
@@ -6,7 +8,7 @@ Reviewed 2026-11-12 for Recommended Cheat Keybinds, ModID `cheat-keybinds-serp`,
 
 ## Provenance and targets
 
-The configured `vanillaPath` contains `data/script/`. On this date all 40 installed archives matched the extraction manifest by name, byte count and UTC timestamp (1 ms tolerance). Relevant XML and binding files were checked against their manifest SHA-256, not merely located in the index. Assets/templates/property definitions/defaults/datasets and German/English text exports come from `config.rda`; the listed bindings and `types/generated/globals.lua` come from `script.rda`. Main XML hashes are recorded in the [1800 comparison](anno-1800-comparison.md#source-identities-and-limits). This is an inventory/provenance check, not a fresh full-archive hash or engine audit.
+The configured `vanillaPath` contains `data/script/`. On this date all 40 installed archives matched the extraction manifest by name, byte count and UTC timestamp (1 ms tolerance). Relevant XML and binding files were checked against their manifest SHA-256, not merely located in the index. Assets/templates/property definitions/defaults/datasets and German/English text exports come from `config.rda`; the listed bindings and `types/generated/globals.lua` come from `script.rda`. Main XML hashes are recorded in the [1800 comparison](../vanilla/anno-1800-comparison.md#source-identities-and-limits). This is an inventory/provenance check, not a fresh full-archive hash or engine audit.
 
 - Native asset `2001271` occurs once, template `ShortcutConfig`, no BaseAssetGUID. `Values/ShortcutConfig/InputBindings` has 136 items. Its Alt+F4 item matches once. None of Alt+C/B/V, Alt+Delete or Shift+Delete is assigned in either native preset.
 - `templates.xml` defines ShortcutConfig with Standard/ShortcutConfig. `properties.xml` defaults InputBindings to Configurable=1, Active=Menu;Session and KeyEvent=OnUp. `properties-meta.xml` defines Command as String, Text as Text, Identifier as String, InputBindings as Vector, InputTypes as a ShortcutPreset-keyed array and KeyType as KeyboardKeyType flags. Modern and Legacy receive explicit bindings in the mod.
@@ -188,7 +190,7 @@ Offline results: structural/XML/localization/CRLF checks pass for 34 triggers (3
 
 The user also tried a genuine island discovery: it behaves like the forced Vanilla test, with no hover tooltip and only the narration subtitle at the top. Full object/location context did not produce a visible hover in that tested case. This closes the proposed real-versus-forced discovery comparison for the reported configuration; it does not prove all native SideNotification contexts lack hover.
 
-Installed config.rda count: 154 explicit SideNotification instances (standalone or inline); 140 inherit the default Infotip500664, 14 explicitly disable with0, none explicitly selects another nonzero ID. The raw InfoTip binary was exported with FileDBReader3.0.3 using version2 and the available 117 interpreter to sibling data/infotips/export.xml. The well-formed inspection XML contains 1,076 InfoTipData entries. Input hash is unchanged; interpreter warnings limit type/round-trip claims. No mod, trigger, shortcut, version or profile changed in this research step. [Export details](../foundations/vanilla-research.md#local-infotip-xml-inspection-export-2026-11-12)
+Installed config.rda count: 154 explicit SideNotification instances (standalone or inline); 140 inherit the default Infotip500664, 14 explicitly disable with0, none explicitly selects another nonzero ID. The raw InfoTip binary was exported with FileDBReader3.0.3 using version2 and the available 117 interpreter to sibling data/infotips/export.xml. The well-formed inspection XML contains 1,076 InfoTipData entries. Input hash is unchanged; interpreter warnings limit type/round-trip claims. No mod, trigger, shortcut, version or profile changed in this research step. [Export details](../vanilla/research.md#local-infotip-xml-inspection-export-2026-11-12)
 
 ## Consolidated 1.15.0 release cleanup (2026-11-12)
 

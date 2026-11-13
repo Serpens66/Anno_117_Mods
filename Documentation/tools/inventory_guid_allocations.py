@@ -11,7 +11,7 @@ import re
 from lxml import etree as ET
 
 ROOT = Path(__file__).resolve().parents[2]
-TARGET = ROOT / 'Documentation/reference/guid-allocations.md'
+TARGET = ROOT / 'Documentation/mods/guid-allocations.md'
 LOW, HIGH = 1500000000, 1500010000
 CHEAT = 'cheat-keybinds-serp'
 CHEAT_BLOCK = range(1500001200, 1500001300)

@@ -78,7 +78,7 @@ Important usage notes:
 - This mod also reduces the initial display delay of ordinary game side notices.
 - Existing saved key assignments are preserved; change them in Controls if needed.
 
-Implementation and source details: Documentation/reference/cheat-keybinds-audit.md
+Implementation and source details: Documentation/mods/cheat-keybinds-audit.md
 
 --------------------------------------------------------------------------
 Historical 1.013 readme follows. Its direct cheat keys are inactive in 1.15.0.
