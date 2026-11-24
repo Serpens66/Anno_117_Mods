@@ -195,4 +195,346 @@ The current player has no valid diplomacy property.</Text>
 The current island workforce manager is invalid.</Text>
     </Text>
   </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001801</LineId>
+      <Text>Coins
+±100,000 coins</Text>
+    </Text>
+    <Text>
+      <LineId>1500001802</LineId>
+      <Text>All goods
+±1,000 per unlocked good</Text>
+    </Text>
+    <Text>
+      <LineId>1500001803</LineId>
+      <Text>Workforce
+Increase / decrease</Text>
+    </Text>
+    <Text>
+      <LineId>1500001804</LineId>
+      <Text>Building costs
+Toggle material checks</Text>
+    </Text>
+    <Text>
+      <LineId>1500001805</LineId>
+      <Text>Upgrade requirements
+Toggle upgrade checks</Text>
+    </Text>
+    <Text>
+      <LineId>1500001806</LineId>
+      <Text>Factory fertility
+Toggle fertility checks</Text>
+    </Text>
+    <Text>
+      <LineId>1500001807</LineId>
+      <Text>Recruitment
+Finish current production</Text>
+    </Text>
+    <Text>
+      <LineId>1500001808</LineId>
+      <Text>Monument
+Advance construction</Text>
+    </Text>
+    <Text>
+      <LineId>1500001809</LineId>
+      <Text>Current research
+Complete / cancel</Text>
+    </Text>
+    <Text>
+      <LineId>1500001810</LineId>
+      <Text>All research
+Complete / reset</Text>
+    </Text>
+    <Text>
+      <LineId>1500001811</LineId>
+      <Text>Random items
+Add items</Text>
+    </Text>
+    <Text>
+      <LineId>1500001812</LineId>
+      <Text>Takeover
+Take over an object or island</Text>
+    </Text>
+    <Text>
+      <LineId>1500001813</LineId>
+      <Text>Emperor reputation
+±10 reputation</Text>
+    </Text>
+    <Text>
+      <LineId>1500001814</LineId>
+      <Text>Diplomacy cooldowns
+Reset cooldowns</Text>
+    </Text>
+    <Text>
+      <LineId>1500001821</LineId>
+      <Text>Coins
++100,000 coins requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001822</LineId>
+      <Text>All goods
++1,000 per unlocked good requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001823</LineId>
+      <Text>Workforce
+Workforce increase requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001824</LineId>
+      <Text>Building costs
+Material checks toggled.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001825</LineId>
+      <Text>Upgrade requirements
+Upgrade checks toggled.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001826</LineId>
+      <Text>Factory fertility
+Fertility requirement toggled.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001827</LineId>
+      <Text>Recruitment
+Recruitment completion requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001828</LineId>
+      <Text>Monument
+Construction advanced.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001829</LineId>
+      <Text>Current research
+Research completion requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001830</LineId>
+      <Text>All research
+Completion of all research requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001831</LineId>
+      <Text>Random items
+Random items requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001832</LineId>
+      <Text>Takeover
+Takeover requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001833</LineId>
+      <Text>Emperor reputation
+Reputation increase of 10 requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001834</LineId>
+      <Text>Diplomacy cooldowns
+Diplomacy cooldowns reset.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001841</LineId>
+      <Text>Coins
+−100,000 coins requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001842</LineId>
+      <Text>All goods
+−1,000 per unlocked good requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001843</LineId>
+      <Text>Workforce
+Workforce decrease requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001849</LineId>
+      <Text>Current research
+Cancellation requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001850</LineId>
+      <Text>All research
+Reset of all research requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001853</LineId>
+      <Text>Emperor reputation
+Reputation decrease of 10 requested.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001901</LineId>
+      <Text>Coins
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001905</LineId>
+      <Text>All goods
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001906</LineId>
+      <Text>All goods
+Go to or select an island you own.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001909</LineId>
+      <Text>Workforce
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001910</LineId>
+      <Text>Workforce
+Go to an island you own.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001911</LineId>
+      <Text>Workforce
+Workforce is unavailable.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001913</LineId>
+      <Text>Building costs
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001917</LineId>
+      <Text>Upgrade requirements
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001921</LineId>
+      <Text>Factory fertility
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001922</LineId>
+      <Text>Factory fertility
+Select an object first.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001923</LineId>
+      <Text>Factory fertility
+Select a suitable factory.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001924</LineId>
+      <Text>Factory fertility
+Select an object you own.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001925</LineId>
+      <Text>Recruitment
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001926</LineId>
+      <Text>Recruitment
+Select an object first.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001927</LineId>
+      <Text>Recruitment
+Select a shipyard or recruitment building you own.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001928</LineId>
+      <Text>Recruitment
+Select an object you own.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001929</LineId>
+      <Text>Monument
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001930</LineId>
+      <Text>Monument
+Select an object first.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001931</LineId>
+      <Text>Monument
+Select a monument you own.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001932</LineId>
+      <Text>Monument
+Select an object you own.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001933</LineId>
+      <Text>Current research
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001934</LineId>
+      <Text>Current research
+The research queue is empty.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001937</LineId>
+      <Text>All research
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001941</LineId>
+      <Text>Random items
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001942</LineId>
+      <Text>Random items
+Go to an island you own.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001945</LineId>
+      <Text>Takeover
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001946</LineId>
+      <Text>Takeover
+Select an object first.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001948</LineId>
+      <Text>Takeover
+Select an object owned by someone else.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001949</LineId>
+      <Text>Emperor reputation
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001950</LineId>
+      <Text>Emperor reputation
+No active player.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001951</LineId>
+      <Text>Emperor reputation
+No active emperor.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001953</LineId>
+      <Text>Diplomacy cooldowns
+Cheat failed. See the log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001954</LineId>
+      <Text>Diplomacy cooldowns
+No active player.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001955</LineId>
+      <Text>Diplomacy cooldowns
+Diplomacy is unavailable.</Text>
+    </Text>
+  </ModOp>
 </ModOps>

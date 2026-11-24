@@ -195,4 +195,346 @@ The current player has no valid diplomacy property.</Text>
 The current island workforce manager is invalid.</Text>
     </Text>
   </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001801</LineId>
+      <Text>金幣
+±100,000金幣</Text>
+    </Text>
+    <Text>
+      <LineId>1500001802</LineId>
+      <Text>所有貨物
+每種已解鎖貨物±1,000件</Text>
+    </Text>
+    <Text>
+      <LineId>1500001803</LineId>
+      <Text>勞動力
+增加／減少</Text>
+    </Text>
+    <Text>
+      <LineId>1500001804</LineId>
+      <Text>建造費用
+切換建材檢查</Text>
+    </Text>
+    <Text>
+      <LineId>1500001805</LineId>
+      <Text>升級條件
+切換升級條件</Text>
+    </Text>
+    <Text>
+      <LineId>1500001806</LineId>
+      <Text>工廠肥力
+切換肥力要求</Text>
+    </Text>
+    <Text>
+      <LineId>1500001807</LineId>
+      <Text>招募
+完成目前生產</Text>
+    </Text>
+    <Text>
+      <LineId>1500001808</LineId>
+      <Text>紀念建築
+推進建造進度</Text>
+    </Text>
+    <Text>
+      <LineId>1500001809</LineId>
+      <Text>目前研究
+完成／取消</Text>
+    </Text>
+    <Text>
+      <LineId>1500001810</LineId>
+      <Text>所有研究
+完成／重設</Text>
+    </Text>
+    <Text>
+      <LineId>1500001811</LineId>
+      <Text>隨機物品
+加入物品</Text>
+    </Text>
+    <Text>
+      <LineId>1500001812</LineId>
+      <Text>接管
+接管物件或島嶼</Text>
+    </Text>
+    <Text>
+      <LineId>1500001813</LineId>
+      <Text>皇帝聲望
+聲望±10</Text>
+    </Text>
+    <Text>
+      <LineId>1500001814</LineId>
+      <Text>外交冷卻
+重設冷卻時間</Text>
+    </Text>
+    <Text>
+      <LineId>1500001821</LineId>
+      <Text>金幣
+已請求增加100,000金幣。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001822</LineId>
+      <Text>所有貨物
+已請求增加每種已解鎖貨物1,000件。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001823</LineId>
+      <Text>勞動力
+已請求增加勞動力。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001824</LineId>
+      <Text>建造費用
+已切換建材檢查。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001825</LineId>
+      <Text>升級條件
+已切換升級條件檢查。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001826</LineId>
+      <Text>工廠肥力
+已切換肥力要求。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001827</LineId>
+      <Text>招募
+已請求完成招募。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001828</LineId>
+      <Text>紀念建築
+已推進建造進度。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001829</LineId>
+      <Text>目前研究
+已請求完成研究。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001830</LineId>
+      <Text>所有研究
+已請求完成所有研究。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001831</LineId>
+      <Text>隨機物品
+已請求隨機物品。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001832</LineId>
+      <Text>接管
+已請求接管。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001833</LineId>
+      <Text>皇帝聲望
+已請求增加10點聲望。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001834</LineId>
+      <Text>外交冷卻
+已重設外交冷卻時間。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001841</LineId>
+      <Text>金幣
+已請求扣除100,000金幣。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001842</LineId>
+      <Text>所有貨物
+已請求扣除每種已解鎖貨物1,000件。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001843</LineId>
+      <Text>勞動力
+已請求減少勞動力。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001849</LineId>
+      <Text>目前研究
+已請求取消研究。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001850</LineId>
+      <Text>所有研究
+已請求重設所有研究。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001853</LineId>
+      <Text>皇帝聲望
+已請求降低10點聲望。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001901</LineId>
+      <Text>金幣
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001905</LineId>
+      <Text>所有貨物
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001906</LineId>
+      <Text>所有貨物
+前往或選取自己擁有的島嶼。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001909</LineId>
+      <Text>勞動力
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001910</LineId>
+      <Text>勞動力
+前往自己擁有的島嶼。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001911</LineId>
+      <Text>勞動力
+勞動力無法使用。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001913</LineId>
+      <Text>建造費用
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001917</LineId>
+      <Text>升級條件
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001921</LineId>
+      <Text>工廠肥力
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001922</LineId>
+      <Text>工廠肥力
+請先選取一個物件。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001923</LineId>
+      <Text>工廠肥力
+請選取合適的工廠。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001924</LineId>
+      <Text>工廠肥力
+請選取自己的物件。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001925</LineId>
+      <Text>招募
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001926</LineId>
+      <Text>招募
+請先選取一個物件。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001927</LineId>
+      <Text>招募
+請選取自己的船塢或招募建築。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001928</LineId>
+      <Text>招募
+請選取自己的物件。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001929</LineId>
+      <Text>紀念建築
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001930</LineId>
+      <Text>紀念建築
+請先選取一個物件。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001931</LineId>
+      <Text>紀念建築
+請選取自己的紀念建築。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001932</LineId>
+      <Text>紀念建築
+請選取自己的物件。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001933</LineId>
+      <Text>目前研究
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001934</LineId>
+      <Text>目前研究
+研究佇列為空。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001937</LineId>
+      <Text>所有研究
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001941</LineId>
+      <Text>隨機物品
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001942</LineId>
+      <Text>隨機物品
+前往自己擁有的島嶼。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001945</LineId>
+      <Text>接管
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001946</LineId>
+      <Text>接管
+請先選取一個物件。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001948</LineId>
+      <Text>接管
+請選取其他玩家擁有的物件。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001949</LineId>
+      <Text>皇帝聲望
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001950</LineId>
+      <Text>皇帝聲望
+沒有目前玩家。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001951</LineId>
+      <Text>皇帝聲望
+沒有在位皇帝。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001953</LineId>
+      <Text>外交冷卻
+作弊操作失敗，請查看記錄。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001954</LineId>
+      <Text>外交冷卻
+沒有目前玩家。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001955</LineId>
+      <Text>外交冷卻
+外交無法使用。</Text>
+    </Text>
+  </ModOp>
 </ModOps>

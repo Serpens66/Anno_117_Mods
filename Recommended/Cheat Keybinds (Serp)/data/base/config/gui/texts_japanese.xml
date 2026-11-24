@@ -195,4 +195,346 @@ The current player has no valid diplomacy property.</Text>
 The current island workforce manager is invalid.</Text>
     </Text>
   </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001801</LineId>
+      <Text>コイン
+コイン±100,000枚</Text>
+    </Text>
+    <Text>
+      <LineId>1500001802</LineId>
+      <Text>すべての商品
+解放済みの商品を各±1,000個</Text>
+    </Text>
+    <Text>
+      <LineId>1500001803</LineId>
+      <Text>労働力
+増やす／減らす</Text>
+    </Text>
+    <Text>
+      <LineId>1500001804</LineId>
+      <Text>建設コスト
+建材チェックを切り替え</Text>
+    </Text>
+    <Text>
+      <LineId>1500001805</LineId>
+      <Text>アップグレード条件
+アップグレード条件を切り替え</Text>
+    </Text>
+    <Text>
+      <LineId>1500001806</LineId>
+      <Text>工場の肥沃度
+肥沃度条件を切り替え</Text>
+    </Text>
+    <Text>
+      <LineId>1500001807</LineId>
+      <Text>ユニット募集
+進行中の募集を完了</Text>
+    </Text>
+    <Text>
+      <LineId>1500001808</LineId>
+      <Text>モニュメント
+建設を進める</Text>
+    </Text>
+    <Text>
+      <LineId>1500001809</LineId>
+      <Text>進行中の研究
+完了／中止</Text>
+    </Text>
+    <Text>
+      <LineId>1500001810</LineId>
+      <Text>すべての研究
+完了／リセット</Text>
+    </Text>
+    <Text>
+      <LineId>1500001811</LineId>
+      <Text>ランダムなアイテム
+アイテムを追加</Text>
+    </Text>
+    <Text>
+      <LineId>1500001812</LineId>
+      <Text>支配権の取得
+対象物や島を奪取</Text>
+    </Text>
+    <Text>
+      <LineId>1500001813</LineId>
+      <Text>皇帝からの評判
+評判±10</Text>
+    </Text>
+    <Text>
+      <LineId>1500001814</LineId>
+      <Text>外交クールダウン
+クールダウンをリセット</Text>
+    </Text>
+    <Text>
+      <LineId>1500001821</LineId>
+      <Text>コイン
+コイン100,000枚の追加を要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001822</LineId>
+      <Text>すべての商品
+解放済みの商品を各1,000個追加するよう要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001823</LineId>
+      <Text>労働力
+労働力の増加を要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001824</LineId>
+      <Text>建設コスト
+建材のチェックを切り替えました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001825</LineId>
+      <Text>アップグレード条件
+アップグレード条件のチェックを切り替えました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001826</LineId>
+      <Text>工場の肥沃度
+肥沃度の条件を切り替えました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001827</LineId>
+      <Text>ユニット募集
+募集の完了を要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001828</LineId>
+      <Text>モニュメント
+建設を進めました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001829</LineId>
+      <Text>進行中の研究
+研究の完了を要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001830</LineId>
+      <Text>すべての研究
+すべての研究の完了を要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001831</LineId>
+      <Text>ランダムなアイテム
+ランダムなアイテムを要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001832</LineId>
+      <Text>支配権の取得
+支配権の取得を要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001833</LineId>
+      <Text>皇帝からの評判
+評判を10上げるよう要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001834</LineId>
+      <Text>外交クールダウン
+外交クールダウンをリセットしました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001841</LineId>
+      <Text>コイン
+コイン100,000枚の削除を要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001842</LineId>
+      <Text>すべての商品
+解放済みの商品を各1,000個減らすよう要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001843</LineId>
+      <Text>労働力
+労働力の減少を要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001849</LineId>
+      <Text>進行中の研究
+研究の中止を要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001850</LineId>
+      <Text>すべての研究
+すべての研究のリセットを要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001853</LineId>
+      <Text>皇帝からの評判
+評判を10下げるよう要求しました。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001901</LineId>
+      <Text>コイン
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001905</LineId>
+      <Text>すべての商品
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001906</LineId>
+      <Text>すべての商品
+自分の島に移動するか、選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001909</LineId>
+      <Text>労働力
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001910</LineId>
+      <Text>労働力
+自分の島に移動してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001911</LineId>
+      <Text>労働力
+労働力を利用できません。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001913</LineId>
+      <Text>建設コスト
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001917</LineId>
+      <Text>アップグレード条件
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001921</LineId>
+      <Text>工場の肥沃度
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001922</LineId>
+      <Text>工場の肥沃度
+先に対象を選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001923</LineId>
+      <Text>工場の肥沃度
+適切な工場を選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001924</LineId>
+      <Text>工場の肥沃度
+自分の所有物を選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001925</LineId>
+      <Text>ユニット募集
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001926</LineId>
+      <Text>ユニット募集
+先に対象を選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001927</LineId>
+      <Text>ユニット募集
+自分の造船所かユニット募集施設を選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001928</LineId>
+      <Text>ユニット募集
+自分の所有物を選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001929</LineId>
+      <Text>モニュメント
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001930</LineId>
+      <Text>モニュメント
+先に対象を選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001931</LineId>
+      <Text>モニュメント
+自分のモニュメントを選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001932</LineId>
+      <Text>モニュメント
+自分の所有物を選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001933</LineId>
+      <Text>進行中の研究
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001934</LineId>
+      <Text>進行中の研究
+研究キューが空です。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001937</LineId>
+      <Text>すべての研究
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001941</LineId>
+      <Text>ランダムなアイテム
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001942</LineId>
+      <Text>ランダムなアイテム
+自分の島に移動してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001945</LineId>
+      <Text>支配権の取得
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001946</LineId>
+      <Text>支配権の取得
+先に対象を選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001948</LineId>
+      <Text>支配権の取得
+他のプレイヤーの所有物を選択してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001949</LineId>
+      <Text>皇帝からの評判
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001950</LineId>
+      <Text>皇帝からの評判
+アクティブなプレイヤーがいません。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001951</LineId>
+      <Text>皇帝からの評判
+有効な皇帝がいません。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001953</LineId>
+      <Text>外交クールダウン
+チートに失敗しました。ログを確認してください。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001954</LineId>
+      <Text>外交クールダウン
+アクティブなプレイヤーがいません。</Text>
+    </Text>
+    <Text>
+      <LineId>1500001955</LineId>
+      <Text>外交クールダウン
+外交を利用できません。</Text>
+    </Text>
+  </ModOp>
 </ModOps>

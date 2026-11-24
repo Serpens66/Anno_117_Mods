@@ -195,4 +195,346 @@ The current player has no valid diplomacy property.</Text>
 The current island workforce manager is invalid.</Text>
     </Text>
   </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001801</LineId>
+      <Text>Monety
+±100 000 monet</Text>
+    </Text>
+    <Text>
+      <LineId>1500001802</LineId>
+      <Text>Wszystkie towary
+±1000 każdego odblokowanego towaru</Text>
+    </Text>
+    <Text>
+      <LineId>1500001803</LineId>
+      <Text>Siła robocza
+Zwiększ / zmniejsz</Text>
+    </Text>
+    <Text>
+      <LineId>1500001804</LineId>
+      <Text>Koszty budowy
+Przełącz sprawdzanie materiałów</Text>
+    </Text>
+    <Text>
+      <LineId>1500001805</LineId>
+      <Text>Warunki ulepszeń
+Przełącz warunki ulepszeń</Text>
+    </Text>
+    <Text>
+      <LineId>1500001806</LineId>
+      <Text>Żyzność dla zakładu
+Przełącz wymóg żyzności</Text>
+    </Text>
+    <Text>
+      <LineId>1500001807</LineId>
+      <Text>Rekrutacja
+Zakończ bieżącą produkcję</Text>
+    </Text>
+    <Text>
+      <LineId>1500001808</LineId>
+      <Text>Monument
+Przyspiesz budowę</Text>
+    </Text>
+    <Text>
+      <LineId>1500001809</LineId>
+      <Text>Bieżące badania
+Ukończ / anuluj</Text>
+    </Text>
+    <Text>
+      <LineId>1500001810</LineId>
+      <Text>Wszystkie badania
+Ukończ / zresetuj</Text>
+    </Text>
+    <Text>
+      <LineId>1500001811</LineId>
+      <Text>Losowe przedmioty
+Dodaj przedmioty</Text>
+    </Text>
+    <Text>
+      <LineId>1500001812</LineId>
+      <Text>Przejęcie
+Przejmij obiekt lub wyspę</Text>
+    </Text>
+    <Text>
+      <LineId>1500001813</LineId>
+      <Text>Reputacja u cesarza
+±10 pkt reputacji</Text>
+    </Text>
+    <Text>
+      <LineId>1500001814</LineId>
+      <Text>Odnowienie dyplomacji
+Wyzeruj czas odnowienia</Text>
+    </Text>
+    <Text>
+      <LineId>1500001821</LineId>
+      <Text>Monety
+Zlecono dodanie 100 000 monet.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001822</LineId>
+      <Text>Wszystkie towary
+Zlecono dodanie 1000 każdego odblokowanego towaru.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001823</LineId>
+      <Text>Siła robocza
+Zlecono zwiększenie siły roboczej.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001824</LineId>
+      <Text>Koszty budowy
+Przełączono sprawdzanie materiałów.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001825</LineId>
+      <Text>Warunki ulepszeń
+Przełączono sprawdzanie warunków ulepszeń.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001826</LineId>
+      <Text>Żyzność dla zakładu
+Przełączono wymóg żyzności.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001827</LineId>
+      <Text>Rekrutacja
+Zlecono dokończenie rekrutacji.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001828</LineId>
+      <Text>Monument
+Przyspieszono budowę.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001829</LineId>
+      <Text>Bieżące badania
+Zlecono ukończenie badań.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001830</LineId>
+      <Text>Wszystkie badania
+Zlecono ukończenie wszystkich badań.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001831</LineId>
+      <Text>Losowe przedmioty
+Zlecono dodanie losowych przedmiotów.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001832</LineId>
+      <Text>Przejęcie
+Zlecono przejęcie.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001833</LineId>
+      <Text>Reputacja u cesarza
+Zlecono dodanie 10 pkt reputacji.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001834</LineId>
+      <Text>Odnowienie dyplomacji
+Wyzerowano czas odnowienia działań dyplomatycznych.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001841</LineId>
+      <Text>Monety
+Zlecono odjęcie 100 000 monet.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001842</LineId>
+      <Text>Wszystkie towary
+Zlecono odjęcie 1000 każdego odblokowanego towaru.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001843</LineId>
+      <Text>Siła robocza
+Zlecono zmniejszenie siły roboczej.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001849</LineId>
+      <Text>Bieżące badania
+Zlecono anulowanie badań.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001850</LineId>
+      <Text>Wszystkie badania
+Zlecono reset wszystkich badań.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001853</LineId>
+      <Text>Reputacja u cesarza
+Zlecono odjęcie 10 pkt reputacji.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001901</LineId>
+      <Text>Monety
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001905</LineId>
+      <Text>Wszystkie towary
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001906</LineId>
+      <Text>Wszystkie towary
+Przejdź na własną wyspę lub ją wybierz.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001909</LineId>
+      <Text>Siła robocza
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001910</LineId>
+      <Text>Siła robocza
+Przejdź na własną wyspę.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001911</LineId>
+      <Text>Siła robocza
+Siła robocza jest niedostępna.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001913</LineId>
+      <Text>Koszty budowy
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001917</LineId>
+      <Text>Warunki ulepszeń
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001921</LineId>
+      <Text>Żyzność dla zakładu
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001922</LineId>
+      <Text>Żyzność dla zakładu
+Najpierw wybierz obiekt.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001923</LineId>
+      <Text>Żyzność dla zakładu
+Wybierz odpowiedni zakład.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001924</LineId>
+      <Text>Żyzność dla zakładu
+Wybierz własny obiekt.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001925</LineId>
+      <Text>Rekrutacja
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001926</LineId>
+      <Text>Rekrutacja
+Najpierw wybierz obiekt.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001927</LineId>
+      <Text>Rekrutacja
+Wybierz własną stocznię lub budynek rekrutacyjny.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001928</LineId>
+      <Text>Rekrutacja
+Wybierz własny obiekt.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001929</LineId>
+      <Text>Monument
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001930</LineId>
+      <Text>Monument
+Najpierw wybierz obiekt.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001931</LineId>
+      <Text>Monument
+Wybierz własny monument.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001932</LineId>
+      <Text>Monument
+Wybierz własny obiekt.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001933</LineId>
+      <Text>Bieżące badania
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001934</LineId>
+      <Text>Bieżące badania
+Kolejka badań jest pusta.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001937</LineId>
+      <Text>Wszystkie badania
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001941</LineId>
+      <Text>Losowe przedmioty
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001942</LineId>
+      <Text>Losowe przedmioty
+Przejdź na własną wyspę.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001945</LineId>
+      <Text>Przejęcie
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001946</LineId>
+      <Text>Przejęcie
+Najpierw wybierz obiekt.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001948</LineId>
+      <Text>Przejęcie
+Wybierz obiekt będący cudzą własnością.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001949</LineId>
+      <Text>Reputacja u cesarza
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001950</LineId>
+      <Text>Reputacja u cesarza
+Brak aktywnego gracza.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001951</LineId>
+      <Text>Reputacja u cesarza
+Brak aktywnego cesarza.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001953</LineId>
+      <Text>Odnowienie dyplomacji
+Kod nie zadziałał. Sprawdź dziennik.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001954</LineId>
+      <Text>Odnowienie dyplomacji
+Brak aktywnego gracza.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001955</LineId>
+      <Text>Odnowienie dyplomacji
+Dyplomacja jest niedostępna.</Text>
+    </Text>
+  </ModOp>
 </ModOps>

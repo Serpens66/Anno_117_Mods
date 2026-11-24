@@ -195,4 +195,346 @@ Der aktuelle Spieler besitzt keine gültige Diplomatie-Eigenschaft.</Text>
 Der Arbeitskräftemanager der aktuellen Insel ist nicht gültig.</Text>
     </Text>
   </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001801</LineId>
+      <Text>Münzen
+±100.000 Münzen</Text>
+    </Text>
+    <Text>
+      <LineId>1500001802</LineId>
+      <Text>Alle Waren
+±1.000 je freigeschalteter Ware</Text>
+    </Text>
+    <Text>
+      <LineId>1500001803</LineId>
+      <Text>Arbeitskräfte
+Erhöhen / senken</Text>
+    </Text>
+    <Text>
+      <LineId>1500001804</LineId>
+      <Text>Baukosten
+Materialprüfung umschalten</Text>
+    </Text>
+    <Text>
+      <LineId>1500001805</LineId>
+      <Text>Ausbauvoraussetzungen
+Ausbauprüfung umschalten</Text>
+    </Text>
+    <Text>
+      <LineId>1500001806</LineId>
+      <Text>Fabrikfruchtbarkeit
+Fruchtbarkeitsprüfung umschalten</Text>
+    </Text>
+    <Text>
+      <LineId>1500001807</LineId>
+      <Text>Rekrutierung
+Laufende Produktion abschließen</Text>
+    </Text>
+    <Text>
+      <LineId>1500001808</LineId>
+      <Text>Monument
+Bau voranbringen</Text>
+    </Text>
+    <Text>
+      <LineId>1500001809</LineId>
+      <Text>Aktuelle Forschung
+Abschließen / abbrechen</Text>
+    </Text>
+    <Text>
+      <LineId>1500001810</LineId>
+      <Text>Alle Forschungen
+Abschließen / zurücksetzen</Text>
+    </Text>
+    <Text>
+      <LineId>1500001811</LineId>
+      <Text>Zufällige Items
+Items hinzufügen</Text>
+    </Text>
+    <Text>
+      <LineId>1500001812</LineId>
+      <Text>Übernahme
+Objekt oder Insel übernehmen</Text>
+    </Text>
+    <Text>
+      <LineId>1500001813</LineId>
+      <Text>Ruf beim Kaiser
+±10 Ruf</Text>
+    </Text>
+    <Text>
+      <LineId>1500001814</LineId>
+      <Text>Diplomatie-Abklingzeiten
+Abklingzeiten zurücksetzen</Text>
+    </Text>
+    <Text>
+      <LineId>1500001821</LineId>
+      <Text>Münzen
++100.000 Münzen angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001822</LineId>
+      <Text>Alle Waren
++1.000 je freigeschalteter Ware angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001823</LineId>
+      <Text>Arbeitskräfte
+Mehr Arbeitskräfte angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001824</LineId>
+      <Text>Baukosten
+Baumaterialprüfung umgeschaltet.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001825</LineId>
+      <Text>Ausbauvoraussetzungen
+Ausbauprüfung umgeschaltet.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001826</LineId>
+      <Text>Fabrikfruchtbarkeit
+Fruchtbarkeitsprüfung umgeschaltet.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001827</LineId>
+      <Text>Rekrutierung
+Abschluss der Rekrutierung angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001828</LineId>
+      <Text>Monument
+Baufortschritt erhöht.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001829</LineId>
+      <Text>Aktuelle Forschung
+Abschluss der Forschung angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001830</LineId>
+      <Text>Alle Forschungen
+Abschluss aller Forschungen angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001831</LineId>
+      <Text>Zufällige Items
+Zufällige Items angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001832</LineId>
+      <Text>Übernahme
+Übernahme angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001833</LineId>
+      <Text>Ruf beim Kaiser
++10 Ruf beim Kaiser angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001834</LineId>
+      <Text>Diplomatie-Abklingzeiten
+Diplomatie-Abklingzeiten zurückgesetzt.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001841</LineId>
+      <Text>Münzen
+−100.000 Münzen angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001842</LineId>
+      <Text>Alle Waren
+−1.000 je freigeschalteter Ware angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001843</LineId>
+      <Text>Arbeitskräfte
+Weniger Arbeitskräfte angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001849</LineId>
+      <Text>Aktuelle Forschung
+Abbruch der Forschung angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001850</LineId>
+      <Text>Alle Forschungen
+Forschungsreset angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001853</LineId>
+      <Text>Ruf beim Kaiser
+−10 Ruf beim Kaiser angefordert.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001901</LineId>
+      <Text>Münzen
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001905</LineId>
+      <Text>Alle Waren
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001906</LineId>
+      <Text>Alle Waren
+Wechsle zu einer eigenen Insel oder wähle sie aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001909</LineId>
+      <Text>Arbeitskräfte
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001910</LineId>
+      <Text>Arbeitskräfte
+Wechsle zu einer eigenen Insel.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001911</LineId>
+      <Text>Arbeitskräfte
+Arbeitskräfte sind nicht verfügbar.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001913</LineId>
+      <Text>Baukosten
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001917</LineId>
+      <Text>Ausbauvoraussetzungen
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001921</LineId>
+      <Text>Fabrikfruchtbarkeit
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001922</LineId>
+      <Text>Fabrikfruchtbarkeit
+Wähle zuerst ein Objekt aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001923</LineId>
+      <Text>Fabrikfruchtbarkeit
+Wähle einen geeigneten Betrieb aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001924</LineId>
+      <Text>Fabrikfruchtbarkeit
+Wähle ein eigenes Objekt aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001925</LineId>
+      <Text>Rekrutierung
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001926</LineId>
+      <Text>Rekrutierung
+Wähle zuerst ein Objekt aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001927</LineId>
+      <Text>Rekrutierung
+Wähle eine eigene Werft oder ein Rekrutierungsgebäude.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001928</LineId>
+      <Text>Rekrutierung
+Wähle ein eigenes Objekt aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001929</LineId>
+      <Text>Monument
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001930</LineId>
+      <Text>Monument
+Wähle zuerst ein Objekt aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001931</LineId>
+      <Text>Monument
+Wähle ein eigenes Monument aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001932</LineId>
+      <Text>Monument
+Wähle ein eigenes Objekt aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001933</LineId>
+      <Text>Aktuelle Forschung
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001934</LineId>
+      <Text>Aktuelle Forschung
+Die Forschungswarteschlange ist leer.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001937</LineId>
+      <Text>Alle Forschungen
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001941</LineId>
+      <Text>Zufällige Items
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001942</LineId>
+      <Text>Zufällige Items
+Wechsle zu einer eigenen Insel.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001945</LineId>
+      <Text>Übernahme
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001946</LineId>
+      <Text>Übernahme
+Wähle zuerst ein Objekt aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001948</LineId>
+      <Text>Übernahme
+Wähle ein fremdes Objekt aus.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001949</LineId>
+      <Text>Ruf beim Kaiser
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001950</LineId>
+      <Text>Ruf beim Kaiser
+Kein aktiver Spieler.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001951</LineId>
+      <Text>Ruf beim Kaiser
+Kein aktiver Kaiser.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001953</LineId>
+      <Text>Diplomatie-Abklingzeiten
+Cheat fehlgeschlagen. Siehe Log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001954</LineId>
+      <Text>Diplomatie-Abklingzeiten
+Kein aktiver Spieler.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001955</LineId>
+      <Text>Diplomatie-Abklingzeiten
+Diplomatie ist nicht verfügbar.</Text>
+    </Text>
+  </ModOp>
 </ModOps>

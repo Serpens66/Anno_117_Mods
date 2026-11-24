@@ -195,4 +195,346 @@ The current player has no valid diplomacy property.</Text>
 The current island workforce manager is invalid.</Text>
     </Text>
   </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001801</LineId>
+      <Text>Monete
+±100.000 monete</Text>
+    </Text>
+    <Text>
+      <LineId>1500001802</LineId>
+      <Text>Tutte le merci
+±1.000 per merce sbloccata</Text>
+    </Text>
+    <Text>
+      <LineId>1500001803</LineId>
+      <Text>Manodopera
+Aumentare / ridurre</Text>
+    </Text>
+    <Text>
+      <LineId>1500001804</LineId>
+      <Text>Costi di costruzione
+Commutare il controllo dei materiali</Text>
+    </Text>
+    <Text>
+      <LineId>1500001805</LineId>
+      <Text>Requisiti di potenziamento
+Commutare i requisiti di potenziamento</Text>
+    </Text>
+    <Text>
+      <LineId>1500001806</LineId>
+      <Text>Fertilità della fabbrica
+Commutare il requisito di fertilità</Text>
+    </Text>
+    <Text>
+      <LineId>1500001807</LineId>
+      <Text>Reclutamento
+Terminare la produzione</Text>
+    </Text>
+    <Text>
+      <LineId>1500001808</LineId>
+      <Text>Monumento
+Far avanzare la costruzione</Text>
+    </Text>
+    <Text>
+      <LineId>1500001809</LineId>
+      <Text>Ricerca attuale
+Completare / annullare</Text>
+    </Text>
+    <Text>
+      <LineId>1500001810</LineId>
+      <Text>Tutte le ricerche
+Completare / azzerare</Text>
+    </Text>
+    <Text>
+      <LineId>1500001811</LineId>
+      <Text>Oggetti casuali
+Aggiungere oggetti</Text>
+    </Text>
+    <Text>
+      <LineId>1500001812</LineId>
+      <Text>Presa di possesso
+Prendere un oggetto o un’isola</Text>
+    </Text>
+    <Text>
+      <LineId>1500001813</LineId>
+      <Text>Reputazione con l’imperatore
+±10 punti reputazione</Text>
+    </Text>
+    <Text>
+      <LineId>1500001814</LineId>
+      <Text>Attese diplomatiche
+Azzerare le attese</Text>
+    </Text>
+    <Text>
+      <LineId>1500001821</LineId>
+      <Text>Monete
+Aggiunta di 100.000 monete richiesta.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001822</LineId>
+      <Text>Tutte le merci
+Aggiunta di 1.000 per merce sbloccata richiesta.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001823</LineId>
+      <Text>Manodopera
+Aumento della manodopera richiesto.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001824</LineId>
+      <Text>Costi di costruzione
+Controllo dei materiali commutato.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001825</LineId>
+      <Text>Requisiti di potenziamento
+Controllo dei potenziamenti commutato.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001826</LineId>
+      <Text>Fertilità della fabbrica
+Requisito di fertilità commutato.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001827</LineId>
+      <Text>Reclutamento
+Conclusione del reclutamento richiesta.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001828</LineId>
+      <Text>Monumento
+Costruzione avanzata.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001829</LineId>
+      <Text>Ricerca attuale
+Completamento della ricerca richiesto.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001830</LineId>
+      <Text>Tutte le ricerche
+Completamento di tutte le ricerche richiesto.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001831</LineId>
+      <Text>Oggetti casuali
+Oggetti casuali richiesti.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001832</LineId>
+      <Text>Presa di possesso
+Presa di possesso richiesta.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001833</LineId>
+      <Text>Reputazione con l’imperatore
+Guadagno di 10 punti reputazione richiesto.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001834</LineId>
+      <Text>Attese diplomatiche
+Attese diplomatiche azzerate.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001841</LineId>
+      <Text>Monete
+Rimozione di 100.000 monete richiesta.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001842</LineId>
+      <Text>Tutte le merci
+Rimozione di 1.000 per merce sbloccata richiesta.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001843</LineId>
+      <Text>Manodopera
+Riduzione della manodopera richiesta.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001849</LineId>
+      <Text>Ricerca attuale
+Annullamento della ricerca richiesto.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001850</LineId>
+      <Text>Tutte le ricerche
+Azzeramento di tutte le ricerche richiesto.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001853</LineId>
+      <Text>Reputazione con l’imperatore
+Perdita di 10 punti reputazione richiesta.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001901</LineId>
+      <Text>Monete
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001905</LineId>
+      <Text>Tutte le merci
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001906</LineId>
+      <Text>Tutte le merci
+Vai su una tua isola o selezionala.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001909</LineId>
+      <Text>Manodopera
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001910</LineId>
+      <Text>Manodopera
+Vai su una tua isola.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001911</LineId>
+      <Text>Manodopera
+Manodopera non disponibile.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001913</LineId>
+      <Text>Costi di costruzione
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001917</LineId>
+      <Text>Requisiti di potenziamento
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001921</LineId>
+      <Text>Fertilità della fabbrica
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001922</LineId>
+      <Text>Fertilità della fabbrica
+Seleziona prima un oggetto.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001923</LineId>
+      <Text>Fertilità della fabbrica
+Seleziona una fabbrica adatta.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001924</LineId>
+      <Text>Fertilità della fabbrica
+Seleziona un oggetto di tua proprietà.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001925</LineId>
+      <Text>Reclutamento
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001926</LineId>
+      <Text>Reclutamento
+Seleziona prima un oggetto.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001927</LineId>
+      <Text>Reclutamento
+Seleziona un tuo cantiere o edificio di reclutamento.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001928</LineId>
+      <Text>Reclutamento
+Seleziona un oggetto di tua proprietà.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001929</LineId>
+      <Text>Monumento
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001930</LineId>
+      <Text>Monumento
+Seleziona prima un oggetto.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001931</LineId>
+      <Text>Monumento
+Seleziona un tuo monumento.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001932</LineId>
+      <Text>Monumento
+Seleziona un oggetto di tua proprietà.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001933</LineId>
+      <Text>Ricerca attuale
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001934</LineId>
+      <Text>Ricerca attuale
+La coda delle ricerche è vuota.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001937</LineId>
+      <Text>Tutte le ricerche
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001941</LineId>
+      <Text>Oggetti casuali
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001942</LineId>
+      <Text>Oggetti casuali
+Vai su una tua isola.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001945</LineId>
+      <Text>Presa di possesso
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001946</LineId>
+      <Text>Presa di possesso
+Seleziona prima un oggetto.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001948</LineId>
+      <Text>Presa di possesso
+Seleziona un oggetto di un altro giocatore.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001949</LineId>
+      <Text>Reputazione con l’imperatore
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001950</LineId>
+      <Text>Reputazione con l’imperatore
+Nessun giocatore attivo.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001951</LineId>
+      <Text>Reputazione con l’imperatore
+Nessun imperatore attivo.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001953</LineId>
+      <Text>Attese diplomatiche
+Trucco fallito. Controlla il registro.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001954</LineId>
+      <Text>Attese diplomatiche
+Nessun giocatore attivo.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001955</LineId>
+      <Text>Attese diplomatiche
+Diplomazia non disponibile.</Text>
+    </Text>
+  </ModOp>
 </ModOps>

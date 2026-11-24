@@ -1,9 +1,9 @@
 -- Anno 117: the shortcut commands call this module initialized by modinfo.json.
--- See Documentation/reference/cheat-keybinds-audit.md for the Vanilla audit.
+-- See Documentation/mods/cheat-keybinds-audit.md for the Vanilla audit.
 local CheatKeybinds_Serp = {
   ActiveCheat = 1,
   Loaded = false,
-  -- Keep existing notification IDs, especially the separate error notices 1213/1214.
+  -- Preserve the existing selection trigger IDs.
   NotificationGUIDs = {
     1500001201, 1500001202, 1500001203, 1500001204,
     1500001205, 1500001206, 1500001207, 1500001208,
@@ -25,6 +25,120 @@ local CheatKeybinds_Serp = {
     emperor_missing = 1500001271,
     diplomacy_missing = 1500001272,
     workforce_unavailable = 1500001273,
+  },
+}
+
+-- Result triggers use the same order as the cheat functions and selection notices.
+local resultNotifications = {
+  { -- Coins
+    primary = 1500001341,
+    alternative = 1500001361,
+    failures = {
+      generic = 1500002001,
+    },
+  },
+  { -- All goods
+    primary = 1500001342,
+    alternative = 1500001362,
+    failures = {
+      generic = 1500002005,
+      goods_area = 1500002006,
+    },
+  },
+  { -- Workforce
+    primary = 1500001343,
+    alternative = 1500001363,
+    failures = {
+      generic = 1500002009,
+      workforce_area = 1500002010,
+      workforce_unavailable = 1500002011,
+    },
+  },
+  { -- Building costs
+    primary = 1500001344,
+    failures = {
+      generic = 1500002013,
+    },
+  },
+  { -- Upgrades
+    primary = 1500001345,
+    failures = {
+      generic = 1500002017,
+    },
+  },
+  { -- Factory fertility
+    primary = 1500001346,
+    failures = {
+      generic = 1500002021,
+      selection_missing = 1500002022,
+      factory_selection = 1500002023,
+      foreign_selection = 1500002024,
+    },
+  },
+  { -- Recruitment
+    primary = 1500001347,
+    failures = {
+      generic = 1500002025,
+      selection_missing = 1500002026,
+      recruitment_selection = 1500002027,
+      foreign_selection = 1500002028,
+    },
+  },
+  { -- Monument
+    primary = 1500001348,
+    failures = {
+      generic = 1500002029,
+      selection_missing = 1500002030,
+      monument_selection = 1500002031,
+      foreign_selection = 1500002032,
+    },
+  },
+  { -- Current research
+    primary = 1500001349,
+    alternative = 1500001369,
+    failures = {
+      generic = 1500002033,
+      research_empty = 1500002034,
+    },
+  },
+  { -- All research
+    primary = 1500001350,
+    alternative = 1500001370,
+    failures = {
+      generic = 1500002037,
+    },
+  },
+  { -- Items
+    primary = 1500001351,
+    failures = {
+      generic = 1500002041,
+      items_area = 1500002042,
+    },
+  },
+  { -- Ownership
+    primary = 1500001352,
+    failures = {
+      generic = 1500002045,
+      selection_missing = 1500002046,
+      takeover_owned = 1500002048,
+    },
+  },
+  { -- Emperor reputation
+    primary = 1500001353,
+    alternative = 1500001373,
+    failures = {
+      generic = 1500002049,
+      participant_missing = 1500002050,
+      emperor_missing = 1500002051,
+    },
+  },
+  { -- Diplomacy cooldowns
+    primary = 1500001354,
+    failures = {
+      generic = 1500002053,
+      participant_missing = 1500002054,
+      diplomacy_missing = 1500002055,
+    },
   },
 }
 
@@ -197,16 +311,19 @@ function CheatKeybinds_Serp.StartCheat(alternative)
   alternative = alternative == true
   local index = CheatKeybinds_Serp.ActiveCheat
   local direction = alternative and "alternative" or "normal"
+  local notices = resultNotifications[index]
   local ok, result, reason = pcall(CheatKeybinds_Serp.Cheats[index], alternative)
   if not ok then
     print("CheatKeybinds_Serp failed (" .. index .. ", " .. direction .. "): " .. tostring(result))
-    notify(1500001214)
+    notify(notices and notices.failures.generic or 1500001214)
   elseif result == false then
     print("CheatKeybinds_Serp not executed: " .. index .. " (" .. direction .. "): " .. tostring(reason))
-    notify(CheatKeybinds_Serp.FailureNotificationGUIDs[reason] or 1500001213)
+    local failure = notices and (notices.failures[reason] or notices.failures.generic)
+    notify(failure or CheatKeybinds_Serp.FailureNotificationGUIDs[reason] or 1500001213)
   else
     print("CheatKeybinds_Serp executed: " .. index .. " (" .. direction .. ")")
-    notify(CheatKeybinds_Serp.NotificationGUIDs[index])
+    local confirmation = notices and (alternative and notices.alternative or notices.primary)
+    notify(confirmation or CheatKeybinds_Serp.NotificationGUIDs[index])
   end
 end
 

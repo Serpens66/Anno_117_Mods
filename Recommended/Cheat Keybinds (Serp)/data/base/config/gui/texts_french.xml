@@ -195,4 +195,346 @@ The current player has no valid diplomacy property.</Text>
 The current island workforce manager is invalid.</Text>
     </Text>
   </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001801</LineId>
+      <Text>Pièces
+±100 000 pièces</Text>
+    </Text>
+    <Text>
+      <LineId>1500001802</LineId>
+      <Text>Toutes les marchandises
+±1 000 par marchandise débloquée</Text>
+    </Text>
+    <Text>
+      <LineId>1500001803</LineId>
+      <Text>Main-d’œuvre
+Augmenter / réduire</Text>
+    </Text>
+    <Text>
+      <LineId>1500001804</LineId>
+      <Text>Coûts de construction
+Basculer le contrôle des matériaux</Text>
+    </Text>
+    <Text>
+      <LineId>1500001805</LineId>
+      <Text>Conditions d’amélioration
+Basculer les conditions d’amélioration</Text>
+    </Text>
+    <Text>
+      <LineId>1500001806</LineId>
+      <Text>Fertilité de l’usine
+Basculer la condition de fertilité</Text>
+    </Text>
+    <Text>
+      <LineId>1500001807</LineId>
+      <Text>Recrutement
+Terminer la production</Text>
+    </Text>
+    <Text>
+      <LineId>1500001808</LineId>
+      <Text>Monument
+Avancer la construction</Text>
+    </Text>
+    <Text>
+      <LineId>1500001809</LineId>
+      <Text>Recherche en cours
+Terminer / annuler</Text>
+    </Text>
+    <Text>
+      <LineId>1500001810</LineId>
+      <Text>Toutes les recherches
+Terminer / réinitialiser</Text>
+    </Text>
+    <Text>
+      <LineId>1500001811</LineId>
+      <Text>Objets aléatoires
+Ajouter des objets</Text>
+    </Text>
+    <Text>
+      <LineId>1500001812</LineId>
+      <Text>Prise de contrôle
+Prendre un objet ou une île</Text>
+    </Text>
+    <Text>
+      <LineId>1500001813</LineId>
+      <Text>Réputation auprès de l’empereur
+±10 points de réputation</Text>
+    </Text>
+    <Text>
+      <LineId>1500001814</LineId>
+      <Text>Délais diplomatiques
+Réinitialiser les délais</Text>
+    </Text>
+    <Text>
+      <LineId>1500001821</LineId>
+      <Text>Pièces
+Ajout de 100 000 pièces demandé.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001822</LineId>
+      <Text>Toutes les marchandises
+Ajout de 1 000 par marchandise débloquée demandé.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001823</LineId>
+      <Text>Main-d’œuvre
+Hausse de la main-d’œuvre demandée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001824</LineId>
+      <Text>Coûts de construction
+Contrôle des matériaux basculé.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001825</LineId>
+      <Text>Conditions d’amélioration
+Contrôle des améliorations basculé.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001826</LineId>
+      <Text>Fertilité de l’usine
+Condition de fertilité basculée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001827</LineId>
+      <Text>Recrutement
+Fin du recrutement demandée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001828</LineId>
+      <Text>Monument
+Construction avancée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001829</LineId>
+      <Text>Recherche en cours
+Fin de la recherche demandée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001830</LineId>
+      <Text>Toutes les recherches
+Fin de toutes les recherches demandée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001831</LineId>
+      <Text>Objets aléatoires
+Objets aléatoires demandés.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001832</LineId>
+      <Text>Prise de contrôle
+Prise de contrôle demandée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001833</LineId>
+      <Text>Réputation auprès de l’empereur
+Gain de 10 points de réputation demandé.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001834</LineId>
+      <Text>Délais diplomatiques
+Délais diplomatiques réinitialisés.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001841</LineId>
+      <Text>Pièces
+Retrait de 100 000 pièces demandé.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001842</LineId>
+      <Text>Toutes les marchandises
+Retrait de 1 000 par marchandise débloquée demandé.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001843</LineId>
+      <Text>Main-d’œuvre
+Baisse de la main-d’œuvre demandée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001849</LineId>
+      <Text>Recherche en cours
+Annulation de la recherche demandée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001850</LineId>
+      <Text>Toutes les recherches
+Réinitialisation des recherches demandée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001853</LineId>
+      <Text>Réputation auprès de l’empereur
+Perte de 10 points de réputation demandée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001901</LineId>
+      <Text>Pièces
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001905</LineId>
+      <Text>Toutes les marchandises
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001906</LineId>
+      <Text>Toutes les marchandises
+Allez sur une de vos îles ou sélectionnez-la.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001909</LineId>
+      <Text>Main-d’œuvre
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001910</LineId>
+      <Text>Main-d’œuvre
+Allez sur une de vos îles.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001911</LineId>
+      <Text>Main-d’œuvre
+Main-d’œuvre indisponible.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001913</LineId>
+      <Text>Coûts de construction
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001917</LineId>
+      <Text>Conditions d’amélioration
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001921</LineId>
+      <Text>Fertilité de l’usine
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001922</LineId>
+      <Text>Fertilité de l’usine
+Sélectionnez d’abord un objet.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001923</LineId>
+      <Text>Fertilité de l’usine
+Sélectionnez une usine adaptée.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001924</LineId>
+      <Text>Fertilité de l’usine
+Sélectionnez un objet qui vous appartient.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001925</LineId>
+      <Text>Recrutement
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001926</LineId>
+      <Text>Recrutement
+Sélectionnez d’abord un objet.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001927</LineId>
+      <Text>Recrutement
+Sélectionnez votre chantier naval ou bâtiment de recrutement.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001928</LineId>
+      <Text>Recrutement
+Sélectionnez un objet qui vous appartient.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001929</LineId>
+      <Text>Monument
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001930</LineId>
+      <Text>Monument
+Sélectionnez d’abord un objet.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001931</LineId>
+      <Text>Monument
+Sélectionnez un de vos monuments.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001932</LineId>
+      <Text>Monument
+Sélectionnez un objet qui vous appartient.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001933</LineId>
+      <Text>Recherche en cours
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001934</LineId>
+      <Text>Recherche en cours
+La file de recherche est vide.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001937</LineId>
+      <Text>Toutes les recherches
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001941</LineId>
+      <Text>Objets aléatoires
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001942</LineId>
+      <Text>Objets aléatoires
+Allez sur une de vos îles.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001945</LineId>
+      <Text>Prise de contrôle
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001946</LineId>
+      <Text>Prise de contrôle
+Sélectionnez d’abord un objet.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001948</LineId>
+      <Text>Prise de contrôle
+Sélectionnez un objet appartenant à un autre joueur.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001949</LineId>
+      <Text>Réputation auprès de l’empereur
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001950</LineId>
+      <Text>Réputation auprès de l’empereur
+Aucun joueur actif.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001951</LineId>
+      <Text>Réputation auprès de l’empereur
+Aucun empereur actif.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001953</LineId>
+      <Text>Délais diplomatiques
+Échec du code. Consultez le journal.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001954</LineId>
+      <Text>Délais diplomatiques
+Aucun joueur actif.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001955</LineId>
+      <Text>Délais diplomatiques
+Diplomatie indisponible.</Text>
+    </Text>
+  </ModOp>
 </ModOps>

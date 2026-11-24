@@ -195,4 +195,346 @@ The current player has no valid diplomacy property.</Text>
 The current island workforce manager is invalid.</Text>
     </Text>
   </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001801</LineId>
+      <Text>코인
+코인 ±100,000개</Text>
+    </Text>
+    <Text>
+      <LineId>1500001802</LineId>
+      <Text>모든 상품
+잠금 해제 상품마다 ±1,000개</Text>
+    </Text>
+    <Text>
+      <LineId>1500001803</LineId>
+      <Text>노동력
+증가 / 감소</Text>
+    </Text>
+    <Text>
+      <LineId>1500001804</LineId>
+      <Text>건설 비용
+건축 자재 확인 전환</Text>
+    </Text>
+    <Text>
+      <LineId>1500001805</LineId>
+      <Text>업그레이드 조건
+업그레이드 조건 확인 전환</Text>
+    </Text>
+    <Text>
+      <LineId>1500001806</LineId>
+      <Text>공장 비옥도
+비옥도 조건 확인 전환</Text>
+    </Text>
+    <Text>
+      <LineId>1500001807</LineId>
+      <Text>모집
+진행 중인 생산 완료</Text>
+    </Text>
+    <Text>
+      <LineId>1500001808</LineId>
+      <Text>기념물
+건설 진행</Text>
+    </Text>
+    <Text>
+      <LineId>1500001809</LineId>
+      <Text>진행 중인 연구
+완료 / 취소</Text>
+    </Text>
+    <Text>
+      <LineId>1500001810</LineId>
+      <Text>모든 연구
+완료 / 초기화</Text>
+    </Text>
+    <Text>
+      <LineId>1500001811</LineId>
+      <Text>무작위 아이템
+아이템 추가</Text>
+    </Text>
+    <Text>
+      <LineId>1500001812</LineId>
+      <Text>소유권 인수
+대상이나 섬 인수</Text>
+    </Text>
+    <Text>
+      <LineId>1500001813</LineId>
+      <Text>황제 평판
+평판 ±10</Text>
+    </Text>
+    <Text>
+      <LineId>1500001814</LineId>
+      <Text>외교 재사용 대기시간
+재사용 대기시간 초기화</Text>
+    </Text>
+    <Text>
+      <LineId>1500001821</LineId>
+      <Text>코인
+코인 100,000개 추가를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001822</LineId>
+      <Text>모든 상품
+잠금 해제된 상품마다 1,000개 추가를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001823</LineId>
+      <Text>노동력
+노동력 증가를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001824</LineId>
+      <Text>건설 비용
+건축 자재 확인을 전환했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001825</LineId>
+      <Text>업그레이드 조건
+업그레이드 조건 확인을 전환했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001826</LineId>
+      <Text>공장 비옥도
+비옥도 조건 확인을 전환했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001827</LineId>
+      <Text>모집
+모집 완료를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001828</LineId>
+      <Text>기념물
+건설을 진행했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001829</LineId>
+      <Text>진행 중인 연구
+연구 완료를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001830</LineId>
+      <Text>모든 연구
+모든 연구 완료를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001831</LineId>
+      <Text>무작위 아이템
+무작위 아이템을 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001832</LineId>
+      <Text>소유권 인수
+소유권 인수를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001833</LineId>
+      <Text>황제 평판
+평판 10 증가를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001834</LineId>
+      <Text>외교 재사용 대기시간
+외교 재사용 대기시간을 초기화했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001841</LineId>
+      <Text>코인
+코인 100,000개 차감을 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001842</LineId>
+      <Text>모든 상품
+잠금 해제된 상품마다 1,000개 차감을 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001843</LineId>
+      <Text>노동력
+노동력 감소를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001849</LineId>
+      <Text>진행 중인 연구
+연구 취소를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001850</LineId>
+      <Text>모든 연구
+모든 연구 초기화를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001853</LineId>
+      <Text>황제 평판
+평판 10 감소를 요청했습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001901</LineId>
+      <Text>코인
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001905</LineId>
+      <Text>모든 상품
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001906</LineId>
+      <Text>모든 상품
+내 섬으로 이동하거나 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001909</LineId>
+      <Text>노동력
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001910</LineId>
+      <Text>노동력
+내 섬으로 이동하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001911</LineId>
+      <Text>노동력
+노동력을 사용할 수 없습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001913</LineId>
+      <Text>건설 비용
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001917</LineId>
+      <Text>업그레이드 조건
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001921</LineId>
+      <Text>공장 비옥도
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001922</LineId>
+      <Text>공장 비옥도
+먼저 대상을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001923</LineId>
+      <Text>공장 비옥도
+알맞은 공장을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001924</LineId>
+      <Text>공장 비옥도
+내 소유의 대상을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001925</LineId>
+      <Text>모집
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001926</LineId>
+      <Text>모집
+먼저 대상을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001927</LineId>
+      <Text>모집
+내 조선소나 모집 건물을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001928</LineId>
+      <Text>모집
+내 소유의 대상을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001929</LineId>
+      <Text>기념물
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001930</LineId>
+      <Text>기념물
+먼저 대상을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001931</LineId>
+      <Text>기념물
+내 기념물을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001932</LineId>
+      <Text>기념물
+내 소유의 대상을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001933</LineId>
+      <Text>진행 중인 연구
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001934</LineId>
+      <Text>진행 중인 연구
+연구 대기열이 비어 있습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001937</LineId>
+      <Text>모든 연구
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001941</LineId>
+      <Text>무작위 아이템
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001942</LineId>
+      <Text>무작위 아이템
+내 섬으로 이동하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001945</LineId>
+      <Text>소유권 인수
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001946</LineId>
+      <Text>소유권 인수
+먼저 대상을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001948</LineId>
+      <Text>소유권 인수
+다른 플레이어의 대상을 선택하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001949</LineId>
+      <Text>황제 평판
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001950</LineId>
+      <Text>황제 평판
+활성 플레이어가 없습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001951</LineId>
+      <Text>황제 평판
+활성 황제가 없습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001953</LineId>
+      <Text>외교 재사용 대기시간
+치트에 실패했습니다. 로그를 확인하세요.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001954</LineId>
+      <Text>외교 재사용 대기시간
+활성 플레이어가 없습니다.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001955</LineId>
+      <Text>외교 재사용 대기시간
+외교를 사용할 수 없습니다.</Text>
+    </Text>
+  </ModOp>
 </ModOps>

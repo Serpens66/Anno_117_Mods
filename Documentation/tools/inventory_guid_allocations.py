@@ -14,7 +14,14 @@ ROOT = Path(__file__).resolve().parents[2]
 TARGET = ROOT / 'Documentation/mods/guid-allocations.md'
 LOW, HIGH = 1500000000, 1500010000
 CHEAT = 'cheat-keybinds-serp'
-CHEAT_BLOCK = range(1500001200, 1500001300)
+CHEAT_RANGES = (
+    range(1500001200, 1500001300),
+    range(1500001301, 1500001375),
+    range(1500001801, 1500001855),
+    range(1500001901, 1500001956),
+    range(1500002001, 1500002056),
+)
+CHEAT_BLOCK = {number for block in CHEAT_RANGES for number in block}
 KNOWN_ASSET_COLLISIONS = {
     n: {'change-multiplayer-gamespeed-serp', 'change-multiplayer-gamespeed-complicated-serp'}
     for n in (1500000050, 1500000051, 1500000054)
@@ -88,6 +95,7 @@ def render(packages, declarations, references):
         '## Allocation rules', '',
         '- Check this register and rerun the scanner before allocating an ID. Reserve and document the intended owner before implementing. Do not choose IDs merely because a single package does not contain them.',
         '- **1500001200-1500001299 is reserved exclusively for Cheat Keybinds (`cheat-keybinds-serp`).** Gaps inside that block remain reserved to this mod; they are not available to other mods.',
+        '- **Cheat Keybinds 1.15.0 popup allocations** reserve 1500001301-1500001374 for portraits, profiles and success triggers, 1500001801-1500001854 for selection and success texts, 1500001901-1500001955 for failure texts, and 1500002001-1500002055 for failure triggers. The sparsely used ranges keep menu positions stable.',
         '- **1500000060-1500000062 are reserved for GameSpeed Multiplayer (`change-multiplayer-gamespeed-serp`) shortcut labels.** Retired Cheat Keybinds compatibility IDs 1500001249-1500001251 remain reserved within its exclusive block.',
         '- Retired Cheat Keybinds diagnostic IDs **1500001294-1500001296** are no longer declared or referenced by the current package. They remain reserved within its exclusive block and must not be reassigned.',
         '- Existing allocations outside this block remain with their recorded owners. References do not transfer ownership. Same-ModID copies are alternative/bundled packages, not independent allocation owners; reconcile their actual contents and never activate incompatible variants together.',

@@ -195,4 +195,346 @@ The current player has no valid diplomacy property.</Text>
 The current island workforce manager is invalid.</Text>
     </Text>
   </ModOp>
+  <ModOp Add="/TextExport/Texts[1]">
+    <Text>
+      <LineId>1500001801</LineId>
+      <Text>Moedas
+±100.000 moedas</Text>
+    </Text>
+    <Text>
+      <LineId>1500001802</LineId>
+      <Text>Todas as mercadorias
+±1.000 por mercadoria liberada</Text>
+    </Text>
+    <Text>
+      <LineId>1500001803</LineId>
+      <Text>Mão de obra
+Aumentar / reduzir</Text>
+    </Text>
+    <Text>
+      <LineId>1500001804</LineId>
+      <Text>Custos de construção
+Alternar verificação de materiais</Text>
+    </Text>
+    <Text>
+      <LineId>1500001805</LineId>
+      <Text>Requisitos de melhoria
+Alternar requisitos de melhoria</Text>
+    </Text>
+    <Text>
+      <LineId>1500001806</LineId>
+      <Text>Fertilidade da fábrica
+Alternar requisito de fertilidade</Text>
+    </Text>
+    <Text>
+      <LineId>1500001807</LineId>
+      <Text>Recrutamento
+Concluir produção</Text>
+    </Text>
+    <Text>
+      <LineId>1500001808</LineId>
+      <Text>Monumento
+Avançar a construção</Text>
+    </Text>
+    <Text>
+      <LineId>1500001809</LineId>
+      <Text>Pesquisa atual
+Concluir / cancelar</Text>
+    </Text>
+    <Text>
+      <LineId>1500001810</LineId>
+      <Text>Todas as pesquisas
+Concluir / reiniciar</Text>
+    </Text>
+    <Text>
+      <LineId>1500001811</LineId>
+      <Text>Itens aleatórios
+Adicionar itens</Text>
+    </Text>
+    <Text>
+      <LineId>1500001812</LineId>
+      <Text>Tomada de controle
+Tomar objeto ou ilha</Text>
+    </Text>
+    <Text>
+      <LineId>1500001813</LineId>
+      <Text>Reputação com o imperador
+±10 de reputação</Text>
+    </Text>
+    <Text>
+      <LineId>1500001814</LineId>
+      <Text>Recarga de diplomacia
+Zerar recargas</Text>
+    </Text>
+    <Text>
+      <LineId>1500001821</LineId>
+      <Text>Moedas
+Adição de 100.000 moedas solicitada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001822</LineId>
+      <Text>Todas as mercadorias
+Adição de 1.000 por mercadoria liberada solicitada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001823</LineId>
+      <Text>Mão de obra
+Aumento de mão de obra solicitado.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001824</LineId>
+      <Text>Custos de construção
+Verificação de materiais alternada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001825</LineId>
+      <Text>Requisitos de melhoria
+Verificação de melhorias alternada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001826</LineId>
+      <Text>Fertilidade da fábrica
+Requisito de fertilidade alternado.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001827</LineId>
+      <Text>Recrutamento
+Conclusão do recrutamento solicitada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001828</LineId>
+      <Text>Monumento
+Construção avançada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001829</LineId>
+      <Text>Pesquisa atual
+Conclusão da pesquisa solicitada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001830</LineId>
+      <Text>Todas as pesquisas
+Conclusão de todas as pesquisas solicitada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001831</LineId>
+      <Text>Itens aleatórios
+Itens aleatórios solicitados.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001832</LineId>
+      <Text>Tomada de controle
+Tomada de controle solicitada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001833</LineId>
+      <Text>Reputação com o imperador
+Aumento de 10 de reputação solicitado.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001834</LineId>
+      <Text>Recarga de diplomacia
+Tempos de recarga de diplomacia zerados.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001841</LineId>
+      <Text>Moedas
+Remoção de 100.000 moedas solicitada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001842</LineId>
+      <Text>Todas as mercadorias
+Remoção de 1.000 por mercadoria liberada solicitada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001843</LineId>
+      <Text>Mão de obra
+Redução de mão de obra solicitada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001849</LineId>
+      <Text>Pesquisa atual
+Cancelamento da pesquisa solicitado.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001850</LineId>
+      <Text>Todas as pesquisas
+Reinício de todas as pesquisas solicitado.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001853</LineId>
+      <Text>Reputação com o imperador
+Redução de 10 de reputação solicitada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001901</LineId>
+      <Text>Moedas
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001905</LineId>
+      <Text>Todas as mercadorias
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001906</LineId>
+      <Text>Todas as mercadorias
+Vá a uma ilha sua ou selecione-a.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001909</LineId>
+      <Text>Mão de obra
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001910</LineId>
+      <Text>Mão de obra
+Vá até uma ilha sua.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001911</LineId>
+      <Text>Mão de obra
+Mão de obra indisponível.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001913</LineId>
+      <Text>Custos de construção
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001917</LineId>
+      <Text>Requisitos de melhoria
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001921</LineId>
+      <Text>Fertilidade da fábrica
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001922</LineId>
+      <Text>Fertilidade da fábrica
+Selecione um objeto antes.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001923</LineId>
+      <Text>Fertilidade da fábrica
+Selecione uma fábrica adequada.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001924</LineId>
+      <Text>Fertilidade da fábrica
+Selecione um objeto seu.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001925</LineId>
+      <Text>Recrutamento
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001926</LineId>
+      <Text>Recrutamento
+Selecione um objeto antes.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001927</LineId>
+      <Text>Recrutamento
+Selecione um estaleiro ou prédio de recrutamento seu.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001928</LineId>
+      <Text>Recrutamento
+Selecione um objeto seu.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001929</LineId>
+      <Text>Monumento
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001930</LineId>
+      <Text>Monumento
+Selecione um objeto antes.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001931</LineId>
+      <Text>Monumento
+Selecione um monumento seu.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001932</LineId>
+      <Text>Monumento
+Selecione um objeto seu.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001933</LineId>
+      <Text>Pesquisa atual
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001934</LineId>
+      <Text>Pesquisa atual
+A fila de pesquisa está vazia.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001937</LineId>
+      <Text>Todas as pesquisas
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001941</LineId>
+      <Text>Itens aleatórios
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001942</LineId>
+      <Text>Itens aleatórios
+Vá até uma ilha sua.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001945</LineId>
+      <Text>Tomada de controle
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001946</LineId>
+      <Text>Tomada de controle
+Selecione um objeto antes.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001948</LineId>
+      <Text>Tomada de controle
+Selecione um objeto de outro jogador.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001949</LineId>
+      <Text>Reputação com o imperador
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001950</LineId>
+      <Text>Reputação com o imperador
+Nenhum jogador ativo.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001951</LineId>
+      <Text>Reputação com o imperador
+Nenhum imperador ativo.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001953</LineId>
+      <Text>Recarga de diplomacia
+Falha no truque. Consulte o log.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001954</LineId>
+      <Text>Recarga de diplomacia
+Nenhum jogador ativo.</Text>
+    </Text>
+    <Text>
+      <LineId>1500001955</LineId>
+      <Text>Recarga de diplomacia
+Diplomacia indisponível.</Text>
+    </Text>
+  </ModOp>
 </ModOps>

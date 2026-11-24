@@ -1,6 +1,6 @@
 Anno 117 - Cheat Keybinds (Serp) - Version 1.15.0
 
-1.15.0 changes:
+1.14.0 changes:
 - Reworked controls: select the previous/next cheat, then execute it normally or
   alternatively. All four controls can be rebound in the game settings.
 - New cheats: increase/decrease emperor reputation and reset diplomacy cooldowns.
@@ -8,12 +8,18 @@ Anno 117 - Cheat Keybinds (Serp) - Version 1.15.0
 - Alternative actions: subtract coins or goods, cancel current research,
   and reset all research.
 
+1.15.0 changes:
+- Selection notices show a short effect with a cheat-specific icon.
+- After using a cheat, a larger popup identifies the action or explains the failure.
+- Alt+G still runs the normal action for cheats that have no alternate action.
+
 Bedienung wie im Anno-1800-Mod / Controls as in the Anno 1800 mod:
 - Alt+C: vorherigen Cheat auswählen / select previous cheat (-1)
 - Alt+B: nächsten Cheat auswählen / select next cheat (+1)
 - Alt+V: ausgewählten Cheat normal ausführen / execute selected cheat normally
 - Alt+G: ausgewählten Cheat alternativ ausführen / alternative execution
-Beim Auswählen zeigt die Meldung zuerst die Wirkung, danach kurze Details.
+Beim Auswählen zeigt die Meldung kurz die Wirkung des Cheats.
+Bei der Ausführung zeigt ein größeres Popup die aufgerufene Aktion oder den Fehlergrund.
 Cycling only selects; it never executes a cheat. Selection wraps around at both ends.
 After loading a game, the first cheat (coins) is selected. Selection is not saved.
 
@@ -67,7 +73,7 @@ Context and compatibility:
 - Ownership change can desync multiplayer.
 - No Anno 1800-only cheats, ship buffs, voice lines or neutral-name workaround are ported.
 - Do not enable this package together with WIP or demo copies sharing cheat-keybinds-serp.
-- ModID and mod.io resource ID are retained. Version 1.15.0 follows legacy 1.013.
+- ModID and mod.io resource ID are retained.
 
 Important usage notes:
 - Ignoring building costs can still spend money and cause bankruptcy.
@@ -81,7 +87,7 @@ Important usage notes:
 Implementation and source details: Documentation/mods/cheat-keybinds-audit.md
 
 --------------------------------------------------------------------------
-Historical 1.013 readme follows. Its direct cheat keys are inactive in 1.15.0.
+Historical 1.013 readme follows. Its direct cheat keys are inactive since 1.14.0.
 --------------------------------------------------------------------------
 
 Anno 117
