@@ -18,6 +18,7 @@ Read the Vanilla and shared chapters for native research. Read the Serp mod chap
 | Prepare a local or external Codex chat | [Instructions](../AGENTS.md), [setup](setup.md), [workflow](workflow.md) |
 | Trace a native feature from definition to consumers | [Vanilla audit](vanilla/research.md), [audit template](templates/audit.md) |
 | Package mods, avoid collisions, port a feature | [Loader and porting](foundations/loader-and-porting.md) |
+| Inspect or combine Phoenix HUD resources | [UI inspection](tools/README.md#inspect-phoenix-ui-resources), [HUD compatibility](foundations/loader-and-porting.md#phoenix-hud-compatibility) |
 | Allocate Serp GUIDs or check existing ownership and collisions | [GUID allocation register](mods/guid-allocations.md) |
 | Compare a native system or mod pattern with Anno 1800 | [1800 comparison](vanilla/anno-1800-comparison.md) |
 | Work on scripts, triggers or multiplayer | [Luau and runtime](foundations/luau-and-runtime.md) |

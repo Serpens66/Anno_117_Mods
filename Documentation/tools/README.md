@@ -37,9 +37,18 @@ if ([string]::IsNullOrWhiteSpace($outputPath) -or ![IO.Path]::IsPathFullyQualifi
 & (Join-Path $documentation 'tools/Extract-Anno117.ps1') -RdaExplorerPath $cfg117.rdaExplorerPath -MainDataPath $cfg117.mainDataPath -OutputPath $outputPath
 ```
 
-The filter accepts `.xml`, `.lua`, `.luau` and `.srt`, excluding graphics paths and generated soundbank catalogs. The only added binary path is `data/infotips/export.bin`. The extractor copies its raw bytes alongside the text and script sources and records its winning archive, size and SHA-256 in `anno117-rda-manifest.json`. Text exports from `config.rda` include all shipped language XMLs in that archive. Other media, binaries and UI JSON require a targeted extract. [InfoTip supplement](../vanilla/research.md#infotips-and-other-resources)
+The filter accepts `.xml`, `.lua`, `.luau` and `.srt`, excluding graphics paths and generated soundbank catalogs. The only added binary path is `data/infotips/export.bin`. The extractor copies its raw bytes alongside the text and script sources and records its winning archive, size and SHA-256 in `anno117-rda-manifest.json`. Text exports from `config.rda` include all shipped language XMLs in that archive. Other media, binaries and Phoenix UI resources require a targeted extract. [InfoTip supplement](../vanilla/research.md#infotips-and-other-resources)
 
 Verify representative files and the manifest before replacing the selective files in a live research folder. `current` was pre-existing in this workspace and was updated at paths listed by its manifest; it retains old, unlisted files and shortcuts. For clean research use a fresh extraction or consult the manifest. Do not delete or merge archived materials without checking the destination.
+
+## Inspect Phoenix UI resources
+
+1. Resolve the research inputs from ignored `Documentation/local.json`. List the exact virtual paths under `data/ui/studio/generated/` in the installed archives, including patch archives. Read the effective members in the extractor's container order, recording archive, size and SHA-256. Compare hashes before reusing loose files from an older or selective snapshot. Use a disposable output location for targeted extraction.
+2. Open the installation or a folder of loose files in the Anno Toolbox UI editor. The inspected resources use `PHXSC` for scenes, `PHXWI` for widgets and `PHXIM` for images. For scripted inspection with local Anno Toolbox 0.2.0, use `annotoolbox.formats.phoenix.load_schema`, `phoenixread.load` and inspect the decoded root and bindings. A hex or string scan can locate a name or UUID, while the decoded structure shows its role and references. [Anno Toolbox UI editor](https://github.com/SunnyM00n/anno-toolbox/blob/main/docs/ui-editor.md)
+3. Compare native and mod instance trees and record which UUID-named files are new or same-path replacements. Follow container references to widget and image assets. Resolve event and property IDs against game-object metadata, generated `rdui` stubs and native bindings with the same path. Cross-check the Lua callbacks that read or write those properties.
+4. Before editing, check decode and byte-identical save with `phoenixwrite.save` for the exact inputs. After editing, decode the new output, check intended instance/binding counts and verify endpoints, shared resources and references. A codec round trip or editor preview establishes offline structure. Check runtime behavior separately in an authorized isolated game test.
+
+The [HUD audit](../vanilla/research.md#hud-scene-resources-and-writable-bindings-2026-11-24) applies this method to Inselbar and records the effective native consumers.
 
 ## Checks
 

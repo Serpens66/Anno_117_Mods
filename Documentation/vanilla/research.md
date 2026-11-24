@@ -16,7 +16,7 @@ The selective extraction includes the raw `data/infotips/export.bin`. Confirm it
 
 The **2026-11-10 InfoTip supplement** to the original 3.0 snapshot refreshed the local binary and added its manifest entry. The installed `infotips.rda` supplies 2,394,704 bytes with SHA-256 `e84254fe137deb3c73de90c68737afd06ca2cab70cca9c7e296e56fc84c3200e`. The archive stream, fresh extraction and refreshed local file matched. The XML inspection export was subsequently produced on 2026-11-12 as described below; loader evaluation remains open. [Original baseline receipt](baseline.json) · [Extraction tools](../tools/README.md)
 
-UI Studio JSON, other FileDB containers, model configuration, media and province data need targeted extraction or conversion. Confirm their format and target path on the installed build.
+Generated Phoenix UI files, other FileDB containers, model configuration, media and province data need targeted extraction or conversion. Confirm their format and target path on the installed build. [Phoenix inspection](../tools/README.md#inspect-phoenix-ui-resources)
 
 ## Native XML dialect
 
@@ -33,3 +33,32 @@ InfoTip500664 (SideNotificationInfoTip) contains ElementType25 and TextId -69021
 ### SideNotification hover status (2026-11-12)
 
 The hover experiments, user runtime observations and resulting inference were recorded while developing Serp's Cheat Keybinds. Their tested scope and current package status are maintained with the mod documentation. [Serp's notification observations](../mods/notification-observations.md)
+
+## HUD scene resources and writable bindings (2026-11-24)
+
+A targeted check across all 41 installed PC archive indexes, including `zz_patchfiles_301.rda`, verified the following native resources under `data/ui/studio/generated/`. These three files were byte-identical to the matching files in the local extract. The generated UI resources are binary and sit outside the selective 3.0 manifest.
+
+| Native resource | Archive | Bytes | SHA-256 |
+| --- | --- | ---: | --- |
+| `hudarchivesscene` (`PHXSC`) | `ui.rda` | 1,923 | `16051a905f50cc20948430ad60ec5644bd02327e06f0ee84639b56c966905d15` |
+| `hudgovernorsbarscene` (`PHXSC`) | `ui.rda`, `zz_patchfiles_150.rda` (identical) | 1,332 | `2edf44c9e469794e6d93b572e96bdbaed9ec12589c4c0fc822257ff567a2a8d6` |
+| `df80c10b-e116-4fc7-a0e7-5495ac9a731d` (`PHXWI`, `Good_Atom`) | `ui.rda` | 1,828 | `c7e96596632d6b2c57ed3b4a02a455d61af836eb9be3de125ab09d24ea473fba` |
+
+The installed `script.rda` stubs under `data/script/types/generated/rdui/gameobjects/` expose string getters and setters for `NotificationArchiveTabsData.CurrentTabName` and `HUDGovernorsBar_LocationData.Second_Third_PartyName`. The corresponding scene data paths are `HUDArchives.SceneData.NotificationArchive.NotificationArchiveTabs` and `HUDGovernorsBar.HUDGovernorsBarData.IslandData.SecondAndThirdPartyData`. `DragSceneObject.LoadingData` exposes the active drag data. The `rdgs/careaeconomyluabindings.lua` stub exposes `GetStorageAmount(productGUID)`.
+
+The working Lua fields have native consumers. These additional effective resources were checked against the installed archives before inspecting their decoded graphs.
+
+| Native resource under `data/ui/studio/generated/` | Effective archive | Observed consumer |
+| --- | --- | --- |
+| `ebe57eed-b91b-49bf-868b-2df9ed8bbe1d` | `ui.rda` | The notification archive reads the `CurrentTabName` binding path to display the tab name. |
+| `105abc85-7a2a-4d9c-a692-12116b4d9184` | `zz_patchfiles_300.rda` | The island HUD binds `Second_Third_PartyName` to the second/third-party label `H02.Text`. |
+| `d3b4a81c-cbd4-464f-9939-b621eb94a8c8` | `zz_patchfiles_300.rda` | The native DropZone template binds `DropZone.DropSuccessful` to its success sound. |
+| `90cab494-fd20-409d-a168-93b64492c76c` | `zz_patchfiles_300.rda` | The native Pin widget uses the same DropZone template and event in its own bindings, including a `DropZone_DS_Entry` instance. |
+
+The patch300 entries differ from the legacy loose copies. Compare the effective archive members even when the path and byte length match the loose copy. Installed `script.rda` also supplies `types/ui.lua` and `types/phoenix.lua`. A name search across all 2,554 effective installed Lua/Luau files for widget creation, mounting and scene registration found the `CCheatBindings.ReloadUI` declaration, whose signature establishes a reload call. A widget or scene registration entry point remains unverified. The 41 archive indexes contained no XML or JSON under `data/ui/studio/generated/`. Some patch archives ship Studio JSON separately under `data/ui/studio/scenes/` for other scenes. Neither HUD scene had a matching Studio JSON file in those indexes.
+
+The local Anno Toolbox 0.2.0 Phoenix reader decoded the three native files listed with hashes and all five package files to the end with no unknown types reported. [Phoenix inspection](../tools/README.md#inspect-phoenix-ui-resources)
+
+In the external reference package `inselbar-tooltip-pin` 0.4.25, the two same-path scene replacements split the display and drop handling. The mod archive scene places a new `PHXWI` widget, `2e71e482-c681-5497-82e6-89da1b1c7c71`, with an HTML-enabled label and a new `PHXIM` image resource for its five empty slots. The archive scene passes its data binding into a custom widget property, which feeds the label. The mod governor scene contains five instances of the native `DropZone` widget. Their `DropSuccessful` events run `EventAssign` bindings that write the zero-width marker strings expected by the mod's Tick script. The script reads drag data and uses the governor string for drop signalling. It uses the archive tab-name string to pass a rich-text row to the UI, yielding the field while the notification archive is open. The widget renders goods and quantities as one formatted row. The two new UUID-named resources were absent across the 41 native archive indexes. The package also replaces the native `Good_Atom` widget `df80c10b-e116-4fc7-a0e7-5495ac9a731d`, changing only its fixed and proportional pivot and child position. Include this shared resource in conflict checks. [HUD compatibility](../foundations/loader-and-porting.md#phoenix-hud-compatibility)
+
+The installed `infotips.rda` payload differs from the 3.0 snapshot. FileDBReader 3.0.3 with compression version 2 and the `infotip_117.xml` interpreter decoded one entry each for `500038`, `25000020`, `24252` and `501001`. The reference package's four InfoTip operations target these existing entries separately from the HUD scene changes. Selector counts are from the inspection representation.
