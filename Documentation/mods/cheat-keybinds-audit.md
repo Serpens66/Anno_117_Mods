@@ -324,6 +324,17 @@ The user clarified that the selected production building's required fertility is
 
 The user also observed that ResetAllActionCooldownsNet caused an active non-aggression pact to expire. The installed diplomacy binding and native cheat script establish the call but do not enumerate every affected timed effect. The description therefore mentions the observed pact behavior and removes the previous assertion about other restrictions. Both observations are scoped to the tested 1.15.0 context.
 
+## 1.15.0 goods and emperor reputation portraits (2026-11-24)
+
+The user's screenshots identify the open-sided goods crate and the laurel-wreathed profile. The installed 3.0.1 archive set resolves both textures in `ui.rda`.
+
+| Portrait PNG | Vanilla source under `data/ui/4k/base/icon_content/` | Vanilla icon reference |
+| --- | --- | --- |
+| `goods.png` | `generic/icon_2d_generic_goods_0.dds` | `64657`, `71039` |
+| `emperor.png` | `diplomacy/icon_2d_reputation_0.dds` | `54256` |
+
+Both motifs use a transparent 512 × 512 canvas and retain the established horizontal centering and bottom alignment. The two portraits keep their existing file references and GUIDs. The other 12 PNGs match their pre-change hashes. The structural checker passes against the installed Vanilla archive extraction including patch archive 301. In-game portrait rendering for these two replacements remains unverified.
+
 ## Historical installation observations (2026-11-12)
 
 Moved from the general setup page during the 2026-11-13 portability review. The following observations retain their original dates, package versions and evidence limits. Current-machine verification follows the setup procedure. [Verification procedure](../setup.md#verify-installation-and-startup-activation)
