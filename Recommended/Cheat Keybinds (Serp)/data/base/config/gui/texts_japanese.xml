@@ -199,172 +199,192 @@ The current island workforce manager is invalid.</Text>
     <Text>
       <LineId>1500001801</LineId>
       <Text>コイン
-コイン±100,000枚</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+100,000
+{(function(s) if not s or not s.gsub or not s.find then return "代替: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "代替: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-100,000
+破産の恐れあり。</Text>
     </Text>
     <Text>
       <LineId>1500001802</LineId>
-      <Text>すべての商品
-解放済みの商品を各±1,000個</Text>
+      <Text>解放済みの全商品
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+1000
+{(function(s) if not s or not s.gsub or not s.find then return "代替: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "代替: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-1000
+自分の島が対象。</Text>
     </Text>
     <Text>
       <LineId>1500001803</LineId>
       <Text>労働力
-増やす／減らす</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+500
+{(function(s) if not s or not s.gsub or not s.find then return "代替: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "代替: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-500
+現在いる自分の島が対象。</Text>
     </Text>
     <Text>
       <LineId>1500001804</LineId>
       <Text>建設コスト
-建材チェックを切り替え</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}建材チェックを切り替え
+費用が引かれる場合あり。
+破産の恐れあり。</Text>
     </Text>
     <Text>
       <LineId>1500001805</LineId>
       <Text>アップグレード条件
-アップグレード条件を切り替え</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}条件チェックを切り替え</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
       <Text>工場の肥沃度
-肥沃度条件を切り替え</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}肥沃度条件を切り替え
+自分の工場が対象。</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
       <Text>ユニット募集
-進行中の募集を完了</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}生産中の船やユニットを完成
+自分の造船所か募集施設が対象。</Text>
     </Text>
     <Text>
       <LineId>1500001808</LineId>
       <Text>モニュメント
-建設を進める</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}建設段階の一部を進行
+自分のモニュメントが対象。</Text>
     </Text>
     <Text>
       <LineId>1500001809</LineId>
       <Text>進行中の研究
-完了／中止</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}研究を完了
+{(function(s) if not s or not s.gsub or not s.find then return "代替: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "代替: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}研究を中止
+キューの先頭が対象。</Text>
     </Text>
     <Text>
       <LineId>1500001810</LineId>
       <Text>すべての研究
-完了／リセット</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}全技術を研究
+{(function(s) if not s or not s.gsub or not s.find then return "代替: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "代替: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}すべてリセット</Text>
     </Text>
     <Text>
       <LineId>1500001811</LineId>
       <Text>ランダムなアイテム
-アイテムを追加</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}アイテムを追加
+現在いる自分の島が対象。</Text>
     </Text>
     <Text>
       <LineId>1500001812</LineId>
       <Text>支配権の取得
-対象物や島を奪取</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}他者の物件を取得
+交易所か邸宅なら島全体。
+マルチプレイで同期ずれの恐れあり。</Text>
     </Text>
     <Text>
       <LineId>1500001813</LineId>
       <Text>皇帝からの評判
-評判±10</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+10
+{(function(s) if not s or not s.gsub or not s.find then return "代替: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "代替: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-10
+現在の皇帝が対象。</Text>
     </Text>
     <Text>
       <LineId>1500001814</LineId>
-      <Text>外交クールダウン
-クールダウンをリセット</Text>
+      <Text>外交
+{(function(s) if not s or not s.gsub or not s.find then return "通常: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "通常: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}自分のクールダウンをリセット
+他の制限は引き続き適用。</Text>
     </Text>
     <Text>
       <LineId>1500001821</LineId>
       <Text>コイン
-コイン100,000枚の追加を要求しました。</Text>
+コインを追加しました</Text>
     </Text>
     <Text>
       <LineId>1500001822</LineId>
       <Text>すべての商品
-解放済みの商品を各1,000個追加するよう要求しました。</Text>
+商品を追加しました</Text>
     </Text>
     <Text>
       <LineId>1500001823</LineId>
       <Text>労働力
-労働力の増加を要求しました。</Text>
+労働力を増やしました</Text>
     </Text>
     <Text>
       <LineId>1500001824</LineId>
       <Text>建設コスト
-建材のチェックを切り替えました。</Text>
+建材チェックを切り替えました</Text>
     </Text>
     <Text>
       <LineId>1500001825</LineId>
       <Text>アップグレード条件
-アップグレード条件のチェックを切り替えました。</Text>
+アップグレード条件を切り替えました</Text>
     </Text>
     <Text>
       <LineId>1500001826</LineId>
       <Text>工場の肥沃度
-肥沃度の条件を切り替えました。</Text>
+肥沃度条件を切り替えました</Text>
     </Text>
     <Text>
       <LineId>1500001827</LineId>
       <Text>ユニット募集
-募集の完了を要求しました。</Text>
+募集を完了しました</Text>
     </Text>
     <Text>
       <LineId>1500001828</LineId>
       <Text>モニュメント
-建設を進めました。</Text>
+モニュメントの建設を進めました</Text>
     </Text>
     <Text>
       <LineId>1500001829</LineId>
       <Text>進行中の研究
-研究の完了を要求しました。</Text>
+研究を完了しました</Text>
     </Text>
     <Text>
       <LineId>1500001830</LineId>
       <Text>すべての研究
-すべての研究の完了を要求しました。</Text>
+全技術を研究しました</Text>
     </Text>
     <Text>
       <LineId>1500001831</LineId>
       <Text>ランダムなアイテム
-ランダムなアイテムを要求しました。</Text>
+ランダムなアイテムを追加しました</Text>
     </Text>
     <Text>
       <LineId>1500001832</LineId>
       <Text>支配権の取得
-支配権の取得を要求しました。</Text>
+支配権を取得しました</Text>
     </Text>
     <Text>
       <LineId>1500001833</LineId>
       <Text>皇帝からの評判
-評判を10上げるよう要求しました。</Text>
+皇帝からの評判が上がりました</Text>
     </Text>
     <Text>
       <LineId>1500001834</LineId>
       <Text>外交クールダウン
-外交クールダウンをリセットしました。</Text>
+外交クールダウンをリセットしました</Text>
     </Text>
     <Text>
       <LineId>1500001841</LineId>
       <Text>コイン
-コイン100,000枚の削除を要求しました。</Text>
+コインを差し引きました</Text>
     </Text>
     <Text>
       <LineId>1500001842</LineId>
       <Text>すべての商品
-解放済みの商品を各1,000個減らすよう要求しました。</Text>
+商品を差し引きました</Text>
     </Text>
     <Text>
       <LineId>1500001843</LineId>
       <Text>労働力
-労働力の減少を要求しました。</Text>
+労働力を減らしました</Text>
     </Text>
     <Text>
       <LineId>1500001849</LineId>
       <Text>進行中の研究
-研究の中止を要求しました。</Text>
+研究を中止しました</Text>
     </Text>
     <Text>
       <LineId>1500001850</LineId>
       <Text>すべての研究
-すべての研究のリセットを要求しました。</Text>
+研究をリセットしました</Text>
     </Text>
     <Text>
       <LineId>1500001853</LineId>
       <Text>皇帝からの評判
-評判を10下げるよう要求しました。</Text>
+皇帝からの評判が下がりました</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

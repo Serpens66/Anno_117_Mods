@@ -199,172 +199,192 @@ The current island workforce manager is invalid.</Text>
     <Text>
       <LineId>1500001801</LineId>
       <Text>코인
-코인 ±100,000개</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+100,000
+{(function(s) if not s or not s.gsub or not s.find then return "대체: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "대체: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-100,000
+파산 위험이 있습니다.</Text>
     </Text>
     <Text>
       <LineId>1500001802</LineId>
-      <Text>모든 상품
-잠금 해제 상품마다 ±1,000개</Text>
+      <Text>해제된 모든 상품
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+1000
+{(function(s) if not s or not s.gsub or not s.find then return "대체: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "대체: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-1000
+내 섬에 적용됩니다.</Text>
     </Text>
     <Text>
       <LineId>1500001803</LineId>
       <Text>노동력
-증가 / 감소</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+500
+{(function(s) if not s or not s.gsub or not s.find then return "대체: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "대체: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-500
+현재 내 섬에 적용됩니다.</Text>
     </Text>
     <Text>
       <LineId>1500001804</LineId>
       <Text>건설 비용
-건축 자재 확인 전환</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}건축 자재 확인 전환
+비용이 차감될 수 있습니다.
+파산 위험이 있습니다.</Text>
     </Text>
     <Text>
       <LineId>1500001805</LineId>
       <Text>업그레이드 조건
-업그레이드 조건 확인 전환</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}조건 확인 전환</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
       <Text>공장 비옥도
-비옥도 조건 확인 전환</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}비옥도 조건 전환
+내 공장에 적용됩니다.</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
       <Text>모집
-진행 중인 생산 완료</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}생산 중인 선박이나 유닛 완료
+내 조선소나 모집 시설에 적용됩니다.</Text>
     </Text>
     <Text>
       <LineId>1500001808</LineId>
       <Text>기념물
-건설 진행</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}건설 단계 일부 진행
+내 기념물에 적용됩니다.</Text>
     </Text>
     <Text>
       <LineId>1500001809</LineId>
       <Text>진행 중인 연구
-완료 / 취소</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}연구 완료
+{(function(s) if not s or not s.gsub or not s.find then return "대체: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "대체: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}연구 취소
+대기열 첫 연구에 적용됩니다.</Text>
     </Text>
     <Text>
       <LineId>1500001810</LineId>
       <Text>모든 연구
-완료 / 초기화</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}모두 연구
+{(function(s) if not s or not s.gsub or not s.find then return "대체: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "대체: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}모두 초기화</Text>
     </Text>
     <Text>
       <LineId>1500001811</LineId>
       <Text>무작위 아이템
-아이템 추가</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}아이템 추가
+현재 내 섬에 적용됩니다.</Text>
     </Text>
     <Text>
       <LineId>1500001812</LineId>
       <Text>소유권 인수
-대상이나 섬 인수</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}다른 소유자의 대상 인수
+교역소나 저택은 섬 전체를 인수합니다.
+멀티플레이 동기화가 어긋날 수 있습니다.</Text>
     </Text>
     <Text>
       <LineId>1500001813</LineId>
       <Text>황제 평판
-평판 ±10</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+10
+{(function(s) if not s or not s.gsub or not s.find then return "대체: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "대체: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-10
+현재 황제에게 적용됩니다.</Text>
     </Text>
     <Text>
       <LineId>1500001814</LineId>
-      <Text>외교 재사용 대기시간
-재사용 대기시간 초기화</Text>
+      <Text>외교
+{(function(s) if not s or not s.gsub or not s.find then return "기본: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "기본: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}내 재사용 대기시간 초기화
+다른 제한은 그대로 적용됩니다.</Text>
     </Text>
     <Text>
       <LineId>1500001821</LineId>
       <Text>코인
-코인 100,000개 추가를 요청했습니다.</Text>
+코인을 추가했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001822</LineId>
       <Text>모든 상품
-잠금 해제된 상품마다 1,000개 추가를 요청했습니다.</Text>
+상품을 추가했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001823</LineId>
       <Text>노동력
-노동력 증가를 요청했습니다.</Text>
+노동력을 늘렸습니다</Text>
     </Text>
     <Text>
       <LineId>1500001824</LineId>
       <Text>건설 비용
-건축 자재 확인을 전환했습니다.</Text>
+건축 자재 확인을 전환했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001825</LineId>
       <Text>업그레이드 조건
-업그레이드 조건 확인을 전환했습니다.</Text>
+업그레이드 조건 확인을 전환했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001826</LineId>
       <Text>공장 비옥도
-비옥도 조건 확인을 전환했습니다.</Text>
+비옥도 조건을 전환했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001827</LineId>
       <Text>모집
-모집 완료를 요청했습니다.</Text>
+모집을 완료했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001828</LineId>
       <Text>기념물
-건설을 진행했습니다.</Text>
+기념물 건설을 진행했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001829</LineId>
       <Text>진행 중인 연구
-연구 완료를 요청했습니다.</Text>
+연구를 완료했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001830</LineId>
       <Text>모든 연구
-모든 연구 완료를 요청했습니다.</Text>
+모든 기술을 연구했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001831</LineId>
       <Text>무작위 아이템
-무작위 아이템을 요청했습니다.</Text>
+무작위 아이템을 추가했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001832</LineId>
       <Text>소유권 인수
-소유권 인수를 요청했습니다.</Text>
+소유권을 인수했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001833</LineId>
       <Text>황제 평판
-평판 10 증가를 요청했습니다.</Text>
+황제 평판이 올랐습니다</Text>
     </Text>
     <Text>
       <LineId>1500001834</LineId>
       <Text>외교 재사용 대기시간
-외교 재사용 대기시간을 초기화했습니다.</Text>
+외교 재사용 대기시간을 초기화했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001841</LineId>
       <Text>코인
-코인 100,000개 차감을 요청했습니다.</Text>
+코인을 차감했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001842</LineId>
       <Text>모든 상품
-잠금 해제된 상품마다 1,000개 차감을 요청했습니다.</Text>
+상품을 차감했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001843</LineId>
       <Text>노동력
-노동력 감소를 요청했습니다.</Text>
+노동력을 줄였습니다</Text>
     </Text>
     <Text>
       <LineId>1500001849</LineId>
       <Text>진행 중인 연구
-연구 취소를 요청했습니다.</Text>
+연구를 취소했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001850</LineId>
       <Text>모든 연구
-모든 연구 초기화를 요청했습니다.</Text>
+연구를 초기화했습니다</Text>
     </Text>
     <Text>
       <LineId>1500001853</LineId>
       <Text>황제 평판
-평판 10 감소를 요청했습니다.</Text>
+황제 평판이 내렸습니다</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

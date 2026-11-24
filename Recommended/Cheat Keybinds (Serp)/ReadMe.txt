@@ -9,24 +9,27 @@ Anno 117 - Cheat Keybinds (Serp) - Version 1.15.0
   and reset all research.
 
 1.15.0 changes:
-- Selection notices show a short effect with a cheat-specific icon.
-- After using a cheat, a larger popup identifies the action or explains the failure.
+- Selecting a cheat previews its effects and shows the current execution shortcuts.
+- Executing a cheat shows a brief confirmation or error in the same popup format.
 - Alt+G still runs the normal action for cheats that have no alternate action.
+- Character popups use a six-second minimum display setting, including base-game character notices.
 
 Bedienung wie im Anno-1800-Mod / Controls as in the Anno 1800 mod:
 - Alt+C: vorherigen Cheat auswählen / select previous cheat (-1)
 - Alt+B: nächsten Cheat auswählen / select next cheat (+1)
 - Alt+V: ausgewählten Cheat normal ausführen / execute selected cheat normally
 - Alt+G: ausgewählten Cheat alternativ ausführen / alternative execution
-Beim Auswählen zeigt die Meldung kurz die Wirkung des Cheats.
-Bei der Ausführung zeigt ein größeres Popup die aufgerufene Aktion oder den Fehlergrund.
+Das Popup beim Auswählen erklärt Wirkung und Voraussetzungen des Cheats.
+Bei der Ausführung erscheint eine kurze Bestätigung oder Fehlermeldung.
+The selection popup explains the cheat's effects and requirements. Execution
+shows a short confirmation or error.
 Cycling only selects; it never executes a cheat. Selection wraps around at both ends.
 After loading a game, the first cheat (coins) is selected. Selection is not saved.
 
 Cheat-Auswahl / Cheat selection:
  1. Münzen +100.000 / alternativ -100.000 / Coins +100,000 / alternative -100,000
  2. Alle Güter hinzufügen / abziehen / Add / deduct all unlocked goods
- 3. Arbeitskräfte erhöhen / senken / Increase / decrease workforce
+ 3. Arbeitskräfte +500 / alternativ -500 / Workforce +500 / alternative -500
  4. Baukosten ignorieren Ein/Aus / Ignore building costs toggle
  5. Ausbauten erlauben Ein/Aus / Allow upgrades toggle
  6. Fruchtbarkeit der angewählten Fabrik / Selected factory fertility toggle
@@ -81,7 +84,6 @@ Important usage notes:
 - Cancelling current research does not promise a refund.
 - Coin/goods subtraction is available, but its behavior at low balances has not
   been confirmed in game. Keep a separate save before using it.
-- This mod also reduces the initial display delay of ordinary game side notices.
 - Existing saved key assignments are preserved; change them in Controls if needed.
 
 Implementation and source details: Documentation/mods/cheat-keybinds-audit.md

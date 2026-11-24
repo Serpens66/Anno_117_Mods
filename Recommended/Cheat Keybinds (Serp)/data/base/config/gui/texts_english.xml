@@ -199,172 +199,193 @@ The current island workforce manager is invalid.</Text>
     <Text>
       <LineId>1500001801</LineId>
       <Text>Coins
-±100,000 coins</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+100,000
+{(function(s) if not s or not s.gsub or not s.find then return "Alternative: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternative: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-100,000
+Risk of bankruptcy.</Text>
     </Text>
     <Text>
       <LineId>1500001802</LineId>
-      <Text>All goods
-±1,000 per unlocked good</Text>
+      <Text>All unlocked goods
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+1000
+{(function(s) if not s or not s.gsub or not s.find then return "Alternative: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternative: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-1000
+Owned island.</Text>
     </Text>
     <Text>
       <LineId>1500001803</LineId>
       <Text>Workforce
-Increase / decrease</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+500
+{(function(s) if not s or not s.gsub or not s.find then return "Alternative: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternative: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-500
+Current owned island.</Text>
     </Text>
     <Text>
       <LineId>1500001804</LineId>
       <Text>Building costs
-Toggle material checks</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Toggle material checks
+Costs may still apply.
+Risk of bankruptcy.</Text>
     </Text>
     <Text>
       <LineId>1500001805</LineId>
       <Text>Upgrade requirements
-Toggle upgrade checks</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Toggle upgrade checks</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
       <Text>Factory fertility
-Toggle fertility checks</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Toggle fertility requirement
+Factory you own.</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
       <Text>Recruitment
-Finish current production</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Finish current ship or unit
+Your shipyard or
+recruitment building.</Text>
     </Text>
     <Text>
       <LineId>1500001808</LineId>
       <Text>Monument
-Advance construction</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Advance part of the phase
+Monument you own.</Text>
     </Text>
     <Text>
       <LineId>1500001809</LineId>
       <Text>Current research
-Complete / cancel</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Complete research
+{(function(s) if not s or not s.gsub or not s.find then return "Alternative: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternative: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}Cancel research
+First entry in the queue.</Text>
     </Text>
     <Text>
       <LineId>1500001810</LineId>
       <Text>All research
-Complete / reset</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Research all
+{(function(s) if not s or not s.gsub or not s.find then return "Alternative: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternative: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}Reset all</Text>
     </Text>
     <Text>
       <LineId>1500001811</LineId>
       <Text>Random items
-Add items</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Add items
+Current owned island.</Text>
     </Text>
     <Text>
       <LineId>1500001812</LineId>
       <Text>Takeover
-Take over an object or island</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Take over a foreign object
+Trading post or villa: whole island.
+May desync multiplayer.</Text>
     </Text>
     <Text>
       <LineId>1500001813</LineId>
       <Text>Emperor reputation
-±10 reputation</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+10
+{(function(s) if not s or not s.gsub or not s.find then return "Alternative: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternative: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-10
+Current emperor.</Text>
     </Text>
     <Text>
       <LineId>1500001814</LineId>
-      <Text>Diplomacy cooldowns
-Reset cooldowns</Text>
+      <Text>Diplomacy
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Reset your cooldowns
+Other restrictions still apply.</Text>
     </Text>
     <Text>
       <LineId>1500001821</LineId>
       <Text>Coins
-+100,000 coins requested.</Text>
+Coins added</Text>
     </Text>
     <Text>
       <LineId>1500001822</LineId>
       <Text>All goods
-+1,000 per unlocked good requested.</Text>
+Goods added</Text>
     </Text>
     <Text>
       <LineId>1500001823</LineId>
       <Text>Workforce
-Workforce increase requested.</Text>
+Workforce increased</Text>
     </Text>
     <Text>
       <LineId>1500001824</LineId>
       <Text>Building costs
-Material checks toggled.</Text>
+Material checks toggled</Text>
     </Text>
     <Text>
       <LineId>1500001825</LineId>
       <Text>Upgrade requirements
-Upgrade checks toggled.</Text>
+Upgrade checks toggled</Text>
     </Text>
     <Text>
       <LineId>1500001826</LineId>
       <Text>Factory fertility
-Fertility requirement toggled.</Text>
+Fertility requirement toggled</Text>
     </Text>
     <Text>
       <LineId>1500001827</LineId>
       <Text>Recruitment
-Recruitment completion requested.</Text>
+Recruitment completed</Text>
     </Text>
     <Text>
       <LineId>1500001828</LineId>
       <Text>Monument
-Construction advanced.</Text>
+Monument construction advanced</Text>
     </Text>
     <Text>
       <LineId>1500001829</LineId>
       <Text>Current research
-Research completion requested.</Text>
+Research completed</Text>
     </Text>
     <Text>
       <LineId>1500001830</LineId>
       <Text>All research
-Completion of all research requested.</Text>
+All technologies researched</Text>
     </Text>
     <Text>
       <LineId>1500001831</LineId>
       <Text>Random items
-Random items requested.</Text>
+Random items added</Text>
     </Text>
     <Text>
       <LineId>1500001832</LineId>
       <Text>Takeover
-Takeover requested.</Text>
+Takeover executed</Text>
     </Text>
     <Text>
       <LineId>1500001833</LineId>
       <Text>Emperor reputation
-Reputation increase of 10 requested.</Text>
+Emperor reputation increased</Text>
     </Text>
     <Text>
       <LineId>1500001834</LineId>
       <Text>Diplomacy cooldowns
-Diplomacy cooldowns reset.</Text>
+Diplomacy cooldowns reset</Text>
     </Text>
     <Text>
       <LineId>1500001841</LineId>
       <Text>Coins
-−100,000 coins requested.</Text>
+Coins deducted</Text>
     </Text>
     <Text>
       <LineId>1500001842</LineId>
       <Text>All goods
-−1,000 per unlocked good requested.</Text>
+Goods deducted</Text>
     </Text>
     <Text>
       <LineId>1500001843</LineId>
       <Text>Workforce
-Workforce decrease requested.</Text>
+Workforce decreased</Text>
     </Text>
     <Text>
       <LineId>1500001849</LineId>
       <Text>Current research
-Cancellation requested.</Text>
+Research canceled</Text>
     </Text>
     <Text>
       <LineId>1500001850</LineId>
       <Text>All research
-Reset of all research requested.</Text>
+Research reset</Text>
     </Text>
     <Text>
       <LineId>1500001853</LineId>
       <Text>Emperor reputation
-Reputation decrease of 10 requested.</Text>
+Emperor reputation decreased</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

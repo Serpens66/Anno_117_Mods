@@ -489,16 +489,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>38172</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001321</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001801</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -507,7 +503,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -547,16 +543,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>501934</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001322</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001802</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -565,7 +557,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -605,16 +597,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>38966</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001323</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001803</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -623,7 +611,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -663,16 +651,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001804</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -681,7 +665,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -721,16 +705,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>29282</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001325</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001805</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -739,7 +719,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -779,16 +759,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>151458</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001326</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001806</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -797,7 +773,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -837,16 +813,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>501372</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001327</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001807</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -855,7 +827,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -895,16 +867,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>501377</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001328</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001808</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -913,7 +881,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -953,16 +921,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>126203</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001329</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001809</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -971,7 +935,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1011,16 +975,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>37766</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001330</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001810</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1029,7 +989,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1069,16 +1029,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>68768</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001331</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001811</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1087,7 +1043,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1127,16 +1083,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>501358</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001332</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001812</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1145,7 +1097,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1185,16 +1137,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001243</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1203,7 +1151,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1243,16 +1191,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001244</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1261,7 +1205,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1302,16 +1246,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>501355</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001333</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001813</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1320,7 +1260,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1360,16 +1300,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>501369</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001334</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001814</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1378,7 +1314,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1499,16 +1435,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001280</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1517,7 +1449,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1557,16 +1489,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001281</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1575,7 +1503,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1615,16 +1543,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001282</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1633,7 +1557,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1673,16 +1597,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001283</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1691,7 +1611,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1731,16 +1651,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001284</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1749,7 +1665,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1789,16 +1705,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001285</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1807,7 +1719,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1847,16 +1759,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001286</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1865,7 +1773,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1905,16 +1813,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001287</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1923,7 +1827,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -1963,16 +1867,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001288</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -1981,7 +1881,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -2021,16 +1921,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001289</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -2039,7 +1935,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -2079,16 +1975,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001290</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -2097,7 +1989,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -2137,16 +2029,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001291</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -2155,7 +2043,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -2195,16 +2083,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001292</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -2213,7 +2097,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -2253,16 +2137,12 @@
                   <Action/>
                   <ActionNotification>
                     <Notification>
-                      <Template>SideNotification</Template>
+                      <Template>CharacterNotification</Template>
                       <Values>
-                        <SideNotification>
-                          <IconAsset>500271</IconAsset>
-                          <NotificationSideTitle>1500000000</NotificationSideTitle>
-                          <HasJumpLocation>0</HasJumpLocation>
+                        <CharacterNotification>
+                          <Profile>1500001324</Profile>
                           <IsArchivable>0</IsArchivable>
-                          <IsSilent>0</IsSilent>
-                          <Infotip>0</Infotip>
-                        </SideNotification>
+                        </CharacterNotification>
                         <BaseNotification>
                           <NotificationText>1500001293</NotificationText>
                           <NotificationTopic>Progress</NotificationTopic>
@@ -2271,7 +2151,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -2851,7 +2731,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -2905,7 +2785,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -2959,7 +2839,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3013,7 +2893,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3067,7 +2947,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3121,7 +3001,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3175,7 +3055,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3229,7 +3109,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3283,7 +3163,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3337,7 +3217,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3391,7 +3271,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3445,7 +3325,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3499,7 +3379,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3553,7 +3433,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3607,7 +3487,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3661,7 +3541,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3715,7 +3595,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3769,7 +3649,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3823,7 +3703,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3877,7 +3757,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3931,7 +3811,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -3985,7 +3865,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4039,7 +3919,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4093,7 +3973,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4147,7 +4027,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4201,7 +4081,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4255,7 +4135,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4309,7 +4189,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4363,7 +4243,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4417,7 +4297,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4471,7 +4351,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4525,7 +4405,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4579,7 +4459,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4633,7 +4513,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4687,7 +4567,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4741,7 +4621,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4795,7 +4675,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4849,7 +4729,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4903,7 +4783,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -4957,7 +4837,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5011,7 +4891,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5065,7 +4945,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5119,7 +4999,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5173,7 +5053,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5227,7 +5107,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5281,7 +5161,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5335,7 +5215,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5389,7 +5269,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5443,7 +5323,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5497,7 +5377,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5551,7 +5431,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5605,7 +5485,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5659,7 +5539,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5713,7 +5593,7 @@
                           <NotificationGroupBlockingTime>0</NotificationGroupBlockingTime>
                           <ReEnterQueueIfInterrupted>0</ReEnterQueueIfInterrupted>
                           <NotificationQueueTimeoutOverwrite>0</NotificationQueueTimeoutOverwrite>
-                          <IsUnique>1</IsUnique>
+                          <IsUnique>0</IsUnique>
                         </BaseNotification>
                         <NotificationSubtitle/>
                       </Values>
@@ -5737,8 +5617,8 @@
       <Text>1500001248</Text>
     </ModOp>
   </Group>
-  <!-- Global Side notification start delay: affects ordinary game side notices too. -->
-  <ModOp Type="merge" GUID="25000040" Path="/Values/NotificationConfiguration/NotificationTypeArray/Side">
-    <Delay>0</Delay>
+  <!-- This six-second minimum applies to all CharacterNotification popups, including base-game messages. -->
+  <ModOp Type="merge" GUID="25000040" Path="/Values/NotificationConfiguration/NotificationTypeArray/Character">
+    <MinDisplayTime>6000</MinDisplayTime>
   </ModOp>
 </ModOps>

@@ -199,172 +199,193 @@ Der Arbeitskräftemanager der aktuellen Insel ist nicht gültig.</Text>
     <Text>
       <LineId>1500001801</LineId>
       <Text>Münzen
-±100.000 Münzen</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+100.000
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativ: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativ: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-100.000
+Bankrott möglich.</Text>
     </Text>
     <Text>
       <LineId>1500001802</LineId>
-      <Text>Alle Waren
-±1.000 je freigeschalteter Ware</Text>
+      <Text>Alle freigeschalteten Waren
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+1000
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativ: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativ: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-1000
+Eigene Insel.</Text>
     </Text>
     <Text>
       <LineId>1500001803</LineId>
       <Text>Arbeitskräfte
-Erhöhen / senken</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+500
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativ: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativ: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-500
+Aktuelle eigene Insel.</Text>
     </Text>
     <Text>
       <LineId>1500001804</LineId>
       <Text>Baukosten
-Materialprüfung umschalten</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Materialprüfung umschalten
+Kosten können anfallen.
+Bankrott möglich.</Text>
     </Text>
     <Text>
       <LineId>1500001805</LineId>
       <Text>Ausbauvoraussetzungen
-Ausbauprüfung umschalten</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Ausbauprüfung umschalten</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
       <Text>Fabrikfruchtbarkeit
-Fruchtbarkeitsprüfung umschalten</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Fruchtbarkeitsprüfung umschalten
+Eigener Betrieb.</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
       <Text>Rekrutierung
-Laufende Produktion abschließen</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Schiff oder Einheit fertigstellen
+Eigene Werft oder
+Rekrutierungsstätte.</Text>
     </Text>
     <Text>
       <LineId>1500001808</LineId>
       <Text>Monument
-Bau voranbringen</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Teil der Bauphase voranbringen
+Eigenes Monument.</Text>
     </Text>
     <Text>
       <LineId>1500001809</LineId>
       <Text>Aktuelle Forschung
-Abschließen / abbrechen</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Forschung abschließen
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativ: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativ: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}Forschung abbrechen
+Erster Eintrag der Warteschlange.</Text>
     </Text>
     <Text>
       <LineId>1500001810</LineId>
       <Text>Alle Forschungen
-Abschließen / zurücksetzen</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Alles erforschen
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativ: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativ: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}Alles zurücksetzen</Text>
     </Text>
     <Text>
       <LineId>1500001811</LineId>
       <Text>Zufällige Items
-Items hinzufügen</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Hinzufügen
+Aktuelle eigene Insel.</Text>
     </Text>
     <Text>
       <LineId>1500001812</LineId>
       <Text>Übernahme
-Objekt oder Insel übernehmen</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Fremdes Objekt übernehmen
+Kontor oder Villa: ganze Insel.
+MP-Desync möglich.</Text>
     </Text>
     <Text>
       <LineId>1500001813</LineId>
       <Text>Ruf beim Kaiser
-±10 Ruf</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+10
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativ: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativ: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-10
+Aktueller Kaiser.</Text>
     </Text>
     <Text>
       <LineId>1500001814</LineId>
-      <Text>Diplomatie-Abklingzeiten
-Abklingzeiten zurücksetzen</Text>
+      <Text>Diplomatie
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Eigene Abklingzeiten zurücksetzen
+Andere Sperrgründe bleiben.</Text>
     </Text>
     <Text>
       <LineId>1500001821</LineId>
       <Text>Münzen
-+100.000 Münzen angefordert.</Text>
+Münzen hinzugefügt</Text>
     </Text>
     <Text>
       <LineId>1500001822</LineId>
       <Text>Alle Waren
-+1.000 je freigeschalteter Ware angefordert.</Text>
+Waren hinzugefügt</Text>
     </Text>
     <Text>
       <LineId>1500001823</LineId>
       <Text>Arbeitskräfte
-Mehr Arbeitskräfte angefordert.</Text>
+Arbeitskräfte erhöht</Text>
     </Text>
     <Text>
       <LineId>1500001824</LineId>
       <Text>Baukosten
-Baumaterialprüfung umgeschaltet.</Text>
+Baumaterialprüfung umgeschaltet</Text>
     </Text>
     <Text>
       <LineId>1500001825</LineId>
       <Text>Ausbauvoraussetzungen
-Ausbauprüfung umgeschaltet.</Text>
+Ausbauprüfung umgeschaltet</Text>
     </Text>
     <Text>
       <LineId>1500001826</LineId>
       <Text>Fabrikfruchtbarkeit
-Fruchtbarkeitsprüfung umgeschaltet.</Text>
+Fruchtbarkeitsprüfung umgeschaltet</Text>
     </Text>
     <Text>
       <LineId>1500001827</LineId>
       <Text>Rekrutierung
-Abschluss der Rekrutierung angefordert.</Text>
+Rekrutierung abgeschlossen</Text>
     </Text>
     <Text>
       <LineId>1500001828</LineId>
       <Text>Monument
-Baufortschritt erhöht.</Text>
+Monumentbau vorangebracht</Text>
     </Text>
     <Text>
       <LineId>1500001829</LineId>
       <Text>Aktuelle Forschung
-Abschluss der Forschung angefordert.</Text>
+Forschung abgeschlossen</Text>
     </Text>
     <Text>
       <LineId>1500001830</LineId>
       <Text>Alle Forschungen
-Abschluss aller Forschungen angefordert.</Text>
+Alle Technologien erforscht</Text>
     </Text>
     <Text>
       <LineId>1500001831</LineId>
       <Text>Zufällige Items
-Zufällige Items angefordert.</Text>
+Zufällige Items hinzugefügt</Text>
     </Text>
     <Text>
       <LineId>1500001832</LineId>
       <Text>Übernahme
-Übernahme angefordert.</Text>
+Übernahme ausgeführt</Text>
     </Text>
     <Text>
       <LineId>1500001833</LineId>
       <Text>Ruf beim Kaiser
-+10 Ruf beim Kaiser angefordert.</Text>
+Kaiserruf erhöht</Text>
     </Text>
     <Text>
       <LineId>1500001834</LineId>
       <Text>Diplomatie-Abklingzeiten
-Diplomatie-Abklingzeiten zurückgesetzt.</Text>
+Diplomatie-Abklingzeiten zurückgesetzt</Text>
     </Text>
     <Text>
       <LineId>1500001841</LineId>
       <Text>Münzen
-−100.000 Münzen angefordert.</Text>
+Münzen abgezogen</Text>
     </Text>
     <Text>
       <LineId>1500001842</LineId>
       <Text>Alle Waren
-−1.000 je freigeschalteter Ware angefordert.</Text>
+Waren abgezogen</Text>
     </Text>
     <Text>
       <LineId>1500001843</LineId>
       <Text>Arbeitskräfte
-Weniger Arbeitskräfte angefordert.</Text>
+Arbeitskräfte gesenkt</Text>
     </Text>
     <Text>
       <LineId>1500001849</LineId>
       <Text>Aktuelle Forschung
-Abbruch der Forschung angefordert.</Text>
+Forschung abgebrochen</Text>
     </Text>
     <Text>
       <LineId>1500001850</LineId>
       <Text>Alle Forschungen
-Forschungsreset angefordert.</Text>
+Forschung zurückgesetzt</Text>
     </Text>
     <Text>
       <LineId>1500001853</LineId>
       <Text>Ruf beim Kaiser
-−10 Ruf beim Kaiser angefordert.</Text>
+Kaiserruf gesenkt</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

@@ -199,172 +199,192 @@ The current island workforce manager is invalid.</Text>
     <Text>
       <LineId>1500001801</LineId>
       <Text>金币
-±100,000金币</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+100,000
+{(function(s) if not s or not s.gsub or not s.find then return "替代：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "替代：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-100,000
+有破产风险。</Text>
     </Text>
     <Text>
       <LineId>1500001802</LineId>
-      <Text>所有货物
-每种已解锁货物±1,000件</Text>
+      <Text>所有已解锁货物
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+1000
+{(function(s) if not s or not s.gsub or not s.find then return "替代：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "替代：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-1000
+适用于自有岛屿。</Text>
     </Text>
     <Text>
       <LineId>1500001803</LineId>
       <Text>劳动力
-增加／减少</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+500
+{(function(s) if not s or not s.gsub or not s.find then return "替代：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "替代：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-500
+适用于当前自有岛屿。</Text>
     </Text>
     <Text>
       <LineId>1500001804</LineId>
       <Text>建造费用
-切换建材检查</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}切换建材检查
+仍可能扣除费用。
+有破产风险。</Text>
     </Text>
     <Text>
       <LineId>1500001805</LineId>
       <Text>升级条件
-切换升级条件</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}切换升级检查</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
       <Text>工厂肥力
-切换肥力要求</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}切换肥力要求
+适用于自有工厂。</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
       <Text>招募
-完成当前生产</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}完成当前舰船或单位
+自有船坞或招募设施。</Text>
     </Text>
     <Text>
       <LineId>1500001808</LineId>
       <Text>纪念建筑
-推进建造进度</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}推进部分阶段
+适用于自有纪念建筑。</Text>
     </Text>
     <Text>
       <LineId>1500001809</LineId>
       <Text>当前研究
-完成／取消</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}完成研究
+{(function(s) if not s or not s.gsub or not s.find then return "替代：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "替代：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}取消研究
+仅限队列首项。</Text>
     </Text>
     <Text>
       <LineId>1500001810</LineId>
       <Text>所有研究
-完成／重置</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}研究全部
+{(function(s) if not s or not s.gsub or not s.find then return "替代：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "替代：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}重置全部</Text>
     </Text>
     <Text>
       <LineId>1500001811</LineId>
       <Text>随机物品
-添加物品</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}添加物品
+适用于当前自有岛屿。</Text>
     </Text>
     <Text>
       <LineId>1500001812</LineId>
       <Text>接管
-接管对象或岛屿</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}接管非自有对象
+贸易站或别墅可接管整岛。
+多人游戏可能失去同步。</Text>
     </Text>
     <Text>
       <LineId>1500001813</LineId>
       <Text>皇帝声望
-声望±10</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+10
+{(function(s) if not s or not s.gsub or not s.find then return "替代：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "替代：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-10
+针对当前皇帝。</Text>
     </Text>
     <Text>
       <LineId>1500001814</LineId>
-      <Text>外交冷却
-重置冷却时间</Text>
+      <Text>外交
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}重置自己的冷却时间
+其他限制依然适用。</Text>
     </Text>
     <Text>
       <LineId>1500001821</LineId>
       <Text>金币
-已请求增加100,000金币。</Text>
+已增加金币</Text>
     </Text>
     <Text>
       <LineId>1500001822</LineId>
       <Text>所有货物
-已请求增加每种已解锁货物1,000件。</Text>
+已添加货物</Text>
     </Text>
     <Text>
       <LineId>1500001823</LineId>
       <Text>劳动力
-已请求增加劳动力。</Text>
+已增加劳动力</Text>
     </Text>
     <Text>
       <LineId>1500001824</LineId>
       <Text>建造费用
-已切换建材检查。</Text>
+已切换建材检查</Text>
     </Text>
     <Text>
       <LineId>1500001825</LineId>
       <Text>升级条件
-已切换升级条件检查。</Text>
+已切换升级条件检查</Text>
     </Text>
     <Text>
       <LineId>1500001826</LineId>
       <Text>工厂肥力
-已切换肥力要求。</Text>
+已切换肥力要求</Text>
     </Text>
     <Text>
       <LineId>1500001827</LineId>
       <Text>招募
-已请求完成招募。</Text>
+已完成招募</Text>
     </Text>
     <Text>
       <LineId>1500001828</LineId>
       <Text>纪念建筑
-建造进度已推进。</Text>
+已推进纪念建筑的建造进度</Text>
     </Text>
     <Text>
       <LineId>1500001829</LineId>
       <Text>当前研究
-已请求完成研究。</Text>
+已完成研究</Text>
     </Text>
     <Text>
       <LineId>1500001830</LineId>
       <Text>所有研究
-已请求完成所有研究。</Text>
+已研究所有科技</Text>
     </Text>
     <Text>
       <LineId>1500001831</LineId>
       <Text>随机物品
-已请求随机物品。</Text>
+已添加随机物品</Text>
     </Text>
     <Text>
       <LineId>1500001832</LineId>
       <Text>接管
-已请求接管。</Text>
+已执行接管</Text>
     </Text>
     <Text>
       <LineId>1500001833</LineId>
       <Text>皇帝声望
-已请求增加10点声望。</Text>
+皇帝声望已提升</Text>
     </Text>
     <Text>
       <LineId>1500001834</LineId>
       <Text>外交冷却
-已重置外交冷却时间。</Text>
+已重置外交冷却时间</Text>
     </Text>
     <Text>
       <LineId>1500001841</LineId>
       <Text>金币
-已请求扣除100,000金币。</Text>
+已扣除金币</Text>
     </Text>
     <Text>
       <LineId>1500001842</LineId>
       <Text>所有货物
-已请求扣除每种已解锁货物1,000件。</Text>
+已扣除货物</Text>
     </Text>
     <Text>
       <LineId>1500001843</LineId>
       <Text>劳动力
-已请求减少劳动力。</Text>
+已减少劳动力</Text>
     </Text>
     <Text>
       <LineId>1500001849</LineId>
       <Text>当前研究
-已请求取消研究。</Text>
+已取消研究</Text>
     </Text>
     <Text>
       <LineId>1500001850</LineId>
       <Text>所有研究
-已请求重置所有研究。</Text>
+已重置研究</Text>
     </Text>
     <Text>
       <LineId>1500001853</LineId>
       <Text>皇帝声望
-已请求降低10点声望。</Text>
+皇帝声望已降低</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

@@ -142,13 +142,31 @@ local resultNotifications = {
   },
 }
 
+-- Capture the original stack inside the xpcall error handler.
+local function errorTraceback(err)
+  local message = tostring(err)
+  if debug and debug.traceback then
+    return debug.traceback(message, 2)
+  end
+  return message
+end
+
+local function logError(context, traceback)
+  local message = "CheatKeybinds_Serp " .. context .. ": " .. traceback
+  if system and system.logError then
+    system.logError(message)
+  else
+    print(message)
+  end
+end
+
 local function notify(guid)
   -- Notification-only triggers: never dispatch gameplay through ActionExecuteScript.
-  local ok, err = pcall(function()
+  local ok, err = xpcall(function()
     Conditions:RegisterTriggerForCurrentParticipantNet(guid)
-  end)
+  end, errorTraceback)
   if not ok then
-    print("CheatKeybinds_Serp notification: " .. tostring(err))
+    logError("notification " .. tostring(guid), err)
   end
 end
 
@@ -300,10 +318,15 @@ end
 
 function CheatKeybinds_Serp.ChangeCheat(add)
   if not CheatKeybinds_Serp.Loaded then return end
-  add = add or 1
-  CheatKeybinds_Serp.ActiveCheat = ((CheatKeybinds_Serp.ActiveCheat - 1 + add) % #CheatKeybinds_Serp.Cheats) + 1
-  print("CheatKeybinds_Serp selected: " .. CheatKeybinds_Serp.ActiveCheat)
-  notify(CheatKeybinds_Serp.NotificationGUIDs[CheatKeybinds_Serp.ActiveCheat])
+  local ok, err = xpcall(function()
+    add = add or 1
+    CheatKeybinds_Serp.ActiveCheat = ((CheatKeybinds_Serp.ActiveCheat - 1 + add) % #CheatKeybinds_Serp.Cheats) + 1
+    print("CheatKeybinds_Serp selected: " .. CheatKeybinds_Serp.ActiveCheat)
+    notify(CheatKeybinds_Serp.NotificationGUIDs[CheatKeybinds_Serp.ActiveCheat])
+  end, errorTraceback)
+  if not ok then
+    logError("selection", err)
+  end
 end
 
 function CheatKeybinds_Serp.StartCheat(alternative)
@@ -312,9 +335,9 @@ function CheatKeybinds_Serp.StartCheat(alternative)
   local index = CheatKeybinds_Serp.ActiveCheat
   local direction = alternative and "alternative" or "normal"
   local notices = resultNotifications[index]
-  local ok, result, reason = pcall(CheatKeybinds_Serp.Cheats[index], alternative)
+  local ok, result, reason = xpcall(CheatKeybinds_Serp.Cheats[index], errorTraceback, alternative)
   if not ok then
-    print("CheatKeybinds_Serp failed (" .. index .. ", " .. direction .. "): " .. tostring(result))
+    logError("failed (" .. index .. ", " .. direction .. ")", result)
     notify(notices and notices.failures.generic or 1500001214)
   elseif result == false then
     print("CheatKeybinds_Serp not executed: " .. index .. " (" .. direction .. "): " .. tostring(reason))

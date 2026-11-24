@@ -199,172 +199,192 @@ The current island workforce manager is invalid.</Text>
     <Text>
       <LineId>1500001801</LineId>
       <Text>Монеты
-±100 000 монет</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+100 000
+{(function(s) if not s or not s.gsub or not s.find then return "Альтернативное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Альтернативное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-100 000
+Риск банкротства.</Text>
     </Text>
     <Text>
       <LineId>1500001802</LineId>
-      <Text>Все товары
-±1000 каждого открытого товара</Text>
+      <Text>Все открытые товары
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+1000
+{(function(s) if not s or not s.gsub or not s.find then return "Альтернативное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Альтернативное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-1000
+На своём острове.</Text>
     </Text>
     <Text>
       <LineId>1500001803</LineId>
       <Text>Рабочая сила
-Увеличить / уменьшить</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+500
+{(function(s) if not s or not s.gsub or not s.find then return "Альтернативное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Альтернативное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-500
+На своём текущем острове.</Text>
     </Text>
     <Text>
       <LineId>1500001804</LineId>
       <Text>Затраты на строительство
-Переключить проверку материалов</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Переключить проверку материалов
+Затраты могут списываться.
+Риск банкротства.</Text>
     </Text>
     <Text>
       <LineId>1500001805</LineId>
       <Text>Условия улучшения
-Переключить условия улучшения</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Переключить проверку условий</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
       <Text>Плодородие для предприятия
-Переключить требование плодородия</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Переключить требование
+Своё предприятие.</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
       <Text>Набор
-Завершить текущее производство</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Завершить корабль или отряд
+Своя верфь или место набора.</Text>
     </Text>
     <Text>
       <LineId>1500001808</LineId>
       <Text>Монумент
-Продвинуть строительство</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Продвинуть часть этапа
+Свой монумент.</Text>
     </Text>
     <Text>
       <LineId>1500001809</LineId>
       <Text>Текущее исследование
-Завершить / отменить</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Завершить
+{(function(s) if not s or not s.gsub or not s.find then return "Альтернативное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Альтернативное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}Отменить
+Первое исследование в очереди.</Text>
     </Text>
     <Text>
       <LineId>1500001810</LineId>
       <Text>Все исследования
-Завершить / сбросить</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Изучить всё
+{(function(s) if not s or not s.gsub or not s.find then return "Альтернативное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Альтернативное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}Сбросить всё</Text>
     </Text>
     <Text>
       <LineId>1500001811</LineId>
       <Text>Случайные предметы
-Добавить предметы</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Добавить предметы
+На своём текущем острове.</Text>
     </Text>
     <Text>
       <LineId>1500001812</LineId>
       <Text>Захват
-Захватить объект или остров</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Захватить чужой объект
+Фактория или вилла: весь остров.
+Риск рассинхронизации в сетевой игре.</Text>
     </Text>
     <Text>
       <LineId>1500001813</LineId>
       <Text>Репутация у императора
-±10 к репутации</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+10
+{(function(s) if not s or not s.gsub or not s.find then return "Альтернативное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Альтернативное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-10
+Действующий император.</Text>
     </Text>
     <Text>
       <LineId>1500001814</LineId>
-      <Text>Задержки дипломатии
-Сбросить задержки</Text>
+      <Text>Дипломатия
+{(function(s) if not s or not s.gsub or not s.find then return "Основное: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Основное: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Сбросить свои задержки
+Другие ограничения действуют.</Text>
     </Text>
     <Text>
       <LineId>1500001821</LineId>
       <Text>Монеты
-Запрошено добавление 100 000 монет.</Text>
+Монеты добавлены</Text>
     </Text>
     <Text>
       <LineId>1500001822</LineId>
       <Text>Все товары
-Запрошено добавление 1000 единиц каждого открытого товара.</Text>
+Товары добавлены</Text>
     </Text>
     <Text>
       <LineId>1500001823</LineId>
       <Text>Рабочая сила
-Запрошено увеличение рабочей силы.</Text>
+Рабочая сила увеличена</Text>
     </Text>
     <Text>
       <LineId>1500001824</LineId>
       <Text>Затраты на строительство
-Проверка материалов переключена.</Text>
+Проверка материалов переключена</Text>
     </Text>
     <Text>
       <LineId>1500001825</LineId>
       <Text>Условия улучшения
-Проверка условий улучшения переключена.</Text>
+Проверка условий улучшения переключена</Text>
     </Text>
     <Text>
       <LineId>1500001826</LineId>
       <Text>Плодородие для предприятия
-Требование плодородия переключено.</Text>
+Требование плодородия переключено</Text>
     </Text>
     <Text>
       <LineId>1500001827</LineId>
       <Text>Набор
-Запрошено завершение набора.</Text>
+Набор завершён</Text>
     </Text>
     <Text>
       <LineId>1500001828</LineId>
       <Text>Монумент
-Строительство продвинуто.</Text>
+Строительство монумента продвинуто</Text>
     </Text>
     <Text>
       <LineId>1500001829</LineId>
       <Text>Текущее исследование
-Запрошено завершение исследования.</Text>
+Исследование завершено</Text>
     </Text>
     <Text>
       <LineId>1500001830</LineId>
       <Text>Все исследования
-Запрошено завершение всех исследований.</Text>
+Все технологии изучены</Text>
     </Text>
     <Text>
       <LineId>1500001831</LineId>
       <Text>Случайные предметы
-Запрошены случайные предметы.</Text>
+Случайные предметы добавлены</Text>
     </Text>
     <Text>
       <LineId>1500001832</LineId>
       <Text>Захват
-Запрошен захват.</Text>
+Захват выполнен</Text>
     </Text>
     <Text>
       <LineId>1500001833</LineId>
       <Text>Репутация у императора
-Запрошено повышение репутации на 10.</Text>
+Репутация у императора повышена</Text>
     </Text>
     <Text>
       <LineId>1500001834</LineId>
       <Text>Задержки дипломатии
-Задержки дипломатии сброшены.</Text>
+Задержки дипломатии сброшены</Text>
     </Text>
     <Text>
       <LineId>1500001841</LineId>
       <Text>Монеты
-Запрошено списание 100 000 монет.</Text>
+Монеты списаны</Text>
     </Text>
     <Text>
       <LineId>1500001842</LineId>
       <Text>Все товары
-Запрошено списание 1000 единиц каждого открытого товара.</Text>
+Товары списаны</Text>
     </Text>
     <Text>
       <LineId>1500001843</LineId>
       <Text>Рабочая сила
-Запрошено уменьшение рабочей силы.</Text>
+Рабочая сила уменьшена</Text>
     </Text>
     <Text>
       <LineId>1500001849</LineId>
       <Text>Текущее исследование
-Запрошена отмена исследования.</Text>
+Исследование отменено</Text>
     </Text>
     <Text>
       <LineId>1500001850</LineId>
       <Text>Все исследования
-Запрошен сброс всех исследований.</Text>
+Исследования сброшены</Text>
     </Text>
     <Text>
       <LineId>1500001853</LineId>
       <Text>Репутация у императора
-Запрошено снижение репутации на 10.</Text>
+Репутация у императора понижена</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

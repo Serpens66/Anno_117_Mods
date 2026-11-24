@@ -199,172 +199,193 @@ The current island workforce manager is invalid.</Text>
     <Text>
       <LineId>1500001801</LineId>
       <Text>Monete
-±100.000 monete</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+100.000
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativa: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativa: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-100.000
+Rischio di bancarotta.</Text>
     </Text>
     <Text>
       <LineId>1500001802</LineId>
-      <Text>Tutte le merci
-±1.000 per merce sbloccata</Text>
+      <Text>Tutte le merci sbloccate
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+1000
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativa: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativa: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-1000
+Su una tua isola.</Text>
     </Text>
     <Text>
       <LineId>1500001803</LineId>
       <Text>Manodopera
-Aumentare / ridurre</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+500
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativa: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativa: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-500
+Sulla tua isola attuale.</Text>
     </Text>
     <Text>
       <LineId>1500001804</LineId>
       <Text>Costi di costruzione
-Commutare il controllo dei materiali</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Commutare il controllo materiali
+I costi possono essere addebitati.
+Rischio di bancarotta.</Text>
     </Text>
     <Text>
       <LineId>1500001805</LineId>
       <Text>Requisiti di potenziamento
-Commutare i requisiti di potenziamento</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Attiva o disattiva il controllo</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
       <Text>Fertilità della fabbrica
-Commutare il requisito di fertilità</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Attiva o disattiva il requisito
+Una tua fabbrica.</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
       <Text>Reclutamento
-Terminare la produzione</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Completa la nave o l’unità
+Un tuo cantiere o luogo
+di reclutamento.</Text>
     </Text>
     <Text>
       <LineId>1500001808</LineId>
       <Text>Monumento
-Far avanzare la costruzione</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Avanza di una parte della fase
+Un tuo monumento.</Text>
     </Text>
     <Text>
       <LineId>1500001809</LineId>
       <Text>Ricerca attuale
-Completare / annullare</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Completa la ricerca
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativa: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativa: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}Annulla la ricerca
+Primo elemento in coda.</Text>
     </Text>
     <Text>
       <LineId>1500001810</LineId>
       <Text>Tutte le ricerche
-Completare / azzerare</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Ricerca tutto
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativa: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativa: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}Azzera tutto</Text>
     </Text>
     <Text>
       <LineId>1500001811</LineId>
       <Text>Oggetti casuali
-Aggiungere oggetti</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Aggiungi oggetti
+Sulla tua isola attuale.</Text>
     </Text>
     <Text>
       <LineId>1500001812</LineId>
       <Text>Presa di possesso
-Prendere un oggetto o un’isola</Text>
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Prendi un oggetto altrui
+Emporio o villa: tutta l’isola.
+Rischio di desincronia online.</Text>
     </Text>
     <Text>
       <LineId>1500001813</LineId>
-      <Text>Reputazione con l’imperatore
-±10 punti reputazione</Text>
+      <Text>Reputazione imperiale
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}+10
+{(function(s) if not s or not s.gsub or not s.find then return "Alternativa: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Alternativa: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecuteAlternative"))}-10
+Imperatore attuale.</Text>
     </Text>
     <Text>
       <LineId>1500001814</LineId>
-      <Text>Attese diplomatiche
-Azzerare le attese</Text>
+      <Text>Diplomazia
+{(function(s) if not s or not s.gsub or not s.find then return "Principale: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principale: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Azzera le tue attese
+Restano gli altri limiti.</Text>
     </Text>
     <Text>
       <LineId>1500001821</LineId>
       <Text>Monete
-Aggiunta di 100.000 monete richiesta.</Text>
+Monete aggiunte</Text>
     </Text>
     <Text>
       <LineId>1500001822</LineId>
       <Text>Tutte le merci
-Aggiunta di 1.000 per merce sbloccata richiesta.</Text>
+Merci aggiunte</Text>
     </Text>
     <Text>
       <LineId>1500001823</LineId>
       <Text>Manodopera
-Aumento della manodopera richiesto.</Text>
+Manodopera aumentata</Text>
     </Text>
     <Text>
       <LineId>1500001824</LineId>
       <Text>Costi di costruzione
-Controllo dei materiali commutato.</Text>
+Controllo dei materiali commutato</Text>
     </Text>
     <Text>
       <LineId>1500001825</LineId>
       <Text>Requisiti di potenziamento
-Controllo dei potenziamenti commutato.</Text>
+Controllo dei potenziamenti commutato</Text>
     </Text>
     <Text>
       <LineId>1500001826</LineId>
       <Text>Fertilità della fabbrica
-Requisito di fertilità commutato.</Text>
+Requisito di fertilità commutato</Text>
     </Text>
     <Text>
       <LineId>1500001827</LineId>
       <Text>Reclutamento
-Conclusione del reclutamento richiesta.</Text>
+Reclutamento completato</Text>
     </Text>
     <Text>
       <LineId>1500001828</LineId>
       <Text>Monumento
-Costruzione avanzata.</Text>
+Costruzione del monumento avanzata</Text>
     </Text>
     <Text>
       <LineId>1500001829</LineId>
       <Text>Ricerca attuale
-Completamento della ricerca richiesto.</Text>
+Ricerca completata</Text>
     </Text>
     <Text>
       <LineId>1500001830</LineId>
       <Text>Tutte le ricerche
-Completamento di tutte le ricerche richiesto.</Text>
+Tutte le tecnologie ricercate</Text>
     </Text>
     <Text>
       <LineId>1500001831</LineId>
       <Text>Oggetti casuali
-Oggetti casuali richiesti.</Text>
+Oggetti casuali aggiunti</Text>
     </Text>
     <Text>
       <LineId>1500001832</LineId>
       <Text>Presa di possesso
-Presa di possesso richiesta.</Text>
+Presa di possesso eseguita</Text>
     </Text>
     <Text>
       <LineId>1500001833</LineId>
       <Text>Reputazione con l’imperatore
-Guadagno di 10 punti reputazione richiesto.</Text>
+Reputazione imperiale aumentata</Text>
     </Text>
     <Text>
       <LineId>1500001834</LineId>
       <Text>Attese diplomatiche
-Attese diplomatiche azzerate.</Text>
+Attese diplomatiche azzerate</Text>
     </Text>
     <Text>
       <LineId>1500001841</LineId>
       <Text>Monete
-Rimozione di 100.000 monete richiesta.</Text>
+Monete sottratte</Text>
     </Text>
     <Text>
       <LineId>1500001842</LineId>
       <Text>Tutte le merci
-Rimozione di 1.000 per merce sbloccata richiesta.</Text>
+Merci sottratte</Text>
     </Text>
     <Text>
       <LineId>1500001843</LineId>
       <Text>Manodopera
-Riduzione della manodopera richiesta.</Text>
+Manodopera ridotta</Text>
     </Text>
     <Text>
       <LineId>1500001849</LineId>
       <Text>Ricerca attuale
-Annullamento della ricerca richiesto.</Text>
+Ricerca annullata</Text>
     </Text>
     <Text>
       <LineId>1500001850</LineId>
       <Text>Tutte le ricerche
-Azzeramento di tutte le ricerche richiesto.</Text>
+Ricerche azzerate</Text>
     </Text>
     <Text>
       <LineId>1500001853</LineId>
       <Text>Reputazione con l’imperatore
-Perdita di 10 punti reputazione richiesta.</Text>
+Reputazione imperiale ridotta</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

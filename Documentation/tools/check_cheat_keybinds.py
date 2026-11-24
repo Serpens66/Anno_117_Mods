@@ -62,10 +62,6 @@ assert len(asset) == 1 and asset[0].findtext('Template') == 'ShortcutConfig'
 assert len(asset[0].xpath("Values/ShortcutConfig/InputBindings/Item[InputTypes/Modern/KeyType='Alt;F4']")) == 1
 assert len(native.xpath("//Asset[Values/Standard/GUID='31973']")) == 1
 selection_ids = [*range(1500001201, 1500001213), 1500001252, 1500001253]
-selection_icons = (
-    38172, 501934, 38966, 500271, 29282, 151458, 501372,
-    501377, 126203, 37766, 68768, 501358, 501355, 501369,
-)
 icon_names = (
     'coins', 'goods', 'workforce', 'build', 'upgrade', 'fertility', 'ship',
     'monument', 'research', 'researchall', 'items', 'takeover', 'emperor', 'diplomacy',
@@ -100,10 +96,19 @@ popup_bindings.update({
     1500002000 + offset: (1500001320 + index, 1500001900 + offset)
     for index, entries in failures.items() for offset in entries.values()
 })
+preview_bindings = {
+    guid: (1500001320 + index, 1500001800 + index)
+    for index, guid in enumerate(selection_ids, 1)
+}
+fallback_bindings = {
+    1500001213: (1500001324, 1500001243),
+    1500001214: (1500001324, 1500001244),
+    **{1500001260 + offset: (1500001324, 1500001280 + offset) for offset in range(14)},
+}
+notification_bindings = preview_bindings | popup_bindings | fallback_bindings
 portrait_ids = set(range(1500001301, 1500001315))
 profile_ids = set(range(1500001321, 1500001335))
-trigger_ids = (set(selection_ids) | {1500001213, 1500001214, 1500001256, 1500001257}
-               | set(range(1500001260, 1500001274)) | popup_bindings.keys())
+trigger_ids = notification_bindings.keys() | {1500001256, 1500001257}
 assets = patch.xpath('/ModOps/ModOp/Asset')
 patch_assets = {int(node.findtext('Values/Standard/GUID')): node for node in assets}
 assert set(patch_assets) == trigger_ids | portrait_ids | profile_ids
@@ -164,29 +169,23 @@ for guid in trigger_ids:
     assert trigger.findtext('Values/TriggerSetup/UsedBySecondParties') == '0', guid
     assert trigger.findtext('Values/Trigger/TriggerCondition/Template') == 'ConditionAlwaysTrue', guid
     assert len(trigger.xpath('Values/Trigger/TriggerActions/Item')) == 1, guid
-assert len(patch.xpath('//SideNotification/IsSilent[text()="0"]')) == 30
-assert not patch.xpath('//SideNotification/IsSilent[text()!="0"]')
-global_config = native.xpath('//Asset[Values/Standard/GUID="25000040"]')
-assert len(global_config) == 1 and global_config[0].findtext('Template') == 'NotificationConfiguration'
-assert global_config[0].find('BaseAssetGUID') is None
-native_side = global_config[0].find('Values/NotificationConfiguration/NotificationTypeArray/Side')
-assert native_side is not None and native_side.find('Delay') is None
-templates = ET.parse(str(vanilla / 'data/base/config/export/templates.xml'))
-assert templates.xpath('//Template[Name="NotificationConfiguration"]/Properties/NotificationConfiguration/NotificationTypeArray/Side/Delay/text()') == ['1000']
+assert not patch.xpath('//SideNotification | //Notification[Template="SideNotification"]')
+character_path = '/Values/NotificationConfiguration/NotificationTypeArray/Character'
+timing_ops = patch.xpath('/ModOps/ModOp[@GUID="25000040"]')
+assert len(timing_ops) == 1
+timing_op = timing_ops[0]
+assert timing_op.get('Type') == 'merge' and timing_op.get('Path') == character_path
+assert len(timing_op) == 1 and timing_op.findtext('MinDisplayTime') == '6000'
+assert not patch.xpath('//NotificationConfiguration')
+native_timing = native_assets['25000040']
+assert len(native_timing) == 1 and native_timing[0].findtext('Template') == 'NotificationConfiguration'
+native_character = native_timing[0].xpath('.' + character_path)
+assert len(native_character) == 1 and native_character[0].find('Delay') is None
+assert native_character[0].findtext('MinDisplayTime') == '3000'
+assert native_character[0].findtext('AdditionalDisplayTime') == '5000'
 # Removed diagnostic IDs must not appear in any live package XML or Lua.
 assert not patch.xpath('//Asset[Values/Standard/GUID="1500001294" or Values/Standard/GUID="1500001295"]')
 assert not patch.xpath('//NotificationAsset')
-delay_ops = patch.xpath('/ModOps/ModOp[@GUID="25000040"]')
-assert len(delay_ops) == 1
-delay_op = delay_ops[0]
-assert delay_op.get('Type') == 'merge'
-assert delay_op.get('Path') == '/Values/NotificationConfiguration/NotificationTypeArray/Side'
-assert [n.tag for n in delay_op] == ['Delay'] and delay_op.findtext('Delay') == '0'
-# Structural projection: only add the inherited Delay override; preserve every other field.
-projected_side = copy.deepcopy(native_side)
-ET.SubElement(projected_side, 'Delay').text = '0'
-projected_side.remove(projected_side.find('Delay'))
-assert ET.tostring(projected_side) == ET.tostring(native_side)
 for guid, delta in ((1500001256, 10), (1500001257, -10)):
     matches = patch.xpath('//Asset[Values/Standard/GUID=$id]', id=str(guid))
     assert len(matches) == 1
@@ -196,7 +195,7 @@ for guid, delta in ((1500001256, 10), (1500001257, -10)):
     assert action.findtext('Amount/Value') == str(delta)
     assert action.findtext('AmountIsADelta') == '1'
     assert action.findtext('EmperorTrait') == '[NONE]'
-    assert not matches[0].xpath('.//SideNotification | .//Participant')
+    assert not matches[0].xpath('.//Notification | .//Participant')
 notification_path = 'Values/Trigger/TriggerActions/Item/TriggerAction'
 notification_values = {
     'NotificationTopic': 'Progress',
@@ -205,34 +204,20 @@ notification_values = {
     'NotificationGroupBlockingTime': '0',
     'ReEnterQueueIfInterrupted': '0',
     'NotificationQueueTimeoutOverwrite': '0',
-    'IsUnique': '1',
+    'IsUnique': '0',
 }
 
 
-def require_notification(guid, template, text):
+assert not patch.xpath('//NotificationAudioAsset')
+for guid, (profile_id, lineid) in notification_bindings.items():
     action = patch_assets[guid].find(notification_path)
     assert action.findtext('Template') == 'ActionNotification', guid
     notification = action.find('Values/ActionNotification/Notification')
-    assert notification.findtext('Template') == template, guid
-    assert notification.findtext('Values/BaseNotification/NotificationText') == str(text), guid
+    assert notification.findtext('Template') == 'CharacterNotification', guid
+    assert notification.findtext('Values/BaseNotification/NotificationText') == str(lineid), guid
     for key, value in notification_values.items():
         assert notification.findtext(f'Values/BaseNotification/{key}') == value, (guid, key)
-    return notification.find(f'Values/{template}')
-
-
-for index, (guid, icon) in enumerate(zip(selection_ids, selection_icons, strict=True), 1):
-    side = require_notification(guid, 'SideNotification', 1500001800 + index)
-    assert side.findtext('IconAsset') == str(icon), guid
-    assert side.findtext('Infotip') == '0', guid
-    icon_assets = native_assets[str(icon)]
-    assert len(icon_assets) == 1 and icon_assets[0].findtext('Template') == 'Icon', icon
-    assert icon_assets[0].findtext('Values/Standard/IconFilename'), icon
-
-for offset in range(14):
-    require_notification(1500001260 + offset, 'SideNotification', 1500001280 + offset)
-
-for guid, (profile_id, lineid) in popup_bindings.items():
-    popup = require_notification(guid, 'CharacterNotification', lineid)
+    popup = notification.find('Values/CharacterNotification')
     assert popup.findtext('Profile') == str(profile_id), guid
     assert popup.findtext('IsArchivable') == '0', guid
     assert popup.find('RewardList') is None, guid
@@ -258,8 +243,8 @@ for index, icon in enumerate(icon_names, 1):
     assert struct.unpack_from('>IIBB', header, 16) == (512, 512, 8, 6), image_path
 
 assert {file.stem for file in (mod / 'data/ui/cheatnotifications/icons').glob('*.png')} == set(icon_names)
-assert len(patch.xpath('//Notification[Template="CharacterNotification"]')) == len(popup_bindings)
-assert len(patch.xpath('//IsUnique')) == 30 + len(popup_bindings)
+assert len(patch.xpath('//Notification')) == len(notification_bindings) == 84
+assert len(patch.xpath('//IsUnique[text()="0"]')) == len(notification_bindings)
 
 # Exercise all optional-mod combinations against their actual installed shortcut
 # definitions (Gamespeed uses its maintained workspace package). Only the console
@@ -318,6 +303,9 @@ for language in (mod / 'data/base/config/gui').glob('texts_*.xml'):
 assert 'change-multiplayer-gamespeed-serp' not in (mod / 'modinfo.json').read_text(encoding='utf-8-sig')
 assert not patch.xpath('/ModOps/Group[@Condition="#change-multiplayer-gamespeed-serp"]')
 
+templates = ET.parse(str(vanilla / 'data/base/config/export/templates.xml'))
+assert templates.xpath('//Template[Name="NotificationConfiguration"]/Properties/NotificationConfiguration/NotificationTypeArray/Character/Delay/text()') == ['1000']
+assert templates.xpath('//Template[Name="CharacterNotification"]/Properties/CharacterNotification')
 metadata = ET.parse(str(vanilla / 'data/base/config/export/properties-meta.xml'))
 assert metadata.xpath('//Property[Name="CharacterNotification"]/ValueDefinition[Name="Profile"]/NeededProperty/text()') == ['Participant']
 allowed_values = {}
@@ -337,21 +325,43 @@ assert list(info['changelog']) == ['1.01', '1.011', '1.012', '1.013', '1.14.0', 
 assert not any(word in info['changelog']['1.15.0'].lower() for word in ('guid', 'mock', 'luau', 'infotip'))
 assert info['Scripts']['Init'] == 'CheatKeybinds_Serp = require("cheatkeybinds_serp")'
 assert (mod / info['Scripts']['Modules'][0]).is_file()
-referenced_text = set(patch.xpath('//NotificationText/text() | //NotificationSideTitle/text() | /ModOps/ModOp/Item/Text/text() | //ModOp/Text/text()'))
+referenced_text = set(patch.xpath('//NotificationText/text() | /ModOps/ModOp/Item/Text/text() | //ModOp/Text/text()'))
 langs = sorted(p for p in (vanilla / 'data/base/config/gui').glob('texts_*.xml') if p.stem != 'texts_metadata')
 assert len(langs) == 12
 assert {lang.name for lang in langs} == {p.name for p in (mod / 'data/base/config/gui').glob('texts_*.xml')}
-new_text_ids = set(map(str, range(1500001801, 1500001815)))
-new_text_ids.update(str(text) for _, text in popup_bindings.values())
+preview_text_ids = {str(text) for _, text in preview_bindings.values()}
+two_action_preview_ids = {str(1500001800 + index) for index in alternate_indexes}
+research_preview_id = '1500001809'
+result_text_ids = {str(text) for _, text in popup_bindings.values()}
+new_text_ids = preview_text_ids | result_text_ids
 for lang in langs:
     texts = ET.parse(str(mod / 'data/base/config/gui' / lang.name))
     lineids = texts.xpath('//Text/LineId/text()')
     assert len(lineids) == len(set(lineids)) == 39 + len(new_text_ids)
     assert referenced_text | new_text_ids <= set(lineids)
+    research_lines = texts.xpath('//Text[LineId=$id]/Text/text()', id=research_preview_id)[0].splitlines()
+    assert len(research_lines) == 4, lang.name
+    shortcut_prefixes = tuple(line.partition('}')[0] + '}' for line in research_lines[1:3])
+    for prefix, identifier in zip(shortcut_prefixes, ('CheatKeybindsSerpExecute', 'CheatKeybindsSerpExecuteAlternative'), strict=True):
+        assert prefix.startswith('{(function(s) '), (lang.name, prefix)
+        assert prefix.endswith(f'ShortcutManager:GetShortcutTooltip("{identifier}"))}}'), (lang.name, prefix)
     for lineid in new_text_ids:
         text = texts.xpath('//Text[LineId=$id]/Text/text()', id=lineid)
         assert len(text) == 1 and text[0].strip(), (lang.name, lineid)
         assert not re.search(r'\b(?:Alt|Ctrl|Shift)\s*\+', text[0], re.I), (lang.name, lineid)
+        lines = [line for line in text[0].splitlines() if line.strip()]
+        if lineid in preview_text_ids:
+            action_count = 2 if lineid in two_action_preview_ids else 1
+            action_lines = lines[1:1 + action_count]
+            assert len(action_lines) == action_count, (lang.name, lineid)
+            assert text[0].count('ShortcutManager:GetShortcutTooltip(') == action_count, (lang.name, lineid)
+            for line, prefix in zip(action_lines, shortcut_prefixes[:action_count], strict=True):
+                assert line.startswith(prefix), (lang.name, lineid)
+                action = line[len(prefix):].strip()
+                assert action and (action_count == 1 or '/' not in action), (lang.name, lineid)
+        else:
+            assert len(lines) == 2, (lang.name, lineid)
+            assert 'ShortcutManager:' not in text[0], (lang.name, lineid)
     assert not set(lineids) & set(ET.parse(str(lang)).xpath('//Text/LineId/text()'))
     for lineid in [*range(1500001221, 1500001233), 1500001254, 1500001255]:
         description = texts.xpath('//Text[LineId=$id]/Text/text()', id=str(lineid))[0]
@@ -375,6 +385,7 @@ local function record(name)
   end
 end
 print = function(...) table.insert(logs, {...}) end
+system = { logError = function(message) table.insert(logs, {message}) end }
 local function register(self, guid)
   if guid == 1500001256 or guid == 1500001257 then
     table.insert(calls, {"reputation", guid})
@@ -454,6 +465,11 @@ for _, alternative in {false, true} do
   execute(13, alternative); check(calls[1][2] == (alternative and 1500001257 or 1500001256))
 end
 execute(1, "true"); check(calls[1][3] == 100000 and notices[1] == 1500001341)
+table.clear(calls); table.clear(notices)
+module.StartCheat(); module.StartCheat()
+check(#calls == 2 and calls[1][1] == "money" and calls[2][1] == "money")
+check(calls[1][3] == 100000 and calls[2][3] == 100000)
+check(#notices == 2 and notices[1] == 1500001341 and notices[2] == 1500001341)
 local legacy_failures = {
   goods_area=1500001260, workforce_area=1500001261, items_area=1500001262,
   selection_missing=1500001263, factory_selection=1500001264,
@@ -529,11 +545,13 @@ Conditions.RegisterTriggerForCurrentParticipantNet = function(self,guid)
 end
 for _, alternative in {false,true} do execute(13,alternative); check(#calls == 0 and #notices == 1 and notices[1] == failures[13].generic) end
 Conditions.RegisterTriggerForCurrentParticipantNet = register
-Economy.MetaStorage.AddAmount = function() error("unavailable binding") end
+local function failAddAmount() error("unavailable binding") end
+Economy.MetaStorage.AddAmount = failAddAmount
 for _, alternative in {false,true} do
   execute(1,alternative);check(#calls==0 and #notices==1 and notices[1]==failures[1].generic)
   local line=tostring(logs[#logs][1])
   check(string.find(line,"unavailable binding",1,true)~=nil)
+  check(string.find(line,"failAddAmount",1,true)~=nil)
   check(string.find(line,alternative and "alternative" or "normal",1,true)~=nil)
   check(string.find(line,"1",1,true)~=nil)
 end
@@ -545,13 +563,16 @@ for index, reasons in failures do
   check(string.find(tostring(logs[#logs][1]), "mocked execution failure", 1, true) ~= nil)
   module.Cheats[index] = cheat
 end
-Conditions.RegisterTriggerForCurrentParticipantNet = function() error("notification unavailable") end
+local function failNotification() error("notification unavailable") end
+Conditions.RegisterTriggerForCurrentParticipantNet = failNotification
 module.GameLoaded()
 module.ChangeCheat(1); check(module.ActiveCheat == 2) -- display failure does not prevent selecting
 check(string.find(tostring(logs[#logs][1]), "notification unavailable", 1, true) ~= nil)
+check(string.find(tostring(logs[#logs][1]), "failNotification", 1, true) ~= nil)
 module.GameUnloaded(); check(module.ActiveCheat == 1 and not module.Loaded)
 table.clear(calls); module.StartCheat(); module.StartCheat(true); module.ChangeCheat(1); check(#calls == 0 and module.ActiveCheat == 1)
 module.GameLoaded(); check(module.ActiveCheat == 1 and module.Loaded)
+
 return checks
 '''
 selection_guids = ', '.join(map(str, selection_ids))
@@ -573,11 +594,8 @@ generated = 'local output = print\nlocal checks = (function()\n' + generated + '
 out = root / 'Documentation/out/cheat-keybinds-mock.luau'
 out.parent.mkdir(parents=True, exist_ok=True)
 out.write_bytes(generated.replace('\n','\r\n').encode('utf-8'))
-assert len(patch.xpath('//SideNotification/Infotip[text()="0"]')) == 30
-assert not patch.xpath('//SideNotification/Infotip[text()!="0"]')
-
 print(f'PASS: structural checks against {vanilla}')
-print(f'{len(langs)} languages, {len(selection_ids)} selection notices, {len(alternate_indexes) + 14} success popups, '
-      f'{sum(map(len, failures.values()))} failure popups, {len(portrait_ids)} portraits, '
+print(f'{len(langs)} languages, {len(preview_bindings)} preview popups, {len(alternate_indexes) + 14} success popups, '
+      f'{sum(map(len, failures.values()))} failure popups, {len(fallback_bindings)} fallback popups, {len(portrait_ids)} portraits, '
       '7 shortcuts, 4 optional-mod combinations (not a loader evaluation).')
 print(f'Generated Luau mock test: {out}')
