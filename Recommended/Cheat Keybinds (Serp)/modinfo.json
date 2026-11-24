@@ -40,6 +40,6 @@
     "1.012": "- Add keybind 'Alt;Delete' to delete (no ruin) current selected building/ship/unit even from other players. - Add keybind 'Shift;Delete' to destroy (ruin) current selected building/ship/unit even from other players (unknown if desync in Multiplayer). - Add keybind 'Control;Delete' to take over control of selected object (surely causes desync in Multiplayer)",
     "1.013": "- While using Control+Delete to take control of selected object: If the object is a Kontor or Villa, instead of changing owner the official TakeOver of the island will be triggered, to hopefully fix the problem that AI continues to build on the island you took over. Thanks 'hulker12' for the report.",
     "1.14.0": "Reworked cheat controls (like my 1800 equivalent): select the previous or next cheat, then execute it normally or use its alternative action. All four controls can be rebound in the game settings. New cheats: increase/decrease emperor reputation and reset diplomacy cooldowns. Replaced the old non functional population cheat with workforce increase/decrease. Alternative actions let you subtract coins or goods, cancel current research, and reset all research.",
-    "1.15.0": "Selecting a cheat opens a detailed preview with its own icon. Execution shows a brief confirmation or error. Character popups use a six-second minimum display setting."
+    "1.15.0": "Selecting a cheat opens a detailed preview with its own icon. A successful cheat plays a confirmation sound. An error opens a popup. Character popups use a six-second minimum display setting."
   }
 }

@@ -304,6 +304,26 @@ The user's screenshot confirms that the German Current Research CharacterNotific
 
 The same expression is used in all 14 previews across 12 languages. There is one primary shortcut label for each single-action cheat and a separate alternate label for each of the six alternate effects. Missing or unsupported tooltip content falls back to localized action labels. The 20 success confirmations per language use brief localized outcome text. Existing bindings, error messages, trigger IDs and notification timing are unchanged. The structure checker and 356 module mocks pass. Standalone Luau evaluated all 240 action expressions with default, rebound and unassigned mock bindings (720 assertions). Only the original research preview is independently confirmed by the in-game screenshot.
 
+## 1.15.0 audio-only success feedback (2026-11-24)
+
+The user replaced the proposed SideNotification confirmations with a sound-only success path. Effective installed script.rda declares Notifications as the CNotificationManager singleton and PlayAudioGuid(audioGuid) on that type. Effective config.rda audio_generated.xml defines 98923 as evt_ux_2d_notification_active_layer_reward_start, and native ActionPlaySound uses that same Audio asset. The user previously heard it in the coin-confirmation popup. Direct playback through the Lua binding remains an in-game check.
+
+After a successful cheat, the module calls Notifications:PlayAudioGuid(98923) once under its own xpcall. An audio failure logs a traceback and does not change the successful cheat outcome. Preview and error paths do not play the success sound. The 20 success triggers and their localized text IDs were removed and remain reserved to Cheat Keybinds. The package retains 14 previews, 34 specific or generic error popups and 16 legacy fallback popups. All 12 locales contain 87 distinct text IDs. Version, bindings, cheat bodies and Character timing stay unchanged.
+
+Current-source structure and GUID inventory checks pass. Luau compilation and 368 mock assertions pass, including both directions, repeated execution, failures with no sound, and audio errors with neither another gameplay operation nor an extra popup. A live test of the successful primary and alternate actions remains pending.
+
+## 1.15.0 success sound routed through Sound (2026-11-24)
+
+The user reported no audible success sound and an empty CharacterNotification with its default portrait when using Notifications:PlayAudioGuid(98923). The 17:47:51 game log confirms three successful workforce calls and no corresponding Lua audio error. The success branch no longer registers a notification trigger, so the notification-manager playback is the likely source of the empty popup in this run.
+
+Effective script.rda declares Sound as CSoundManager and CheatPlaySound(guid) on that type. Effective config.rda still resolves 98923 as the native reward Audio asset. The success branch now calls Sound:CheatPlaySound(98923) under the same isolated xpcall, without notifying through the notification manager. Structure, compilation and 368 mock checks pass. The user subsequently confirmed that the sound plays with `Sound:CheatPlaySound(98923)`. The tested audio asset and callback context delimit that result. [Lua audio usage](../foundations/luau-and-runtime.md#playing-an-audio-asset-from-lua)
+
+## 1.15.0 island fertility and timed diplomacy descriptions (2026-11-24)
+
+The user clarified that the selected production building's required fertility is added to or removed from the island. The tooltip now describes this effect. The installed Factory binding declares ToggleCheatFertility on the selected object's factory property, and the original readme describes adding the selected factory's needed fertility to the island. The current change is limited to text.
+
+The user also observed that ResetAllActionCooldownsNet caused an active non-aggression pact to expire. The installed diplomacy binding and native cheat script establish the call but do not enumerate every affected timed effect. The description therefore mentions the observed pact behavior and removes the previous assertion about other restrictions. Both observations are scoped to the tested 1.15.0 context.
+
 ## Historical installation observations (2026-11-12)
 
 Moved from the general setup page during the 2026-11-13 portability review. The following observations retain their original dates, package versions and evidence limits. Current-machine verification follows the setup procedure. [Verification procedure](../setup.md#verify-installation-and-startup-activation)

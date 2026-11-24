@@ -33,8 +33,8 @@ Allow building upgrades despite unmet requirements.</Text>
     </Text>
     <Text>
       <LineId>1500001226</LineId>
-      <Text>Factory fertility: On/Off
-Toggle the required fertility for your selected owned factory.</Text>
+      <Text>Add or remove island fertility
+Select a production building you own. This adds the fertility it needs to its island or removes it.</Text>
     </Text>
     <Text>
       <LineId>1500001227</LineId>
@@ -116,7 +116,7 @@ Normal: +10; alternative: −10 with the current emperor. Normal reputation scal
     <Text>
       <LineId>1500001255</LineId>
       <Text>Reset diplomacy cooldowns
-Reset your own action cooldowns. Other restrictions, such as pending replies or unmet requirements, remain.</Text>
+Resets your own diplomacy cooldowns. May end active non-aggression pacts.</Text>
     </Text>
     <Text>
       <LineId>1500001258</LineId>
@@ -231,9 +231,10 @@ Risk of bankruptcy.</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
-      <Text>Factory fertility
-{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Toggle fertility requirement
-Factory you own.</Text>
+      <Text>Island fertility
+{(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Add or remove fertility
+Select a building you own.
+Uses its required fertility.</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
@@ -285,107 +286,7 @@ Current emperor.</Text>
       <LineId>1500001814</LineId>
       <Text>Diplomacy
 {(function(s) if not s or not s.gsub or not s.find then return "Normal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Normal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Reset your cooldowns
-Other restrictions still apply.</Text>
-    </Text>
-    <Text>
-      <LineId>1500001821</LineId>
-      <Text>Coins
-Coins added</Text>
-    </Text>
-    <Text>
-      <LineId>1500001822</LineId>
-      <Text>All goods
-Goods added</Text>
-    </Text>
-    <Text>
-      <LineId>1500001823</LineId>
-      <Text>Workforce
-Workforce increased</Text>
-    </Text>
-    <Text>
-      <LineId>1500001824</LineId>
-      <Text>Building costs
-Material checks toggled</Text>
-    </Text>
-    <Text>
-      <LineId>1500001825</LineId>
-      <Text>Upgrade requirements
-Upgrade checks toggled</Text>
-    </Text>
-    <Text>
-      <LineId>1500001826</LineId>
-      <Text>Factory fertility
-Fertility requirement toggled</Text>
-    </Text>
-    <Text>
-      <LineId>1500001827</LineId>
-      <Text>Recruitment
-Recruitment completed</Text>
-    </Text>
-    <Text>
-      <LineId>1500001828</LineId>
-      <Text>Monument
-Monument construction advanced</Text>
-    </Text>
-    <Text>
-      <LineId>1500001829</LineId>
-      <Text>Current research
-Research completed</Text>
-    </Text>
-    <Text>
-      <LineId>1500001830</LineId>
-      <Text>All research
-All technologies researched</Text>
-    </Text>
-    <Text>
-      <LineId>1500001831</LineId>
-      <Text>Random items
-Random items added</Text>
-    </Text>
-    <Text>
-      <LineId>1500001832</LineId>
-      <Text>Takeover
-Takeover executed</Text>
-    </Text>
-    <Text>
-      <LineId>1500001833</LineId>
-      <Text>Emperor reputation
-Emperor reputation increased</Text>
-    </Text>
-    <Text>
-      <LineId>1500001834</LineId>
-      <Text>Diplomacy cooldowns
-Diplomacy cooldowns reset</Text>
-    </Text>
-    <Text>
-      <LineId>1500001841</LineId>
-      <Text>Coins
-Coins deducted</Text>
-    </Text>
-    <Text>
-      <LineId>1500001842</LineId>
-      <Text>All goods
-Goods deducted</Text>
-    </Text>
-    <Text>
-      <LineId>1500001843</LineId>
-      <Text>Workforce
-Workforce decreased</Text>
-    </Text>
-    <Text>
-      <LineId>1500001849</LineId>
-      <Text>Current research
-Research canceled</Text>
-    </Text>
-    <Text>
-      <LineId>1500001850</LineId>
-      <Text>All research
-Research reset</Text>
-    </Text>
-    <Text>
-      <LineId>1500001853</LineId>
-      <Text>Emperor reputation
-Emperor reputation decreased</Text>
+May end non-aggression pacts.</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

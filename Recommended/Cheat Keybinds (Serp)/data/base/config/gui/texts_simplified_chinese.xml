@@ -33,8 +33,8 @@ Allow building upgrades despite unmet requirements.</Text>
     </Text>
     <Text>
       <LineId>1500001226</LineId>
-      <Text>Factory fertility: On/Off
-Toggle the required fertility for your selected owned factory.</Text>
+      <Text>添加或移除岛屿肥力
+选择自有生产建筑，在其所在岛屿添加或移除该建筑所需的肥力。</Text>
     </Text>
     <Text>
       <LineId>1500001227</LineId>
@@ -115,8 +115,8 @@ Normal: +10; alternative: −10 with the current emperor. Normal reputation scal
     </Text>
     <Text>
       <LineId>1500001255</LineId>
-      <Text>Reset diplomacy cooldowns
-Reset your own action cooldowns. Other restrictions, such as pending replies or unmet requirements, remain.</Text>
+      <Text>重置外交冷却时间
+重置自己的外交行动冷却时间。可能终止仍然有效的互不侵犯条约。</Text>
     </Text>
     <Text>
       <LineId>1500001258</LineId>
@@ -231,9 +231,10 @@ The current island workforce manager is invalid.</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
-      <Text>工厂肥力
-{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}切换肥力要求
-适用于自有工厂。</Text>
+      <Text>岛屿肥力
+{(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}添加或移除肥力
+选择自有生产建筑。
+以该建筑所需的肥力为准。</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
@@ -284,107 +285,7 @@ The current island workforce manager is invalid.</Text>
       <LineId>1500001814</LineId>
       <Text>外交
 {(function(s) if not s or not s.gsub or not s.find then return "主要：" end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "主要：" end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}重置自己的冷却时间
-其他限制依然适用。</Text>
-    </Text>
-    <Text>
-      <LineId>1500001821</LineId>
-      <Text>金币
-已增加金币</Text>
-    </Text>
-    <Text>
-      <LineId>1500001822</LineId>
-      <Text>所有货物
-已添加货物</Text>
-    </Text>
-    <Text>
-      <LineId>1500001823</LineId>
-      <Text>劳动力
-已增加劳动力</Text>
-    </Text>
-    <Text>
-      <LineId>1500001824</LineId>
-      <Text>建造费用
-已切换建材检查</Text>
-    </Text>
-    <Text>
-      <LineId>1500001825</LineId>
-      <Text>升级条件
-已切换升级条件检查</Text>
-    </Text>
-    <Text>
-      <LineId>1500001826</LineId>
-      <Text>工厂肥力
-已切换肥力要求</Text>
-    </Text>
-    <Text>
-      <LineId>1500001827</LineId>
-      <Text>招募
-已完成招募</Text>
-    </Text>
-    <Text>
-      <LineId>1500001828</LineId>
-      <Text>纪念建筑
-已推进纪念建筑的建造进度</Text>
-    </Text>
-    <Text>
-      <LineId>1500001829</LineId>
-      <Text>当前研究
-已完成研究</Text>
-    </Text>
-    <Text>
-      <LineId>1500001830</LineId>
-      <Text>所有研究
-已研究所有科技</Text>
-    </Text>
-    <Text>
-      <LineId>1500001831</LineId>
-      <Text>随机物品
-已添加随机物品</Text>
-    </Text>
-    <Text>
-      <LineId>1500001832</LineId>
-      <Text>接管
-已执行接管</Text>
-    </Text>
-    <Text>
-      <LineId>1500001833</LineId>
-      <Text>皇帝声望
-皇帝声望已提升</Text>
-    </Text>
-    <Text>
-      <LineId>1500001834</LineId>
-      <Text>外交冷却
-已重置外交冷却时间</Text>
-    </Text>
-    <Text>
-      <LineId>1500001841</LineId>
-      <Text>金币
-已扣除金币</Text>
-    </Text>
-    <Text>
-      <LineId>1500001842</LineId>
-      <Text>所有货物
-已扣除货物</Text>
-    </Text>
-    <Text>
-      <LineId>1500001843</LineId>
-      <Text>劳动力
-已减少劳动力</Text>
-    </Text>
-    <Text>
-      <LineId>1500001849</LineId>
-      <Text>当前研究
-已取消研究</Text>
-    </Text>
-    <Text>
-      <LineId>1500001850</LineId>
-      <Text>所有研究
-已重置研究</Text>
-    </Text>
-    <Text>
-      <LineId>1500001853</LineId>
-      <Text>皇帝声望
-皇帝声望已降低</Text>
+可能终止互不侵犯条约。</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

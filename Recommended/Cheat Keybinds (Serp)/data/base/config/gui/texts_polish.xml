@@ -33,8 +33,8 @@ Allow building upgrades despite unmet requirements.</Text>
     </Text>
     <Text>
       <LineId>1500001226</LineId>
-      <Text>Factory fertility: On/Off
-Toggle the required fertility for your selected owned factory.</Text>
+      <Text>Dodaj lub usuń żyzność wyspy
+Wybierz własny budynek produkcyjny. Dodaje lub usuwa żyzność, której wymaga ten budynek, na jego wyspie.</Text>
     </Text>
     <Text>
       <LineId>1500001227</LineId>
@@ -115,8 +115,8 @@ Normal: +10; alternative: −10 with the current emperor. Normal reputation scal
     </Text>
     <Text>
       <LineId>1500001255</LineId>
-      <Text>Reset diplomacy cooldowns
-Reset your own action cooldowns. Other restrictions, such as pending replies or unmet requirements, remain.</Text>
+      <Text>Wyzeruj czasy odnowienia dyplomacji
+Zeruje czasy odnowienia twoich działań dyplomatycznych. Może zakończyć trwające pakty o nieagresji.</Text>
     </Text>
     <Text>
       <LineId>1500001258</LineId>
@@ -231,9 +231,10 @@ Ryzyko bankructwa.</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
-      <Text>Żyzność dla zakładu
-{(function(s) if not s or not s.gsub or not s.find then return "Główna: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Główna: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Przełącz wymóg żyzności
-We własnym zakładzie.</Text>
+      <Text>Żyzność wyspy
+{(function(s) if not s or not s.gsub or not s.find then return "Główna: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Główna: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Dodaj lub usuń żyzność
+Wybierz własny budynek.
+Obowiązuje żyzność, której wymaga.</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
@@ -285,107 +286,7 @@ Obecny cesarz.</Text>
       <LineId>1500001814</LineId>
       <Text>Dyplomacja
 {(function(s) if not s or not s.gsub or not s.find then return "Główna: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Główna: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Wyzeruj czasy odnowienia
-Pozostałe ograniczenia obowiązują.</Text>
-    </Text>
-    <Text>
-      <LineId>1500001821</LineId>
-      <Text>Monety
-Dodano monety</Text>
-    </Text>
-    <Text>
-      <LineId>1500001822</LineId>
-      <Text>Wszystkie towary
-Dodano towary</Text>
-    </Text>
-    <Text>
-      <LineId>1500001823</LineId>
-      <Text>Siła robocza
-Zwiększono siłę roboczą</Text>
-    </Text>
-    <Text>
-      <LineId>1500001824</LineId>
-      <Text>Koszty budowy
-Przełączono kontrolę materiałów</Text>
-    </Text>
-    <Text>
-      <LineId>1500001825</LineId>
-      <Text>Warunki ulepszeń
-Przełączono kontrolę ulepszeń</Text>
-    </Text>
-    <Text>
-      <LineId>1500001826</LineId>
-      <Text>Żyzność dla zakładu
-Przełączono wymóg żyzności</Text>
-    </Text>
-    <Text>
-      <LineId>1500001827</LineId>
-      <Text>Rekrutacja
-Ukończono rekrutację</Text>
-    </Text>
-    <Text>
-      <LineId>1500001828</LineId>
-      <Text>Monument
-Przyspieszono budowę monumentu</Text>
-    </Text>
-    <Text>
-      <LineId>1500001829</LineId>
-      <Text>Bieżące badania
-Ukończono badania</Text>
-    </Text>
-    <Text>
-      <LineId>1500001830</LineId>
-      <Text>Wszystkie badania
-Zbadano wszystkie technologie</Text>
-    </Text>
-    <Text>
-      <LineId>1500001831</LineId>
-      <Text>Losowe przedmioty
-Dodano losowe przedmioty</Text>
-    </Text>
-    <Text>
-      <LineId>1500001832</LineId>
-      <Text>Przejęcie
-Przejęcie wykonane</Text>
-    </Text>
-    <Text>
-      <LineId>1500001833</LineId>
-      <Text>Reputacja u cesarza
-Wzrosła reputacja u cesarza</Text>
-    </Text>
-    <Text>
-      <LineId>1500001834</LineId>
-      <Text>Odnowienie dyplomacji
-Wyzerowano czasy odnowienia dyplomacji</Text>
-    </Text>
-    <Text>
-      <LineId>1500001841</LineId>
-      <Text>Monety
-Odjęto monety</Text>
-    </Text>
-    <Text>
-      <LineId>1500001842</LineId>
-      <Text>Wszystkie towary
-Odjęto towary</Text>
-    </Text>
-    <Text>
-      <LineId>1500001843</LineId>
-      <Text>Siła robocza
-Zmniejszono siłę roboczą</Text>
-    </Text>
-    <Text>
-      <LineId>1500001849</LineId>
-      <Text>Bieżące badania
-Anulowano badania</Text>
-    </Text>
-    <Text>
-      <LineId>1500001850</LineId>
-      <Text>Wszystkie badania
-Zresetowano badania</Text>
-    </Text>
-    <Text>
-      <LineId>1500001853</LineId>
-      <Text>Reputacja u cesarza
-Spadła reputacja u cesarza</Text>
+Może zakończyć pakty o nieagresji.</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

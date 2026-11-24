@@ -33,8 +33,8 @@ Allow building upgrades despite unmet requirements.</Text>
     </Text>
     <Text>
       <LineId>1500001226</LineId>
-      <Text>Factory fertility: On/Off
-Toggle the required fertility for your selected owned factory.</Text>
+      <Text>Adicionar ou remover fertilidade da ilha
+Selecione um edifício de produção seu. A fertilidade exigida por ele é adicionada à ilha onde fica ou removida dela.</Text>
     </Text>
     <Text>
       <LineId>1500001227</LineId>
@@ -115,8 +115,8 @@ Normal: +10; alternative: −10 with the current emperor. Normal reputation scal
     </Text>
     <Text>
       <LineId>1500001255</LineId>
-      <Text>Reset diplomacy cooldowns
-Reset your own action cooldowns. Other restrictions, such as pending replies or unmet requirements, remain.</Text>
+      <Text>Zerar recargas diplomáticas
+Zera as recargas das suas ações diplomáticas. Pode encerrar pactos de não agressão em vigor.</Text>
     </Text>
     <Text>
       <LineId>1500001258</LineId>
@@ -231,9 +231,10 @@ Risco de falência.</Text>
     </Text>
     <Text>
       <LineId>1500001806</LineId>
-      <Text>Fertilidade da fábrica
-{(function(s) if not s or not s.gsub or not s.find then return "Principal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Alternar requisito de fertilidade
-Fábrica própria.</Text>
+      <Text>Fertilidade da ilha
+{(function(s) if not s or not s.gsub or not s.find then return "Principal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Adicionar ou remover fertilidade
+Selecione um edifício seu.
+Vale a fertilidade que ele exige.</Text>
     </Text>
     <Text>
       <LineId>1500001807</LineId>
@@ -285,107 +286,7 @@ Imperador atual.</Text>
       <LineId>1500001814</LineId>
       <Text>Diplomacia
 {(function(s) if not s or not s.gsub or not s.find then return "Principal: " end local t,n=s:gsub('&lt;custom%-entity[^&gt;]*&gt;&lt;custom%-properties%s+KeyText="([^"]+)"%s*/&gt;&lt;/custom%-entity&gt;',"%1"); if n==0 or t:find("[&lt;&gt;]") then return "Principal: " end return (t:gsub("%s*%+%s*","+")) .. ": " end)(ShortcutManager:GetShortcutTooltip("CheatKeybindsSerpExecute"))}Zerar suas recargas
-Outras restrições continuam.</Text>
-    </Text>
-    <Text>
-      <LineId>1500001821</LineId>
-      <Text>Moedas
-Moedas adicionadas</Text>
-    </Text>
-    <Text>
-      <LineId>1500001822</LineId>
-      <Text>Todas as mercadorias
-Mercadorias adicionadas</Text>
-    </Text>
-    <Text>
-      <LineId>1500001823</LineId>
-      <Text>Mão de obra
-Mão de obra aumentada</Text>
-    </Text>
-    <Text>
-      <LineId>1500001824</LineId>
-      <Text>Custos de construção
-Controle de materiais alternado</Text>
-    </Text>
-    <Text>
-      <LineId>1500001825</LineId>
-      <Text>Requisitos de melhoria
-Controle de melhorias alternado</Text>
-    </Text>
-    <Text>
-      <LineId>1500001826</LineId>
-      <Text>Fertilidade da fábrica
-Requisito de fertilidade alternado</Text>
-    </Text>
-    <Text>
-      <LineId>1500001827</LineId>
-      <Text>Recrutamento
-Recrutamento concluído</Text>
-    </Text>
-    <Text>
-      <LineId>1500001828</LineId>
-      <Text>Monumento
-Construção do monumento avançada</Text>
-    </Text>
-    <Text>
-      <LineId>1500001829</LineId>
-      <Text>Pesquisa atual
-Pesquisa concluída</Text>
-    </Text>
-    <Text>
-      <LineId>1500001830</LineId>
-      <Text>Todas as pesquisas
-Todas as tecnologias pesquisadas</Text>
-    </Text>
-    <Text>
-      <LineId>1500001831</LineId>
-      <Text>Itens aleatórios
-Itens aleatórios adicionados</Text>
-    </Text>
-    <Text>
-      <LineId>1500001832</LineId>
-      <Text>Tomada de controle
-Tomada de controle executada</Text>
-    </Text>
-    <Text>
-      <LineId>1500001833</LineId>
-      <Text>Reputação com o imperador
-Reputação com o imperador aumentada</Text>
-    </Text>
-    <Text>
-      <LineId>1500001834</LineId>
-      <Text>Recarga de diplomacia
-Recargas diplomáticas zeradas</Text>
-    </Text>
-    <Text>
-      <LineId>1500001841</LineId>
-      <Text>Moedas
-Moedas deduzidas</Text>
-    </Text>
-    <Text>
-      <LineId>1500001842</LineId>
-      <Text>Todas as mercadorias
-Mercadorias deduzidas</Text>
-    </Text>
-    <Text>
-      <LineId>1500001843</LineId>
-      <Text>Mão de obra
-Mão de obra reduzida</Text>
-    </Text>
-    <Text>
-      <LineId>1500001849</LineId>
-      <Text>Pesquisa atual
-Pesquisa cancelada</Text>
-    </Text>
-    <Text>
-      <LineId>1500001850</LineId>
-      <Text>Todas as pesquisas
-Pesquisas reiniciadas</Text>
-    </Text>
-    <Text>
-      <LineId>1500001853</LineId>
-      <Text>Reputação com o imperador
-Reputação com o imperador reduzida</Text>
+Pode encerrar pactos de não agressão.</Text>
     </Text>
     <Text>
       <LineId>1500001901</LineId>

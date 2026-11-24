@@ -25,6 +25,12 @@ The modloader's Init hook can assign a module returned by require to a uniquely 
 
 Native ShortcutConfig asset 2001271 uses `Values/ShortcutConfig/InputBindings`, with separate Modern/Legacy presets. A Command is a string and the inspected native examples call singleton methods. Trace the current target, property defaults, input type and actual consumer before changing shortcut behavior.
 
+## Playing an audio asset from Lua
+
+Call `Sound:CheatPlaySound(audioGUID)` to play an audio asset from a cheat shortcut. Pass the asset GUID from the effective `data/base/config/export/audio_generated.xml`. The Wwise event ID is a separate value. The current `csoundmanagerluabindings.lua` declares this method on the `Sound` singleton.
+
+`Sound:CheatPlaySound(98923)` played the native reward sound in the user's Cheat Keybinds 1.15.0 test. The package calls it after successful execution and logs any Lua exception separately. That test establishes playback in the tested shortcut context. Multiplayer audio scope is still unverified. [Runtime evidence](../mods/cheat-keybinds-audit.md#1150-success-sound-routed-through-sound-2026-11-24)
+
 ## Validation and package examples
 
 Test locally with a disposable save, then check distinct participants and co-op peers, their active sessions, reconnect and removal when applicable. Record the initiating peer and exactly what every other peer sees. Metadata multiplayer flags, no crash on launch, and shared code on disk are separate from synchronization evidence.

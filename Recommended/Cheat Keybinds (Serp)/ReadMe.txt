@@ -10,7 +10,7 @@ Anno 117 - Cheat Keybinds (Serp) - Version 1.15.0
 
 1.15.0 changes:
 - Selecting a cheat previews its effects and shows the current execution shortcuts.
-- Executing a cheat shows a brief confirmation or error in the same popup format.
+- A successful action plays a confirmation sound. Failures show a short popup.
 - Alt+G still runs the normal action for cheats that have no alternate action.
 - Character popups use a six-second minimum display setting, including base-game character notices.
 
@@ -20,9 +20,9 @@ Bedienung wie im Anno-1800-Mod / Controls as in the Anno 1800 mod:
 - Alt+V: ausgewählten Cheat normal ausführen / execute selected cheat normally
 - Alt+G: ausgewählten Cheat alternativ ausführen / alternative execution
 Das Popup beim Auswählen erklärt Wirkung und Voraussetzungen des Cheats.
-Bei der Ausführung erscheint eine kurze Bestätigung oder Fehlermeldung.
-The selection popup explains the cheat's effects and requirements. Execution
-shows a short confirmation or error.
+Bei Erfolg ertönt ein Bestätigungston. Bei einem Fehler erscheint ein Popup.
+The selection popup explains the cheat's effects and requirements. Success
+plays a confirmation sound. Failures show a short popup.
 Cycling only selects; it never executes a cheat. Selection wraps around at both ends.
 After loading a game, the first cheat (coins) is selected. Selection is not saved.
 
@@ -32,7 +32,8 @@ Cheat-Auswahl / Cheat selection:
  3. Arbeitskräfte +500 / alternativ -500 / Workforce +500 / alternative -500
  4. Baukosten ignorieren Ein/Aus / Ignore building costs toggle
  5. Ausbauten erlauben Ein/Aus / Allow upgrades toggle
- 6. Fruchtbarkeit der angewählten Fabrik / Selected factory fertility toggle
+ 6. Fruchtbarkeit des gewählten Betriebs zur Insel hinzufügen oder entfernen
+    Add or remove the selected factory's required fertility on its island
  7. Rekrutierung fertigstellen / Complete recruitment (ship or unit)
  8. Monument weiterbauen / Advance monument construction
  9. Aktuelle Forschung fertigstellen / abbrechen / Complete / stop current research
@@ -40,7 +41,8 @@ Cheat-Auswahl / Cheat selection:
 11. Zufällige Items / Random items
 12. Besitzer ändern / Change selected object's owner (Kontor/Villa: island takeover)
 13. Kaiserruf +10 / alternativ -10 / Emperor reputation +10 / alternative -10
-14. Eigene Diplomatie-Cooldowns zurücksetzen / Reset own diplomatic action cooldowns
+14. Eigene Diplomatie-Cooldowns zurücksetzen. Kann Nichtangriffspakte beenden.
+    Reset own diplomatic cooldowns. Active non-aggression pacts can end.
 
 Die bisherigen Einzel-Cheat-Tasten (Insert/Home/End und Control+Delete) sind ersetzt.
 The old individual cheat shortcuts (Insert/Home/End and Control+Delete) are replaced.

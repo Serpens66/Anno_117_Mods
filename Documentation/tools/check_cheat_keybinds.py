@@ -84,18 +84,10 @@ failures = {
             for slot, reason in {1: 'generic', **failure_reasons.get(index, {})}.items()}
     for index in range(1, 15)
 }
-popup_bindings = {
-    1500001340 + index: (1500001320 + index, 1500001820 + index)
-    for index in range(1, 15)
-}
-popup_bindings.update({
-    1500001360 + index: (1500001320 + index, 1500001840 + index)
-    for index in alternate_indexes
-})
-popup_bindings.update({
+failure_bindings = {
     1500002000 + offset: (1500001320 + index, 1500001900 + offset)
     for index, entries in failures.items() for offset in entries.values()
-})
+}
 preview_bindings = {
     guid: (1500001320 + index, 1500001800 + index)
     for index, guid in enumerate(selection_ids, 1)
@@ -105,7 +97,7 @@ fallback_bindings = {
     1500001214: (1500001324, 1500001244),
     **{1500001260 + offset: (1500001324, 1500001280 + offset) for offset in range(14)},
 }
-notification_bindings = preview_bindings | popup_bindings | fallback_bindings
+notification_bindings = preview_bindings | failure_bindings | fallback_bindings
 portrait_ids = set(range(1500001301, 1500001315))
 profile_ids = set(range(1500001321, 1500001335))
 trigger_ids = notification_bindings.keys() | {1500001256, 1500001257}
@@ -243,7 +235,7 @@ for index, icon in enumerate(icon_names, 1):
     assert struct.unpack_from('>IIBB', header, 16) == (512, 512, 8, 6), image_path
 
 assert {file.stem for file in (mod / 'data/ui/cheatnotifications/icons').glob('*.png')} == set(icon_names)
-assert len(patch.xpath('//Notification')) == len(notification_bindings) == 84
+assert len(patch.xpath('//Notification')) == len(notification_bindings) == 64
 assert len(patch.xpath('//IsUnique[text()="0"]')) == len(notification_bindings)
 
 # Exercise all optional-mod combinations against their actual installed shortcut
@@ -332,8 +324,8 @@ assert {lang.name for lang in langs} == {p.name for p in (mod / 'data/base/confi
 preview_text_ids = {str(text) for _, text in preview_bindings.values()}
 two_action_preview_ids = {str(1500001800 + index) for index in alternate_indexes}
 research_preview_id = '1500001809'
-result_text_ids = {str(text) for _, text in popup_bindings.values()}
-new_text_ids = preview_text_ids | result_text_ids
+failure_text_ids = {str(text) for _, text in failure_bindings.values()}
+new_text_ids = preview_text_ids | failure_text_ids
 for lang in langs:
     texts = ET.parse(str(mod / 'data/base/config/gui' / lang.name))
     lineids = texts.xpath('//Text/LineId/text()')
@@ -378,7 +370,12 @@ for path in [*mod.rglob('*'), *speed.rglob('*')]:
 
 source = (mod / 'data/cheatkeybinds_serp.lua').read_text(encoding='utf-8-sig')
 harness = r'''
-local calls, notices, logs = {}, {}, {}
+local calls, notices, sounds, logs = {}, {}, {}, {}
+local function playAudio(self, guid)
+  assert(self == Sound)
+  table.insert(sounds, guid)
+end
+Sound = { CheatPlaySound = playAudio }
 local function record(name)
   return function(self, ...)
     table.insert(calls, {name, ...})
@@ -432,10 +429,13 @@ for i, guid in expected_notices do
   check(module.NotificationGUIDs[i] == guid and guid ~= 1500001213 and guid ~= 1500001214)
 end
 local function execute(index, alternative)
-  table.clear(calls); table.clear(notices)
+  table.clear(calls); table.clear(notices); table.clear(sounds)
   module.ActiveCheat = index; module.StartCheat(alternative)
 end
-module.ChangeCheat(1); module.StartCheat(); module.StartCheat(true); check(#calls == 0 and #notices == 0)
+local function checkSuccessAudio()
+  check(#notices == 0 and #sounds == 1 and sounds[1] == 98923)
+end
+module.ChangeCheat(1); module.StartCheat(); module.StartCheat(true); check(#calls == 0 and #notices == 0 and #sounds == 0)
 module.GameLoaded(); check(module.ActiveCheat == 1)
 module.ChangeCheat(-1); check(module.ActiveCheat == 14 and notices[#notices] == 1500001253 and #calls == 0)
 module.ChangeCheat(1); check(module.ActiveCheat == 1 and #calls == 0)
@@ -444,7 +444,7 @@ for i, guid in expected_notices do
   module.ActiveCheat = i == 14 and 1 or i + 1
   table.clear(notices)
   module.ChangeCheat(-1)
-  check(module.ActiveCheat == i and #calls == 0 and #notices == 1 and notices[1] == guid)
+  check(module.ActiveCheat == i and #calls == 0 and #sounds == 0 and #notices == 1 and notices[1] == guid)
 end
 local normal = {"money","goods","workforce","costs","upgrades","fertility","recruitment","monument","research","allResearch","items","owner","reputation","cooldowns"}
 local alternate = {"money","goods","workforce","costs","upgrades","fertility","recruitment","monument","stopResearch","resetAllResearch","items","owner","reputation","cooldowns"}
@@ -454,8 +454,7 @@ for _, alternative in {false, true} do
     object.IsOwnedByCurrentParticipant = i ~= 12
     execute(i, alternative)
     check(#calls == 1 and calls[1][1] == name)
-    local success = (alternative and alternate_success[i]) or 1500001340 + i
-    check(#notices == 1 and notices[1] == success)
+    checkSuccessAudio()
   end
   execute(1, alternative); check(calls[1][2] == 1010017 and calls[1][3] == (alternative and -100000 or 100000))
   execute(2, alternative); check(calls[1][2] == (alternative and -1000 or 1000))
@@ -464,12 +463,29 @@ for _, alternative in {false, true} do
   if not alternative then check(calls[1][3] == true) end
   execute(13, alternative); check(calls[1][2] == (alternative and 1500001257 or 1500001256))
 end
-execute(1, "true"); check(calls[1][3] == 100000 and notices[1] == 1500001341)
-table.clear(calls); table.clear(notices)
-module.StartCheat(); module.StartCheat()
-check(#calls == 2 and calls[1][1] == "money" and calls[2][1] == "money")
-check(calls[1][3] == 100000 and calls[2][3] == 100000)
-check(#notices == 2 and notices[1] == 1500001341 and notices[2] == 1500001341)
+execute(1, "true"); check(calls[1][3] == 100000); checkSuccessAudio()
+for _, alternative in {false, true} do
+  table.clear(calls); table.clear(notices); table.clear(sounds)
+  module.StartCheat(alternative); module.StartCheat(alternative)
+  local amount = alternative and -100000 or 100000
+  check(#calls == 2 and calls[1][1] == "money" and calls[2][1] == "money")
+  check(calls[1][3] == amount and calls[2][3] == amount)
+  check(#notices == 0 and #sounds == 2 and sounds[1] == 98923 and sounds[2] == 98923)
+end
+local function failAudio(self, guid)
+  playAudio(self, guid)
+  error("audio unavailable")
+end
+Sound.CheatPlaySound = failAudio
+for _, alternative in {false, true} do
+  execute(1, alternative)
+  check(#calls == 1 and calls[1][1] == "money")
+  checkSuccessAudio()
+  local line = tostring(logs[#logs][1])
+  check(string.find(line, "audio unavailable", 1, true) ~= nil)
+  check(string.find(line, "failAudio", 1, true) ~= nil)
+end
+Sound.CheatPlaySound = playAudio
 local legacy_failures = {
   goods_area=1500001260, workforce_area=1500001261, items_area=1500001262,
   selection_missing=1500001263, factory_selection=1500001264,
@@ -483,7 +499,7 @@ for reason, guid in legacy_failures do check(module.FailureNotificationGUIDs[rea
 local function fails(index, reason)
   for _, alternative in {false,true} do
     execute(index,alternative)
-    check(#calls == 0 and #notices == 1 and notices[1] == failures[index][reason])
+    check(#calls == 0 and #sounds == 0 and #notices == 1 and notices[1] == failures[index][reason])
     local line = tostring(logs[#logs][1])
     check(string.find(line,tostring(index),1,true) ~= nil and string.find(line,reason,1,true) ~= nil)
     check(string.find(line,alternative and "alternative" or "normal",1,true) ~= nil)
@@ -534,21 +550,21 @@ participant.Diplomacy=nil;fails(14,"diplomacy_missing");participant.Diplomacy=di
 local saved=module.Cheats[1]
 for _, reason in {"unknown_reason",false} do
   module.Cheats[1]=function() return false,reason end
-  for _,alternative in {false,true} do execute(1,alternative);check(#calls==0 and #notices==1 and notices[1]==failures[1].generic) end
+  for _,alternative in {false,true} do execute(1,alternative);check(#calls==0 and #sounds==0 and #notices==1 and notices[1]==failures[1].generic) end
 end
 module.Cheats[1]=function() return false end
-for _,alternative in {false,true} do execute(1,alternative);check(#calls==0 and #notices==1 and notices[1]==failures[1].generic) end
+for _,alternative in {false,true} do execute(1,alternative);check(#calls==0 and #sounds==0 and #notices==1 and notices[1]==failures[1].generic) end
 module.Cheats[1]=saved
 Conditions.RegisterTriggerForCurrentParticipantNet = function(self,guid)
   if guid == 1500001256 or guid == 1500001257 then error("reputation action unavailable") end
   register(self,guid)
 end
-for _, alternative in {false,true} do execute(13,alternative); check(#calls == 0 and #notices == 1 and notices[1] == failures[13].generic) end
+for _, alternative in {false,true} do execute(13,alternative); check(#calls == 0 and #sounds == 0 and #notices == 1 and notices[1] == failures[13].generic) end
 Conditions.RegisterTriggerForCurrentParticipantNet = register
 local function failAddAmount() error("unavailable binding") end
 Economy.MetaStorage.AddAmount = failAddAmount
 for _, alternative in {false,true} do
-  execute(1,alternative);check(#calls==0 and #notices==1 and notices[1]==failures[1].generic)
+  execute(1,alternative);check(#calls==0 and #sounds==0 and #notices==1 and notices[1]==failures[1].generic)
   local line=tostring(logs[#logs][1])
   check(string.find(line,"unavailable binding",1,true)~=nil)
   check(string.find(line,"failAddAmount",1,true)~=nil)
@@ -559,31 +575,29 @@ for index, reasons in failures do
   local cheat = module.Cheats[index]
   module.Cheats[index] = function() error("mocked execution failure") end
   execute(index)
-  check(#calls == 0 and #notices == 1 and notices[1] == reasons.generic)
+  check(#calls == 0 and #sounds == 0 and #notices == 1 and notices[1] == reasons.generic)
   check(string.find(tostring(logs[#logs][1]), "mocked execution failure", 1, true) ~= nil)
   module.Cheats[index] = cheat
 end
 local function failNotification() error("notification unavailable") end
 Conditions.RegisterTriggerForCurrentParticipantNet = failNotification
 module.GameLoaded()
-module.ChangeCheat(1); check(module.ActiveCheat == 2) -- display failure does not prevent selecting
+module.ChangeCheat(1); check(module.ActiveCheat == 2 and #sounds == 0) -- display failure does not prevent selecting
 check(string.find(tostring(logs[#logs][1]), "notification unavailable", 1, true) ~= nil)
 check(string.find(tostring(logs[#logs][1]), "failNotification", 1, true) ~= nil)
 module.GameUnloaded(); check(module.ActiveCheat == 1 and not module.Loaded)
-table.clear(calls); module.StartCheat(); module.StartCheat(true); module.ChangeCheat(1); check(#calls == 0 and module.ActiveCheat == 1)
+table.clear(calls); module.StartCheat(); module.StartCheat(true); module.ChangeCheat(1); check(#calls == 0 and #sounds == 0 and module.ActiveCheat == 1)
 module.GameLoaded(); check(module.ActiveCheat == 1 and module.Loaded)
 
 return checks
 '''
 selection_guids = ', '.join(map(str, selection_ids))
-alternate_guids = ', '.join(f'[{i}] = {1500001360 + i}' for i in alternate_indexes)
 failure_rows = []
 for index, reasons in failures.items():
     entries = ', '.join(f'{reason} = {1500002000 + offset}' for reason, offset in reasons.items())
     failure_rows.append(f'  [{index}] = {{{entries}}},')
 expected_guids = '\n'.join((
     f'local expected_notices = {{{selection_guids}}}',
-    f'local alternate_success = {{{alternate_guids}}}',
     'local failures = {',
     *failure_rows,
     '}',
@@ -595,7 +609,7 @@ out = root / 'Documentation/out/cheat-keybinds-mock.luau'
 out.parent.mkdir(parents=True, exist_ok=True)
 out.write_bytes(generated.replace('\n','\r\n').encode('utf-8'))
 print(f'PASS: structural checks against {vanilla}')
-print(f'{len(langs)} languages, {len(preview_bindings)} preview popups, {len(alternate_indexes) + 14} success popups, '
+print(f'{len(langs)} languages, {len(preview_bindings)} preview popups, '
       f'{sum(map(len, failures.values()))} failure popups, {len(fallback_bindings)} fallback popups, {len(portrait_ids)} portraits, '
       '7 shortcuts, 4 optional-mod combinations (not a loader evaluation).')
 print(f'Generated Luau mock test: {out}')
